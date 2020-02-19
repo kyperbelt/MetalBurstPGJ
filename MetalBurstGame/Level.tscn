@@ -1,9 +1,34 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://systems/Engine.tscn" type="PackedScene" id=2]
 
-[node name="Level" type="Node2D"]
+[sub_resource type="NoiseTexture" id=1]
 
-[node name="Player" parent="." instance=ExtResource( 1 )]
+[node name="Level" type="ViewportContainer"]
+anchor_left = 0.265
+anchor_right = 0.728
+anchor_bottom = 0.952
+margin_left = -14.4
+margin_right = 21.1199
+margin_bottom = 25.92
+stretch = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GuiBackground" type="Sprite" parent="."]
+position = Vector2( 251.669, 214.259 )
+scale = Vector2( 1.98308, 1.83695 )
+texture = SubResource( 1 )
+
+[node name="PlayArea" type="Viewport" parent="."]
+size = Vector2( 480, 540 )
+handle_input_locally = false
+render_target_update_mode = 3
+
+[node name="Player" parent="PlayArea" instance=ExtResource( 1 )]
 position = Vector2( 235.611, 507.215 )
 speed = 300.0
+
+[node name="Engine" parent="PlayArea" instance=ExtResource( 2 )]
