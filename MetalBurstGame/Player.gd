@@ -7,6 +7,10 @@ extends Node2D
 
 export var speed : float = 300;
 
+var play_area_width : int = 640
+var play_area_height : int = 540
+
+
 
 
 # Called when the node enters the scene tree for the first time.
@@ -29,3 +33,8 @@ func _process(delta):
 	if Input.is_action_pressed("move_right"):
 		move.x+=speed
 	translate(move*delta)
+	
+	if(position.x < 0) : position.x = 0
+	if(position.x > play_area_width) : position.x = play_area_width
+	if(position.y < 0) : position.y = 0;
+	if(position.y > play_area_height): position.y = play_area_height

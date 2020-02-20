@@ -7,8 +7,8 @@
 [node name="Level" type="ViewportContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = -0.78624
-margin_right = -320.786
+margin_left = 298.496
+margin_right = -21.5038
 __meta__ = {
 "_edit_use_anchors_": false
 }
