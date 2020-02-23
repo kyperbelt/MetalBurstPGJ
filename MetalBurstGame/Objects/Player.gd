@@ -38,3 +38,9 @@ func _process(delta):
 	if(position.x > play_area_width) : position.x = play_area_width
 	if(position.y < 0) : position.y = 0;
 	if(position.y > play_area_height): position.y = play_area_height
+
+#collision has started with something
+func on_collision_start(area):
+	var node = area.get_parent()
+	print("collision with "+node.name+" detected!")
+	pass
