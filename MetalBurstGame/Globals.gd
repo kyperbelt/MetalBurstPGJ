@@ -1,10 +1,8 @@
+extends Node2D
 
 #This file contains important global information and functions
 #that can be accessed from anywhere in the program at any given 
 #time by calling Globals.something. 
-
-
-extends Node
 
 
 # Called when the node enters the scene tree for the first time.
