@@ -1,9 +1,8 @@
 extends Node2D
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+#This file contains important global information and functions
+#that can be accessed from anywhere in the program at any given 
+#time by calling Globals.something. 
 
 
 # Called when the node enters the scene tree for the first time.
@@ -13,6 +12,3 @@ func _enter_tree():
 	OS.set_window_position(screen_size*0.5 - window_size*0.5)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
