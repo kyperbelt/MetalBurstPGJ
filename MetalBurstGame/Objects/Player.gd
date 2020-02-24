@@ -6,18 +6,44 @@ var speed_reduced = 0
 var play_area_width : int = 640
 var play_area_height : int = 540
 
+var pos
+var direction
+var parent
+var shot_timer = 0
+var cooldown = 0.2
+var firing = false
+
+class PlayerBullet extends "Projectile.gd".Projectile:
+	func _init(pos, speed, direction).(position, speed, direction):
+		pass
+	
+	func _ready():
+		set_texture(Globals.player_bullet_image)
+	
+	func _process(delta):
+		pass
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	parent = get_parent()
 	set_process(true)
 
 
 func _process(delta):
 	
 	var move : Vector2 = Vector2(0,0);
-	
+
+	shot_timer -= delta
+
 	if Input.is_action_pressed("fire"):
 		print("firing")
+		if shot_timer <= 0:
+			shoot()
+			firing = true
+	else:
+		firing = false
 	if Input.is_action_pressed("move_up"):
 		move.y-=speed + speed_reduced
 	if Input.is_action_pressed("move_down"):
@@ -45,3 +71,9 @@ func on_collision_start(area):
 func start(pos):
 	position = pos
 	$Collisionshape2D.disabled = false
+
+func shoot():
+	#parent.get_node("sfx_player").play("shoot")
+	var bullet = PlayerBullet.new(position + Vector2(0, -41), 1000, Vector2(0, -1))
+	parent.add_child(bullet)
+	shot_timer = cooldown
