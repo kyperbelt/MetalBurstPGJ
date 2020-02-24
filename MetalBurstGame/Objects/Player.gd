@@ -1,11 +1,13 @@
 extends Node2D
 
+const RELOAD_TIME = 0.1 
+
 export var speed : float = 300
 var speed_reduced = 0
 
 var play_area_width : int = 640
 var play_area_height : int = 540
-
+var reloading = 0.0
 var pos
 var direction
 var parent
@@ -42,8 +44,8 @@ func _process(delta):
 		if shot_timer <= 0:
 			shoot()
 			firing = true
-	else:
-		firing = false
+		else:
+			firing = false
 	if Input.is_action_pressed("move_up"):
 		move.y-=speed + speed_reduced
 	if Input.is_action_pressed("move_down"):
@@ -63,6 +65,8 @@ func _process(delta):
 	if(position.y < 0) : position.y = 0;
 	if(position.y > play_area_height): position.y = play_area_height
 
+	reloading -= delta
+
 #collision has started with something
 func on_collision_start(area):
 	var node = area.get_parent()
@@ -73,7 +77,10 @@ func start(pos):
 	$Collisionshape2D.disabled = false
 
 func shoot():
-	#parent.get_node("sfx_player").play("shoot")
-	var bullet = PlayerBullet.new(position + Vector2(0, -41), 1000, Vector2(0, -1))
-	parent.add_child(bullet)
-	shot_timer = cooldown
+	if reloading <= 0.0:
+		#parent.get_node("sfx_player").play("shoot")
+		var bullet = PlayerBullet.new(position + Vector2(0, -41), 1000, Vector2(0, -1))
+		bullet.global_position = global_position
+		parent.add_child(bullet)
+		shot_timer = cooldown
+		reloading = RELOAD_TIME
