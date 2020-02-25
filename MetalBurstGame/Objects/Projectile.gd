@@ -15,22 +15,26 @@ class Projectile extends Sprite:
 		self.direction = direction
 
 	func _ready():
-		parent = get_parent()
-		set_process(true)
+		self.parent = get_parent()
+		self.set_process(true)
 
 	func _process(delta):
-		#pos = get_position()
-		print("Projectile func")
-		move(delta)
-
-		removeWenOffScreen()
-		print(global_position)
+		#print("Projectile func")
+		self.move(delta)
+		self.removeWenOffScreen()
+		#print(global_position)
 	
 	func move(delta):
-		global_position += (Vector2(0, -300) * delta)
+		self.global_position += (Vector2(0, -300) * (2 * delta))
+		#self.pos += (Vector2(0, -300) * (2 * delta))
+		#self.set_position(self.pos)
+
+	func change_speed(new_speed):
+		self.speed = new_speed
 
 	func removeWenOffScreen():
-		if global_position.y < 0:
+		if self.global_position.y < 0:
+		# if self.pos.y < 0:
 			queue_free()
 
 

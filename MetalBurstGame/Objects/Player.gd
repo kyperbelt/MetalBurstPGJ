@@ -16,13 +16,13 @@ var cooldown = 0.2
 var firing = false
 
 class PlayerBullet extends "Projectile.gd".Projectile:
-	func _init(pos, speed, direction).(position, speed, direction):
+	func _init(_pos, _speed, _direction).(position, speed, direction):
 		pass
 	
 	func _ready():
 		set_texture(Globals.player_bullet_image)
 	
-	func _process(delta):
+	func _process(_delta):
 		pass
 
 
@@ -36,8 +36,8 @@ func _process(delta):
 	
 	var move : Vector2 = Vector2(0,0);
 
-	shot_timer -= delta
-
+	# shot_timer -= delta
+	shot_timer = -1
 	if Input.is_action_pressed("fire"):
 		print("firing")
 		if shot_timer <= 0:
@@ -80,6 +80,7 @@ func shoot():
 		#parent.get_node("sfx_player").play("shoot")
 		var bullet = PlayerBullet.new(position + Vector2(0, -41), 1000, Vector2(0, -1))
 		bullet.global_position = global_position
+		bullet.change_speed(speed)
 		parent.add_child(bullet)
 		shot_timer = cooldown
 		reloading = RELOAD_TIME
