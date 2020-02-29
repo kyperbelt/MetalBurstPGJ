@@ -1,5 +1,7 @@
 extends Node2D
 
+const BULLET_TEST = preload("res://Objects/BulletTest.tscn")
+
 const RELOAD_TIME = 0.1 
 
 export var speed : float = 300
@@ -14,17 +16,6 @@ var parent
 var shot_timer = 0
 var cooldown = 0.2
 var firing = false
-
-class PlayerBullet extends "Projectile.gd".Projectile:
-	func _init(_pos, _speed, _direction).(position, speed, direction):
-		pass
-	
-	func _ready():
-		set_texture(Globals.player_bullet_image)
-	
-	func _process(_delta):
-		pass
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -68,6 +59,7 @@ func _process(delta):
 
 #collision has started with something
 func on_collision_start(area):
+	print_tree_pretty()
 	var node = area.get_parent()
 	print("collision with "+node.name+" detected!")
 
@@ -77,10 +69,10 @@ func start(pos):
 
 func shoot():
 	if reloading <= 0.0:
-		#parent.get_node("sfx_player").play("shoot")
-		var bullet = PlayerBullet.new(position + Vector2(0, -41), 1000, Vector2(0, -1))
+		var bullet = BULLET_TEST.instance()
+		bullet.set_texture(Globals.player_bullet_image)
 		bullet.global_position = global_position
-		bullet.change_speed(speed)
+		#bullet.change_speed(speed)
 		parent.add_child(bullet)
 		shot_timer = cooldown
 		reloading = RELOAD_TIME

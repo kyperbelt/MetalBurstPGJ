@@ -1,6 +1,6 @@
 extends Node2D
 
-class Projectile extends Sprite:
+class MBProjectile extends Sprite:
 	var state = 1
 	var use_default_image = true
 	var pos
@@ -16,6 +16,9 @@ class Projectile extends Sprite:
 
 	func _ready():
 		self.parent = get_parent()
+		#$PlayerBulletArea.connect("area_entered", self, "hit")
+		#var node = get_node("Projectile/PlayerBulletArea")
+		#node.connect("area_entered", self, "hit")
 		self.set_process(true)
 
 	func _process(delta):
@@ -26,8 +29,7 @@ class Projectile extends Sprite:
 	
 	func move(delta):
 		self.global_position += (Vector2(0, -300) * (2 * delta))
-		#self.pos += (Vector2(0, -300) * (2 * delta))
-		#self.set_position(self.pos)
+		#print("Bullet position: " + String(self.global_position))
 
 	func change_speed(new_speed):
 		self.speed = new_speed
@@ -38,6 +40,31 @@ class Projectile extends Sprite:
 			queue_free()
 
 
+		#collision has started with something
 
+#func start(pos):
+#	print("Projectile start")
+#	position = pos
+#	$Collisionshape2D.disabled = false
 
+func _ready():
+	# print_tree_pretty()
+	$PlayerBulletArea.connect("area_entered", self, "hit")
+	#$Collisionshape2D.disabled = false
 
+func hit(object):
+	print("Bullet collision with " + object.name + " etected!")
+	if object.name == 'EnemyArea':
+		queue_free()
+
+func _on_PlayerBulletArea_area_entered(area):
+	# pass # Replace with function body.
+	#var node = get_node("Projectile/PlayerBulletArea")
+	##var node = area.get_parent()
+	##node.connect("area_entered", self, "hit")
+	#print("Bullet collision with "+node.name+" detected!")
+	print("Bullet collision with  detected!")
+func start(pos):
+	print("Bullet position: " + pos)
+	position = pos
+	$Collisionshape2D.disabled = false
