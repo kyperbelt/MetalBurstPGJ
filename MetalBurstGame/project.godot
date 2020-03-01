@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="MetalBurstGame"
-run/main_scene="res://Stages/TestStage.tscn"
+run/main_scene="res://Screens/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]
