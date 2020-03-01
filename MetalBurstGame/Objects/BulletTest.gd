@@ -6,6 +6,21 @@ extends Sprite
 # var b = "text"
 var speed
 
+const PLAYER_VELOCITY = Vector2(0, -300)
+const ENEMY_VELOCITY = Vector2(0, 300)
+
+const PROJECTILE_TYPES = [
+	preload("res://placeholder_assets/bullet.png"),
+	preload("res://placeholder_assets/enemy_bullet.png")
+]
+export (int, "PLAYER_BULLET", "ENEMY_BULLET") var projectileType setget setProjectileType
+
+
+func setProjectileType(newProjectileType):
+	if newProjectileType != null:
+		projectileType = newProjectileType
+		texture = PROJECTILE_TYPES[projectileType]
+
 func _ready():
 	# print_tree_pretty()
 	$BulletTestArea.connect("area_entered", self, "hit")
@@ -25,7 +40,10 @@ func _on_PlayerBulletArea_area_entered(area):
 	print("Bullet collision with  detected!")
 
 func move(delta):
-	global_position += (Vector2(0, -300) * (2 * delta))
+	if (projectileType == 0):
+		global_position += (PLAYER_VELOCITY * (2 * delta))
+	else:
+		global_position += (ENEMY_VELOCITY * (2 * delta))
 	#print("Bullet position: " + String(self.global_position))
 
 func change_speed(new_speed):

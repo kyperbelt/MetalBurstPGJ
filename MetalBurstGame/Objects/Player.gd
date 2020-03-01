@@ -1,6 +1,7 @@
 extends Node2D
 
 const BULLET_TEST = preload("res://Objects/BulletTest.tscn")
+const PLAYER_BULLET = 0
 
 const RELOAD_TIME = 0.1 
 
@@ -59,7 +60,7 @@ func _process(delta):
 
 #collision has started with something
 func on_collision_start(area):
-	print_tree_pretty()
+	#print_tree_pretty()
 	var node = area.get_parent()
 	print("collision with "+node.name+" detected!")
 
@@ -70,7 +71,7 @@ func start(pos):
 func shoot():
 	if reloading <= 0.0:
 		var bullet = BULLET_TEST.instance()
-		bullet.set_texture(Globals.player_bullet_image)
+		bullet.setProjectileType(PLAYER_BULLET)
 		bullet.global_position = global_position
 		#bullet.change_speed(speed)
 		parent.add_child(bullet)
