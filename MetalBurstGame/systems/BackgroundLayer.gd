@@ -29,7 +29,7 @@ func _ready():
 			grid[col][row].position.y = (position.y - get_rect().size.y)+(get_rect().size.y * row)
 			add_child(grid[col][row])
 
-			print(str(get_rect().size) + "<-size pos-> "+str(grid[col][row].position))
+			#print(str(get_rect().size) + "<-size pos-> "+str(grid[col][row].position))
 
 	set_texture(null)
 
@@ -54,7 +54,7 @@ func scroll(hscroll : float,vscroll : float):
 	if current_pos.y + original_size.y < position.y || current_pos.y > position.y + original_size.y : 
 		current_pos.y = position.y
 		change_y = true
-		print("reset y")
+		#print("reset y")
 		
 	
 	for col in range(grid.size()):

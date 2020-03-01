@@ -1,9 +1,57 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://systems/ScrollingBackground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://placeholder_assets/title.png" type="Texture" id=2]
+[ext_resource path="res://systems/OptionsMenu.tscn" type="PackedScene" id=3]
+[ext_resource path="res://systems/MenuOption.gd" type="Script" id=4]
+[ext_resource path="res://Screens/TitleScreen.gd" type="Script" id=5]
 
 [node name="TitleScreen" type="Node2D"]
+script = ExtResource( 5 )
 
 [node name="GuiLayer" type="CanvasLayer" parent="."]
 
+[node name="Title" type="Sprite" parent="GuiLayer"]
+position = Vector2( 503.351, 143.11 )
+texture = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="GuiLayer/Title"]
+repeat = true
+playback/repeat = true
+
+[node name="OptionsMenu" parent="GuiLayer" instance=ExtResource( 3 )]
+margin_left = 414.524
+margin_top = 292.799
+margin_right = -403.476
+margin_bottom = -20.201
+rect_scale = Vector2( 2.74306, 3.52391 )
+
+[node name="options" type="VBoxContainer" parent="GuiLayer/OptionsMenu"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="option0" type="Label" parent="GuiLayer/OptionsMenu/options"]
+margin_right = 70.0
+margin_bottom = 14.0
+text = "New Game"
+script = ExtResource( 4 )
+
+[node name="option1" type="Label" parent="GuiLayer/OptionsMenu/options"]
+margin_top = 18.0
+margin_right = 70.0
+margin_bottom = 32.0
+text = "Continue"
+script = ExtResource( 4 )
+
+[node name="option2" type="Label" parent="GuiLayer/OptionsMenu/options"]
+margin_top = 36.0
+margin_right = 70.0
+margin_bottom = 50.0
+text = "Quit"
+script = ExtResource( 4 )
+
 [node name="ScrollingBackground" parent="." instance=ExtResource( 1 )]
+[connection signal="selection_entered" from="GuiLayer/OptionsMenu" to="." method="selection_made"]
