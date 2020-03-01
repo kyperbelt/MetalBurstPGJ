@@ -18,3 +18,4 @@ script = ExtResource( 1 )
 [node name="BulletLayer" type="Node" parent="."]
 
 [node name="BulletSprite" parent="BulletLayer" instance=ExtResource( 3 )]
+projectileType = null

@@ -34,7 +34,7 @@ func _process(delta):
 
 func hit(object):
 	print("Enemy collision with " + object.name + " detected!")
-	if object.name == 'BulletTestArea' || object.name == 'PlayerCollisionArea':
+	if object.name == 'ProjectilesArea' || object.name == 'PlayerCollisionArea':
 		queue_free()
 
 func shoot():
