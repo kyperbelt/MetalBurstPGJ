@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://systems/ScrollingBackground.tscn" type="PackedScene" id=1]
+
+[node name="TitleScreen" type="Node2D"]
+
+[node name="GuiLayer" type="CanvasLayer" parent="."]
+
+[node name="ScrollingBackground" parent="." instance=ExtResource( 1 )]

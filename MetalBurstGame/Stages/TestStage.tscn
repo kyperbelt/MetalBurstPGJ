@@ -3,18 +3,18 @@
 [ext_resource path="res://systems/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Enemy.tscn" type="PackedScene" id=2]
 
-[sub_resource type="Gradient" id=2]
+[sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0.324921, 1 )
 
-[sub_resource type="GradientTexture" id=1]
-gradient = SubResource( 2 )
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
 
 [node name="Stage" type="Node"]
 
 [node name="gui_background" type="Sprite" parent="."]
 position = Vector2( 1025.27, 250.167 )
 scale = Vector2( 1, 845.825 )
-texture = SubResource( 1 )
+texture = SubResource( 2 )
 
 [node name="Level" parent="." instance=ExtResource( 1 )]
 
