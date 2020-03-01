@@ -5,7 +5,7 @@ extends Node2D
 
 export(float) var speed = 100
 
-const BULLET_TEST = preload("res://Objects/BulletTest.tscn")
+const BULLET_TEST = preload("res://Objects/Projectiles.tscn")
 const ENEMY_BULLET = 1
 
 const RELOAD_TIME = 0.1 

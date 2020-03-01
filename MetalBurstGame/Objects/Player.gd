@@ -1,6 +1,6 @@
 extends Node2D
 
-const BULLET_TEST = preload("res://Objects/BulletTest.tscn")
+const BULLET_TEST = preload("res://Objects/Projectiles.tscn")
 const PLAYER_BULLET = 0
 
 const RELOAD_TIME = 0.1 
