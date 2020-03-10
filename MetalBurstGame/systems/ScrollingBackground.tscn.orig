@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://placeholder_assets/spr_stars01.png" type="Texture" id=1]
+[ext_resource path="res://placeholder_assets/spr_stars02.png" type="Texture" id=2]
+[ext_resource path="res://placeholder_assets/blackbackground.png" type="Texture" id=3]
+[ext_resource path="res://systems/ScrollingBackground.gd" type="Script" id=4]
+[ext_resource path="res://systems/BackgroundLayer.gd" type="Script" id=5]
+=======
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://systems/ScrollingBackground.gd" type="Script" id=4]
+>>>>>>> kyperbelt-screens
+
+[node name="ScrollingBackground" type="Node2D"]
+script = ExtResource( 4 )
+vertical_velocity = 80.0
+<<<<<<< HEAD
+
+[node name="Layer0" type="Sprite" parent="."]
+position = Vector2( -27.2991, -25.7242 )
+scale = Vector2( 5.3955, 4.70736 )
+texture = ExtResource( 3 )
+centered = false
+script = ExtResource( 5 )
+multiplier = 0.0
+
+[node name="Layer1" type="Sprite" parent="."]
+position = Vector2( -608.006, -900.519 )
+texture = ExtResource( 1 )
+centered = false
+region_rect = Rect2( 0, 900, 1000, 1000 )
+script = ExtResource( 5 )
+multiplier = 0.4
+
+[node name="Layer2" type="Sprite" parent="."]
+position = Vector2( -621.438, -729.049 )
+texture = ExtResource( 2 )
+centered = false
+script = ExtResource( 5 )
+=======
+>>>>>>> kyperbelt-screens

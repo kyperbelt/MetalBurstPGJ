@@ -5,7 +5,10 @@ var play_area_height = 0
 
 
 #level
-export(NodePath) var Level 
+export(NodePath) var Level
+
+
+const Background = preload("res://systems/ScrollingBackground.gd")
 
 #player
 onready var player = get_node("PlayerLayer/Player");
@@ -24,6 +27,10 @@ func pre_process_entities():
 			print("added "+child.name+" to entitylayer")
 			child.get_parent().remove_child(child)
 			$EntityLayer.add_child(child)
+		if(child is Background):
+			print("added "+child.name+" to background layer")
+			child.get_parent().remove_child(child)
+			$BackgroundLayer.add_child(child)
 
 func center_player():
 	if(player!=null):
