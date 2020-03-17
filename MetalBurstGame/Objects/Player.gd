@@ -7,6 +7,9 @@ enum PROJECTILES {
 	PLAYER_BOMB = 2
 	
 }
+
+signal player_hit
+
 const RELOAD_TIME = 0.1 
 
 export var speed : float = 300
@@ -81,6 +84,13 @@ func on_collision_start(area):
 	var node = area.get_parent()
 	print("collision with "+node.name+" detected!")
 
+
+func hit(object):
+	print("player is hit by =%s" % object.name)
+	var _ok = get_tree().change_scene("res://Screens/GameOverScreen.tscn")
+
+
+
 func start(pos):
 	position = pos
 	$Collisionshape2D.disabled = false
@@ -90,6 +100,7 @@ func shoot():
 		var bullet = BULLET_PROJECTILE.instance()
 		bullet.setProjectileType(PROJECTILES.PLAYER_BULLET)
 		bullet.global_position = global_position
+		$PlayerBulletStreamPlayer.play()
 		#bullet.change_speed(speed)
 		parent.add_child(bullet)
 		shot_timer = cooldown
@@ -100,6 +111,7 @@ func bomb_away():
 		var bomb = BULLET_PROJECTILE.instance()
 		bomb.setProjectileType(PROJECTILES.PLAYER_BOMB)
 		bomb.global_position = global_position
+		$PlayerBulletStreamPlayer.play()
 		#bullet.change_speed(speed)
 		parent.add_child(bomb)
 		bomb_timer = bomb_cooldown

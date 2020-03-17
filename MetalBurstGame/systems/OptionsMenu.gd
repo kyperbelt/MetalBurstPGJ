@@ -58,8 +58,14 @@ func get_selection():
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
 		emit_signal("selection_entered",_selection)
-	if Input.is_action_just_pressed("move_down"):
+	if Input.is_action_just_pressed("move_down") || Input.is_action_just_pressed("move_right"):
 		next_selection()
-	if Input.is_action_just_pressed("move_up"):
+	if Input.is_action_just_pressed("move_up") || Input.is_action_just_pressed("move_left"):
 		prev_selection()
 	pass
+
+func _on_OptionsMenu_selection_changed():
+	$OptionsAudioStreamPlayer.play()
+
+func _on_OptionsMenu_mouse_entered():
+	$OptionsFocusAudioStreamPlayer.play()

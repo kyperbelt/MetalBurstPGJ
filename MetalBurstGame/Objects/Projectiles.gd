@@ -35,8 +35,12 @@ func _process(delta):
 		
 func hit(object):
 	print("Bullet collision with " + object.name + " detected!")
-	if object.name == 'EnemyArea':
+	if object.name == 'EnemyArea' && projectileType == 0:
 		queue_free()
+	if object.name == 'PlayerCollisionArea' && projectileType == 1:
+		queue_free()
+		print("player hit")
+		object.get_parent().hit(self)
 
 func move(delta):
 	if (projectileType == 0):
