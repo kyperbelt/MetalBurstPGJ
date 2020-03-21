@@ -6,7 +6,6 @@
 [ext_resource path="res://placeholder_assets/audio/metal_burst-01.wav" type="AudioStream" id=4]
 
 [sub_resource type="Gradient" id=1]
-offsets = PoolRealArray( 0.324921, 1 )
 
 [sub_resource type="GradientTexture" id=2]
 gradient = SubResource( 1 )
@@ -14,7 +13,7 @@ gradient = SubResource( 1 )
 [node name="Stage" type="Node"]
 
 [node name="gui_background" type="Sprite" parent="."]
-position = Vector2( 1025.27, 250.167 )
+position = Vector2( 1027.79, 247.649 )
 scale = Vector2( 1, 845.825 )
 texture = SubResource( 2 )
 
@@ -26,7 +25,7 @@ position = Vector2( -285.932, 0 )
 [node name="Enemy" parent="Level" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
-position = Vector2( 430.615, -330.138 )
+position = Vector2( 362.642, -330.138 )
 
 [node name="Enemy2" parent="Level" groups=[
 "Enemy",
@@ -36,15 +35,16 @@ position = Vector2( 43.4426, -457.026 )
 [node name="Enemy3" parent="Level" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
-position = Vector2( 372.051, -593.675 )
+position = Vector2( 356.946, -593.675 )
 
 [node name="Enemy4" parent="Level" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
-position = Vector2( -124.875, -760.919 )
+position = Vector2( 48.8347, -760.919 )
 
 [node name="LevelOneAudioStreamPlayer" type="AudioStreamPlayer" parent="Level"]
 stream = ExtResource( 4 )
+volume_db = -10.0
 bus = "LevelOneBus"
 [connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]
 [connection signal="tree_exited" from="Level" to="Level" method="_on_Level_tree_exited"]
