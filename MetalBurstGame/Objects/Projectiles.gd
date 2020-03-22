@@ -25,7 +25,7 @@ func setProjectileType(newProjectileType):
 
 func _ready():
 	# print_tree_pretty()
-	$ProjectilesArea.connect("area_entered", self, "hit")
+	var _result = $ProjectilesArea.connect("area_entered", self, "hit")
 	# $Collisionshape2D.disabled = false
 
 func _process(delta):

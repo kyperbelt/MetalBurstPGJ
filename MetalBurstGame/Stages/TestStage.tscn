@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://systems/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Enemy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://backgrounds/SpaceBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://placeholder_assets/audio/metal_burst-01.wav" type="AudioStream" id=4]
+[ext_resource path="res://Screens/InformationDisplay.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Gradient" id=1]
 offsets = PoolRealArray( 0.324921, 1 )
@@ -46,5 +47,7 @@ position = Vector2( -124.875, -760.919 )
 [node name="LevelOneAudioStreamPlayer" type="AudioStreamPlayer" parent="Level"]
 stream = ExtResource( 4 )
 bus = "LevelOneBus"
+
+[node name="InformationDisplay" parent="Level" instance=ExtResource( 5 )]
 [connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]
 [connection signal="tree_exited" from="Level" to="Level" method="_on_Level_tree_exited"]

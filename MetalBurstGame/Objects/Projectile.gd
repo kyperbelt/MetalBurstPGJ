@@ -8,11 +8,11 @@ class MBProjectile extends Sprite:
 	var direction
 	var parent
 	
-	func _init(pos, speed, direction):
-		self.set_position(pos)
-		self.pos = pos
-		self.speed = speed
-		self.direction = direction
+	func _init(_pos, _speed, _direction):
+		self.set_position(_pos)
+		self.pos = _pos
+		self.speed = _speed
+		self.direction = _direction
 
 	func _ready():
 		self.parent = get_parent()
@@ -49,7 +49,7 @@ class MBProjectile extends Sprite:
 
 func _ready():
 	# print_tree_pretty()
-	$PlayerBulletArea.connect("area_entered", self, "hit")
+	var _result = $PlayerBulletArea.connect("area_entered", self, "hit")
 	#$Collisionshape2D.disabled = false
 
 func hit(object):
@@ -57,7 +57,7 @@ func hit(object):
 	if object.name == 'EnemyArea':
 		queue_free()
 
-func _on_PlayerBulletArea_area_entered(area):
+func _on_PlayerBulletArea_area_entered(_area):
 	# pass # Replace with function body.
 	#var node = get_node("Projectile/PlayerBulletArea")
 	##var node = area.get_parent()

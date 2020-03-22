@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Control",
+"class": "InformationDisplay",
+"language": "GDScript",
+"path": "res://Screens/InformationDisplay.gd"
+} ]
 _global_script_class_icons={
-
+"InformationDisplay": ""
 }
 
 [application]

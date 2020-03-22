@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://systems/Engine.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objects/Projectiles.tscn" type="PackedScene" id=3]
 
 [node name="Engine" type="Node"]
@@ -12,8 +11,6 @@ script = ExtResource( 1 )
 [node name="EntityLayer" type="Node" parent="."]
 
 [node name="PlayerLayer" type="Node" parent="."]
-
-[node name="Player" parent="PlayerLayer" instance=ExtResource( 2 )]
 
 [node name="EffectLayer" type="Node" parent="."]
 

@@ -9,7 +9,7 @@ extends Control
 func _ready():
 	$Container/PlayArea.update_size($Container.rect_size.x,$Container.rect_size.y)
 	$Container/PlayArea/Engine.pre_process_entities()
-	pass # Replace with function body.
+	$Container/PlayArea/Engine.set_info_display(get_node("InformationDisplay"))
 
 
 

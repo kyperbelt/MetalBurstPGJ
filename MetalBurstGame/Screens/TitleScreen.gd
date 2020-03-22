@@ -8,6 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Globals.delete_player()
 	get_tree().paused = false#just in case the game was paused
 	pass # Replace with function body.
 

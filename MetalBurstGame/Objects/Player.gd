@@ -8,8 +8,6 @@ enum PROJECTILES {
 	
 }
 
-signal player_hit
-
 const RELOAD_TIME = 0.1 
 
 export var speed : float = 300
@@ -28,6 +26,18 @@ var cooldown = 0.2
 var bomb_cooldown = 0.2
 var firing = false
 var bombing = false
+
+var invulnerable : bool = false
+
+signal player_hit
+
+#######################
+var score: int = 0
+var lives: int = 3
+#percentage of energy for bomb 0 - 1
+var bomb_percentage:float=1.0
+#the cost of the bomb in energy percentage
+export(float,.01,1.0) var bomb_cost:float=.25 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -87,12 +97,13 @@ func on_collision_start(area):
 
 func hit(object):
 	print("player is hit by =%s" % object.name)
-	var _ok = get_tree().change_scene("res://Screens/GameOverScreen.tscn")
+	lives-=1
+	emit_signal("player_hit")
 
 
 
-func start(pos):
-	position = pos
+func start(_pos):
+	position = _pos
 	$Collisionshape2D.disabled = false
 
 func shoot():
