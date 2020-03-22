@@ -1,29 +1,43 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://systems/PlayArea.gd" type="Script" id=1]
 [ext_resource path="res://systems/Level.gd" type="Script" id=2]
 [ext_resource path="res://systems/Engine.tscn" type="PackedScene" id=3]
 [ext_resource path="res://systems/ScrollingBackground.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Screens/PauseScreen.tscn" type="PackedScene" id=5]
 
-[node name="Level" type="ViewportContainer"]
+[node name="Level" type="Control"]
 anchor_right = 1.0
-anchor_bottom = 0.938
-margin_left = 285.932
-margin_right = -238.068
-margin_bottom = 35.712
+anchor_bottom = 1.0
+margin_right = -4.0
+margin_bottom = -3.0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PlayArea" type="Viewport" parent="."]
+[node name="Container" type="ViewportContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.97
+margin_left = 285.932
+margin_right = -249.068
+margin_bottom = -0.179993
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayArea" type="Viewport" parent="Container"]
 size = Vector2( 500, 576 )
 handle_input_locally = false
 hdr = false
 render_target_update_mode = 3
 script = ExtResource( 1 )
 
-[node name="ScrollingBackground" parent="PlayArea" instance=ExtResource( 4 )]
+[node name="ScrollingBackground" parent="Container/PlayArea" instance=ExtResource( 4 )]
 
-[node name="Engine" parent="PlayArea" instance=ExtResource( 3 )]
-Level = NodePath("../..")
+[node name="Engine" parent="Container/PlayArea" instance=ExtResource( 3 )]
+Level = NodePath("../../..")
+PauseScreen = NodePath("../../../PauseScreens")
+
+[node name="PauseScreens" parent="." instance=ExtResource( 5 )]
+visible = false

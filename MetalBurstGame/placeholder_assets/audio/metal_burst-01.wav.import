@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/metal_burst-01.wav-d315fa8626482c4dfbde32fa5bf60120.sample"
+
+[deps]
+
+source_file="res://placeholder_assets/audio/metal_burst-01.wav"
+dest_files=[ "res://.import/metal_burst-01.wav-d315fa8626482c4dfbde32fa5bf60120.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
