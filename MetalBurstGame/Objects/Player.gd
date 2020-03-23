@@ -113,6 +113,8 @@ func shoot():
 		bullet.global_position = global_position
 		$PlayerBulletStreamPlayer.play()
 		#bullet.change_speed(speed)
+		if(!is_instance_valid(parent)):
+			parent = get_parent()
 		parent.add_child(bullet)
 		shot_timer = cooldown
 		bullet_reloading = RELOAD_TIME
