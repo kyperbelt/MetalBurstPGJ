@@ -126,6 +126,8 @@ func bomb_away():
 		bomb.global_position = global_position
 		$PlayerBulletStreamPlayer.play()
 		#bullet.change_speed(speed)
+		if(!is_instance_valid(parent)):
+			parent = get_parent()
 		parent.add_child(bomb)
 		bomb_timer = bomb_cooldown
 		bomb_reloading = RELOAD_TIME
