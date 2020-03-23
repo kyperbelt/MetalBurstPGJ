@@ -6,7 +6,6 @@
 [ext_resource path="res://placeholder_assets/audio/metal_burst-01.wav" type="AudioStream" id=4]
 
 [sub_resource type="Gradient" id=1]
-offsets = PoolRealArray( 0.324921, 1 )
 
 [sub_resource type="GradientTexture" id=2]
 gradient = SubResource( 1 )
@@ -41,7 +40,7 @@ position = Vector2( 372.051, -593.675 )
 [node name="Enemy4" parent="Level" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
-position = Vector2( -124.875, -760.919 )
+position = Vector2( 45.5304, -760.919 )
 
 [node name="LevelOneAudioStreamPlayer" type="AudioStreamPlayer" parent="Level"]
 stream = ExtResource( 4 )
