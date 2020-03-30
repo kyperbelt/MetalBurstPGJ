@@ -59,10 +59,9 @@ script = ExtResource( 4 )
 stream = ExtResource( 6 )
 bus = "OptionsAudioBus"
 
-[node name="OptionsFocusAudioStreamPlayer" type="AudioStreamPlayer" parent="GuiLayer/OptionsMenu"]
-stream = ExtResource( 7 )
-
 [node name="SpaceBackground" parent="." instance=ExtResource( 1 )]
-[connection signal="mouse_entered" from="GuiLayer/OptionsMenu" to="GuiLayer/OptionsMenu" method="_on_OptionsMenu_mouse_entered"]
+
+[node name="OptionsFocusAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
 [connection signal="selection_changed" from="GuiLayer/OptionsMenu" to="GuiLayer/OptionsMenu" method="_on_OptionsMenu_selection_changed"]
 [connection signal="selection_entered" from="GuiLayer/OptionsMenu" to="." method="selection_made"]

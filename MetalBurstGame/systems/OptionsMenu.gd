@@ -67,5 +67,5 @@ func _process(_delta):
 func _on_OptionsMenu_selection_changed():
 	$OptionsAudioStreamPlayer.play()
 
-func _on_OptionsMenu_mouse_entered():
-	$OptionsFocusAudioStreamPlayer.play()
+#func _on_OptionsMenu_selection_entered():
+#	$OptionsFocusAudioStreamPlayer.play()

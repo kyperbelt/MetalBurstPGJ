@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Objects/Player.gd" type="Script" id=1]
 [ext_resource path="res://placeholder_assets/deer_placeholder.png" type="Texture" id=2]
 [ext_resource path="res://placeholder_assets/audio/playerShoot.wav" type="AudioStream" id=3]
+[ext_resource path="res://placeholder_assets/deer_chara/KritaTest2.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -10,8 +11,14 @@
 script = ExtResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, 7 )
+scale = Vector2( 0.134523, 0.134523 )
+texture = ExtResource( 4 )
+
+[node name="Sprite(Old)" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0.173773, 0.935793 )
-scale = Vector2( 0.27557, 0.294843 )
+scale = Vector2( 0.28, 0.28 )
 texture = ExtResource( 2 )
 
 [node name="PlayerCollisionArea" type="Area2D" parent="."]
@@ -22,6 +29,7 @@ shape = SubResource( 1 )
 
 [node name="PlayerBulletStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+pitch_scale = 3.0
 bus = "PlayerBulletBus"
 
 [node name="PlayerBombStreamPlayer" type="AudioStreamPlayer" parent="."]

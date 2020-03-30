@@ -5,7 +5,6 @@ extends Node2D
 # var a = 2
 # var b = "text"
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	get_tree().paused = false#just in case the game was paused
@@ -13,6 +12,8 @@ func _ready():
 
 func selection_made(selection : int):
 	print("selected option %s " % selection)
+	$OptionsFocusAudioStreamPlayer.play()
+	yield(get_tree().create_timer(1.0), "timeout")
 	match selection:
 		0:
 			var result = get_tree().change_scene("res://Stages/TestStage.tscn")
@@ -28,3 +29,4 @@ func selection_made(selection : int):
 		_: 
 			print("%s is not a valid selection" % selection)
 	pass
+
