@@ -5,8 +5,8 @@
 [ext_resource path="res://systems/OptionsMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://systems/MenuOption.gd" type="Script" id=4]
 [ext_resource path="res://Screens/TitleScreen.gd" type="Script" id=5]
-[ext_resource path="res://placeholder_assets/audio/menu_scroll01.wav" type="AudioStream" id=6]
-[ext_resource path="res://placeholder_assets/audio/menu_select.wav" type="AudioStream" id=7]
+[ext_resource path="res://placeholder_assets/SFX/menu_scroll01.wav" type="AudioStream" id=6]
+[ext_resource path="res://placeholder_assets/SFX/menu_select.wav" type="AudioStream" id=7]
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource( 5 )
