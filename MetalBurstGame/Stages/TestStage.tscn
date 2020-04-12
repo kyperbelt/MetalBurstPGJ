@@ -24,10 +24,32 @@ texture = SubResource( 2 )
 [node name="SpaceBackground" parent="Level" instance=ExtResource( 3 )]
 position = Vector2( -285.932, 0 )
 
+[node name="Ember5" parent="Level" groups=[
+"Enemy",
+] instance=ExtResource( 2 )]
+position = Vector2( 307.431, -1264.94 )
+speed = 200.0
+
+[node name="Ember6" parent="Level" groups=[
+"Enemy",
+] instance=ExtResource( 2 )]
+position = Vector2( 187.848, -1269.72 )
+speed = 200.0
+
 [node name="Spinner1" parent="Level" groups=[
 "Enemy",
 ] instance=ExtResource( 6 )]
-position = Vector2( 219.448, -854.592 )
+position = Vector2( 240.876, -1068.87 )
+
+[node name="Spinner2" parent="Level" groups=[
+"Enemy",
+] instance=ExtResource( 6 )]
+position = Vector2( 131.787, -1144.85 )
+
+[node name="Spinner3" parent="Level" groups=[
+"Enemy",
+] instance=ExtResource( 6 )]
+position = Vector2( 344.121, -1135.11 )
 
 [node name="Ember1" parent="Level" groups=[
 "Enemy",
@@ -42,7 +64,7 @@ position = Vector2( 43.4426, -457.026 )
 [node name="Ember3" parent="Level" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
-position = Vector2( 372.051, -593.675 )
+position = Vector2( 428.544, -593.675 )
 
 [node name="Ember4" parent="Level" groups=[
 "Enemy",
