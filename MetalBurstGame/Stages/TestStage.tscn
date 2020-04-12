@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://systems/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Enemy.tscn" type="PackedScene" id=2]
 [ext_resource path="res://backgrounds/SpaceBackground.tscn" type="PackedScene" id=3]
 [ext_resource path="res://placeholder_assets/BGM/metal_burst-01.wav" type="AudioStream" id=4]
 [ext_resource path="res://Screens/InformationDisplay.tscn" type="PackedScene" id=5]
-
+[ext_resource path="res://Objects/Enemy2.tscn" type="PackedScene" id=6]
 
 [sub_resource type="Gradient" id=1]
 
@@ -24,22 +24,27 @@ texture = SubResource( 2 )
 [node name="SpaceBackground" parent="Level" instance=ExtResource( 3 )]
 position = Vector2( -285.932, 0 )
 
-[node name="Enemy" parent="Level" groups=[
+[node name="Spinner1" parent="Level" groups=[
+"Enemy",
+] instance=ExtResource( 6 )]
+position = Vector2( 219.448, -854.592 )
+
+[node name="Ember1" parent="Level" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
 position = Vector2( 430.615, -330.138 )
 
-[node name="Enemy2" parent="Level" groups=[
+[node name="Ember2" parent="Level" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
 position = Vector2( 43.4426, -457.026 )
 
-[node name="Enemy3" parent="Level" groups=[
+[node name="Ember3" parent="Level" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
 position = Vector2( 372.051, -593.675 )
 
-[node name="Enemy4" parent="Level" groups=[
+[node name="Ember4" parent="Level" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
 position = Vector2( 45.5304, -760.919 )
