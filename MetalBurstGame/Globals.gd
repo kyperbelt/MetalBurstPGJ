@@ -7,7 +7,7 @@ var screen_size
 var margin = 80
 var player_bullet_image
 
-var _Player = preload("res://Objects/Player.tscn");
+var _Player = preload("res://Prefabs_PlayerRelevant/Player.tscn");
 var _player = null
 
 # Called when the node enters the scene tree for the first time.

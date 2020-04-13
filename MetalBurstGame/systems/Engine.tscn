@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://systems/Engine.gd" type="Script" id=1]
-[ext_resource path="res://Objects/Projectiles.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs_PlayerRelevant/Projectiles.tscn" type="PackedScene" id=3]
 
 [node name="Engine" type="Node"]
 script = ExtResource( 1 )
