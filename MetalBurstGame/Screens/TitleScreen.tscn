@@ -1,12 +1,16 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://backgrounds/SpaceBackground.tscn" type="PackedScene" id=1]
-[ext_resource path="res://placeholder_assets/title.png" type="Texture" id=2]
+[ext_resource path="res://Assets_UIMenus/title.png" type="Texture" id=2]
 [ext_resource path="res://systems/OptionsMenu.tscn" type="PackedScene" id=3]
 [ext_resource path="res://systems/MenuOption.gd" type="Script" id=4]
 [ext_resource path="res://Screens/TitleScreen.gd" type="Script" id=5]
-[ext_resource path="res://placeholder_assets/SFX/menu_scroll01.wav" type="AudioStream" id=6]
-[ext_resource path="res://placeholder_assets/SFX/menu_select.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets_Audio/SFX/menu_scroll01.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets_Audio/SFX/menu_select.wav" type="AudioStream" id=7]
+
+
+
+
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource( 5 )
