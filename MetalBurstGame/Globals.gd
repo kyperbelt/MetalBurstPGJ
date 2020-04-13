@@ -15,7 +15,7 @@ func _enter_tree():
 	screen_size = OS.get_screen_size(0)
 	var window_size = OS.get_window_size()
 	OS.set_window_position(screen_size*0.5 - window_size*0.5)
-	player_bullet_image = preload("res://placeholder_assets/bullet.png")
+	player_bullet_image = preload("res://Assets_PlayerRelevant/bullet.png")
 
 
 func get_player():

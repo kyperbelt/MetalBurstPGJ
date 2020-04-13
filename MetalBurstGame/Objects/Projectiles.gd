@@ -11,9 +11,9 @@ const ENEMY_VELOCITY = Vector2(0, 300)
 const PLAYER_BOMB_VELOCITY = Vector2(0, -100)
 
 const PROJECTILE_TYPES = [
-	preload("res://placeholder_assets/bullet.png"),
-	preload("res://placeholder_assets/enemy_bullet.png"),
-	preload("res://placeholder_assets/player_bomb_sm.png")
+	preload("res://Assets_PlayerRelevant/bullet.png"),
+	preload("res://Assets_Danmaku/enemy_bullet.png"),
+	preload("res://Assets_PlayerRelevant/player_bomb_sm.png")
 ]
 export (int, "PLAYER_BULLET", "ENEMY_BULLET") var projectileType setget setProjectileType
 
