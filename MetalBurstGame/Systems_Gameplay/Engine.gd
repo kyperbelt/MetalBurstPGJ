@@ -11,9 +11,9 @@ export(NodePath) var Level
 export(NodePath) var PauseScreen
 
 
-const Background = preload("res://systems/ScrollingBackground.gd")
+const Background = preload("res://Prefabs_Backgrounds/ScrollingBackground.gd")
 const Projectile = preload("res://Prefabs_FoeDanmaku/Projectile.gd")
-const InformationDisplay = preload("res://Prefabs_UIScreens/InformationDisplay.gd")
+const InformationDisplay = preload("res://Systems_Gameplay/InformationDisplay.gd")
 
 #player
 var player = null
@@ -47,7 +47,7 @@ func _process(delta):
 		#remove player so that it doesnt get freed
 		player.get_parent().remove_child(player) #=================?????
 
-		var code = get_tree().change_scene("res://Prefabs_UIScreens/GameOverScreen.tscn")
+		var code = get_tree().change_scene("res://Scenes_Menus/GameOverScreen.tscn")
 		if(code != OK):
 			print("failed to change to gameover screen")
 
@@ -91,7 +91,7 @@ func center_player():
 func player_hit():
 	if(player.lives <= 0):
 		player.get_parent().remove_child(player)
-		var _ok = get_tree().change_scene("res://Prefabs_UIScreens/GameOverScreen.tscn")
+		var _ok = get_tree().change_scene("res://Scenes_Menus/GameOverScreen.tscn")
 	else:
 		informationDisplay.set_lives(player.lives,false)
 	pass

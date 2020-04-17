@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "InformationDisplay",
 "language": "GDScript",
-"path": "res://Prefabs_UIScreens/InformationDisplay.gd"
+"path": "res://Systems_Gameplay/InformationDisplay.gd"
 } ]
 _global_script_class_icons={
 "InformationDisplay": ""
@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="MetalBurstGame"
-run/main_scene="res://Prefabs_UIScreens/TitleScreen.tscn"
+run/main_scene="res://Scenes_Menus/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]

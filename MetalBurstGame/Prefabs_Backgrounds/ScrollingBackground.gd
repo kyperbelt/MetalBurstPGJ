@@ -8,7 +8,7 @@ export(float) var vertical_velocity = 100
 #speed of horizontal scrolling - invert speed to invert direction
 export(float) var horizontal_velocity = 0
 
-const BackgroundLayer = preload("res://systems/BackgroundLayer.gd")
+const BackgroundLayer = preload("res://Prefabs_Backgrounds/BackgroundLayer.gd")
 
 #will contain a list of layers
 var layers = []
