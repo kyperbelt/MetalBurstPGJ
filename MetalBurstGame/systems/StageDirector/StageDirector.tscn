@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://systems/StageDirector/StageDirector.gd" type="Script" id=1]
+
+[node name="StageDirector" type="Node2D"]
+script = ExtResource( 1 )
+stage_duration = 600.0

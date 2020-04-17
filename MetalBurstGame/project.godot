@@ -13,9 +13,15 @@ _global_script_classes=[ {
 "class": "InformationDisplay",
 "language": "GDScript",
 "path": "res://Screens/InformationDisplay.gd"
+}, {
+"base": "Node2D",
+"class": "StageEvent",
+"language": "GDScript",
+"path": "res://systems/StageDirector/StageEvent.gd"
 } ]
 _global_script_class_icons={
-"InformationDisplay": ""
+"InformationDisplay": "",
+"StageEvent": "res://placeholder_assets/class_icons/StageEvent.png"
 }
 
 [application]
