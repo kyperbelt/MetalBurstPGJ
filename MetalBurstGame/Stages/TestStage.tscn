@@ -42,9 +42,9 @@ position = Vector2( 1441.27, -1529.31 )
 scale = Vector2( 15.4849, 7.55271 )
 
 [node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 228.915, -519.797 )
-event_time = 3.3989
-spawn_x = 228.915
+position = Vector2( 288.689, -394.815 )
+event_time = 2.58165
+spawn_x = 288.689
 
 [node name="Enemy4" parent="StageDirector/SpawnEvent" groups=[
 "Enemy",

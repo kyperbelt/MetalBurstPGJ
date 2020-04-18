@@ -12,7 +12,6 @@ export(float) var spawn_x = 0 setget set_spawn_x,get_spawn_x
 
 #VARS
 var prev_y = NAN
-var alpha :float = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,15 +21,15 @@ func _ready():
 func _on_timeline_change():
 	if(!override_time):
 		var sd : StageDirector = director as StageDirector
-		alpha = sd.get_alpha_from_time(event_time)
+		var alpha = sd.get_alpha_from_time(event_time)
 		position.y = sd.get_y_from_alpha(alpha)
 		prev_y = position.y
-		set_time_using_alpha(sd.duration)
+		set_time_using_alpha(sd.duration,alpha)
 		
 		#print("timeline changed - position updated")
 		update()
 		
-func set_time_using_alpha(duration):
+func set_time_using_alpha(duration,alpha):
 	var temp = override_time
 	override_time = true
 	event_time = duration * alpha
@@ -38,7 +37,7 @@ func set_time_using_alpha(duration):
 	
 
 func _execute_event():
-	print("SpawnEvent=[event_time:%s spawn_x:%s]" % [event_time,spawn_x])
+	print("SpawnEvent=[event_time:%s spawn_x:%s]" % [get_time(),spawn_x])
 	pass
 
 func set_spawn_x(x):
@@ -53,6 +52,14 @@ func set_time(time):
 	if(override_time):
 		.set_time(time)
 
+func get_time():
+	if(override_time):
+		return .get_time()
+	else:
+		var sd : StageDirector = director as StageDirector
+		var alpha = sd.get_alpha_from_y(position.y)
+		return director.duration * alpha
+
 func _process(_delta):
 	if(Engine.editor_hint):
 		if(spawn_x!=position.x):
@@ -61,8 +68,8 @@ func _process(_delta):
 			prev_y = position.y
 			var sd : StageDirector = director as StageDirector
 			var ypos = position.y
-			alpha = sd.get_alpha_from_y(position.y)
-			set_time_using_alpha(sd.duration)
+			var alpha = sd.get_alpha_from_y(position.y)
+			set_time_using_alpha(sd.duration,alpha)
 			print("ypos %s | alpha %s " % [ypos, alpha])
 			pass	
 
