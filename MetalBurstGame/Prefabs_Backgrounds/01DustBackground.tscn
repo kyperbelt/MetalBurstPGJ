@@ -18,9 +18,10 @@ colors = PoolColorArray( 0.611765, 0.439216, 0.32549, 1, 0.247059, 0.247059, 0.2
 [sub_resource type="GradientTexture" id=4]
 gradient = SubResource( 3 )
 
-[node name="SpaceBackground" type="Node2D"]
+[node name="01DustBackground" type="Node2D"]
 script = ExtResource( 4 )
-vertical_velocity = -80.0
+vertical_velocity = 50.0
+horizontal_velocity = -50.0
 
 [node name="Layer0" type="Sprite" parent="."]
 visible = false
@@ -35,6 +36,7 @@ __meta__ = {
 multiplier = 0.0
 
 [node name="Prototype 1a" type="Sprite" parent="."]
+visible = false
 position = Vector2( 1118.78, -26.2259 )
 rotation = 1.57079
 scale = Vector2( 0.30938, 1219.68 )
@@ -47,7 +49,6 @@ Darker area at top"
 }
 
 [node name="Prototype 1b" type="Sprite" parent="."]
-visible = false
 position = Vector2( 1118.78, -26.2259 )
 rotation = 1.57079
 scale = Vector2( 0.30938, 1219.68 )
