@@ -10,10 +10,11 @@ export(float) var max_duration = 20.0
 export(NodePath) var Level
 export(NodePath) var PauseScreen
 
-
 const Background = preload("res://systems/ScrollingBackground.gd")
 const Projectile = preload("res://Objects/Projectile.gd")
 const InformationDisplay = preload("res://Screens/InformationDisplay.gd")
+
+onready var position : Vector2 = Vector2(0,0)
 
 #player
 var player = null

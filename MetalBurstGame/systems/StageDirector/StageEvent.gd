@@ -27,5 +27,9 @@ func _execute_event():
 	
 func _process(_delta):
 	pass
+
+#called when event is added to the stage director
+func _on_event_added():
+	pass
 	
 

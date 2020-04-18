@@ -12,6 +12,9 @@ export(float) var spawn_x = 0 setget set_spawn_x,get_spawn_x
 
 #VARS
 var prev_y = NAN
+var entities = []
+var engine #same engine that houses the layers | not to be confused with godot's internal ENGINE
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -34,10 +37,25 @@ func set_time_using_alpha(duration,alpha):
 	override_time = true
 	event_time = duration * alpha
 	override_time = temp
-	
+
+func _on_event_added():
+	var children = get_children()
+	for child in children:
+		if(child is Enemy):
+			entities.append(child)
+			remove_child(child)
+	pass
 
 func _execute_event():
-	print("SpawnEvent=[event_time:%s spawn_x:%s]" % [get_time(),spawn_x])
+	var entity_layer = engine.get_node("EntityLayer")
+	for entity in entities:
+		var new_x = spawn_x + director.get_offset()
+		var new_y = director.position.y+entity.position.y
+		entity.position = Vector2(new_x,new_y)
+		entity_layer.add_child(entity)
+		entity.engine_ready(engine)
+		print("SpawnEvent=[event_time:%s spawn_x:%s spawn_y=%s]" % [get_time(),new_x,new_y])
+	entities.clear()
 	pass
 
 func set_spawn_x(x):

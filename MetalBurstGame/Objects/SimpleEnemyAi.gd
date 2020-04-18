@@ -3,6 +3,8 @@
 
 extends Node2D
 
+class_name Enemy
+
 export(float) var speed = 100
 
 const BULLET_TEST = preload("res://Objects/Projectiles.tscn")

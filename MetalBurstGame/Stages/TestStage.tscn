@@ -35,21 +35,31 @@ bus = "LevelOneBus"
 position = Vector2( 480, 0 )
 duration = 10.0
 LevelScene = NodePath("../Level")
-hatch_marks = 6
+hatch_marks = 10
 
 [node name="END" parent="StageDirector" index="1"]
-position = Vector2( 1441.27, -1529.31 )
-scale = Vector2( 15.4849, 7.55271 )
+position = Vector2( -744.258, -3041.52 )
+scale = Vector2( 7.06361, 5.00941 )
 
 [node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 288.689, -394.815 )
-event_time = 2.58165
-spawn_x = 288.689
+position = Vector2( -63.0148, -313.172 )
+event_time = 1.02966
+spawn_x = -63.0148
 
 [node name="Enemy4" parent="StageDirector/SpawnEvent" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
-position = Vector2( 2.13266, -209.469 )
+position = Vector2( 2.13269, -112.133 )
+
+[node name="SpawnEvent2" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 235.471, -2334.25 )
+event_time = 7.67461
+spawn_x = 235.471
+
+[node name="Enemy4" parent="StageDirector/SpawnEvent2" groups=[
+"Enemy",
+] instance=ExtResource( 2 )]
+position = Vector2( 2.13269, -112.133 )
 [connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]
 [connection signal="tree_exited" from="Level" to="Level" method="_on_Level_tree_exited"]
 

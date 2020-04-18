@@ -81,7 +81,16 @@ func _draw():
 				var index = i+1
 				hatchpos = Vector2(start_position.x,end_position.y-hatch_dist*index)
 				draw_line(Vector2(hatchpos.x-hatch_len/2,hatchpos.y), Vector2(hatchpos.x+hatch_len/2,hatchpos.y), hatch_color, hatch_width, true)
-		
+
+
+func get_offset():
+	if(!LevelScene.is_empty()):
+		var level = get_node(LevelScene)
+		var container = level.get_node("Container")
+		var c_size = container.rect_size
+		return  c_size.x / 2
+	return 0
+	
 
 func end_position_changed():
 	if(end.position.y >= start.position.y - 1000):
@@ -109,6 +118,21 @@ func _process(delta):
 				event._execute_event()
 				stage_events.erase(event)
 
+func add_stage_event(event):
+	stage_events.append(event)
+	event.engine = get_node(LevelScene).get_node("Container/PlayArea/Engine")
+	event._on_event_added()
+
+
+func add_all_events_to_queue():
+	for child in get_children():
+		if(child is StageEvent):
+			print(child.get_name()," added to StageEventQueue")
+			add_stage_event(child)
+			remove_child(child)
+			pass
+
+#UTILITIES
 func get_alpha_from_time(time):
 	return time / duration
 
@@ -121,17 +145,6 @@ func get_y_from_alpha(alpha):
 func get_alpha_from_y(ypos):
 	return ypos / get_dist()
 
-func add_stage_event(event):
-	stage_events.append(event)
-
-
-func add_all_events_to_queue():
-	for child in get_children():
-		if(child is StageEvent):
-			print(child.get_name()," added to StageEventQueue")
-			add_stage_event(child)
-			remove_child(child)
-			pass
 	
 func position_to_viewport():
 
@@ -140,6 +153,7 @@ func position_to_viewport():
 		var container = level.get_node("Container")
 		var c_pos = container.rect_position
 		var c_size = container.rect_size
-		position = Vector2(c_pos.x + c_size.x / 2, c_pos.y )
+		var offset = c_size.x / 2
+		position = Vector2(c_pos.x + offset, c_pos.y )
 
 
