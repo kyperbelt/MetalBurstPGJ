@@ -14,7 +14,6 @@ export(NodePath) var PauseScreen
 const Background = preload("res://systems/ScrollingBackground.gd")
 const Projectile = preload("res://Objects/Projectile.gd")
 const InformationDisplay = preload("res://Screens/InformationDisplay.gd")
-const StageDirector = preload("res://systems/StageDirector/StageDirector.gd")
 
 #player
 var player = null
@@ -36,10 +35,9 @@ func _process(delta):
 
 	# just increment the score every 2 seconds for a whole second
 	# while testing. 
-	# if(int(elapsed) % 2 == 0):
-	# 	player.score+=100
-	# 	if(informationDisplay!=null):
-	# 		informationDisplay.set_score(player.score,true)
+#	if(int(elapsed) % 2 == 0):
+#		player.score+=100
+#		informationDisplay.set_score(player.score,true)
 
 	if(Input.is_action_just_pressed(("pause"))):
 		get_node(PauseScreen).show()
@@ -60,7 +58,7 @@ func pre_process_entities():
 	for child in level_children:
 		var added : bool = false
 		if(child.is_in_group("Enemy")):
-			print("added "+child.name+" to entitylayer")
+			print("please use SceneDirector SPawnEvents to add to Entities to Stage [failed to add "+child.name+" to entitylayer]")
 			child.get_parent().remove_child(child)
 			$EntityLayer.add_child(child)
 			added = true

@@ -13,7 +13,7 @@ func _ready():
 	pass # Replace with function body.
 
 
-func _process(delta):
+func _process(_delta):
 	if(last_position!=position):
 		last_position = Vector2(position)
 		emit_signal("position_changed")

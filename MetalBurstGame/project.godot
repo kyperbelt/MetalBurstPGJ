@@ -14,6 +14,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Screens/InformationDisplay.gd"
 }, {
+"base": "StageEvent",
+"class": "SpawnEvent",
+"language": "GDScript",
+"path": "res://systems/StageDirector/Events/SpawnEvent.gd"
+}, {
+"base": "Node2D",
+"class": "StageDirector",
+"language": "GDScript",
+"path": "res://systems/StageDirector/StageDirector.gd"
+}, {
 "base": "Node2D",
 "class": "StageEvent",
 "language": "GDScript",
@@ -21,6 +31,8 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "InformationDisplay": "",
+"SpawnEvent": "res://placeholder_assets/tools/entity.png",
+"StageDirector": "res://placeholder_assets/tools/director.png",
 "StageEvent": "res://placeholder_assets/class_icons/StageEvent.png"
 }
 
