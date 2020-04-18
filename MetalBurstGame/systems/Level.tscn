@@ -1,17 +1,19 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Systems_Gameplay/PlayArea.gd" type="Script" id=1]
-[ext_resource path="res://Prefabs_Backgrounds/SpaceBackground.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scenes_Menus/PauseScreen.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Systems_Gameplay/Engine.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Systems_Gameplay/Level.gd" type="Script" id=5]
+[ext_resource path="res://systems/PlayArea.gd" type="Script" id=1]
+[ext_resource path="res://systems/Level.gd" type="Script" id=2]
+[ext_resource path="res://systems/Engine.tscn" type="PackedScene" id=3]
+[ext_resource path="res://systems/ScrollingBackground.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs_UIScreens/PauseScreen.tscn" type="PackedScene" id=5]
+
+
 
 [node name="Level" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_right = -4.0
 margin_bottom = -3.0
-script = ExtResource( 5 )
+script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -33,12 +35,11 @@ hdr = false
 render_target_update_mode = 3
 script = ExtResource( 1 )
 
-[node name="SpaceBackground" parent="Container/PlayArea" instance=ExtResource( 2 )]
-visible = false
+[node name="ScrollingBackground" parent="Container/PlayArea" instance=ExtResource( 4 )]
 
-[node name="Engine" parent="Container/PlayArea" instance=ExtResource( 4 )]
+[node name="Engine" parent="Container/PlayArea" instance=ExtResource( 3 )]
 Level = NodePath("../../..")
 PauseScreen = NodePath("../../../PauseScreens")
 
-[node name="PauseScreens" parent="." instance=ExtResource( 3 )]
+[node name="PauseScreens" parent="." instance=ExtResource( 5 )]
 visible = false

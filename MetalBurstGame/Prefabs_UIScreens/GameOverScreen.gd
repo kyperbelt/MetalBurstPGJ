@@ -25,7 +25,7 @@ func selection_made(selection : int):
 				print("could not change scene")
 			pass
 		1:
-			var scene = "res://Scenes_Menus/TitleScreen.tscn"
+			var scene = "res://Prefabs_UIScreens/TitleScreen.tscn"
 			var result = get_tree().change_scene(scene)
 			if(result != OK):
 				print("could not change to scene %s" % scene)

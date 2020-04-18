@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Scenes_Menus/PauseScreen.gd" type="Script" id=1]
-[ext_resource path="res://Assets_UIScreens/paused.png" type="Texture" id=2]
-[ext_resource path="res://Assets_UIScreens/pauseOverlay.png" type="Texture" id=3]
-[ext_resource path="res://Systems_Menus/OptionsMenu.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Systems_Menus/MenuOption.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs_UIScreens/PauseScreen.gd" type="Script" id=1]
+[ext_resource path="res://Assets_UIScreens/pauseOverlay.png" type="Texture" id=2]
+[ext_resource path="res://Assets_UIScreens/paused.png" type="Texture" id=3]
+[ext_resource path="res://systems/OptionsMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://systems/MenuOption.gd" type="Script" id=5]
 
 [node name="PauseScreens" type="Control"]
 anchor_right = 1.0
@@ -20,11 +20,11 @@ __meta__ = {
 modulate = Color( 1, 1, 1, 0.4 )
 position = Vector2( 513.344, 291.442 )
 scale = Vector2( 33.084, 19.2151 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="paused" type="Sprite" parent="."]
 position = Vector2( 496.936, 126.664 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="OptionsMenu" parent="." instance=ExtResource( 4 )]
 anchor_right = 0.0

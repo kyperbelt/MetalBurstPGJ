@@ -4,7 +4,7 @@ var options = []
 
 var _selection : int = 0 #selection
 
-var MenuOption = preload("res://Systems_Menus/MenuOption.gd")
+var MenuOption = preload("res://systems/MenuOption.gd")
 
 signal selection_changed #changed the selection
 signal selection_entered #entered the selection
