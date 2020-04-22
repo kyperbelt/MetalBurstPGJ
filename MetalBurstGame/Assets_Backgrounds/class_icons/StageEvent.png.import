@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StageEvent.png-c967778d5beea3895f99924f591d69b6.stex"
+path="res://.import/StageEvent.png-7c2abcee177b89cff095a80a5904765e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://placeholder_assets/class_icons/StageEvent.png"
-dest_files=[ "res://.import/StageEvent.png-c967778d5beea3895f99924f591d69b6.stex" ]
+source_file="res://Assets_Backgrounds/class_icons/StageEvent.png"
+dest_files=[ "res://.import/StageEvent.png-7c2abcee177b89cff095a80a5904765e.stex" ]
 
 [params]
 

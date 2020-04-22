@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/pointA.png-7e3e34d7a0ef439d55e067637c438411.stex"
+path="res://.import/pointA.png-142321e1ecc06892f16dd93024c0c8c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://placeholder_assets/tools/pointA.png"
-dest_files=[ "res://.import/pointA.png-7e3e34d7a0ef439d55e067637c438411.stex" ]
+source_file="res://Assets_Backgrounds/tools/pointA.png"
+dest_files=[ "res://.import/pointA.png-142321e1ecc06892f16dd93024c0c8c6.stex" ]
 
 [params]
 
