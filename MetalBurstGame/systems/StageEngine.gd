@@ -11,8 +11,8 @@ export(NodePath) var Level
 export(NodePath) var PauseScreen
 
 const Background = preload("res://systems/ScrollingBackground.gd")
-const Projectile = preload("res://Objects/Projectile.gd")
-const InformationDisplay = preload("res://Screens/InformationDisplay.gd")
+const Projectile = preload("res://Prefabs_FoeDanmaku/Projectile.gd")
+const InformationDisplay = preload("res://Prefabs_UIScreens/InformationDisplay.gd")
 
 onready var position : Vector2 = Vector2(0,0)
 
@@ -90,7 +90,7 @@ func center_player():
 func player_hit():
 	if(player.lives <= 0):
 		player.get_parent().remove_child(player)
-		var _ok = get_tree().change_scene("res://Screens/GameOverScreen.tscn")
+		var _ok = get_tree().change_scene("res://Prefabs_UIScreens/GameOverScreen.tscn")
 	else:
 		informationDisplay.set_lives(player.lives,false)
 	pass

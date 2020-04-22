@@ -4,7 +4,9 @@
 [ext_resource path="res://systems/Level.gd" type="Script" id=2]
 [ext_resource path="res://systems/Engine.tscn" type="PackedScene" id=3]
 [ext_resource path="res://systems/ScrollingBackground.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Screens/PauseScreen.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs_UIScreens/PauseScreen.tscn" type="PackedScene" id=5]
+
+
 
 [node name="Level" type="Control"]
 anchor_right = 1.0

@@ -22,27 +22,7 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "InformationDisplay",
 "language": "GDScript",
-"path": "res://Screens/InformationDisplay.gd"
-}, {
-"base": "StageEvent",
-"class": "PositionalEvent",
-"language": "GDScript",
-"path": "res://systems/StageDirector/Events/PositionalEvent.gd"
-}, {
-"base": "PositionalEvent",
-"class": "SpawnEvent",
-"language": "GDScript",
-"path": "res://systems/StageDirector/Events/SpawnEvent.gd"
-}, {
-"base": "Node2D",
-"class": "StageDirector",
-"language": "GDScript",
-"path": "res://systems/StageDirector/StageDirector.gd"
-}, {
-"base": "Node2D",
-"class": "StageEvent",
-"language": "GDScript",
-"path": "res://systems/StageDirector/StageEvent.gd"
+"path": "res://Prefabs_UIScreens/InformationDisplay.gd"
 } ]
 _global_script_class_icons={
 "EndStageEvent": "res://placeholder_assets/tools/exit.png",
@@ -57,7 +37,7 @@ _global_script_class_icons={
 [application]
 
 config/name="MetalBurstGame"
-run/main_scene="res://Screens/TitleScreen.tscn"
+run/main_scene="res://Prefabs_UIScreens/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]

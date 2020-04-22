@@ -7,7 +7,7 @@ var screen_size
 var margin = 80
 var player_bullet_image
 
-var _Player = preload("res://Objects/Player.tscn");
+var _Player = preload("res://Prefabs_PlayerRelevant/Player.tscn");
 var _player = null
 
 # Called when the node enters the scene tree for the first time.
@@ -15,7 +15,7 @@ func _enter_tree():
 	screen_size = OS.get_screen_size(0)
 	var window_size = OS.get_window_size()
 	OS.set_window_position(screen_size*0.5 - window_size*0.5)
-	player_bullet_image = preload("res://placeholder_assets/bullet.png")
+	player_bullet_image = preload("res://Assets_PlayerRelevant/bullet.png")
 
 
 func get_player():
