@@ -29,10 +29,20 @@ onready var start = $START
 onready var end = $END
 
 #EXPORT OPTIONS
-export(bool) var display_timeline = true
-export(float,10.0,600.0) var duration
-export(NodePath) var LevelScene
+
+export(String) var G_U_I_D_E_S = get_sep() setget set_sep,get_sep
+export(bool) var show_timeline = true setget set_show_timeline
 export(int) var hatch_marks = 3
+export(bool) var show_bounds = true setget set_show_bounds
+export(Color) var bounds_color = Color.red setget set_bounds_color
+
+
+export(String) var T_U_N_I_N_G = get_sep() setget set_sep,get_sep
+
+export(float) var duration = 10.0 setget set_duration,get_duration
+
+export(String) var D_E_P_E_N_D_E_N_C_Y = get_sep() setget set_sep,get_sep
+export(NodePath) var LevelScene
 
 #CLASS VARIABLES
 var elapsed : float = 0.0;
@@ -51,13 +61,34 @@ func _ready():
 		start_position = Vector2(start.position)
 		if(end.position == start.position):
 			end.position = Vector2(start.position.x,start.position.y - 1000)
-		
+		update()
 	else:
 		#IN GAME
 		start.set_visible(false)
 		end.set_visible(false)
 		set_process(true)
 		add_all_events_to_queue()
+
+func set_sep(_sep):
+	update()
+	pass
+
+func get_sep():
+	return ""
+
+func set_bounds_color(color):
+	bounds_color = color
+	update()
+
+func set_duration(d):
+	duration = d if d > 10 else 10
+
+func get_duration():
+	return duration
+
+func set_show_bounds(show):
+	show_bounds = show
+	update()
 
 func _draw():
 	if(Engine.editor_hint):
@@ -67,8 +98,11 @@ func _draw():
 			var c_pos = Vector2(container.rect_position.x-position.x,container.rect_position.y)
 			var c_size = container.rect_size
 			draw_rect(Rect2(c_pos,c_size),Color.black,true)
+			if(show_bounds):
+				draw_rect(Rect2(c_pos,Vector2(c_size.x,get_dist())),bounds_color,false)
+			
 		
-		if(display_timeline):
+		if(show_timeline):
 			draw_line(Vector2(start_position), Vector2(start_position.x,end_position.y), Color.white, 4, true)
 			draw_line(Vector2(start_position.x,end_position.y), Vector2(end_position), Color.red, 6, true)
 			var hatchpos = Vector2(0,0)
@@ -82,7 +116,10 @@ func _draw():
 				hatchpos = Vector2(start_position.x,end_position.y-hatch_dist*index)
 				draw_line(Vector2(hatchpos.x-hatch_len/2,hatchpos.y), Vector2(hatchpos.x+hatch_len/2,hatchpos.y), hatch_color, hatch_width, true)
 
-
+func set_show_timeline(show):
+	show_timeline = show
+	update()
+	
 func get_offset():
 	if(!LevelScene.is_empty()):
 		var level = get_node(LevelScene)
@@ -130,7 +167,14 @@ func add_all_events_to_queue():
 			print(child.get_name()," added to StageEventQueue")
 			add_stage_event(child)
 			remove_child(child)
-			pass
+
+#get the current time in the timeline
+func get_current_time():
+	return elapsed
+
+#get the time percentage in the timeline 0-1
+func get_time_percentage():
+	return get_alpha_from_time(elapsed)
 
 #UTILITIES
 func get_alpha_from_time(time):

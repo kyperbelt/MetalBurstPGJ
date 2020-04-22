@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "PositionalEvent",
+"class": "EndStageEvent",
+"language": "GDScript",
+"path": "res://systems/StageDirector/Events/EndStageEvent.gd"
+}, {
 "base": "Node2D",
 "class": "Enemy",
 "language": "GDScript",
@@ -20,6 +25,11 @@ _global_script_classes=[ {
 "path": "res://Screens/InformationDisplay.gd"
 }, {
 "base": "StageEvent",
+"class": "PositionalEvent",
+"language": "GDScript",
+"path": "res://systems/StageDirector/Events/PositionalEvent.gd"
+}, {
+"base": "PositionalEvent",
 "class": "SpawnEvent",
 "language": "GDScript",
 "path": "res://systems/StageDirector/Events/SpawnEvent.gd"
@@ -35,8 +45,10 @@ _global_script_classes=[ {
 "path": "res://systems/StageDirector/StageEvent.gd"
 } ]
 _global_script_class_icons={
+"EndStageEvent": "res://placeholder_assets/tools/exit.png",
 "Enemy": "",
 "InformationDisplay": "",
+"PositionalEvent": "res://placeholder_assets/class_icons/StageEvent.png",
 "SpawnEvent": "res://placeholder_assets/tools/entity.png",
 "StageDirector": "res://placeholder_assets/tools/director.png",
 "StageEvent": "res://placeholder_assets/class_icons/StageEvent.png"
