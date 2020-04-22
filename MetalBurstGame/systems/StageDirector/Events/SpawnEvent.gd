@@ -5,7 +5,12 @@ class_name SpawnEvent, "res://placeholder_assets/tools/entity.png"
 
 #SIGNALS
 
-#Exports
+#EXPORTS
+export(String) var S_P_A_W_N = get_sep() setget set_sep,get_sep
+func set_sep(_sep):
+	update()
+func get_sep():
+	return ""
 export(float) var spawn_x = 0 setget set_spawn_x,get_spawn_x
 
 #VARS

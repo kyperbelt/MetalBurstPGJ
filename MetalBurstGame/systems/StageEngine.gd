@@ -45,12 +45,10 @@ func _process(delta):
 		get_tree().paused = true
 	if(elapsed>=max_duration):
 		elapsed=0
-		#remove player so that it doesnt get freed
-		player.get_parent().remove_child(player) #=================?????
 
-		var code = get_tree().change_scene("res://Screens/GameOverScreen.tscn")
-		if(code != OK):
-			print("failed to change to gameover screen")
+func cleanup():
+	#remove player so that it doesnt get freed
+	player.get_parent().remove_child(player) #=================?????
 
 #proceess the entities in the level by adding them to engine
 #so that logic works properly

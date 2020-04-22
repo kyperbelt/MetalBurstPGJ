@@ -8,7 +8,11 @@ class_name PositionalEvent, "res://placeholder_assets/class_icons/StageEvent.png
 #SIGNALS
 
 #EXPORTS
-
+export(String) var P_O_S_I_T_O_N = get_sep() setget set_sep,get_sep
+func set_sep(_sep):
+	update()
+func get_sep():
+	return ""
 	#if true ignores the positional based timing.
 export(bool) var override_time = false
 
@@ -21,10 +25,14 @@ func _ready():
 	if Engine.editor_hint:
 		update()
 	
-func _on_timeline_change():
+func _on_timeline_change(duration_changed:bool):
 	if(!override_time):
 		var sd : StageDirector = director as StageDirector
-		var alpha = sd.get_alpha_from_time(event_time)
+		var alpha = 1
+		if(!duration_changed):
+			alpha = sd.get_alpha_from_time(event_time)
+		else:
+			alpha = sd.get_alpha_from_y(position.y)
 		position.y = sd.get_y_from_alpha(alpha)
 		prev_y = position.y
 		set_time_using_alpha(sd.duration,alpha)
@@ -38,7 +46,9 @@ func set_time_using_alpha(duration,alpha):
 	event_time = duration * alpha
 	override_time = temp
 	
-	
+
+
+
 func set_time(time):
 	if(override_time):
 		.set_time(time)

@@ -1,7 +1,10 @@
+tool
 extends Node2D
 
 class_name StageEvent, "res://placeholder_assets/class_icons/StageEvent.png"
 
+#EXPORT
+export(String) var B_A_S_E = get_sep() setget set_sep,get_sep
 export(float)var event_time setget set_time,get_time
 
 onready var director = get_parent()
@@ -13,7 +16,7 @@ func _ready():
 	director.connect("timeline_changed",self,"_on_timeline_change")
 
 #override - called when the timeline has changed either in duration or scale
-func _on_timeline_change():
+func _on_timeline_change(duration_changed:bool):
 	pass
 
 func set_time(time):
@@ -30,8 +33,6 @@ func _process(_delta):
 
 func set_sep(_sep):
 	update()
-	pass
-
 func get_sep():
 	return ""
 

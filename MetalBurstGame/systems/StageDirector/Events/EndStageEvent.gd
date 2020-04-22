@@ -10,8 +10,13 @@ when the duration is exceeded. It will then transfer to the
 desired scene. You can specify if you want there to be an delay from
 the time it executes. 
 """
-
-export var offset : float setget set_offset,get_offset
+#EXPORTS
+export(String) var E_N_D = get_sep() setget set_sep,get_sep
+func set_sep(_sep):
+	update()
+func get_sep():
+	return ""
+export var delay : float setget set_delay,get_delay
 export(PackedScene) var Target
 
 
@@ -20,11 +25,11 @@ func _ready():
 		set("editor_description",EDITOR_DESC)
 		
 
-func get_offset():
-	return offset
+func get_delay():
+	return delay
 	
-func set_offset(o):
-	offset = o if o > 0 else 0
+func set_delay(time):
+	delay = time if time > 0 else 0
 	_y_changed()
 
 func get_time():
@@ -37,7 +42,7 @@ func get_time():
 func _y_changed():
 	if(!override_time):
 		var sd = director as StageDirector
-		position.y = sd.get_y_from_alpha((sd.duration+offset)/sd.duration) if sd!=null else position.y
+		position.y = sd.get_y_from_alpha((sd.duration+delay)/sd.duration) if sd!=null else position.y
 		update()
 
 func _process(_delta):
@@ -46,6 +51,11 @@ func _process(_delta):
 		
 
 func _execute_event():
+	
+	engine.cleanup()
+	var code = director.get_tree().change_scene_to(Target)
+	if(code != OK):
+		print("switching to [%s]" % Target)
 	print("[END STAGE EVENT] executed")
 	pass
 

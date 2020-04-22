@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://systems/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Objects/Enemy.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://systems/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://systems/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://systems/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Screens/GameOverScreen.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Gradient" id=1]
 
@@ -35,15 +36,16 @@ bus = "LevelOneBus"
 [node name="StageDirector" parent="." instance=ExtResource( 6 )]
 position = Vector2( 480, 0 )
 bounds_color = Color( 0, 0.6, 1, 1 )
+duration = 30.0
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
-position = Vector2( 662.04, -1421.86 )
+position = Vector2( 1086.64, -1584.4 )
 scale = Vector2( 7.06361, 5.00941 )
 
 [node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( -149.244, -481.109 )
-event_time = 3.38367
+position = Vector2( -149.244, -422.459 )
+event_time = 7.99907
 spawn_x = -149.244
 
 [node name="Enemy4" parent="StageDirector/SpawnEvent" groups=[
@@ -52,8 +54,8 @@ spawn_x = -149.244
 position = Vector2( 2.13269, -112.133 )
 
 [node name="SpawnEvent4" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 94.1789, -260.767 )
-event_time = 1.83399
+position = Vector2( 94.1789, -228.98 )
+event_time = 4.33563
 spawn_x = 94.1789
 
 [node name="Enemy4" parent="StageDirector/SpawnEvent4" groups=[
@@ -67,9 +69,9 @@ position = Vector2( -153.78, 213.54 )
 position = Vector2( -356.252, 49.3885 )
 
 [node name="SpawnEvent2" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 125.478, -840.247 )
-event_time = 5.90951
-spawn_x = 125.478
+position = Vector2( 76.4353, -849.506 )
+event_time = 16.085
+spawn_x = 76.4353
 
 [node name="Enemy4" parent="StageDirector/SpawnEvent2" groups=[
 "Enemy",
@@ -77,8 +79,8 @@ spawn_x = 125.478
 position = Vector2( 2.13269, -112.133 )
 
 [node name="SpawnEvent3" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 123.597, -512.125 )
-event_time = 3.60181
+position = Vector2( 123.597, -449.694 )
+event_time = 8.51476
 spawn_x = 123.597
 
 [node name="Enemy4" parent="StageDirector/SpawnEvent3" groups=[
@@ -87,8 +89,9 @@ spawn_x = 123.597
 position = Vector2( 2.13269, -112.133 )
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 8 )]
-position = Vector2( -120.01, -1421.86 )
-Target = NodePath("")
+position = Vector2( -186.594, -1584.4 )
+event_time = 30.0
+Target = ExtResource( 9 )
 [connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]
 [connection signal="tree_exited" from="Level" to="Level" method="_on_Level_tree_exited"]
 

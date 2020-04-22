@@ -82,6 +82,8 @@ func set_bounds_color(color):
 
 func set_duration(d):
 	duration = d if d > 10 else 10
+	#timeline changed and the duration was changed so its true
+	emit_signal("timeline_changed",true)
 
 func get_duration():
 	return duration
@@ -134,7 +136,8 @@ func end_position_changed():
 		end.position.y = start.position.y - 1000
 	end_position = Vector2(end.position)
 	start_position = Vector2(start.position)
-	emit_signal("timeline_changed")
+	#timeline was changed but the duration was not so its false
+	emit_signal("timeline_changed",false)
 	update()
 	
 	
