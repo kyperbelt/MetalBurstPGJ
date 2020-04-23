@@ -1,0 +1,31 @@
+extends Node2D
+
+
+export(PackedScene) var NEW_GAME_SCENE
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	Globals.delete_player()
+	get_tree().paused = false#just in case the game was paused
+	pass # Replace with function body.
+
+func selection_made(selection : int):
+	print("selected option %s " % selection)
+	$OptionsFocusAudioStreamPlayer.play()
+	yield(get_tree().create_timer(1.0), "timeout")
+	match selection:
+		0:
+			var result = get_tree().change_scene_to(NEW_GAME_SCENE)
+			if(result != OK):
+				print("could not change scene")
+			pass
+		1:
+			print("option %s is not yet implemented!" % selection)
+			pass
+		2:
+			get_tree().quit()
+			pass
+		_: 
+			print("%s is not a valid selection" % selection)
+	pass
+

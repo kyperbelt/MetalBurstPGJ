@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/Projectiles/BulletTest.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Projectiles/enemy_bullet.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Projectiles/bullet.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Sprite" type="Sprite"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "StageFoe Bullets"
+}
+PROJECTILE_TYPES = [ ExtResource( 3 ), ExtResource( 2 ) ]
+
+[node name="BulletTestArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BulletTestArea"]
+shape = SubResource( 1 )

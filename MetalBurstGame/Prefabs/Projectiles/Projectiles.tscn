@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prefabs/Projectiles/Projectiles.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Projectiles/enemy_bullet.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Projectiles/player_bomb_sm.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Projectiles/bullet.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="ProjectilesSprite" type="Sprite"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Player's Bullet"
+}
+PROJECTILE_TYPES = [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 3 ) ]
+
+[node name="ProjectilesArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectilesArea"]
+shape = SubResource( 1 )

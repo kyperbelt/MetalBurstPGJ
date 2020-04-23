@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/StageDirector.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/StageDirector/Indicators/START.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/System/StageDirector/Indicators/END.tscn" type="PackedScene" id=3]
+
+
+
+[node name="StageDirector" type="Node2D"]
+position = Vector2( -3.55054, -10.6516 )
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "HelloWorld",
+"editor_description": "HelloWorld"
+}
+stage_duration = 600.0
+
+[node name="START" parent="." instance=ExtResource( 2 )]
+
+[node name="END" parent="." instance=ExtResource( 3 )]
+position = Vector2( 643.419, -2148.98 )

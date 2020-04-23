@@ -10,56 +10,86 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Sprite",
+"class": "BackgroundLayer",
+"language": "GDScript",
+"path": "res://Prefabs/System/BackgroundLayer.gd"
+}, {
+"base": "Sprite",
 "class": "EndNode",
 "language": "GDScript",
-"path": "res://systems/StageDirector/Indicators/END.gd"
+"path": "res://Prefabs/System/StageDirector/Indicators/END.gd"
 }, {
 "base": "PositionalEvent",
 "class": "EndStageEvent",
 "language": "GDScript",
-"path": "res://systems/StageDirector/Events/EndStageEvent.gd"
+"path": "res://Prefabs/System/StageDirector/Events/EndStageEvent.gd"
 }, {
 "base": "Node2D",
 "class": "Enemy",
 "language": "GDScript",
-"path": "res://Prefabs_StageFoes/SimpleEnemyAi.gd"
+"path": "res://Prefabs/Enemies/SimpleEnemyAi.gd"
 }, {
 "base": "Control",
 "class": "InformationDisplay",
 "language": "GDScript",
-"path": "res://Prefabs_UIScreens/InformationDisplay.gd"
+"path": "res://Prefabs/Screens/InformationDisplay.gd"
+}, {
+"base": "Label",
+"class": "MenuOption",
+"language": "GDScript",
+"path": "res://Prefabs/System/MenuOption.gd"
+}, {
+"base": "Node2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Prefabs/Player/Player.gd"
 }, {
 "base": "StageEvent",
 "class": "PositionalEvent",
 "language": "GDScript",
-"path": "res://systems/StageDirector/Events/PositionalEvent.gd"
+"path": "res://Prefabs/System/StageDirector/Events/PositionalEvent.gd"
+}, {
+"base": "Sprite",
+"class": "Projectiles",
+"language": "GDScript",
+"path": "res://Prefabs/Projectiles/Projectiles.gd"
+}, {
+"base": "Node2D",
+"class": "ScrollingBackground",
+"language": "GDScript",
+"path": "res://Prefabs/System/ScrollingBackground.gd"
 }, {
 "base": "PositionalEvent",
 "class": "SpawnEvent",
 "language": "GDScript",
-"path": "res://systems/StageDirector/Events/SpawnEvent.gd"
+"path": "res://Prefabs/System/StageDirector/Events/SpawnEvent.gd"
 }, {
 "base": "Node2D",
 "class": "StageDirector",
 "language": "GDScript",
-"path": "res://systems/StageDirector/StageDirector.gd"
+"path": "res://Prefabs/System/StageDirector/StageDirector.gd"
 }, {
 "base": "Node2D",
 "class": "StageEvent",
 "language": "GDScript",
-"path": "res://systems/StageDirector/StageEvent.gd"
+"path": "res://Prefabs/System/StageDirector/StageEvent.gd"
 }, {
 "base": "Sprite",
 "class": "StartNode",
 "language": "GDScript",
-"path": "res://systems/StageDirector/Indicators/START.gd"
+"path": "res://Prefabs/System/StageDirector/Indicators/START.gd"
 } ]
 _global_script_class_icons={
+"BackgroundLayer": "",
 "EndNode": "",
 "EndStageEvent": "res://Assets/Tools/exit.png",
 "Enemy": "",
 "InformationDisplay": "",
+"MenuOption": "",
+"Player": "",
 "PositionalEvent": "res://Assets/Tools/pointA.png",
+"Projectiles": "",
+"ScrollingBackground": "",
 "SpawnEvent": "res://Assets/Tools/entity.png",
 "StageDirector": "res://Assets/Tools/director.png",
 "StageEvent": "res://Assets/Tools/open.png",
@@ -69,7 +99,7 @@ _global_script_class_icons={
 [application]
 
 config/name="MetalBurstGame"
-run/main_scene="res://Prefabs_UIScreens/TitleScreen.tscn"
+run/main_scene="res://Prefabs/Screens/TitleScreen.tscn"
 config/icon="res://icon.png"
 
 [autoload]

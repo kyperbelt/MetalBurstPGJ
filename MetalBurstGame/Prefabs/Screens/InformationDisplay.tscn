@@ -1,0 +1,94 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Prefabs/Screens/InformationDisplay.gd" type="Script" id=1]
+
+
+
+
+[node name="InformationDisplay" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LivesContainer" type="HBoxContainer" parent="."]
+margin_left = 10.9388
+margin_top = 475.058
+margin_right = 59.9388
+margin_bottom = 515.058
+rect_scale = Vector2( 2.3, 1.8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LivesLabel" type="Label" parent="LivesContainer"]
+margin_top = 12.0
+margin_right = 37.0
+margin_bottom = 26.0
+text = "Lives:"
+
+[node name="Lives" type="Label" parent="LivesContainer"]
+margin_left = 41.0
+margin_top = 12.0
+margin_right = 77.0
+margin_bottom = 26.0
+text = "@@@"
+
+[node name="ScoreContainer" type="VBoxContainer" parent="."]
+margin_left = 775.084
+margin_top = 454.144
+margin_right = 855.084
+margin_bottom = 486.144
+rect_scale = Vector2( 2.45617, 2.11416 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScoreLabel" type="Label" parent="ScoreContainer"]
+margin_right = 80.0
+margin_bottom = 14.0
+text = "Score:"
+align = 1
+
+[node name="Score" type="Label" parent="ScoreContainer"]
+margin_top = 18.0
+margin_right = 80.0
+margin_bottom = 32.0
+text = "0000000000"
+
+[node name="BombContainer" type="HBoxContainer" parent="."]
+margin_left = 10.9388
+margin_top = 430.744
+margin_right = 71.9388
+margin_bottom = 470.744
+rect_scale = Vector2( 2.3, 1.8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BombLabel" type="Label" parent="BombContainer"]
+margin_top = 13.0
+margin_right = 49.0
+margin_bottom = 27.0
+text = "Bombs:"
+
+[node name="Bombs" type="Label" parent="BombContainer"]
+margin_left = 53.0
+margin_top = 13.0
+margin_right = 61.0
+margin_bottom = 27.0
+text = "0"
+
+[node name="StageName" type="Label" parent="."]
+margin_left = 800.477
+margin_top = 27.0
+margin_right = 872.477
+margin_bottom = 41.0
+rect_scale = Vector2( 2.3, 1.8 )
+text = "StageName"
+__meta__ = {
+"_edit_use_anchors_": false
+}
