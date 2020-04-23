@@ -1,7 +1,7 @@
 tool
 extends Node2D
 
-class_name StageEvent, "res://placeholder_assets/class_icons/StageEvent.png"
+class_name StageEvent, "res://Assets/Tools/open.png"
 
 #EXPORT
 export(String) var B_A_S_E = get_sep() setget set_sep,get_sep
@@ -16,6 +16,7 @@ func _ready():
 	director.connect("timeline_changed",self,"_on_timeline_change")
 
 #override - called when the timeline has changed either in duration or scale
+# warning-ignore:unused_argument
 func _on_timeline_change(duration_changed:bool):
 	pass
 

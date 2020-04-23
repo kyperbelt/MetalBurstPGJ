@@ -1,7 +1,7 @@
 tool
 extends PositionalEvent
 
-class_name SpawnEvent, "res://placeholder_assets/tools/entity.png"
+class_name SpawnEvent, "res://Assets/Tools/entity.png"
 
 #SIGNALS
 

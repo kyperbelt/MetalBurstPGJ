@@ -1,6 +1,7 @@
 tool
 extends Sprite
 
+class_name EndNode
 #Declare signals here
 signal position_changed
 

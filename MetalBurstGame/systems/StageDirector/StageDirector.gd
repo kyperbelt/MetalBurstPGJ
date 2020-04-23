@@ -12,12 +12,7 @@ and even ending the level/stage if it has taken too long.
 @jonathan camarena
 """
 
-class_name StageDirector, "res://placeholder_assets/tools/director.png"
-
-#CONSTS
-const StageEvent = preload("res://systems/StageDirector/StageEvent.gd")
-const END_NODE = preload("res://systems/StageDirector/Indicators/END.tscn")
-
+class_name StageDirector, "res://Assets/Tools/director.png"
 
 
 #SIGNALS

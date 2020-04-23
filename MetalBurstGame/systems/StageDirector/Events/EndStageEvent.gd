@@ -1,7 +1,7 @@
 tool
 extends PositionalEvent
 
-class_name EndStageEvent, "res://placeholder_assets/tools/exit.png"
+class_name EndStageEvent, "res://Assets/Tools/exit.png"
 
 const EDITOR_DESC="""
 This event is not based on position. Rather, it only 

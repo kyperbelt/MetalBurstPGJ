@@ -3,7 +3,7 @@ extends StageEvent
 
 #Stage event that auto adjusts itself based on timeline
 #changes.
-class_name PositionalEvent, "res://placeholder_assets/class_icons/StageEvent.png"
+class_name PositionalEvent, "res://Assets/Tools/pointA.png"
 
 #SIGNALS
 

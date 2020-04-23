@@ -10,11 +10,6 @@
 [ext_resource path="res://systems/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs_UIScreens/GameOverScreen.tscn" type="PackedScene" id=9]
 
-
-
-
-
-
 [sub_resource type="Gradient" id=1]
 
 [sub_resource type="GradientTexture" id=2]
@@ -45,12 +40,12 @@ duration = 30.0
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
-position = Vector2( 1086.64, -1584.4 )
+position = Vector2( 846.331, -1623.63 )
 scale = Vector2( 7.06361, 5.00941 )
 
 [node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( -149.244, -422.459 )
-event_time = 7.99907
+position = Vector2( -149.244, -432.92 )
+event_time = 7.9991
 spawn_x = -149.244
 
 [node name="Enemy4" parent="StageDirector/SpawnEvent" groups=[
@@ -59,8 +54,8 @@ spawn_x = -149.244
 position = Vector2( 2.13269, -112.133 )
 
 [node name="SpawnEvent4" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 94.1789, -228.98 )
-event_time = 4.33563
+position = Vector2( 94.1789, -234.65 )
+event_time = 4.33565
 spawn_x = 94.1789
 
 [node name="Enemy4" parent="StageDirector/SpawnEvent4" groups=[
@@ -74,8 +69,8 @@ position = Vector2( -153.78, 213.54 )
 position = Vector2( -356.252, 49.3885 )
 
 [node name="SpawnEvent2" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 76.4353, -849.506 )
-event_time = 16.085
+position = Vector2( 76.4353, -870.542 )
+event_time = 16.0851
 spawn_x = 76.4353
 
 [node name="Enemy4" parent="StageDirector/SpawnEvent2" groups=[
@@ -84,8 +79,8 @@ spawn_x = 76.4353
 position = Vector2( 2.13269, -112.133 )
 
 [node name="SpawnEvent3" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 123.597, -449.694 )
-event_time = 8.51476
+position = Vector2( 123.597, -460.83 )
+event_time = 8.51478
 spawn_x = 123.597
 
 [node name="Enemy4" parent="StageDirector/SpawnEvent3" groups=[
@@ -94,7 +89,7 @@ spawn_x = 123.597
 position = Vector2( 2.13269, -112.133 )
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 8 )]
-position = Vector2( -186.594, -1584.4 )
+position = Vector2( -186.594, -1623.63 )
 event_time = 30.0
 Target = ExtResource( 9 )
 [connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]

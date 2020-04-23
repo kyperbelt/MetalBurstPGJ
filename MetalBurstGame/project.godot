@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Sprite",
+"class": "EndNode",
+"language": "GDScript",
+"path": "res://systems/StageDirector/Indicators/END.gd"
+}, {
 "base": "PositionalEvent",
 "class": "EndStageEvent",
 "language": "GDScript",
@@ -43,15 +48,22 @@ _global_script_classes=[ {
 "class": "StageEvent",
 "language": "GDScript",
 "path": "res://systems/StageDirector/StageEvent.gd"
+}, {
+"base": "Sprite",
+"class": "StartNode",
+"language": "GDScript",
+"path": "res://systems/StageDirector/Indicators/START.gd"
 } ]
 _global_script_class_icons={
-"EndStageEvent": "",
+"EndNode": "",
+"EndStageEvent": "res://Assets/Tools/exit.png",
 "Enemy": "",
 "InformationDisplay": "",
-"PositionalEvent": "",
-"SpawnEvent": "",
-"StageDirector": "",
-"StageEvent": ""
+"PositionalEvent": "res://Assets/Tools/pointA.png",
+"SpawnEvent": "res://Assets/Tools/entity.png",
+"StageDirector": "res://Assets/Tools/director.png",
+"StageEvent": "res://Assets/Tools/open.png",
+"StartNode": ""
 }
 
 [application]
