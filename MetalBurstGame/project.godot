@@ -177,6 +177,16 @@ pause={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Default"
+2d_physics/layer_2="Background"
+2d_physics/layer_3="Player"
+2d_physics/layer_4="Enemies"
+2d_physics/layer_5="EnemyBullets"
+2d_physics/layer_6="PlayerBullets"
+2d_physics/layer_7="PlayerBombs"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
