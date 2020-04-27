@@ -18,8 +18,8 @@ gradient = SubResource( 1 )
 [node name="Stage" type="Node"]
 
 [node name="gui_background" type="Sprite" parent="."]
-position = Vector2( 1025.27, 250.167 )
-scale = Vector2( 1, 845.825 )
+position = Vector2( 777.411, 338.688 )
+scale = Vector2( 1, 1022.87 )
 texture = SubResource( 2 )
 
 [node name="Level" parent="." instance=ExtResource( 1 )]
@@ -34,9 +34,15 @@ bus = "LevelOneBus"
 [node name="InformationDisplay" parent="Level" instance=ExtResource( 5 )]
 
 [node name="StageDirector" parent="." instance=ExtResource( 6 )]
-position = Vector2( 480, 0 )
+position = Vector2( 640, 0 )
+G_U_I_D_E_S = ""
+show_timeline = true
 hatch_marks = 10
+show_bounds = true
+bounds_color = Color( 1, 0, 0, 1 )
+T_U_N_I_N_G = ""
 duration = 30.0
+D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
@@ -46,7 +52,7 @@ scale = Vector2( 7.06361, 5.00941 )
 [node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -149.244, -454.257 )
 B_A_S_E = ""
-event_time = null
+event_time = 7.37602
 P_O_S_I_T_O_N = ""
 override_time = false
 S_P_A_W_N = ""
@@ -60,7 +66,7 @@ position = Vector2( 2.13269, -112.133 )
 [node name="SpawnEvent4" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 117.436, -234.839 )
 B_A_S_E = ""
-event_time = null
+event_time = 3.81321
 P_O_S_I_T_O_N = ""
 override_time = false
 S_P_A_W_N = ""
@@ -104,7 +110,7 @@ position = Vector2( 107.301, 107.948 )
 [node name="SpawnEvent2" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 166.06, -931.796 )
 B_A_S_E = ""
-event_time = null
+event_time = 15.1301
 P_O_S_I_T_O_N = ""
 override_time = false
 S_P_A_W_N = ""
@@ -118,7 +124,7 @@ position = Vector2( 2.13269, -112.133 )
 [node name="SpawnEvent3" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 123.597, -483.541 )
 B_A_S_E = ""
-event_time = null
+event_time = 7.85152
 P_O_S_I_T_O_N = ""
 override_time = false
 S_P_A_W_N = ""
@@ -131,7 +137,12 @@ position = Vector2( 2.13269, -112.133 )
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -166.552, -1847.57 )
+B_A_S_E = ""
 event_time = 30.0
+P_O_S_I_T_O_N = ""
+override_time = false
+E_N_D = ""
+delay = 0.0
 Target = ExtResource( 9 )
 [connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]
 [connection signal="tree_exited" from="Level" to="Level" method="_on_Level_tree_exited"]
