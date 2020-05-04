@@ -2,9 +2,6 @@
 
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.gd" type="Script" id=1]
 
-
-
-
 [node name="InformationDisplay" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -14,10 +11,10 @@ __meta__ = {
 }
 
 [node name="LivesContainer" type="HBoxContainer" parent="."]
-margin_left = 10.9388
-margin_top = 475.058
-margin_right = 59.9388
-margin_bottom = 515.058
+margin_left = 992.742
+margin_top = 249.087
+margin_right = 1069.74
+margin_bottom = 289.087
 rect_scale = Vector2( 2.3, 1.8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -37,10 +34,10 @@ margin_bottom = 26.0
 text = "@@@"
 
 [node name="ScoreContainer" type="VBoxContainer" parent="."]
-margin_left = 775.084
-margin_top = 454.144
-margin_right = 855.084
-margin_bottom = 486.144
+margin_left = 980.727
+margin_top = 124.928
+margin_right = 1060.73
+margin_bottom = 156.928
 rect_scale = Vector2( 2.45617, 2.11416 )
 alignment = 1
 __meta__ = {
@@ -60,33 +57,33 @@ margin_bottom = 32.0
 text = "0000000000"
 
 [node name="BombContainer" type="HBoxContainer" parent="."]
-margin_left = 10.9388
-margin_top = 430.744
-margin_right = 71.9388
-margin_bottom = 470.744
+margin_left = 998.647
+margin_top = 325.807
+margin_right = 1081.65
+margin_bottom = 362.807
 rect_scale = Vector2( 2.3, 1.8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BombLabel" type="Label" parent="BombContainer"]
-margin_top = 13.0
+margin_top = 11.0
 margin_right = 49.0
-margin_bottom = 27.0
+margin_bottom = 25.0
 text = "Bombs:"
 
 [node name="Bombs" type="Label" parent="BombContainer"]
 margin_left = 53.0
-margin_top = 13.0
+margin_top = 11.0
 margin_right = 61.0
-margin_bottom = 27.0
+margin_bottom = 25.0
 text = "0"
 
 [node name="StageName" type="Label" parent="."]
-margin_left = 800.477
-margin_top = 27.0
-margin_right = 872.477
-margin_bottom = 41.0
+margin_left = 993.331
+margin_top = 36.7401
+margin_right = 1065.33
+margin_bottom = 50.7401
 rect_scale = Vector2( 2.3, 1.8 )
 text = "StageName"
 __meta__ = {
