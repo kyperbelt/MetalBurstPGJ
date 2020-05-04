@@ -29,7 +29,7 @@ func selection_made(selection: int):
 			hide()
 			set_process(false)
 		1:
-			var scene = "res://Prefabs_UIScreens/TitleScreen.tscn"
+			var scene = "res://Prefabs/Screens/TitleScreen.tscn"
 			var result = get_tree().change_scene(scene)
 			if(result != OK):
 				print("could not change to scene %s" % scene)
