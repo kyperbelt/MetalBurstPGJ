@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Screens/title.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Audio/SFX/menu_scroll01.wav" type="AudioStream" id=2]
@@ -8,10 +8,12 @@
 [ext_resource path="res://Prefabs/Screens/TitleScreen.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/System/MenuOption.gd" type="Script" id=7]
 [ext_resource path="res://Prefabs/Stages/TestStage.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Stages/TestStage2.tscn" type="PackedScene" id=9]
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource( 6 )
 NEW_GAME_SCENE = ExtResource( 8 )
+TestStage2 = ExtResource( 9 )
 
 [node name="GuiLayer" type="CanvasLayer" parent="."]
 
@@ -38,21 +40,21 @@ __meta__ = {
 }
 
 [node name="option0" type="Label" parent="GuiLayer/OptionsMenu/options"]
-margin_right = 70.0
+margin_right = 77.0
 margin_bottom = 14.0
-text = "New Game"
+text = "Test Stage 1"
 script = ExtResource( 7 )
 
 [node name="option1" type="Label" parent="GuiLayer/OptionsMenu/options"]
 margin_top = 18.0
-margin_right = 70.0
+margin_right = 77.0
 margin_bottom = 32.0
-text = "Continue"
+text = "Test Stage 2"
 script = ExtResource( 7 )
 
 [node name="option2" type="Label" parent="GuiLayer/OptionsMenu/options"]
 margin_top = 36.0
-margin_right = 70.0
+margin_right = 77.0
 margin_bottom = 50.0
 text = "Quit"
 script = ExtResource( 7 )

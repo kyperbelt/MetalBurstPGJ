@@ -2,6 +2,7 @@ extends Node2D
 
 
 export(PackedScene) var NEW_GAME_SCENE
+export(PackedScene) var TestStage2
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,7 +21,9 @@ func selection_made(selection : int):
 				print("could not change scene")
 			pass
 		1:
-			print("option %s is not yet implemented!" % selection)
+			var result = get_tree().change_scene_to(TestStage2)
+			if(result != OK):
+				print("could not change scene")
 			pass
 		2:
 			get_tree().quit()
