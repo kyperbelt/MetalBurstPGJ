@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Screens/title.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Audio/SFX/menu_scroll01.wav" type="AudioStream" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://Prefabs/System/MenuOption.gd" type="Script" id=7]
 [ext_resource path="res://Prefabs/Stages/TestStage.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Stages/TestStage2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/Screens/InstructionsFont.tres" type="DynamicFont" id=10]
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource( 6 )
@@ -62,6 +63,22 @@ script = ExtResource( 7 )
 [node name="OptionsAudioStreamPlayer" type="AudioStreamPlayer" parent="GuiLayer/OptionsMenu"]
 stream = ExtResource( 2 )
 bus = "OptionsAudioBus"
+
+[node name="Instructions" type="Label" parent="GuiLayer"]
+margin_left = 918.011
+margin_top = 360.328
+margin_right = 1198.01
+margin_bottom = 645.328
+custom_fonts/font = ExtResource( 10 )
+text = "Instructions:
+Arrow Keys = Move
+Z = Fire
+X = Bomb
+SHIFT (hold) = Focus
+ESC = Pause"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="SpaceBackground" parent="." instance=ExtResource( 4 )]
 
