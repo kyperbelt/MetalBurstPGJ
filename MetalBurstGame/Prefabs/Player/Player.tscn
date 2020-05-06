@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Player/KritaTest2.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Audio/SFX/playerShoot.wav" type="AudioStream" id=2]
 [ext_resource path="res://Assets/Player/deer_placeholder.png" type="Texture" id=3]
 [ext_resource path="res://Prefabs/Player/Player.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/Projectiles/Projectiles.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Audio/SFX/playerShoot_vers02.wav" type="AudioStream" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -34,10 +34,14 @@ collision_mask = 24
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollisionArea"]
 shape = SubResource( 1 )
 
-[node name="PlayerBulletStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
-pitch_scale = 3.0
-bus = "PlayerBulletBus"
+[node name="sfx_playerShoot" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+max_distance = 20000.0
+bus = "Sound FX"
 
-[node name="PlayerBombStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="sfx_playerBomb" type="AudioStreamPlayer2D" parent="."]
+
+[node name="sfx_playerShoot1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+bus = "Player Shoot"
 [connection signal="area_entered" from="PlayerCollisionArea" to="." method="on_collision_start"]

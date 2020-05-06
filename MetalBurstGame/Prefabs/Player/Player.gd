@@ -113,7 +113,7 @@ func shoot():
 		var bullet = BULLET_PROJECTILE.instance()
 		bullet.setProjectileType(PROJECTILES.PLAYER_BULLET)
 		bullet.global_position = global_position
-		$PlayerBulletStreamPlayer.play()
+		$sfx_playerShoot.play()
 		#bullet.change_speed(speed)
 		if(!is_instance_valid(parent)):
 			parent = get_parent()
@@ -126,7 +126,7 @@ func bomb_away():
 		var bomb = BULLET_PROJECTILE.instance()
 		bomb.setProjectileType(PROJECTILES.PLAYER_BOMB)
 		bomb.global_position = global_position
-		$PlayerBulletStreamPlayer.play()
+		$sfx_playerBomb.play()
 		#bullet.change_speed(speed)
 		if(!is_instance_valid(parent)):
 			parent = get_parent()

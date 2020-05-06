@@ -15,8 +15,8 @@ func _ready():
 
 
 func _on_Level_tree_entered():
-	$LevelOneAudioStreamPlayer.play()
+	$mu_stageOne.play()
 
 
 func _on_Level_tree_exited():
-	$LevelOneAudioStreamPlayer.stop()
+	$mu_stageOne.stop()
