@@ -133,3 +133,5 @@ func bomb_away():
 		parent.add_child(bomb)
 		bomb_timer = bomb_cooldown
 		bomb_reloading = RELOAD_TIME
+
+		

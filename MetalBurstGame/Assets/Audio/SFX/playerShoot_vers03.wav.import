@@ -12,7 +12,7 @@ dest_files=[ "res://.import/playerShoot_vers03.wav-d4ffe9187c2ee351560519fa2dbde
 [params]
 
 force/8_bit=false
-force/mono=false
+force/mono=true
 force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false

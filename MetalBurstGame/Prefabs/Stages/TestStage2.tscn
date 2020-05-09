@@ -48,7 +48,7 @@ event_time = 15.126
 
 [node name="10 sec" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 0, -314.303 )
-event_time = 9.98466
+event_time = 9.98468
 
 [node name="Enemy" parent="StageDirector/10 sec" instance=ExtResource( 8 )]
 position = Vector2( -73.662, -50.7736 )
@@ -64,7 +64,7 @@ position = Vector2( -213.29, -134.868 )
 
 [node name="5sec" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 0, -174.675 )
-event_time = 5.54901
+event_time = 5.54902
 
 [node name="Enemy" parent="StageDirector/5sec" instance=ExtResource( 8 )]
 position = Vector2( 138.953, 7.93347 )
