@@ -27,9 +27,10 @@ texture = SubResource( 2 )
 [node name="SpaceBackground" parent="Level" instance=ExtResource( 3 )]
 position = Vector2( -285.932, 0 )
 
-[node name="mu_stageOne" type="AudioStreamPlayer" parent="Level"]
+[node name="BGM_testStage1" type="AudioStreamPlayer" parent="Level"]
 stream = ExtResource( 4 )
 volume_db = 0.2
+bus = "Music"
 
 [node name="InformationDisplay" parent="Level" instance=ExtResource( 5 )]
 

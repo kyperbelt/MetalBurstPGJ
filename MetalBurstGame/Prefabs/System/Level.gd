@@ -15,8 +15,8 @@ func _ready():
 
 
 func _on_Level_tree_entered():
-	$mu_stageOne.play()
+	$bgm_testStage2.play()
 
 
 func _on_Level_tree_exited():
-	$mu_stageOne.stop()
+	$bgm_testStage2.stop()

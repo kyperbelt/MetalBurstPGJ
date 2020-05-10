@@ -17,9 +17,10 @@ texture = ExtResource( 1 )
 
 [node name="Level" parent="." instance=ExtResource( 2 )]
 
-[node name="BGMstage2" type="AudioStreamPlayer" parent="Level"]
+[node name="bgm_testStage2" type="AudioStreamPlayer" parent="Level"]
 stream = ExtResource( 5 )
 autoplay = true
+bus = "Music"
 
 [node name="PropaneBG" parent="Level" instance=ExtResource( 3 )]
 light_mask = 0

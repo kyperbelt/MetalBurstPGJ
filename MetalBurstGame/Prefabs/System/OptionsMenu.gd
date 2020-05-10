@@ -63,7 +63,7 @@ func _process(_delta):
 	pass
 
 func _on_OptionsMenu_selection_changed():
-	$OptionsAudioStreamPlayer.play()
+	$sfx_menuScroll.play()
 
 #func _on_OptionsMenu_selection_entered():
 #	$OptionsFocusAudioStreamPlayer.play()
