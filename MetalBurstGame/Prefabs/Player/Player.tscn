@@ -21,6 +21,7 @@ bus = "Player Shoot"
 
 [node name="sfx_playerBomb" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
+bus = "Player Bomb"
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, 7 )
