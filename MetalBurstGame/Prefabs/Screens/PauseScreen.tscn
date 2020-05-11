@@ -6,10 +6,6 @@
 [ext_resource path="res://Prefabs/System/OptionsMenu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/System/MenuOption.gd" type="Script" id=5]
 
-
-
-
-
 [node name="PauseScreens" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -22,8 +18,8 @@ __meta__ = {
 
 [node name="Overlay" type="Sprite" parent="."]
 modulate = Color( 1, 1, 1, 0.4 )
-position = Vector2( 513.344, 291.442 )
-scale = Vector2( 33.084, 19.2151 )
+position = Vector2( 646.784, 367.415 )
+scale = Vector2( 41.424, 23.9634 )
 texture = ExtResource( 2 )
 
 [node name="paused" type="Sprite" parent="."]

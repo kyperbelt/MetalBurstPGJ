@@ -37,9 +37,9 @@ multiplier = 0.0
 
 [node name="Prototype 1a" type="Sprite" parent="."]
 visible = false
-position = Vector2( 1118.78, -26.2259 )
+position = Vector2( 1315.68, -26.2271 )
 rotation = 1.57079
-scale = Vector2( 0.30938, 1219.68 )
+scale = Vector2( 0.379773, 1416.59 )
 texture = SubResource( 2 )
 centered = false
 __meta__ = {
@@ -49,9 +49,9 @@ Darker area at top"
 }
 
 [node name="Prototype 1b" type="Sprite" parent="."]
-position = Vector2( 1118.78, -26.2259 )
+position = Vector2( 1320.96, -26.2272 )
 rotation = 1.57079
-scale = Vector2( 0.30938, 1219.68 )
+scale = Vector2( 0.378056, 1421.86 )
 texture = SubResource( 4 )
 centered = false
 __meta__ = {
