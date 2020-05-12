@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Player/KritaTest2.png" type="Texture" id=1]
-[ext_resource path="res://Assets/Audio/SFX/playerShoot_vers03.wav" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Audio/SFX/playerShoot_vers04.wav" type="AudioStream" id=2]
 [ext_resource path="res://Assets/Player/deer_placeholder.png" type="Texture" id=3]
 [ext_resource path="res://Prefabs/Player/Player.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/Projectiles/Projectiles.tscn" type="PackedScene" id=5]
@@ -20,7 +20,6 @@ stream = ExtResource( 2 )
 bus = "Player Shoot"
 
 [node name="sfx_playerBomb" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 2 )
 bus = "Player Bomb"
 
 [node name="Sprite" type="Sprite" parent="."]
