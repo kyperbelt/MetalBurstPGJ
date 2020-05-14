@@ -1,13 +1,10 @@
 extends Sprite
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+#This controls FoeBullets
 var speed
 
 const PLAYER_VELOCITY = Vector2(0, -300)
-const ENEMY_VELOCITY = Vector2(0, 300)
+const ENEMY_VELOCITY = Vector2(0, 200)
 
 export(Array,Texture) var PROJECTILE_TYPES = []
 export (int, "PLAYER_BULLET", "ENEMY_BULLET") var projectileType setget setProjectileType

@@ -2,12 +2,10 @@ extends Sprite
 
 class_name Projectiles
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+#This controls PlayerBullets
 var speed
 
-const PLAYER_VELOCITY = Vector2(0, -300)
+const PLAYER_VELOCITY = Vector2(0, -600)
 const ENEMY_VELOCITY = Vector2(0, 300)
 const PLAYER_BOMB_VELOCITY = Vector2(0, -100)
 
