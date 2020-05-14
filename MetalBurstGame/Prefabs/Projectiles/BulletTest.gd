@@ -27,8 +27,8 @@ func _process(delta):
 		
 func hit(object):
 	print("Bullet collision with " + object.name + " detected!")
-	if object.name == 'EnemyArea':
-		queue_free()
+	object.get_parent().hit(self)
+	queue_free()
 
 func _on_PlayerBulletArea_area_entered(area):
 	print("Bullet collision with  detected!")
