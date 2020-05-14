@@ -6,7 +6,13 @@ extends Node2D
 class_name Enemy
 
 export(float) var speed = 100
+export(float) var HP = 300
+export(float) var DMGreceived = 100
+#DMGreceived is meant to be temperary
+#DMGreceived better placed in PlayerBullet
 
+#export(AudioStreamPlayer) var FoeHitSFX
+#export(AudioStreamPlayer) var FoeDeathSFX
 export(PackedScene) var BULLET_TEST 
 const ENEMY_BULLET = 1
 
@@ -46,10 +52,15 @@ func _process(delta):
 
 func hit(object):
 	print("Enemy collision with " + object.name + " detected!")
-	if (object.name == 'ProjectilesArea' && object.get_parent().projectileType == 0 ):
+	HP -= DMGreceived
+	$FoeHitSFX.play()
+	#HP-Threshold SFX can also be done here ; more advanced
+	if HP <= 0:
+		$FoeDeathSFX.play()
 		queue_free()
 	if object.name == 'PlayerCollisionArea':
 		object.get_parent().hit(self)
+		queue_free()
 
 func shoot():
 	#attempt to shoot if already placed in correct engine layer
