@@ -8,7 +8,7 @@
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Stages/TestStage2.tscn" type="PackedScene" id=9]
 
 [sub_resource type="Gradient" id=1]
 
@@ -139,12 +139,7 @@ position = Vector2( 2.13269, -112.133 )
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -166.552, -1847.57 )
-B_A_S_E = ""
 event_time = 30.0
-P_O_S_I_T_O_N = ""
-override_time = false
-E_N_D = ""
-delay = 0.0
 Target = ExtResource( 9 )
 [connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]
 [connection signal="tree_exited" from="Level" to="Level" method="_on_Level_tree_exited"]

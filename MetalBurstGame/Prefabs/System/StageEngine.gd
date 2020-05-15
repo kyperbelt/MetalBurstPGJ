@@ -78,8 +78,10 @@ func center_player():
 
 func player_hit():
 	if(player.lives <= 0):
+		get_tree().change_scene("res://Prefabs/Screens/GameOverScreen.tscn")
 		cleanup()
 		emit_signal("player_died")
+		player.lives = 4 #This resets players life to 4 ; Bandaid ; Mod "Player.gd"
 	else:
 		informationDisplay.set_lives(player.lives,false)
 	pass
