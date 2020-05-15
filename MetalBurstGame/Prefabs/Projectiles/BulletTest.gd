@@ -1,13 +1,10 @@
 extends Sprite
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+#This controls FoeBullets
 var speed
 
 const PLAYER_VELOCITY = Vector2(0, -300)
-const ENEMY_VELOCITY = Vector2(0, 300)
+const ENEMY_VELOCITY = Vector2(0, 200)
 
 export(Array,Texture) var PROJECTILE_TYPES = []
 export (int, "PLAYER_BULLET", "ENEMY_BULLET") var projectileType setget setProjectileType
@@ -30,8 +27,8 @@ func _process(delta):
 		
 func hit(object):
 	print("Bullet collision with " + object.name + " detected!")
-	if object.name == 'EnemyArea':
-		queue_free()
+	object.get_parent().hit(self)
+	queue_free()
 
 func _on_PlayerBulletArea_area_entered(area):
 	print("Bullet collision with  detected!")

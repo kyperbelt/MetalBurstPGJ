@@ -35,7 +35,7 @@ signal player_hit
 
 #######################
 var score: int = 0
-var lives: int = 3
+var lives: int = 4
 #percentage of energy for bomb 0 - 1
 var bomb_percentage:float=1.0
 #the cost of the bomb in energy percentage
