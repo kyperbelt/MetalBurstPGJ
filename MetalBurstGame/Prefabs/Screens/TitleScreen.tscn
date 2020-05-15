@@ -60,7 +60,7 @@ margin_bottom = 50.0
 text = "Quit"
 script = ExtResource( 7 )
 
-[node name="OptionsAudioStreamPlayer" type="AudioStreamPlayer" parent="GuiLayer/OptionsMenu"]
+[node name="sfx_menuScroll" type="AudioStreamPlayer" parent="GuiLayer/OptionsMenu"]
 stream = ExtResource( 2 )
 bus = "OptionsAudioBus"
 
@@ -82,7 +82,7 @@ __meta__ = {
 
 [node name="SpaceBackground" parent="." instance=ExtResource( 4 )]
 
-[node name="OptionsFocusAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="sfx_menuSelect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 [connection signal="selection_changed" from="GuiLayer/OptionsMenu" to="GuiLayer/OptionsMenu" method="_on_OptionsMenu_selection_changed"]
 [connection signal="selection_entered" from="GuiLayer/OptionsMenu" to="." method="selection_made"]
