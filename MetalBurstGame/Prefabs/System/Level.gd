@@ -14,9 +14,9 @@ func _ready():
 	$Container/PlayArea/Engine.set_info_display(get_node("InformationDisplay"))
 
 
-func _on_Level_tree_entered():
-	$bgm_testStage2.play()
+#func _on_Level_tree_entered():
+	#$bgm_testStage2.play()
 
 
-func _on_Level_tree_exited():
-	$bgm_testStage2.stop()
+#func _on_Level_tree_exited():
+	#$bgm_testStage2.stop()
