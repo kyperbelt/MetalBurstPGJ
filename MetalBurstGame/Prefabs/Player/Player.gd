@@ -35,7 +35,7 @@ signal player_hit
 
 #######################
 var score: int = 0
-var lives: int = 3
+var lives: int = 4
 #percentage of energy for bomb 0 - 1
 var bomb_percentage:float=1.0
 #the cost of the bomb in energy percentage
@@ -113,7 +113,7 @@ func shoot():
 		var bullet = BULLET_PROJECTILE.instance()
 		bullet.setProjectileType(PROJECTILES.PLAYER_BULLET)
 		bullet.global_position = global_position
-		$PlayerBulletStreamPlayer.play()
+		$sfx_playerShoot.play()
 		#bullet.change_speed(speed)
 		if(!is_instance_valid(parent)):
 			parent = get_parent()
@@ -126,10 +126,12 @@ func bomb_away():
 		var bomb = BULLET_PROJECTILE.instance()
 		bomb.setProjectileType(PROJECTILES.PLAYER_BOMB)
 		bomb.global_position = global_position
-		$PlayerBulletStreamPlayer.play()
+		$sfx_playerBomb.play()
 		#bullet.change_speed(speed)
 		if(!is_instance_valid(parent)):
 			parent = get_parent()
 		parent.add_child(bomb)
 		bomb_timer = bomb_cooldown
 		bomb_reloading = RELOAD_TIME
+
+		
