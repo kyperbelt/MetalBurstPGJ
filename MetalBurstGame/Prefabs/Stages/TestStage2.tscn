@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/Screens/UItestA.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Prefabs/Enemies/SpinnerA.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Backgrounds/DustParticles.tscn" type="PackedScene" id=13]
 
 [node name="RootNode" type="Node"]
 
@@ -26,9 +27,11 @@ stream = ExtResource( 5 )
 autoplay = true
 bus = "Music"
 
-[node name="PropaneBG" parent="Level" instance=ExtResource( 3 )]
+[node name="Stage2BG" parent="Level" instance=ExtResource( 3 )]
 light_mask = 0
 position = Vector2( -320, 0 )
+
+[node name="DustParticles" parent="Level" instance=ExtResource( 13 )]
 
 [node name="InformationDisplay" parent="Level" instance=ExtResource( 4 )]
 light_mask = 0
