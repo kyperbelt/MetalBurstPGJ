@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Enemies/EmberA.tscn" type="PackedScene" id=2]
@@ -11,17 +11,7 @@
 [ext_resource path="res://Prefabs/Stages/TestStage2.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Backgrounds/Stage1BG.tscn" type="PackedScene" id=10]
 
-[sub_resource type="Gradient" id=1]
-
-[sub_resource type="GradientTexture" id=2]
-gradient = SubResource( 1 )
-
 [node name="Stage" type="Node"]
-
-[node name="gui_background" type="Sprite" parent="."]
-position = Vector2( 777.411, 338.688 )
-scale = Vector2( 1, 1022.87 )
-texture = SubResource( 2 )
 
 [node name="Level" parent="." instance=ExtResource( 1 )]
 
