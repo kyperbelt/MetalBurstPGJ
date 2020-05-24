@@ -8,7 +8,7 @@
 [ext_resource path="res://Assets/Audio/SFX/enemyDeath.wav" type="AudioStream" id=6]
 [ext_resource path="res://Assets/Enemies/EmberShadow.png" type="Texture" id=7]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40.0432, 25.296 )
 
 [node name="EmberA" type="Node2D"]
@@ -25,7 +25,7 @@ collision_mask = 100
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyArea"]
 position = Vector2( 0, 10 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Emberv1" type="Sprite" parent="."]
 visible = false
@@ -34,7 +34,7 @@ texture = ExtResource( 3 )
 [node name="Emberv2" type="AnimatedSprite" parent="."]
 frames = ExtResource( 4 )
 animation = "MediumSpeed"
-frame = 2
+frame = 1
 playing = true
 
 [node name="FoeHitSFX" type="AudioStreamPlayer" parent="."]

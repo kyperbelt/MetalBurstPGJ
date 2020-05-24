@@ -1,10 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Player/KritaTest2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Audio/SFX/playerShoot_vers04.wav" type="AudioStream" id=2]
 [ext_resource path="res://Assets/Player/deer_placeholder.png" type="Texture" id=3]
 [ext_resource path="res://Prefabs/Player/Player.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/Projectiles/Projectiles.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/Enemies/Shadow.png" type="Texture" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -21,6 +22,12 @@ bus = "Player Shoot"
 
 [node name="sfx_playerBomb" type="AudioStreamPlayer" parent="."]
 bus = "Player Bomb"
+
+[node name="Shadow" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.607843 )
+position = Vector2( 0, 5 )
+scale = Vector2( 2, 1 )
+texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0, 7 )
