@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Sprite",
 "class": "BackgroundLayer",
 "language": "GDScript",
-"path": "res://Prefabs/System/BackgroundLayer.gd"
+"path": "res://Prefabs/Backgrounds/BackgroundLayer.gd"
 }, {
 "base": "Sprite",
 "class": "EndNode",
@@ -57,7 +57,7 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "ScrollingBackground",
 "language": "GDScript",
-"path": "res://Prefabs/System/ScrollingBackground.gd"
+"path": "res://Prefabs/Backgrounds/ScrollingBackground.gd"
 }, {
 "base": "PositionalEvent",
 "class": "SpawnEvent",
