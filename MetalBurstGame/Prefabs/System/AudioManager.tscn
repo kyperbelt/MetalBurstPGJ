@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/Audio/BGM/MB_stage2_music.wav" type="AudioStream" id=1]
+[ext_resource path="res://Assets/Audio/SFX/menu_select.wav" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Audio/SFX/menu_scroll01.wav" type="AudioStream" id=3]
+[ext_resource path="res://Assets/Audio/SFX/enemyHit01.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Audio/SFX/playerDeath.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Audio/SFX/playerShoot_vers04.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Audio/BGM/metal_burst-01.wav" type="AudioStream" id=7]
+
+[node name="AudioManager" type="Node"]
+__meta__ = {
+"_editor_description_": "Created by: ReimJ
+Purpose of this scene is to act as a \"repository\" for all sfx and bgm used in the project. Scripts will use signals to call nodes in this scene and play them. Place this scene in other scenes to play sounds(?)"
+}
+
+[node name="bgm_testStage1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+bus = "Music"
+__meta__ = {
+"_editor_description_": "Connected to \"TestStage.tscn\"
+
+Plays: On Stage 1 as Stage BGM"
+}
+
+[node name="bgm_testStage2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+bus = "Music"
+__meta__ = {
+"_editor_description_": "Connected to \"TestStage2.tscn\"
+
+Plays: On Stage 2 as Stage BGM"
+}
+
+[node name="sfx_menuScroll" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Connected to \"TitleScreen.tscn\"
+
+Plays: When player scrolls through menu items. Currently only plays on main menu."
+}
+
+[node name="sfx_menuSelect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+bus = "OptionsAudioBus"
+__meta__ = {
+"_editor_description_": "Connected to \"TitleScreen.tscn\"
+
+Plays: When player selects a menu item. Currently acts as the \"play\" button."
+}
+
+[node name="sfx_playerShoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+bus = "Player Shoot"
+__meta__ = {
+"_editor_description_": "Connected to \"Player.tscn\"
+
+Plays: When the player fires a shot (\"Z\"). Will be heard very often. Does not need to draw too much attention."
+}
+
+[node name="sfx_playerBomb" type="AudioStreamPlayer" parent="."]
+bus = "Player Bomb"
+__meta__ = {
+"_editor_description_": "Connected to \"Player.tscn\"
+
+Plays: When the player fires a \"bomb\". Can be long, loud, and fancy. Bombs currently not coded yet."
+}
+
+[node name="sfx_foeHit" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Connected to \"[Every Enemy Scene]\"
+
+Plays: Whenever an enemy entity (StageFoe or Boss) recieves damage from the player. This is the \"normal\" hit sound."
+}
+
+[node name="sfx_foeDeath" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Connected to \"[Every Enemy Scene]\"
+
+Plays: when an StageFoe is killed (thier HP reaches 0). Also when a Boss Form is defeated and transitions to the next phase."
+}
