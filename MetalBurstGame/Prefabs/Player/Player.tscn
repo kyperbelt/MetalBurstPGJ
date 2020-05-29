@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Assets/Player/KritaTest2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Audio/SFX/playerShoot_vers04.wav" type="AudioStream" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://Prefabs/Player/Player.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/Projectiles/Projectiles.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Enemies/Shadow.png" type="Texture" id=6]
+[ext_resource path="res://Assets/Player/KritaTest2(NoSkull).png" type="Texture" id=7]
+[ext_resource path="res://Assets/Player/GreenSkull.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Player/BlueSkull.png" type="Texture" id=9]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -30,6 +33,7 @@ scale = Vector2( 2, 1 )
 texture = ExtResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 position = Vector2( 0, 7 )
 scale = Vector2( 0.134523, 0.134523 )
 texture = ExtResource( 1 )
@@ -39,6 +43,23 @@ visible = false
 position = Vector2( 0.173773, 0.935793 )
 scale = Vector2( 0.28, 0.28 )
 texture = ExtResource( 3 )
+
+[node name="Body" type="Sprite" parent="."]
+visible = false
+position = Vector2( 0, 7 )
+scale = Vector2( 0.135, 0.135 )
+texture = ExtResource( 7 )
+
+[node name="SkullGreen" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1.1, -19 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 8 )
+
+[node name="SkullBlue" type="Sprite" parent="."]
+position = Vector2( 2.77364, 14.0003 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
 
 [node name="PlayerCollisionArea" type="Area2D" parent="."]
 input_pickable = false
