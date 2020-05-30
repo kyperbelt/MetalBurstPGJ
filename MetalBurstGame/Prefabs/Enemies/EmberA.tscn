@@ -13,6 +13,7 @@ extents = Vector2( 40.0432, 25.296 )
 
 [node name="EmberA" type="Node2D"]
 script = ExtResource( 1 )
+HP = 500.0
 BULLET_TEST = ExtResource( 2 )
 
 [node name="Shadow" type="Sprite" parent="."]
@@ -34,7 +35,7 @@ texture = ExtResource( 3 )
 [node name="Emberv2" type="AnimatedSprite" parent="."]
 frames = ExtResource( 4 )
 animation = "MediumSpeed"
-frame = 1
+frame = 2
 playing = true
 
 [node name="FoeHitSFX" type="AudioStreamPlayer" parent="."]

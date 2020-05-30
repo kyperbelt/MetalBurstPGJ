@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Enemies/EmberA.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Stages/TestStage2.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Backgrounds/Stage1BG.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Enemies/TinyEmber.tscn" type="PackedScene" id=11]
 
 [node name="Stage" type="Node"]
 
@@ -31,87 +32,127 @@ bus = "Music"
 
 [node name="StageDirector" parent="." instance=ExtResource( 6 )]
 position = Vector2( 640, 0 )
-hatch_marks = 10
+G_U_I_D_E_S = ""
+show_timeline = true
+hatch_marks = 8
+show_bounds = true
+bounds_color = Color( 1, 0, 0, 1 )
+T_U_N_I_N_G = ""
 duration = 30.0
+D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
 position = Vector2( 598.444, -1847.57 )
 scale = Vector2( 7.06361, 5.00941 )
 
-[node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( -149.244, -454.257 )
-event_time = 7.37602
-spawn_x = -149.244
+[node name="Last one" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( -4.13562, -816.965 )
+B_A_S_E = ""
+event_time = 13.2655
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = -4.13562
 
-[node name="Enemy4" parent="StageDirector/SpawnEvent" groups=[
+[node name="Enemy4" parent="StageDirector/Last one" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
 position = Vector2( 2.13269, -112.133 )
 
-[node name="SpawnEvent4" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 117.436, -234.839 )
-event_time = 3.81321
-spawn_x = 117.436
+[node name="2ndSwarm" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 1.84914, -616.143 )
+B_A_S_E = ""
+event_time = 10.0046
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 1.84914
 
-[node name="Enemy4" parent="StageDirector/SpawnEvent4" groups=[
+[node name="TinyEmber" parent="StageDirector/2ndSwarm" instance=ExtResource( 11 )]
+position = Vector2( -56.1204, -21.5847 )
+
+[node name="TinyEmber2" parent="StageDirector/2ndSwarm" instance=ExtResource( 11 )]
+position = Vector2( 47.4863, -28.0601 )
+
+[node name="TinyEmber4" parent="StageDirector/2ndSwarm" instance=ExtResource( 11 )]
+position = Vector2( 118.716, -41.011 )
+
+[node name="TinyEmber3" parent="StageDirector/2ndSwarm" instance=ExtResource( 11 )]
+position = Vector2( 192.104, -71.2296 )
+
+[node name="TinyEmber8" parent="StageDirector/2ndSwarm" instance=ExtResource( 11 )]
+position = Vector2( 263.334, -110.082 )
+
+[node name="TinyEmber7" parent="StageDirector/2ndSwarm" instance=ExtResource( 11 )]
+position = Vector2( -114.399, -47.4864 )
+
+[node name="TinyEmber6" parent="StageDirector/2ndSwarm" instance=ExtResource( 11 )]
+position = Vector2( -183.47, -84.1804 )
+
+[node name="TinyEmber5" parent="StageDirector/2ndSwarm" instance=ExtResource( 11 )]
+position = Vector2( -256.858, -116.558 )
+
+[node name="Big" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 2.72249, -407.994 )
+B_A_S_E = ""
+event_time = 6.62483
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 2.72249
+
+[node name="Enemy4" parent="StageDirector/Big" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
-position = Vector2( -183.053, 111.02 )
+position = Vector2( 86.3131, -109.974 )
 
-[node name="Enemy8" parent="StageDirector/SpawnEvent4" groups=[
+[node name="Enemy5" parent="StageDirector/Big" groups=[
 "Enemy",
 ] instance=ExtResource( 2 )]
-position = Vector2( -73.5726, -12.7402 )
+position = Vector2( -98.0303, -100.117 )
 
-[node name="Enemy9" parent="StageDirector/SpawnEvent4" groups=[
-"Enemy",
-] instance=ExtResource( 2 )]
-position = Vector2( 32.7345, 74.5268 )
+[node name="StartSwarm" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 2.60532, -202.03 )
+B_A_S_E = ""
+event_time = 3.28047
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 2.60532
 
-[node name="Enemy10" parent="StageDirector/SpawnEvent4" groups=[
-"Enemy",
-] instance=ExtResource( 2 )]
-position = Vector2( -306.813, 115.78 )
+[node name="TinyEmber" parent="StageDirector/StartSwarm" instance=ExtResource( 11 )]
+position = Vector2( -88.7285, -23.5304 )
 
-[node name="Enemy6" parent="StageDirector/SpawnEvent4" groups=[
-"Enemy",
-] instance=ExtResource( 2 )]
-position = Vector2( -43.4258, 106.26 )
+[node name="TinyEmber2" parent="StageDirector/StartSwarm" instance=ExtResource( 11 )]
+position = Vector2( -168.7, -21.4798 )
 
-[node name="Enemy7" parent="StageDirector/SpawnEvent4" groups=[
-"Enemy",
-] instance=ExtResource( 2 )]
-position = Vector2( -198.92, -0.0467834 )
+[node name="TinyEmber4" parent="StageDirector/StartSwarm" instance=ExtResource( 11 )]
+position = Vector2( -258.924, -54.2886 )
 
-[node name="Enemy5" parent="StageDirector/SpawnEvent4" groups=[
-"Enemy",
-] instance=ExtResource( 2 )]
-position = Vector2( 107.301, 107.948 )
+[node name="TinyEmber3" parent="StageDirector/StartSwarm" instance=ExtResource( 11 )]
+position = Vector2( -125.638, -76.8447 )
 
-[node name="SpawnEvent2" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 166.06, -931.796 )
-event_time = 15.1301
-spawn_x = 166.06
+[node name="TinyEmber8" parent="StageDirector/StartSwarm" instance=ExtResource( 11 )]
+position = Vector2( 146.545, -107.927 )
 
-[node name="Enemy4" parent="StageDirector/SpawnEvent2" groups=[
-"Enemy",
-] instance=ExtResource( 2 )]
-position = Vector2( 2.13269, -112.133 )
+[node name="TinyEmber7" parent="StageDirector/StartSwarm" instance=ExtResource( 11 )]
+position = Vector2( 66.6816, -107.711 )
 
-[node name="SpawnEvent3" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 123.597, -483.541 )
-event_time = 7.85152
-spawn_x = 123.597
+[node name="TinyEmber6" parent="StageDirector/StartSwarm" instance=ExtResource( 11 )]
+position = Vector2( 99.0587, -174.624 )
 
-[node name="Enemy4" parent="StageDirector/SpawnEvent3" groups=[
-"Enemy",
-] instance=ExtResource( 2 )]
-position = Vector2( 2.13269, -112.133 )
+[node name="TinyEmber5" parent="StageDirector/StartSwarm" instance=ExtResource( 11 )]
+position = Vector2( 235.043, -155.197 )
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -166.552, -1847.57 )
+B_A_S_E = ""
 event_time = 30.0
+P_O_S_I_T_O_N = ""
+override_time = false
+E_N_D = ""
+delay = 0.0
 Target = ExtResource( 9 )
 [connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]
 [connection signal="tree_exited" from="Level" to="Level" method="_on_Level_tree_exited"]
