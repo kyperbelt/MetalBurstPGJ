@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/Enemies/TinyEmbers.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Assets/Enemies/EmberShadow.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20, 15 )
+
+[node name="TinyEmber" type="Node2D"]
+__meta__ = {
+"_editor_description_": "-Use script to determine the color scheme of the stage foe (choose from 4 colors). Animations determined in \"Visuals\" Node (Path: Tiny Ember (this node) > Visuals)
+
+-If this foe needs to be rotated, rotate from *this* root node
+
+-Firing animations can be added as well, but will have to create a new child node to accomidate"
+}
+
+[node name="Shadow" type="Sprite" parent="."]
+scale = Vector2( 0.638265, 0.775513 )
+texture = ExtResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="Visuals" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -7 )
+frames = ExtResource( 1 )
+animation = "TinyEmberRed"
+frame = 3
+playing = true
