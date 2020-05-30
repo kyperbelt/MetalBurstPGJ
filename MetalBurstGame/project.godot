@@ -30,6 +30,11 @@ _global_script_classes=[ {
 "path": "res://Prefabs/System/Behavior/Brain.gd"
 }, {
 "base": "BehaviorNode",
+"class": "Composite",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Composite.gd"
+}, {
+"base": "BehaviorNode",
 "class": "Decorator",
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Decorator.gd"
@@ -104,6 +109,7 @@ _global_script_class_icons={
 "BackgroundLayer": "",
 "BehaviorNode": "",
 "Brain": "res://Assets/Tools/Behavior/brain.png",
+"Composite": "res://Assets/Tools/Behavior/sequence.png",
 "Decorator": "res://Assets/Tools/Behavior/decorator.png",
 "EndNode": "",
 "EndStageEvent": "res://Assets/Tools/exit.png",

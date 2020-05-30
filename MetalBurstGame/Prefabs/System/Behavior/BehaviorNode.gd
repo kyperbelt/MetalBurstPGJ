@@ -8,9 +8,19 @@ enum RunState{
 	Success
 }
 
+#the data used by this node
+var blackBoard = {}
 
-func _ready():
+#if overwritten must be called as well. 
+func initiate(board):
+	blackBoard = board
+
 	
-	pass # Replace with function body.
+func _ready():
+	pass
 
-func proccess_behavior
+func _update_behavior(_delta:float):
+	return RunState.Failed
+	
+func _process(delta):
+	_update_behavior(delta)
