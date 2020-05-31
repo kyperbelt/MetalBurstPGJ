@@ -79,6 +79,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/Projectiles/Projectiles.gd"
 }, {
+"base": "Reference",
+"class": "RunState",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/RunState.gd"
+}, {
 "base": "Node2D",
 "class": "ScrollingBackground",
 "language": "GDScript",
@@ -119,6 +124,7 @@ _global_script_class_icons={
 "Player": "",
 "PositionalEvent": "res://Assets/Tools/pointA.png",
 "Projectiles": "",
+"RunState": "",
 "ScrollingBackground": "",
 "SpawnEvent": "res://Assets/Tools/entity.png",
 "StageDirector": "res://Assets/Tools/director.png",
