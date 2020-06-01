@@ -5,7 +5,7 @@ class_name Composite, "res://Assets/Tools/Behavior/sequence.png"
 
 var _childBehaviors = []
 
-func add(child:BehaviorNode)->Composite:
+func add(child)->Composite:
 	_childBehaviors.append(child)
 	child.set_parent_behavior(self)
 	return self
@@ -14,5 +14,5 @@ func get_child_behaviors():
 	return _childBehaviors
 
 func _ready():
-	pass # Replace with function body.
+	pass # Replace with function body. cache all ChildBehaviors Here
 

@@ -2,7 +2,7 @@ extends Node
 
 class_name BehaviorNode
 
-var _brain : Brain = null
+var _brain = null
 var _parentBehavior : BehaviorNode = null
 var _lastState : RunState = RunState.Nothing
 var _state : RunState = RunState.Failed
@@ -17,7 +17,7 @@ func set_state(state):
 func get_state():
 	return _state
 
-func set_brain(brain:Brain):
+func set_brain(brain:):
 	_brain = brain;
 
 func get_brain():
