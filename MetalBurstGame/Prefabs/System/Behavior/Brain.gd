@@ -14,8 +14,8 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(delta):
-	_update_brain(delta)
-
+	var finished : bool = !update_brain(delta)
+	
 func is_running():
 	return _running
 
@@ -26,7 +26,7 @@ func start(blackBoard,root:BehaviorNode):
 	root.set_brain(self)
 	root.set_parent_behavior(null)
 	_current = root
-
+	
 func get_blackboard():
 	return _blackBoard
 
@@ -42,13 +42,15 @@ func get_current()->BehaviorNode:
 func get_root_behavior()->BehaviorNode:
 	return _root
 
-func _update_brain(delta)->bool:
+func get_last_state()->RunState:
+	return _lastState
+
+func update_brain(delta)->bool:
 	if(_running):
 		if(_root!=null):
-			var state : RunState = _root.update_behavior(delta)
+			var state : RunState = _root._update_behavior(delta)
 			if(state != RunState.Running):
 				_running = false
 				_lastState = state
-		pass
 	return _running
 	

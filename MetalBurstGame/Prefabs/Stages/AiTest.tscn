@@ -35,7 +35,7 @@ hatch_marks = 10
 show_bounds = true
 bounds_color = Color( 1, 0, 0, 1 )
 T_U_N_I_N_G = ""
-duration = 10.0
+duration = 10
 D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
@@ -45,7 +45,12 @@ scale = Vector2( 7.06361, 5.00941 )
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -114.495, -1847.57 )
-event_time = 10.0
+B_A_S_E = ""
+event_time = 10
+P_O_S_I_T_O_N = ""
+override_time = false
+E_N_D = ""
+delay = 0.0
 Target = ExtResource( 2 )
 [connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]
 [connection signal="tree_exited" from="Level" to="Level" method="_on_Level_tree_exited"]

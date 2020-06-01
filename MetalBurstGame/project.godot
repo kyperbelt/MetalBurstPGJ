@@ -89,6 +89,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/Backgrounds/ScrollingBackground.gd"
 }, {
+"base": "Composite",
+"class": "Selector",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Composites/Selector.gd"
+}, {
+"base": "Composite",
+"class": "Sequence",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Composites/Sequence.gd"
+}, {
 "base": "PositionalEvent",
 "class": "SpawnEvent",
 "language": "GDScript",
@@ -126,6 +136,8 @@ _global_script_class_icons={
 "Projectiles": "",
 "RunState": "",
 "ScrollingBackground": "",
+"Selector": "",
+"Sequence": "",
 "SpawnEvent": "res://Assets/Tools/entity.png",
 "StageDirector": "res://Assets/Tools/director.png",
 "StageEvent": "res://Assets/Tools/open.png",
