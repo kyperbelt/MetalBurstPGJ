@@ -78,6 +78,7 @@ func _process(delta):
 		move.x+=speed + speed_reduced
 	if Input.is_action_pressed("move_slower"):
 		speed_reduced = -150
+		#Insert Animation Code Here
 	else:
 		speed_reduced = 0
 	translate(move*delta)
