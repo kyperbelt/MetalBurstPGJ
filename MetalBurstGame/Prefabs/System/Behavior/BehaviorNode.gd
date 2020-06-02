@@ -4,8 +4,8 @@ class_name BehaviorNode
 
 var _brain = null
 var _parentBehavior : BehaviorNode = null
-var _lastState : RunState = RunState.Nothing
-var _state : RunState = RunState.Failed
+var _lastState : int = RunState.Failed
+var _state : int = RunState.Failed
 
 	
 func _ready():
@@ -21,7 +21,7 @@ func set_brain(brain):
 	_brain = brain;
 
 func get_brain():
-	return _brain
+	return _brain if _brain != null else get_parent_behavior().get_brain()
 
 func set_parent_behavior(parentBehavior:BehaviorNode):
 	_parentBehavior = parentBehavior
@@ -35,9 +35,12 @@ func get_blackboard():
 #if overwritten must be called as well. 
 func initiate():
 	_state = RunState.Running
-	_brain.set_current(self)
+	get_brain().set_current(self)
 
 
-func _update_behavior(_delta:float)->RunState:
+func _update_behavior(_delta:float)->int:
 	return RunState.Failed
+
+func is_type(type):
+	return type == "BehaviorNode"
 	

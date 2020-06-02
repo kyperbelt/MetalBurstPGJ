@@ -13,13 +13,13 @@ func initiate():
 	get_child_behavior().initiate()
 	_finished = false
 
-func _update_behavior(delta:float)->RunState:
+func _update_behavior(delta:float)->int:
 	
 	if( _finished):
 		_finished = false
 		get_child_behavior().initiate()
 	
-	var result : RunState = get_child_behavior()._update_behavior(delta)
+	var result : int = get_child_behavior()._update_behavior(delta)
 
 	if(result != RunState.Running && result != RunState.Failed):
 		_finished = true

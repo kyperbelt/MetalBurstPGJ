@@ -18,7 +18,7 @@ func initiate():
 	_current = 0
 	_last = -1
 
-func _update_behavior(delta:float)->RunState:
+func _update_behavior(delta:float)->int:
 	var cBehaviors = get_child_behaviors()
 
 	if(_finished):
@@ -36,7 +36,7 @@ func _update_behavior(delta:float)->RunState:
 				behavior.initiate()
 				_last = _current
 			
-			var result : RunState = behavior._update_behavior(delta)
+			var result : int = behavior._update_behavior(delta)
 
 			if(result == RunState.Success):
 				return result
@@ -46,4 +46,7 @@ func _update_behavior(delta:float)->RunState:
 			_finished = true
 	
 	return RunState.Running
+
+func get_child_behaviors():
+	return .get_child_behaviors()
 

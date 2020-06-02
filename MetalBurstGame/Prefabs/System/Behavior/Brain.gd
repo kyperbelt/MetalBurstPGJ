@@ -1,5 +1,5 @@
 extends Node
-
+#TODO: make check for missing root node using tool
 class_name Brain, "res://Assets/Tools/Behavior/brain.png"
 
 #data used by this brain and all nodes in the behavior tree
@@ -7,14 +7,17 @@ class_name Brain, "res://Assets/Tools/Behavior/brain.png"
 var _blackBoard = {}
 var _root :BehaviorNode= null
 var _current = null
-var _lastState : RunState = RunState.Running
+var _lastState : int = RunState.Running
 var _running = false
 
 func _ready():
+	_process(true)
+	print("starting brain")
+	start({},_find_first_behavior())
 	pass # Replace with function body.
 
 func _process(delta):
-	var finished : bool = !update_brain(delta)
+	var _finished : bool = !update_brain(delta) #make use of the _finished Variable
 	
 func is_running():
 	return _running
@@ -24,6 +27,7 @@ func start(blackBoard,root:BehaviorNode):
 	_running = true
 	_blackBoard = blackBoard
 	root.set_brain(self)
+	root.initiate()
 	root.set_parent_behavior(null)
 	_current = root
 	
@@ -42,15 +46,24 @@ func get_current()->BehaviorNode:
 func get_root_behavior()->BehaviorNode:
 	return _root
 
-func get_last_state()->RunState:
+func get_last_state()->int:
 	return _lastState
 
 func update_brain(delta)->bool:
 	if(_running):
 		if(_root!=null):
-			var state : RunState = _root._update_behavior(delta)
+			var state : int = _root._update_behavior(delta)
 			if(state != RunState.Running):
 				_running = false
 				_lastState = state
 	return _running
+
+	#find the first behavior node child
+func _find_first_behavior()->BehaviorNode:
+	for child in get_children():
+		if(child.is_type("BehaviorNode")):
+			print("behavior found:"+child.get_name())
+			return child as BehaviorNode
+	print("no child behavior found")
+	return null
 	
