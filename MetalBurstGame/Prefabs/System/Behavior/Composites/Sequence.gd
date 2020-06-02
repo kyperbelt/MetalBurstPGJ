@@ -1,5 +1,11 @@
 extends Composite
 
+
+"""
+A sequence Runs all the children in sequence and returns success only 
+when all its child behaviors post success. Otherwise it will return Failure
+at the first Failed post by a child behavior. 
+"""
 class_name Sequence
 
 var _finished:bool = false
