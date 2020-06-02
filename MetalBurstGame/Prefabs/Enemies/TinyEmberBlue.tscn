@@ -8,7 +8,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20, 15 )
 
-[node name="TinyEmber" type="Node2D"]
+[node name="TinyEmberBlue" type="Node2D"]
 script = ExtResource( 3 )
 __meta__ = {
 "_editor_description_": "-If this foe needs to be rotated, rotate from *this* root node
@@ -38,7 +38,7 @@ shape = SubResource( 1 )
 position = Vector2( 0, -7 )
 frames = ExtResource( 1 )
 animation = "TinyEmberBlue"
-frame = 2
+frame = 3
 playing = true
 
 [node name="FoeHitSFX" type="AudioStreamPlayer" parent="."]
