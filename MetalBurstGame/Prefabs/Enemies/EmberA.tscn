@@ -35,6 +35,7 @@ texture = ExtResource( 3 )
 [node name="Emberv2" type="AnimatedSprite" parent="."]
 frames = ExtResource( 4 )
 animation = "MediumSpeed"
+frame = 2
 playing = true
 
 [node name="FoeHitSFX" type="AudioStreamPlayer" parent="."]

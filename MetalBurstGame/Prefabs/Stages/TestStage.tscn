@@ -10,7 +10,8 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Stages/TestStage2.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Backgrounds/Stage1BG.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Prefabs/Enemies/TinyEmber.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=11]
+
 
 [node name="Stage" type="Node"]
 
