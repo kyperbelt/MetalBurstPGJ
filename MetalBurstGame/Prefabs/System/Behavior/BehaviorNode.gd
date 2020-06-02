@@ -17,7 +17,7 @@ func set_state(state):
 func get_state():
 	return _state
 
-func set_brain(brain:):
+func set_brain(brain):
 	_brain = brain;
 
 func get_brain():
