@@ -14,6 +14,9 @@ var _timesRan:int = 1
 
 func initiate():
 	.initiate()
+	get_child_behavior().initiate()#requires child -- see TODO in base Decorator class
+	_finished = false
+	_timesRan = 1
 	pass
 
 func _update_behavior(delta:float)->RunState:
