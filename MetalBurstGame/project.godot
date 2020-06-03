@@ -187,6 +187,7 @@ pause={
 2d_physics/layer_5="EnemyBullets"
 2d_physics/layer_6="PlayerBullets"
 2d_physics/layer_7="PlayerBombs"
+2d_physics/layer_8="Items"
 
 [rendering]
 
