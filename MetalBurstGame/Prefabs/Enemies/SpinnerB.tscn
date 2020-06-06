@@ -28,7 +28,7 @@ shape = SubResource( 1 )
 [node name="SpinnningSpriteBig" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
 animation = "24FPS"
-frame = 4
+frame = 3
 playing = true
 
 [node name="SpinnningSpriteSmall" type="AnimatedSprite" parent="."]
@@ -36,7 +36,7 @@ modulate = Color( 1, 0, 0, 1 )
 scale = Vector2( 0.5, 0.5 )
 frames = ExtResource( 1 )
 animation = "24FPS"
-frame = 4
+frame = 3
 playing = true
 flip_h = true
 

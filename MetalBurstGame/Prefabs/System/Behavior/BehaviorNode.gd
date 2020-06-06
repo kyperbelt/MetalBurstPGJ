@@ -41,6 +41,9 @@ func initiate():
 func _update_behavior(_delta:float)->int:
 	return RunState.Failed
 
-func is_type(type):
-	return type == "BehaviorNode"
+func is_class(type):
+	return type == get_class()
+
+func get_class()->String:
+	return "BehaviorNode"
 	

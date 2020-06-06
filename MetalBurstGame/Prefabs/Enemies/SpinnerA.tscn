@@ -34,7 +34,7 @@ texture = ExtResource( 1 )
 [node name="SpinnningSpritev2" type="AnimatedSprite" parent="."]
 frames = ExtResource( 5 )
 animation = "6 Frame"
-frame = 5
+frame = 1
 playing = true
 
 [node name="TopSprite" type="Sprite" parent="."]

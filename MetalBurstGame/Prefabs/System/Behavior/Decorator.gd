@@ -18,6 +18,7 @@ func _ready():
 
 func _find_first_behavior():
 	for child in get_children():
-		if(child.is_type("BehaviorNode")):
+		if(child is BehaviorNode):
 			set_child_behavior(child)
+			break
 

@@ -24,8 +24,11 @@ func _ready():
 
 func _on_event_added():
 	var children = get_children()
+
 	for child in children:
-		if(child is Enemy):
+		print(child.get_class())
+		if(child.is_class("Enemy")):
+			print("added ")
 			entities.append(child)
 			remove_child(child)
 			

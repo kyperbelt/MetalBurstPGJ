@@ -8,6 +8,10 @@
 
 [node name="TestBehavior" type="Node"]
 script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "A simple test behavior that prints to the console every few seconds.
+"
+}
 
 [node name="Repeater" type="Node" parent="."]
 script = ExtResource( 2 )

@@ -75,3 +75,9 @@ func shoot():
 		my_engine.add_child(bullet)
 		shot_timer = cooldown
 		reloading = RELOAD_TIME
+
+func is_class(type:String):
+	return type == get_class()
+
+func get_class()->String:
+	return "Enemy"

@@ -20,5 +20,5 @@ func _ready():
 	#find all child behaviors in this node
 func _find_child_behaviors():
 	for child in get_children():
-		if(child.is_type("BehaviorNode")):
+		if(child is BehaviorNode):
 			add_child_behavior(child)
