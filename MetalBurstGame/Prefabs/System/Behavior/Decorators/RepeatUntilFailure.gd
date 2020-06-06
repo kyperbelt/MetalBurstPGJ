@@ -1,3 +1,4 @@
+tool
 extends Decorator
 
 """
@@ -28,5 +29,3 @@ func _update_behavior(delta:float)->int:
 
 	return RunState.Running
 
-func _ready():
-	pass # Replace with function body.

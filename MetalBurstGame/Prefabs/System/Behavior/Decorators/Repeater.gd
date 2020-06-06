@@ -1,3 +1,4 @@
+tool
 extends Decorator
 
 """
@@ -21,7 +22,6 @@ func initiate():
 	pass
 
 func _update_behavior(delta:float)->int:
-
 	if(_finished):
 		_finished = false
 		get_child_behavior().initiate()
@@ -36,5 +36,3 @@ func _update_behavior(delta:float)->int:
 		_finished = true
 	return RunState.Running
 
-func _ready():
-	pass # Replace with function body.

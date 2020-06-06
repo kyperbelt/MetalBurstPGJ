@@ -1,3 +1,4 @@
+tool
 extends BehaviorNode
 
 #TODO: Add editor tool support to identify when child nodes are missing
@@ -14,11 +15,22 @@ func get_child_behaviors():
 	return _childBehaviors
 
 func _ready():
-	_find_child_behaviors()
-	pass # Replace with function body. cache all ChildBehaviors Here
+	if(!Engine.is_editor_hint()):
+		_find_child_behaviors() #cache all ChildBehaviors Here
 
 	#find all child behaviors in this node
 func _find_child_behaviors():
 	for child in get_children():
 		if(child is BehaviorNode):
 			add_child_behavior(child)
+			
+func _get_configuration_warning():
+	if(Engine.is_editor_hint()):
+		for child in get_children():
+			if(child is BehaviorNode):
+				return ""
+	return """
+			No child BehaviorNode was found so this will not function properly.
+			Try adding BehaviorNodes like Decorators,Composite or Actions for the
+			sequence to perform correctly.
+		   """

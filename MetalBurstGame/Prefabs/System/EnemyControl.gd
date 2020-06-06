@@ -21,8 +21,10 @@ func _ready():
 #called by the engine when it adds it to the correct layer
 func engine_ready(engine):
 	_engineReady = true
-	_myEngine = engine;
-	pass
+	_myEngine = engine
+	_brain.start({
+	
+	})
 
 func get_engine_ready()->bool:
 	return _engineReady

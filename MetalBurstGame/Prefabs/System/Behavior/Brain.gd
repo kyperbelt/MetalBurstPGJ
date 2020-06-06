@@ -10,31 +10,30 @@ var _root :BehaviorNode= null
 var _current = null
 var _lastState : int = RunState.Running
 var _running = false
+var _runCount : int = 0
 
 func _ready():
 	if(Engine.is_editor_hint()):
 		pass
 	else:
 		set_process(false)
-		print("starting brain")
-		start({},_find_first_behavior())
 	
 func is_running():
 	return _running
 
-func start(blackBoard,root:BehaviorNode):
-	_root = root
+func start(blackBoard):
+	_root = _find_first_behavior()
 	_running = true
 	_blackBoard = blackBoard
-	root.set_brain(self)
-	root.initiate()
-	root.set_parent_behavior(null)
-	_current = root
+	_root.set_brain(self)
+	_root.initiate()
+	_root.set_parent_behavior(null)
+	_current = _root
 	
-func get_blackboard():
+func get_blackboard()->Dictionary:
 	return _blackBoard
 
-func set_blackboard(blackBoard):
+func set_blackboard(blackBoard:Dictionary):
 	_blackBoard = blackBoard
 
 func set_current(current:BehaviorNode):
@@ -49,6 +48,9 @@ func get_root_behavior()->BehaviorNode:
 func get_last_state()->int:
 	return _lastState
 
+func get_run_count()->int:
+	return _runCount
+
 func update_brain(delta)->bool:
 	if(_running):
 		if(_root!=null):
@@ -56,6 +58,7 @@ func update_brain(delta)->bool:
 			if(state != RunState.Running):
 				_running = false
 				_lastState = state
+				_runCount += 1
 	return _running
 
 	#find the first behavior node child

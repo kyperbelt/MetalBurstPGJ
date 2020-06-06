@@ -29,8 +29,8 @@ func set_parent_behavior(parentBehavior:BehaviorNode):
 func get_parent_behavior()->BehaviorNode:
 	return _parentBehavior
 
-func get_blackboard():
-	return _brain.get_blackboard()
+func get_blackboard()->Dictionary:
+	return get_brain().get_blackboard()
 
 #if overwritten must be called as well. 
 func initiate():
