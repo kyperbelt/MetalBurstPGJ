@@ -1,15 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=2]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Wait.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Print.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/MoveTo.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/RandomInt.gd" type="Script" id=7]
 
-[node name="TestBehavior" type="Node"]
+[node name="RandomZoneSpawn" type="Node"]
 script = ExtResource( 1 )
 __meta__ = {
-"_editor_description_": "A simple test behavior that prints to the console every few seconds.
+"_editor_description_": "A simple test behavior that prints to the console every few seconds. and moves the user to a zone instantly
 "
 }
 
@@ -21,7 +23,16 @@ script = ExtResource( 4 )
 
 [node name="Wait" type="Node" parent="Repeater/Sequence"]
 script = ExtResource( 3 )
-delay = 3.0
+
+[node name="RandomInt" type="Node" parent="Repeater/Sequence"]
+script = ExtResource( 7 )
+
+[node name="MoveTo" type="Node" parent="Repeater/Sequence"]
+script = ExtResource( 6 )
+_zone = 1
+_xOffset = 10.0
+_yOffset = 10.0
+_useValue = true
 
 [node name="Print" type="Node" parent="Repeater/Sequence"]
 script = ExtResource( 5 )

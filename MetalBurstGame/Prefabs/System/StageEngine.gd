@@ -1,5 +1,7 @@
 extends Node
 
+class_name MBengine#MetalBurstEngine
+
 #SIGNALS
 signal player_died
 
@@ -85,3 +87,6 @@ func player_hit():
 	else:
 		informationDisplay.set_lives(player.lives,false)
 	pass
+
+func get_play_container()->ViewportContainer:
+	return get_node(Level).get_node("Container") as ViewportContainer

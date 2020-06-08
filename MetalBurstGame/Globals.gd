@@ -8,6 +8,7 @@ var margin = 80
 var player_bullet_image
 const Player : PackedScene = preload("res://Prefabs/Player/Player.tscn")
 var _player = null
+var random : RandomNumberGenerator = RandomNumberGenerator.new()
 
 # Called when the node enters the scene tree for the first time.
 func _enter_tree():

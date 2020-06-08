@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Behaviors/TestBehavior.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Behaviors/ZigZagger.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Enemies/BehaviorTest/TestAiEnemy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Backgrounds/Stage1BG.tscn" type="PackedScene" id=10]
 
@@ -37,18 +38,164 @@ LevelScene = NodePath("../Level")
 position = Vector2( -1339.53, -1985.58 )
 scale = Vector2( 7.06361, 5.00941 )
 
-[node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 7 )]
+[node name="RandomZoneSpawner" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -273.87, -367.453 )
 event_time = 1.85061
 spawn_x = -273.87
 
-[node name="TestEnemy" parent="StageDirector/SpawnEvent" instance=ExtResource( 9 )]
+[node name="RandomZoneEnemy" parent="StageDirector/RandomZoneSpawner" instance=ExtResource( 9 )]
 position = Vector2( 57.4153, 100.477 )
 
-[node name="TestBehavior" parent="StageDirector/SpawnEvent/TestEnemy" instance=ExtResource( 2 )]
+[node name="TestBehavior" parent="StageDirector/RandomZoneSpawner/RandomZoneEnemy" instance=ExtResource( 2 )]
+
+[node name="RandomZoneEnemy2" parent="StageDirector/RandomZoneSpawner" instance=ExtResource( 9 )]
+position = Vector2( 57.4153, 100.477 )
+
+[node name="TestBehavior" parent="StageDirector/RandomZoneSpawner/RandomZoneEnemy2" instance=ExtResource( 2 )]
+
+[node name="RandomZoneEnemy3" parent="StageDirector/RandomZoneSpawner" instance=ExtResource( 9 )]
+position = Vector2( 57.4153, 100.477 )
+
+[node name="TestBehavior" parent="StageDirector/RandomZoneSpawner/RandomZoneEnemy3" instance=ExtResource( 2 )]
+
+[node name="ZiggZaggerSpawner" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( -120.544, -46.363 )
+event_time = 0.233499
+spawn_x = -120.544
+
+[node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner" instance=ExtResource( 9 )]
+position = Vector2( -71.0901, -40.1814 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner/ZigZagger" instance=ExtResource( 8 )]
+
+[node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner" instance=ExtResource( 9 )]
+position = Vector2( 0, -108.181 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner/ZigZagger2" instance=ExtResource( 8 )]
+
+[node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner" instance=ExtResource( 9 )]
+position = Vector2( 83.4535, -52.5448 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner/ZigZagger3" instance=ExtResource( 8 )]
+
+[node name="ZiggZaggerSpawner2" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 163.9, -291.573 )
+event_time = 1.46845
+spawn_x = 163.9
+
+[node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner2" instance=ExtResource( 9 )]
+position = Vector2( -71.0901, -40.1814 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner2/ZigZagger" instance=ExtResource( 8 )]
+
+[node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner2" instance=ExtResource( 9 )]
+position = Vector2( 0, -108.181 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner2/ZigZagger2" instance=ExtResource( 8 )]
+
+[node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner2" instance=ExtResource( 9 )]
+position = Vector2( 83.4535, -52.5448 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner2/ZigZagger3" instance=ExtResource( 8 )]
+
+[node name="ZiggZaggerSpawner3" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( -140.161, -683.909 )
+event_time = 3.44438
+spawn_x = -140.161
+
+[node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner3" instance=ExtResource( 9 )]
+position = Vector2( -71.0901, -40.1814 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner3/ZigZagger" instance=ExtResource( 8 )]
+
+[node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner3" instance=ExtResource( 9 )]
+position = Vector2( 0, -108.181 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner3/ZigZagger2" instance=ExtResource( 8 )]
+
+[node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner3" instance=ExtResource( 9 )]
+position = Vector2( 83.4535, -52.5448 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner3/ZigZagger3" instance=ExtResource( 8 )]
+
+[node name="ZiggZaggerSpawner4" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 198.229, -943.832 )
+event_time = 4.75343
+spawn_x = 198.229
+
+[node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
+position = Vector2( -71.0901, -40.1814 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger" instance=ExtResource( 8 )]
+
+[node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
+position = Vector2( 0, -108.181 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger2" instance=ExtResource( 8 )]
+
+[node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
+position = Vector2( 83.4535, -52.5448 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger3" instance=ExtResource( 8 )]
+
+[node name="ZiggZaggerSpawner5" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( -125.448, -1242.99 )
+event_time = 6.26008
+spawn_x = -125.448
+
+[node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner5" instance=ExtResource( 9 )]
+position = Vector2( -71.0901, -40.1814 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner5/ZigZagger" instance=ExtResource( 8 )]
+
+[node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner5" instance=ExtResource( 9 )]
+position = Vector2( 0, -108.181 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner5/ZigZagger2" instance=ExtResource( 8 )]
+
+[node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner5" instance=ExtResource( 9 )]
+position = Vector2( 83.4535, -52.5448 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner5/ZigZagger3" instance=ExtResource( 8 )]
+
+[node name="ZiggZaggerSpawner6" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 181.498, -1394.36 )
+event_time = 7.02243
+spawn_x = 181.498
+
+[node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner6" instance=ExtResource( 9 )]
+position = Vector2( -71.0901, -40.1814 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner6/ZigZagger" instance=ExtResource( 8 )]
+
+[node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner6" instance=ExtResource( 9 )]
+position = Vector2( 0, -108.181 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner6/ZigZagger2" instance=ExtResource( 8 )]
+
+[node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner6" instance=ExtResource( 9 )]
+position = Vector2( 83.4535, -52.5448 )
+_maxSpeed = 300.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner6/ZigZagger3" instance=ExtResource( 8 )]
 [connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]
 [connection signal="tree_exited" from="Level" to="Level" method="_on_Level_tree_exited"]
 
 [editable path="StageDirector"]
-
-[editable path="StageDirector/SpawnEvent/TestEnemy/TestBehavior"]

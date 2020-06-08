@@ -14,6 +14,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Action.gd"
 }, {
+"base": "Action",
+"class": "AddPath",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Actions/AddPath.gd"
+}, {
+"base": "Reference",
+"class": "BB",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/BB.gd"
+}, {
 "base": "Sprite",
 "class": "BackgroundLayer",
 "language": "GDScript",
@@ -69,10 +79,25 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Decorators/Inverter.gd"
 }, {
+"base": "Node",
+"class": "MBengine",
+"language": "GDScript",
+"path": "res://Prefabs/System/StageEngine.gd"
+}, {
 "base": "Label",
 "class": "MenuOption",
 "language": "GDScript",
 "path": "res://Prefabs/System/MenuOption.gd"
+}, {
+"base": "Action",
+"class": "MoveCardinal",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Actions/MoveCardinal.gd"
+}, {
+"base": "Action",
+"class": "MoveTo",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Actions/MoveTo.gd"
 }, {
 "base": "Node2D",
 "class": "Player",
@@ -93,6 +118,11 @@ _global_script_classes=[ {
 "class": "Projectiles",
 "language": "GDScript",
 "path": "res://Prefabs/Projectiles/Projectiles.gd"
+}, {
+"base": "Action",
+"class": "RandomInt",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Actions/RandomInt.gd"
 }, {
 "base": "Selector",
 "class": "RandomSelector",
@@ -154,6 +184,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/System/StageDirector/Indicators/START.gd"
 }, {
+"base": "Action",
+"class": "StopMove",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Actions/StopMove.gd"
+}, {
 "base": "Decorator",
 "class": "Succeeder",
 "language": "GDScript",
@@ -163,9 +198,16 @@ _global_script_classes=[ {
 "class": "Wait",
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Actions/Wait.gd"
+}, {
+"base": "Reference",
+"class": "ZoneMap",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/ZoneMap.gd"
 } ]
 _global_script_class_icons={
 "Action": "res://Assets/Tools/Behavior/action.png",
+"AddPath": "",
+"BB": "",
 "BackgroundLayer": "",
 "BehaviorNode": "",
 "Brain": "res://Assets/Tools/Behavior/brain.png",
@@ -177,11 +219,15 @@ _global_script_class_icons={
 "EnemyControl": "res://Assets/Tools/boss.png",
 "InformationDisplay": "",
 "Inverter": "",
+"MBengine": "",
 "MenuOption": "",
+"MoveCardinal": "",
+"MoveTo": "",
 "Player": "",
 "PositionalEvent": "res://Assets/Tools/pointA.png",
 "Print": "",
 "Projectiles": "",
+"RandomInt": "",
 "RandomSelector": "",
 "RandomSequence": "",
 "RepeatUntilFail": "",
@@ -194,8 +240,10 @@ _global_script_class_icons={
 "StageDirector": "res://Assets/Tools/director.png",
 "StageEvent": "res://Assets/Tools/open.png",
 "StartNode": "",
+"StopMove": "",
 "Succeeder": "",
-"Wait": ""
+"Wait": "",
+"ZoneMap": ""
 }
 
 [application]

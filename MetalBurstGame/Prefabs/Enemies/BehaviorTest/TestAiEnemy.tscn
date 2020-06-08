@@ -12,7 +12,6 @@ script = ExtResource( 2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
 animation = "MediumSpeed"
-frame = 3
 playing = true
 
 [node name="EnemyArea" type="Area2D" parent="."]
