@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/MoveCardinal.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=3]
+
+[node name="SideEnter" type="Node"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Movement Enter from right side of the screen to left side of the screen"
+}
+
+[node name="Sequence" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="MoveCardinal" type="Node" parent="Sequence"]
+script = ExtResource( 2 )
+_direction = 6
