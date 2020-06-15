@@ -17,7 +17,12 @@ _global_script_classes=[ {
 "base": "Action",
 "class": "AddPath",
 "language": "GDScript",
-"path": "res://Prefabs/System/Behavior/Actions/AddPath.gd"
+"path": "res://Prefabs/System/Behavior/Actions/Utility/AddPath.gd"
+}, {
+"base": "Action",
+"class": "Alive",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Actions/State/Alive.gd"
 }, {
 "base": "Reference",
 "class": "BB",
@@ -38,6 +43,11 @@ _global_script_classes=[ {
 "class": "Brain",
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Brain.gd"
+}, {
+"base": "Action",
+"class": "ChangeSpeed",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd"
 }, {
 "base": "BehaviorNode",
 "class": "Composite",
@@ -92,12 +102,12 @@ _global_script_classes=[ {
 "base": "Action",
 "class": "MoveCardinal",
 "language": "GDScript",
-"path": "res://Prefabs/System/Behavior/Actions/MoveCardinal.gd"
+"path": "res://Prefabs/System/Behavior/Actions/Movement/MoveCardinal.gd"
 }, {
 "base": "Action",
 "class": "MoveTo",
 "language": "GDScript",
-"path": "res://Prefabs/System/Behavior/Actions/MoveTo.gd"
+"path": "res://Prefabs/System/Behavior/Actions/Movement/MoveTo.gd"
 }, {
 "base": "Node2D",
 "class": "Player",
@@ -112,7 +122,7 @@ _global_script_classes=[ {
 "base": "Action",
 "class": "Print",
 "language": "GDScript",
-"path": "res://Prefabs/System/Behavior/Actions/Print.gd"
+"path": "res://Prefabs/System/Behavior/Actions/Utility/Print.gd"
 }, {
 "base": "Sprite",
 "class": "Projectiles",
@@ -122,7 +132,7 @@ _global_script_classes=[ {
 "base": "Action",
 "class": "RandomInt",
 "language": "GDScript",
-"path": "res://Prefabs/System/Behavior/Actions/RandomInt.gd"
+"path": "res://Prefabs/System/Behavior/Actions/Utility/RandomInt.gd"
 }, {
 "base": "Selector",
 "class": "RandomSelector",
@@ -143,6 +153,16 @@ _global_script_classes=[ {
 "class": "Repeater",
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Decorators/Repeater.gd"
+}, {
+"base": "Action",
+"class": "RotateBy",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Actions/Movement/RotateBy.gd"
+}, {
+"base": "Action",
+"class": "RotateTo",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Actions/Movement/RotateTo.gd"
 }, {
 "base": "Reference",
 "class": "RunState",
@@ -187,7 +207,7 @@ _global_script_classes=[ {
 "base": "Action",
 "class": "StopMove",
 "language": "GDScript",
-"path": "res://Prefabs/System/Behavior/Actions/StopMove.gd"
+"path": "res://Prefabs/System/Behavior/Actions/Movement/StopMove.gd"
 }, {
 "base": "Decorator",
 "class": "Succeeder",
@@ -197,7 +217,7 @@ _global_script_classes=[ {
 "base": "Action",
 "class": "Wait",
 "language": "GDScript",
-"path": "res://Prefabs/System/Behavior/Actions/Wait.gd"
+"path": "res://Prefabs/System/Behavior/Actions/Utility/Wait.gd"
 }, {
 "base": "Reference",
 "class": "ZoneMap",
@@ -207,10 +227,12 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Action": "res://Assets/Tools/Behavior/action.png",
 "AddPath": "",
+"Alive": "",
 "BB": "",
 "BackgroundLayer": "",
 "BehaviorNode": "",
 "Brain": "res://Assets/Tools/Behavior/brain.png",
+"ChangeSpeed": "",
 "Composite": "res://Assets/Tools/Behavior/sequence.png",
 "Decorator": "res://Assets/Tools/Behavior/decorator.png",
 "EndNode": "",
@@ -232,6 +254,8 @@ _global_script_class_icons={
 "RandomSequence": "",
 "RepeatUntilFail": "",
 "Repeater": "",
+"RotateBy": "",
+"RotateTo": "",
 "RunState": "",
 "ScrollingBackground": "",
 "Selector": "",
