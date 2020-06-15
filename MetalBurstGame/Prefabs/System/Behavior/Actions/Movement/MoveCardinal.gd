@@ -47,6 +47,5 @@ func _update_behavior(_delta:float)->int:
 	print("%s before normal %s" % [Direction.keys()[_direction],newVelocity])
 	newVelocity = newVelocity.normalized()
 	print("%s  after normal  %s" % [Direction.keys()[_direction],newVelocity])
-	newVelocity = Vector2(newVelocity.x * _self.get_max_speed(),newVelocity.y*_self.get_max_speed())
 	_self.set_velocity(newVelocity.x,newVelocity.y)
 	return RunState.Success
