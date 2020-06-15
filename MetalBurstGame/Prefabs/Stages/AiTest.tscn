@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Behaviors/TestBehavior.tscn" type="PackedScene" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://Prefabs/Behaviors/ZigZagger.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Enemies/BehaviorTest/TestAiEnemy.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Backgrounds/Stage1BG.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Behaviors/Curve.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/Behaviors/SideEnter.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Behaviors/Circle Repeat.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Behaviors/SucceederTest.tscn" type="PackedScene" id=14]
 
 [node name="Stage" type="Node"]
 
@@ -31,7 +35,14 @@ bus = "Music"
 
 [node name="StageDirector" parent="." instance=ExtResource( 6 )]
 position = Vector2( 640, 0 )
+G_U_I_D_E_S = ""
+show_timeline = true
 hatch_marks = 10
+show_bounds = true
+bounds_color = Color( 1, 0, 0, 1 )
+T_U_N_I_N_G = ""
+duration = 20.0
+D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
@@ -39,162 +50,251 @@ position = Vector2( -1339.53, -1985.58 )
 scale = Vector2( 7.06361, 5.00941 )
 
 [node name="RandomZoneSpawner" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( -273.87, -367.453 )
-event_time = 1.85061
-spawn_x = -273.87
+position = Vector2( -254.349, -1918.33 )
+B_A_S_E = ""
+event_time = 19.3226
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = -254.349
 
 [node name="RandomZoneEnemy" parent="StageDirector/RandomZoneSpawner" instance=ExtResource( 9 )]
 position = Vector2( 57.4153, 100.477 )
+_maxHealth = 100.0
 
 [node name="TestBehavior" parent="StageDirector/RandomZoneSpawner/RandomZoneEnemy" instance=ExtResource( 2 )]
 
 [node name="RandomZoneEnemy2" parent="StageDirector/RandomZoneSpawner" instance=ExtResource( 9 )]
 position = Vector2( 57.4153, 100.477 )
+_maxHealth = 100.0
 
 [node name="TestBehavior" parent="StageDirector/RandomZoneSpawner/RandomZoneEnemy2" instance=ExtResource( 2 )]
 
 [node name="RandomZoneEnemy3" parent="StageDirector/RandomZoneSpawner" instance=ExtResource( 9 )]
 position = Vector2( 57.4153, 100.477 )
+_maxHealth = 100.0
 
 [node name="TestBehavior" parent="StageDirector/RandomZoneSpawner/RandomZoneEnemy3" instance=ExtResource( 2 )]
 
-[node name="ZiggZaggerSpawner" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( -120.544, -46.363 )
-event_time = 0.233499
-spawn_x = -120.544
-
-[node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner" instance=ExtResource( 9 )]
-position = Vector2( -71.0901, -40.1814 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner/ZigZagger" instance=ExtResource( 8 )]
-
-[node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner" instance=ExtResource( 9 )]
-position = Vector2( 0, -108.181 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner/ZigZagger2" instance=ExtResource( 8 )]
-
-[node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner" instance=ExtResource( 9 )]
-position = Vector2( 83.4535, -52.5448 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner/ZigZagger3" instance=ExtResource( 8 )]
-
-[node name="ZiggZaggerSpawner2" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 163.9, -291.573 )
-event_time = 1.46845
-spawn_x = 163.9
-
-[node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner2" instance=ExtResource( 9 )]
-position = Vector2( -71.0901, -40.1814 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner2/ZigZagger" instance=ExtResource( 8 )]
-
-[node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner2" instance=ExtResource( 9 )]
-position = Vector2( 0, -108.181 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner2/ZigZagger2" instance=ExtResource( 8 )]
-
-[node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner2" instance=ExtResource( 9 )]
-position = Vector2( 83.4535, -52.5448 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner2/ZigZagger3" instance=ExtResource( 8 )]
-
-[node name="ZiggZaggerSpawner3" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( -140.161, -683.909 )
-event_time = 3.44438
-spawn_x = -140.161
-
-[node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner3" instance=ExtResource( 9 )]
-position = Vector2( -71.0901, -40.1814 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner3/ZigZagger" instance=ExtResource( 8 )]
-
-[node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner3" instance=ExtResource( 9 )]
-position = Vector2( 0, -108.181 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner3/ZigZagger2" instance=ExtResource( 8 )]
-
-[node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner3" instance=ExtResource( 9 )]
-position = Vector2( 83.4535, -52.5448 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner3/ZigZagger3" instance=ExtResource( 8 )]
-
-[node name="ZiggZaggerSpawner4" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 198.229, -943.832 )
-event_time = 4.75343
-spawn_x = 198.229
-
-[node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
-position = Vector2( -71.0901, -40.1814 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger" instance=ExtResource( 8 )]
-
-[node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
-position = Vector2( 0, -108.181 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger2" instance=ExtResource( 8 )]
-
-[node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
-position = Vector2( 83.4535, -52.5448 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger3" instance=ExtResource( 8 )]
-
-[node name="ZiggZaggerSpawner5" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( -125.448, -1242.99 )
-event_time = 6.26008
-spawn_x = -125.448
-
-[node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner5" instance=ExtResource( 9 )]
-position = Vector2( -71.0901, -40.1814 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner5/ZigZagger" instance=ExtResource( 8 )]
-
-[node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner5" instance=ExtResource( 9 )]
-position = Vector2( 0, -108.181 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner5/ZigZagger2" instance=ExtResource( 8 )]
-
-[node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner5" instance=ExtResource( 9 )]
-position = Vector2( 83.4535, -52.5448 )
-_maxSpeed = 300.0
-
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner5/ZigZagger3" instance=ExtResource( 8 )]
-
-[node name="ZiggZaggerSpawner6" parent="StageDirector" instance=ExtResource( 7 )]
+[node name="SuccederTest" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 181.498, -1394.36 )
-event_time = 7.02243
+B_A_S_E = ""
+event_time = 14.0449
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 181.498
 
-[node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner6" instance=ExtResource( 9 )]
+[node name="ZigZagger" parent="StageDirector/SuccederTest" instance=ExtResource( 9 )]
 position = Vector2( -71.0901, -40.1814 )
 _maxSpeed = 300.0
+_maxHealth = 100.0
 
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner6/ZigZagger" instance=ExtResource( 8 )]
+[node name="SucceederTest" parent="StageDirector/SuccederTest/ZigZagger" instance=ExtResource( 14 )]
 
-[node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner6" instance=ExtResource( 9 )]
+[node name="ZigZagger2" parent="StageDirector/SuccederTest" instance=ExtResource( 9 )]
 position = Vector2( 0, -108.181 )
 _maxSpeed = 300.0
+_maxHealth = 100.0
 
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner6/ZigZagger2" instance=ExtResource( 8 )]
+[node name="SucceederTest" parent="StageDirector/SuccederTest/ZigZagger2" instance=ExtResource( 14 )]
 
-[node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner6" instance=ExtResource( 9 )]
+[node name="ZigZagger3" parent="StageDirector/SuccederTest" instance=ExtResource( 9 )]
 position = Vector2( 83.4535, -52.5448 )
 _maxSpeed = 300.0
+_maxHealth = 100.0
 
-[node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner6/ZigZagger3" instance=ExtResource( 8 )]
+[node name="SucceederTest" parent="StageDirector/SuccederTest/ZigZagger3" instance=ExtResource( 14 )]
+
+[node name="CircleRepeat" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( -125.448, -1242.99 )
+B_A_S_E = ""
+event_time = 12.5202
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = -125.448
+
+[node name="ZigZagger" parent="StageDirector/CircleRepeat" instance=ExtResource( 9 )]
+position = Vector2( -71.0901, -40.1814 )
+_maxSpeed = 200.0
+_maxHealth = 100.0
+
+[node name="CircleRepeater" parent="StageDirector/CircleRepeat/ZigZagger" instance=ExtResource( 13 )]
+
+[node name="ZigZagger2" parent="StageDirector/CircleRepeat" instance=ExtResource( 9 )]
+position = Vector2( 0, -108.181 )
+_maxSpeed = 200.0
+_maxHealth = 100.0
+
+[node name="CircleRepeater" parent="StageDirector/CircleRepeat/ZigZagger2" instance=ExtResource( 13 )]
+
+[node name="ZigZagger3" parent="StageDirector/CircleRepeat" instance=ExtResource( 9 )]
+position = Vector2( 83.4535, -52.5448 )
+_maxSpeed = 200.0
+_maxHealth = 100.0
+
+[node name="CircleRepeater" parent="StageDirector/CircleRepeat/ZigZagger3" instance=ExtResource( 13 )]
+
+[node name="SideEnterLine4" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 364.921, -1100 )
+B_A_S_E = ""
+event_time = 11.0799
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 364.921
+
+[node name="Ember" parent="StageDirector/SideEnterLine4" instance=ExtResource( 9 )]
+position = Vector2( 0, 100 )
+rotation = 1.5708
+_maxSpeed = 200.0
+_maxHealth = 100.0
+
+[node name="SideEnter" parent="StageDirector/SideEnterLine4/Ember" instance=ExtResource( 12 )]
+
+[node name="SideEnterLine3" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 364.921, -1066 )
+B_A_S_E = ""
+event_time = 10.7374
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 364.921
+
+[node name="Ember" parent="StageDirector/SideEnterLine3" instance=ExtResource( 9 )]
+position = Vector2( 0, 100 )
+rotation = 1.5708
+_maxSpeed = 200.0
+_maxHealth = 100.0
+
+[node name="SideEnter" parent="StageDirector/SideEnterLine3/Ember" instance=ExtResource( 12 )]
+
+[node name="SideEnterLine2" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 364.921, -1033 )
+B_A_S_E = ""
+event_time = 10.405
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 364.921
+
+[node name="Ember" parent="StageDirector/SideEnterLine2" instance=ExtResource( 9 )]
+position = Vector2( 0, 100 )
+rotation = 1.5708
+_maxSpeed = 200.0
+_maxHealth = 100.0
+
+[node name="SideEnter" parent="StageDirector/SideEnterLine2/Ember" instance=ExtResource( 12 )]
+
+[node name="SideEnterLine" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 364.921, -1000 )
+B_A_S_E = ""
+event_time = 10.0726
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 364.921
+
+[node name="Ember" parent="StageDirector/SideEnterLine" instance=ExtResource( 9 )]
+position = Vector2( 0, 100 )
+rotation = 1.5708
+_maxSpeed = 200.0
+_maxHealth = 100.0
+
+[node name="SideEnter" parent="StageDirector/SideEnterLine/Ember" instance=ExtResource( 12 )]
+
+[node name="Side Enter" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 364.921, -683.909 )
+B_A_S_E = ""
+event_time = 6.88876
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 364.921
+
+[node name="Ember" parent="StageDirector/Side Enter" instance=ExtResource( 9 )]
+position = Vector2( 0, 50 )
+rotation = 1.5708
+_maxSpeed = 200.0
+_maxHealth = 100.0
+
+[node name="SideEnter" parent="StageDirector/Side Enter/Ember" instance=ExtResource( 12 )]
+
+[node name="Ember2" parent="StageDirector/Side Enter" instance=ExtResource( 9 )]
+position = Vector2( 0, 150 )
+rotation = 1.5708
+_maxSpeed = 200.0
+_maxHealth = 100.0
+
+[node name="SideEnter" parent="StageDirector/Side Enter/Ember2" instance=ExtResource( 12 )]
+
+[node name="Ember3" parent="StageDirector/Side Enter" instance=ExtResource( 9 )]
+position = Vector2( 0, 250 )
+rotation = 1.5708
+_maxSpeed = 200.0
+_maxHealth = 100.0
+
+[node name="SideEnter" parent="StageDirector/Side Enter/Ember3" instance=ExtResource( 12 )]
+
+[node name="VariableSpeed" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 163.9, -291.573 )
+B_A_S_E = ""
+event_time = 2.93691
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 163.9
+
+[node name="ZigZagger" parent="StageDirector/VariableSpeed" instance=ExtResource( 9 )]
+position = Vector2( -80, -45 )
+_maxHealth = 100.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/VariableSpeed/ZigZagger" instance=ExtResource( 8 )]
+
+[node name="ZigZagger2" parent="StageDirector/VariableSpeed" instance=ExtResource( 9 )]
+position = Vector2( 0, -45 )
+_maxSpeed = 200.0
+_maxHealth = 100.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/VariableSpeed/ZigZagger2" instance=ExtResource( 8 )]
+
+[node name="ZigZagger3" parent="StageDirector/VariableSpeed" instance=ExtResource( 9 )]
+position = Vector2( 80, -45 )
+_maxSpeed = 300.0
+_maxHealth = 100.0
+
+[node name="ZigZaggerBrain" parent="StageDirector/VariableSpeed/ZigZagger3" instance=ExtResource( 8 )]
+
+[node name="CurveGroup" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( -120, -90 )
+B_A_S_E = ""
+event_time = 0.906536
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = -120.0
+
+[node name="ZigZagger" parent="StageDirector/CurveGroup" instance=ExtResource( 9 )]
+position = Vector2( -80, -45 )
+_maxSpeed = 150.0
+_maxHealth = 100.0
+
+[node name="Curve" parent="StageDirector/CurveGroup/ZigZagger" instance=ExtResource( 11 )]
+
+[node name="ZigZagger2" parent="StageDirector/CurveGroup" instance=ExtResource( 9 )]
+position = Vector2( 0, -100 )
+_maxSpeed = 150.0
+_maxHealth = 100.0
+
+[node name="Curve" parent="StageDirector/CurveGroup/ZigZagger2" instance=ExtResource( 11 )]
+
+[node name="ZigZagger3" parent="StageDirector/CurveGroup" instance=ExtResource( 9 )]
+position = Vector2( 80, -45 )
+_maxSpeed = 150.0
+_maxHealth = 100.0
+
+[node name="Curve" parent="StageDirector/CurveGroup/ZigZagger3" instance=ExtResource( 11 )]
 [connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]
 [connection signal="tree_exited" from="Level" to="Level" method="_on_Level_tree_exited"]
 
