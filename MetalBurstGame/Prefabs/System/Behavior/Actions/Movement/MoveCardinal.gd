@@ -44,8 +44,6 @@ func _update_behavior(_delta:float)->int:
 		Direction.NorthWest:
 			newVelocity.x = -1
 			newVelocity.y = -1
-	print("%s before normal %s" % [Direction.keys()[_direction],newVelocity])
 	newVelocity = newVelocity.normalized()
-	print("%s  after normal  %s" % [Direction.keys()[_direction],newVelocity])
 	_self.set_velocity(newVelocity.x,newVelocity.y)
 	return RunState.Success
