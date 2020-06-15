@@ -1,0 +1,41 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Prefabs/Enemies/SimpleEnemyAi.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/Projectiles/BulletTest.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Enemies/StageFoeTestingEmber.tres" type="Texture" id=3]
+[ext_resource path="res://Assets/Enemies/EmberSprites.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://Assets/Audio/SFX/enemyHit02.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Audio/SFX/enemyDeath.wav" type="AudioStream" id=6]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40.0432, 25.296 )
+
+[node name="EmberA" type="Node2D"]
+script = ExtResource( 1 )
+BULLET_TEST = ExtResource( 2 )
+
+[node name="EnemyArea" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyArea"]
+position = Vector2( 0, 10 )
+shape = SubResource( 1 )
+
+[node name="Emberv1" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="Emberv2" type="AnimatedSprite" parent="."]
+frames = ExtResource( 4 )
+animation = "MediumSpeed"
+frame = 5
+playing = true
+
+[node name="FoeHitSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = 5.0
+bus = "Enemy Hit"
+
+[node name="FoeDeathSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
