@@ -2,9 +2,11 @@
 
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=2]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/MoveCardinal.gd" type="Script" id=3]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Wait.gd" type="Script" id=4]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/StopMove.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveCardinal.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/StopMove.gd" type="Script" id=5]
+
+
 
 [node name="Curve" type="Node"]
 script = ExtResource( 1 )
