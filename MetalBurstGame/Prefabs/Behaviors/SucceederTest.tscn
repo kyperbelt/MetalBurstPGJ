@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/MoveCardinal.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Succeeder.gd" type="Script" id=4]
+
+[node name="SucceederTest" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Succeeder" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="Sequence" type="Node" parent="Succeeder"]
+script = ExtResource( 2 )
+
+[node name="MoveCardinal2" type="Node" parent="Succeeder/Sequence"]
+script = ExtResource( 3 )
+_direction = 5
+
+[node name="MoveCardinal" type="Node" parent="Succeeder/Sequence"]
+script = ExtResource( 3 )
+_direction = 3

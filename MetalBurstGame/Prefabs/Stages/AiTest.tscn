@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Behaviors/TestBehavior.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Prefabs/Behaviors/Curve.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Behaviors/SideEnter.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Behaviors/Circle Repeat.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Behaviors/SucceederTest.tscn" type="PackedScene" id=14]
 
 [node name="Stage" type="Node"]
 
@@ -75,7 +76,7 @@ _maxHealth = 100.0
 
 [node name="TestBehavior" parent="StageDirector/RandomZoneSpawner/RandomZoneEnemy3" instance=ExtResource( 2 )]
 
-[node name="Group6" parent="StageDirector" instance=ExtResource( 7 )]
+[node name="SuccederTest" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 181.498, -1394.36 )
 B_A_S_E = ""
 event_time = 14.0449
@@ -84,26 +85,26 @@ override_time = false
 S_P_A_W_N = ""
 spawn_x = 181.498
 
-[node name="ZigZagger" parent="StageDirector/Group6" instance=ExtResource( 9 )]
+[node name="ZigZagger" parent="StageDirector/SuccederTest" instance=ExtResource( 9 )]
 position = Vector2( -71.0901, -40.1814 )
 _maxSpeed = 300.0
 _maxHealth = 100.0
 
-[node name="ZigZaggerBrain" parent="StageDirector/Group6/ZigZagger" instance=ExtResource( 8 )]
+[node name="SucceederTest" parent="StageDirector/SuccederTest/ZigZagger" instance=ExtResource( 14 )]
 
-[node name="ZigZagger2" parent="StageDirector/Group6" instance=ExtResource( 9 )]
+[node name="ZigZagger2" parent="StageDirector/SuccederTest" instance=ExtResource( 9 )]
 position = Vector2( 0, -108.181 )
 _maxSpeed = 300.0
 _maxHealth = 100.0
 
-[node name="ZigZaggerBrain" parent="StageDirector/Group6/ZigZagger2" instance=ExtResource( 8 )]
+[node name="SucceederTest" parent="StageDirector/SuccederTest/ZigZagger2" instance=ExtResource( 14 )]
 
-[node name="ZigZagger3" parent="StageDirector/Group6" instance=ExtResource( 9 )]
+[node name="ZigZagger3" parent="StageDirector/SuccederTest" instance=ExtResource( 9 )]
 position = Vector2( 83.4535, -52.5448 )
 _maxSpeed = 300.0
 _maxHealth = 100.0
 
-[node name="ZigZaggerBrain" parent="StageDirector/Group6/ZigZagger3" instance=ExtResource( 8 )]
+[node name="SucceederTest" parent="StageDirector/SuccederTest/ZigZagger3" instance=ExtResource( 14 )]
 
 [node name="CircleRepeat" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -125.448, -1242.99 )
