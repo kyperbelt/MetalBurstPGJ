@@ -1,14 +1,25 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/Player/KritaTest2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Audio/SFX/playerShoot_vers05.wav" type="AudioStream" id=2]
-[ext_resource path="res://Assets/Player/deer_placeholder.png" type="Texture" id=3]
 [ext_resource path="res://Prefabs/Player/Player.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/Projectiles/Projectiles.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Audio/SFX/playerBomb03.wav" type="AudioStream" id=6]
 [ext_resource path="res://Assets/Player/PlayerProto.tres" type="SpriteFrames" id=7]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="StreamTexture" id=1]
+resource_local_to_scene = true
+flags = 4
+load_path = "res://.import/25x25x9 Round Bullets.png-40ea70743577d06d82be62f15b88b8f3.stex"
+
+[sub_resource type="AtlasTexture" id=2]
+resource_local_to_scene = true
+flags = 4
+atlas = SubResource( 1 )
+region = Rect2( 150, 0, 25, 25 )
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 8.0
 
 [node name="Player" type="Node2D"]
 script = ExtResource( 4 )
@@ -31,16 +42,14 @@ position = Vector2( 0, 7 )
 scale = Vector2( 0.134523, 0.134523 )
 texture = ExtResource( 1 )
 
-[node name="Sprite(Old)" type="Sprite" parent="."]
-visible = false
-position = Vector2( 0.173773, 0.935793 )
-scale = Vector2( 0.28, 0.28 )
-texture = ExtResource( 3 )
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, 21 )
 frames = ExtResource( 7 )
 animation = "Spread"
+
+[node name="Hitbox" type="Sprite" parent="."]
+scale = Vector2( 0.75, 0.75 )
+texture = SubResource( 2 )
 
 [node name="PlayerCollisionArea" type="Area2D" parent="."]
 input_pickable = false
@@ -48,5 +57,5 @@ collision_layer = 4
 collision_mask = 24
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollisionArea"]
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 [connection signal="area_entered" from="PlayerCollisionArea" to="." method="on_collision_start"]
