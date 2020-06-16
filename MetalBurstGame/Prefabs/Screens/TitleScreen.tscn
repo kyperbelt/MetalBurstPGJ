@@ -8,7 +8,7 @@
 [ext_resource path="res://Prefabs/Screens/TitleScreen.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/System/MenuOption.gd" type="Script" id=7]
 [ext_resource path="res://Prefabs/Stages/SiliusFractured.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Prefabs/Stages/TestStage2.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Stages/Stage2Mountainous.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Screens/InstructionsFont.tres" type="DynamicFont" id=10]
 [ext_resource path="res://Prefabs/Stages/TestStage.tscn" type="PackedScene" id=11]
 
@@ -43,28 +43,28 @@ __meta__ = {
 }
 
 [node name="option0" type="Label" parent="GuiLayer/OptionsMenu/options"]
-margin_right = 101.0
+margin_right = 152.0
 margin_bottom = 14.0
-text = "Silius Fractured"
+text = "Testing: Silius Fractured"
 script = ExtResource( 7 )
 
 [node name="option1" type="Label" parent="GuiLayer/OptionsMenu/options"]
 margin_top = 18.0
-margin_right = 101.0
+margin_right = 152.0
 margin_bottom = 32.0
-text = "Test Stage 2"
+text = "Stage2: Mountainous"
 script = ExtResource( 7 )
 
 [node name="option2" type="Label" parent="GuiLayer/OptionsMenu/options"]
 margin_top = 36.0
-margin_right = 101.0
+margin_right = 152.0
 margin_bottom = 50.0
 text = "[Undetermined]"
 script = ExtResource( 7 )
 
 [node name="option3" type="Label" parent="GuiLayer/OptionsMenu/options"]
 margin_top = 54.0
-margin_right = 101.0
+margin_right = 152.0
 margin_bottom = 68.0
 text = "Quit"
 script = ExtResource( 7 )
@@ -90,6 +90,7 @@ __meta__ = {
 }
 
 [node name="Notice" type="Label" parent="GuiLayer"]
+visible = false
 margin_left = 607.641
 margin_top = 367.187
 margin_right = 1254.64
@@ -102,6 +103,23 @@ The song is a metal cover by someone
 named \"Sinvicta\" (you can find him on YouTube).
 The song was used for testing purposes only.
 It will not be in the final game."
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Notice2" type="Label" parent="GuiLayer"]
+margin_left = 607.641
+margin_top = 367.187
+margin_right = 1254.64
+margin_bottom = 700.187
+custom_fonts/font = ExtResource( 10 )
+text = "IMPORTANT NOTE:
+The song used in the first stage is a
+metal remix by someone named \"Sinvicta\"
+The name of the remix is \"Silius Fractured\"
+The source game is \"Journey to Silius\"
+This track is used for testing purposes only
+It will not be in the final game"
 __meta__ = {
 "_edit_use_anchors_": false
 }

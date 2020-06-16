@@ -13,9 +13,14 @@
 [ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Backgrounds/DustParticles.tscn" type="PackedScene" id=13]
 
-
-
 [node name="RootNode" type="Node"]
+
+[node name="NOTES" type="Node" parent="."]
+__meta__ = {
+"_editor_description_": "[Will delete this scene later]
+[Not deleted to prevent merge conflicts]
+[Actual Stage 2 will be in a seperate scene]"
+}
 
 [node name="Level" parent="." instance=ExtResource( 2 )]
 
@@ -35,8 +40,14 @@ light_mask = 0
 
 [node name="StageDirector" parent="." instance=ExtResource( 6 )]
 position = Vector2( 640, 0 )
+G_U_I_D_E_S = ""
+show_timeline = true
 hatch_marks = 12
+show_bounds = true
+bounds_color = Color( 1, 0, 0, 1 )
+T_U_N_I_N_G = ""
 duration = 130.0
+D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
@@ -44,7 +55,11 @@ position = Vector2( 1002.84, -4092.21 )
 
 [node name="Trans(2-00)" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -321.351, -3780.29 )
+B_A_S_E = ""
 event_time = 120.091
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -321.351
 
 [node name="PlaceholderBoss" parent="StageDirector/Trans(2-00)" instance=ExtResource( 9 )]
@@ -52,27 +67,48 @@ position = Vector2( 318.706, 137.069 )
 
 [node name="Trans(1-25)" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -319.5, -2684.72 )
+B_A_S_E = ""
 event_time = 85.2873
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -319.5
 
 [node name="Trans(1-15)" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -319.5, -2364.56 )
+B_A_S_E = ""
 event_time = 75.1166
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -319.5
 
 [node name="Trans(1-05)" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -317.649, -2061.06 )
+B_A_S_E = ""
 event_time = 65.4751
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -317.649
 
 [node name="Trans(55)" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -319.5, -1752 )
+B_A_S_E = ""
 event_time = 55.657
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -319.5
 
 [node name="6pk" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 0, -933.479 )
+B_A_S_E = ""
 event_time = 29.6545
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="EmberA" parent="StageDirector/6pk" instance=ExtResource( 8 )]
 position = Vector2( -231.476, -57.6546 )
@@ -94,7 +130,11 @@ position = Vector2( -117.235, -54.4812 )
 
 [node name="20stream" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -1.19209e-07, -595.138 )
+B_A_S_E = ""
 event_time = 18.9062
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -1.19209e-07
 
 [node name="SpinnerA" parent="StageDirector/20stream" instance=ExtResource( 10 )]
@@ -158,12 +198,21 @@ position = Vector2( -1.67023, -1673.88 )
 
 [node name="Trans(0-15)" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -319.455, -476.144 )
+B_A_S_E = ""
 event_time = 15.126
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -319.455
 
 [node name="3pk Right2" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 0, -404.527 )
+B_A_S_E = ""
 event_time = 12.8509
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Enemy" parent="StageDirector/3pk Right2" instance=ExtResource( 8 )]
 position = Vector2( 127.951, -46.4774 )
@@ -176,7 +225,12 @@ position = Vector2( 176.843, -109.434 )
 
 [node name="3pk Left2" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 0, -299.759 )
+B_A_S_E = ""
 event_time = 9.52265
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Enemy" parent="StageDirector/3pk Left2" instance=ExtResource( 8 )]
 position = Vector2( -105.633, -51.8956 )
@@ -189,7 +243,12 @@ position = Vector2( -163.727, -129.492 )
 
 [node name="3pk Right" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 0, -193.32 )
+B_A_S_E = ""
 event_time = 6.14133
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Enemy" parent="StageDirector/3pk Right" instance=ExtResource( 8 )]
 position = Vector2( 127.951, -46.4774 )
@@ -202,7 +261,12 @@ position = Vector2( 176.843, -109.434 )
 
 [node name="3pk Left" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 0, -94.7034 )
+B_A_S_E = ""
 event_time = 3.00851
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Enemy" parent="StageDirector/3pk Left" instance=ExtResource( 8 )]
 position = Vector2( -105.633, -51.8956 )
@@ -215,27 +279,47 @@ position = Vector2( -163.727, -129.492 )
 
 [node name="Trans(1-25)2" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -667.277, -3717.18 )
+B_A_S_E = ""
 event_time = 118.086
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -667.277
 
 [node name="Trans(1-15)2" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -667.277, -3397.02 )
-event_time = 107.916
+B_A_S_E = ""
+event_time = 107.915
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -667.277
 
 [node name="Trans(1-05)2" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -665.426, -3093.52 )
-event_time = 98.2741
+B_A_S_E = ""
+event_time = 98.2739
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -665.426
 
 [node name="Trans(55)2" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -667.277, -2784.46 )
-event_time = 88.4559
+B_A_S_E = ""
+event_time = 88.4558
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -667.277
 
 [node name="6pk2" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -347.777, -1965.94 )
-event_time = 62.4534
+B_A_S_E = ""
+event_time = 62.4533
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -347.777
 
 [node name="EmberA" parent="StageDirector/6pk2" instance=ExtResource( 8 )]
@@ -258,7 +342,11 @@ position = Vector2( -117.235, -54.4812 )
 
 [node name="20stream2" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -347.777, -1627.6 )
+B_A_S_E = ""
 event_time = 51.7051
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -347.777
 
 [node name="SpinnerA" parent="StageDirector/20stream2" instance=ExtResource( 10 )]
@@ -322,12 +410,20 @@ position = Vector2( -1.67023, -1673.88 )
 
 [node name="Trans(0-15)2" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -667.232, -1508.61 )
+B_A_S_E = ""
 event_time = 47.925
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -667.232
 
 [node name="3pk Right4" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -347.777, -1436.99 )
+B_A_S_E = ""
 event_time = 45.6498
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -347.777
 
 [node name="Enemy" parent="StageDirector/3pk Right4" instance=ExtResource( 8 )]
@@ -341,7 +437,11 @@ position = Vector2( 176.843, -109.434 )
 
 [node name="3pk Left4" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -347.777, -1332.22 )
-event_time = 42.3216
+B_A_S_E = ""
+event_time = 42.3215
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -347.777
 
 [node name="Enemy" parent="StageDirector/3pk Left4" instance=ExtResource( 8 )]
@@ -355,7 +455,11 @@ position = Vector2( -163.727, -129.492 )
 
 [node name="3pk Right3" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -347.777, -1225.78 )
-event_time = 38.9403
+B_A_S_E = ""
+event_time = 38.9402
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -347.777
 
 [node name="Enemy" parent="StageDirector/3pk Right3" instance=ExtResource( 8 )]
@@ -369,7 +473,11 @@ position = Vector2( 176.843, -109.434 )
 
 [node name="3pk Left3" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -347.777, -1127.17 )
-event_time = 35.8075
+B_A_S_E = ""
+event_time = 35.8076
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -347.777
 
 [node name="Enemy" parent="StageDirector/3pk Left3" instance=ExtResource( 8 )]
@@ -383,27 +491,47 @@ position = Vector2( -163.727, -129.492 )
 
 [node name="Trans(1-25)3" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -20.6289, -4222.55 )
+B_A_S_E = ""
 event_time = 134.141
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -20.6289
 
 [node name="Trans(1-15)3" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -20.6289, -3902.39 )
+B_A_S_E = ""
 event_time = 123.97
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -20.6289
 
 [node name="Trans(1-05)3" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -18.7779, -3598.89 )
+B_A_S_E = ""
 event_time = 114.328
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -18.7779
 
 [node name="Trans(55)3" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -20.6289, -3289.83 )
+B_A_S_E = ""
 event_time = 104.51
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -20.6289
 
 [node name="6pk3" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 298.871, -2471.31 )
-event_time = 78.5076
+B_A_S_E = ""
+event_time = 78.5078
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 298.871
 
 [node name="EmberA" parent="StageDirector/6pk3" instance=ExtResource( 8 )]
@@ -426,7 +554,11 @@ position = Vector2( -117.235, -54.4812 )
 
 [node name="20stream3" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 298.871, -2132.97 )
-event_time = 67.7593
+B_A_S_E = ""
+event_time = 67.7595
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 298.871
 
 [node name="SpinnerA" parent="StageDirector/20stream3" instance=ExtResource( 10 )]
@@ -490,12 +622,20 @@ position = Vector2( -1.67023, -1673.88 )
 
 [node name="Trans(0-15)3" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -20.5839, -2013.97 )
-event_time = 63.9792
+B_A_S_E = ""
+event_time = 63.9791
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -20.5839
 
 [node name="3pk Right6" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 298.871, -1942.35 )
-event_time = 61.7041
+B_A_S_E = ""
+event_time = 61.7039
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 298.871
 
 [node name="Enemy" parent="StageDirector/3pk Right6" instance=ExtResource( 8 )]
@@ -509,7 +649,11 @@ position = Vector2( 176.843, -109.434 )
 
 [node name="3pk Left6" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 298.871, -1837.59 )
-event_time = 58.3758
+B_A_S_E = ""
+event_time = 58.376
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 298.871
 
 [node name="Enemy" parent="StageDirector/3pk Left6" instance=ExtResource( 8 )]
@@ -523,7 +667,11 @@ position = Vector2( -163.727, -129.492 )
 
 [node name="3pk Right5" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 298.871, -1731.15 )
-event_time = 54.9945
+B_A_S_E = ""
+event_time = 54.9946
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 298.871
 
 [node name="Enemy" parent="StageDirector/3pk Right5" instance=ExtResource( 8 )]
@@ -537,7 +685,11 @@ position = Vector2( 176.843, -109.434 )
 
 [node name="3pk Left5" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 298.871, -1632.53 )
+B_A_S_E = ""
 event_time = 51.8617
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 298.871
 
 [node name="Enemy" parent="StageDirector/3pk Left5" instance=ExtResource( 8 )]
@@ -551,27 +703,47 @@ position = Vector2( -163.727, -129.492 )
 
 [node name="Trans(1-25)4" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -374.585, -4712.64 )
+B_A_S_E = ""
 event_time = 149.71
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -374.585
 
 [node name="Trans(1-15)4" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -374.585, -4392.48 )
+B_A_S_E = ""
 event_time = 139.539
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -374.585
 
 [node name="Trans(1-05)4" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -372.734, -4088.98 )
+B_A_S_E = ""
 event_time = 129.897
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -372.734
 
 [node name="Trans(55)4" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -374.585, -3779.92 )
+B_A_S_E = ""
 event_time = 120.079
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -374.585
 
 [node name="6pk4" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -55.0854, -2961.4 )
+B_A_S_E = ""
 event_time = 94.0768
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -55.0854
 
 [node name="EmberA" parent="StageDirector/6pk4" instance=ExtResource( 8 )]
@@ -594,7 +766,11 @@ position = Vector2( -117.235, -54.4812 )
 
 [node name="20stream4" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -55.0854, -2623.06 )
+B_A_S_E = ""
 event_time = 83.3285
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -55.0854
 
 [node name="SpinnerA" parent="StageDirector/20stream4" instance=ExtResource( 10 )]
@@ -658,12 +834,20 @@ position = Vector2( -1.67023, -1673.88 )
 
 [node name="Trans(0-15)4" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -374.54, -2504.06 )
-event_time = 79.5483
+B_A_S_E = ""
+event_time = 79.5482
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -374.54
 
 [node name="3pk Right8" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -55.0854, -2432.45 )
-event_time = 77.2732
+B_A_S_E = ""
+event_time = 77.2733
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -55.0854
 
 [node name="Enemy" parent="StageDirector/3pk Right8" instance=ExtResource( 8 )]
@@ -677,7 +861,11 @@ position = Vector2( 176.843, -109.434 )
 
 [node name="3pk Left8" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -55.0854, -2327.68 )
+B_A_S_E = ""
 event_time = 73.945
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -55.0854
 
 [node name="Enemy" parent="StageDirector/3pk Left8" instance=ExtResource( 8 )]
@@ -691,7 +879,11 @@ position = Vector2( -163.727, -129.492 )
 
 [node name="3pk Right7" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -55.0854, -2221.24 )
-event_time = 70.5637
+B_A_S_E = ""
+event_time = 70.5636
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -55.0854
 
 [node name="Enemy" parent="StageDirector/3pk Right7" instance=ExtResource( 8 )]
@@ -705,7 +897,11 @@ position = Vector2( 176.843, -109.434 )
 
 [node name="3pk Left7" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -55.0854, -2122.62 )
-event_time = 67.4308
+B_A_S_E = ""
+event_time = 67.4307
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -55.0854
 
 [node name="Enemy" parent="StageDirector/3pk Left7" instance=ExtResource( 8 )]
@@ -719,27 +915,47 @@ position = Vector2( -163.727, -129.492 )
 
 [node name="Trans(1-25)5" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 6.59839, -3151.6 )
+B_A_S_E = ""
 event_time = 100.119
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 6.59839
 
 [node name="Trans(1-15)5" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 6.59839, -2831.44 )
+B_A_S_E = ""
 event_time = 89.9483
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 6.59839
 
 [node name="Trans(1-05)5" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 8.4494, -2527.94 )
-event_time = 80.3069
+B_A_S_E = ""
+event_time = 80.3068
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 8.4494
 
 [node name="Trans(55)5" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 6.59839, -2218.88 )
+B_A_S_E = ""
 event_time = 70.4887
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 6.59839
 
 [node name="6pk5" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 326.098, -1400.36 )
+B_A_S_E = ""
 event_time = 44.4862
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 326.098
 
 [node name="EmberA" parent="StageDirector/6pk5" instance=ExtResource( 8 )]
@@ -762,7 +978,11 @@ position = Vector2( -117.235, -54.4812 )
 
 [node name="20stream5" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 326.098, -1062.02 )
+B_A_S_E = ""
 event_time = 33.7379
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 326.098
 
 [node name="SpinnerA" parent="StageDirector/20stream5" instance=ExtResource( 10 )]
@@ -826,12 +1046,20 @@ position = Vector2( -1.67023, -1673.88 )
 
 [node name="Trans(0-15)5" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 6.64343, -943.026 )
-event_time = 29.9578
+B_A_S_E = ""
+event_time = 29.9577
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 6.64343
 
 [node name="3pk Right10" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 326.098, -871.409 )
+B_A_S_E = ""
 event_time = 27.6826
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 326.098
 
 [node name="Enemy" parent="StageDirector/3pk Right10" instance=ExtResource( 8 )]
@@ -845,7 +1073,11 @@ position = Vector2( 176.843, -109.434 )
 
 [node name="3pk Left10" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 326.098, -766.642 )
+B_A_S_E = ""
 event_time = 24.3544
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 326.098
 
 [node name="Enemy" parent="StageDirector/3pk Left10" instance=ExtResource( 8 )]
@@ -859,7 +1091,11 @@ position = Vector2( -163.727, -129.492 )
 
 [node name="3pk Right9" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 326.098, -660.203 )
+B_A_S_E = ""
 event_time = 20.9731
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 326.098
 
 [node name="Enemy" parent="StageDirector/3pk Right9" instance=ExtResource( 8 )]
@@ -873,7 +1109,11 @@ position = Vector2( 176.843, -109.434 )
 
 [node name="3pk Left9" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 326.098, -561.586 )
+B_A_S_E = ""
 event_time = 17.8403
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 326.098
 
 [node name="Enemy" parent="StageDirector/3pk Left9" instance=ExtResource( 8 )]

@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Prefabs/Backgrounds/DustParticles.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Backgrounds/Stage2BG.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Audio/BGM/MetalBurstBGM2 (Spliced).wav" type="AudioStream" id=5]
+[ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
+
+[node name="Stage2RootNode" type="Node"]
+
+[node name="NOTES" type="Node" parent="."]
+__meta__ = {
+"_editor_description_": "###Links###
+-End of Stage links to GAME OVER
+
+###Y-Transforms###
+-1:56 minutes long
+-116  seconds long
+-\"END\" transform is \"y = -5800\"
+-10 Seconds = \"y = -500\"
+-1 Second = \"y = -50\"
+
+###X-Transforms###
+Left Edge = \"x = -320\"
+Centerline = \"x = 0\"
+Right Edge = \"x = 320\"
+
+###Song Timing###
+00(17) - Intro - y=-0
+17(2.5) - IntroTrans - y=-850
+19.5(35) - BuildUp - y=-975
+54.5(10.5) - MainMelodyA1 - y=-2725
+65(10.5) - MainMelodyB - y=-3250
+75.5(10.5) - MainMelodyA2 - y=-3775
+86(16) - RunOff - y=-4300
+102(11.5) - RunOffOutro - y=-5100"
+}
+
+[node name="Level" parent="." instance=ExtResource( 2 )]
+
+[node name="Stage2BG" parent="Level" instance=ExtResource( 3 )]
+position = Vector2( -285.932, 0 )
+
+[node name="DustParticles" parent="Level" instance=ExtResource( 1 )]
+position = Vector2( -285.932, 0 )
+
+[node name="BGMstage2Spliced" type="AudioStreamPlayer" parent="Level"]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="InformationDisplay" parent="Level" instance=ExtResource( 4 )]
+
+[node name="StageDirector" parent="." instance=ExtResource( 6 )]
+position = Vector2( 640, 0 )
+G_U_I_D_E_S = ""
+show_timeline = true
+hatch_marks = 28
+show_bounds = true
+bounds_color = Color( 1, 0, 0, 1 )
+T_U_N_I_N_G = ""
+duration = 10
+D_E_P_E_N_D_E_N_C_Y = ""
+LevelScene = NodePath("../Level")
+
+[node name="END" parent="StageDirector" index="1"]
+position = Vector2( 640, -5800 )
+
+[node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 0, -5800 )
+B_A_S_E = ""
+event_time = 10
+P_O_S_I_T_O_N = ""
+override_time = false
+E_N_D = ""
+delay = 0.0
+Target = null
+
+[editable path="StageDirector"]
