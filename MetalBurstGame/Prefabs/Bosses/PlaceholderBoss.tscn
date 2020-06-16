@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Bosses/PlaceholderBoss.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Bosses/Boss1-Sketch01.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Bosses/Boss1-Sketch02.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Bosses/Boss1-Sketch03.png" type="Texture" id=4]
+[ext_resource path="res://Prefabs/Enemies/SimpleEnemyAi.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 50, 100 )
+
+[node name="PlaceholderBoss" type="Node2D"]
+script = ExtResource( 5 )
+speed = 31.0
+HP = 3000.0
+DMGreceived = 50.0
+
+[node name="Sketch1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 4.80136, -7.73282 )
+scale = Vector2( 0.462414, 0.462414 )
+texture = ExtResource( 2 )
+
+[node name="Sketch2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 5.16339, 25.5896 )
+scale = Vector2( 0.584063, 0.584063 )
+texture = ExtResource( 3 )
+
+[node name="Sketch3" type="Sprite" parent="."]
+position = Vector2( 5.163, 25.59 )
+scale = Vector2( 0.584, 0.584 )
+texture = ExtResource( 4 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="PlaceholderBoss" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 1 )
