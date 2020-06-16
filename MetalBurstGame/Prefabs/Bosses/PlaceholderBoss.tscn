@@ -32,9 +32,9 @@ position = Vector2( 5.163, 25.59 )
 scale = Vector2( 0.584, 0.584 )
 texture = ExtResource( 4 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="EnemyArea" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyArea"]
 shape = SubResource( 1 )
 
 [node name="PlaceholderBoss" type="Sprite" parent="."]
