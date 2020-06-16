@@ -13,42 +13,50 @@ __meta__ = {
 }
 
 [node name="UItestA" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 2 )
 centered = false
 
 [node name="UItestB" type="Sprite" parent="."]
-visible = false
 texture = ExtResource( 3 )
 centered = false
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 1012.0
+margin_top = 496.0
+margin_right = 1236.0
+margin_bottom = 680.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="LivesContainer" type="HBoxContainer" parent="."]
-margin_left = 992.742
-margin_top = 249.087
-margin_right = 1069.74
-margin_bottom = 289.087
+margin_left = 1014.18
+margin_top = 498.369
+margin_right = 1091.18
+margin_bottom = 512.369
 rect_scale = Vector2( 2.3, 1.8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="LivesLabel" type="Label" parent="LivesContainer"]
-margin_top = 13.0
 margin_right = 37.0
-margin_bottom = 27.0
+margin_bottom = 14.0
 text = "Lives:"
 
 [node name="Lives" type="Label" parent="LivesContainer"]
 margin_left = 41.0
-margin_top = 13.0
 margin_right = 77.0
-margin_bottom = 27.0
+margin_bottom = 14.0
 text = "@@@"
 
 [node name="ScoreContainer" type="VBoxContainer" parent="."]
-margin_left = 980.727
-margin_top = 124.928
-margin_right = 1060.73
-margin_bottom = 156.928
+margin_left = 1020.96
+margin_top = 602.352
+margin_right = 1100.97
+margin_bottom = 634.352
 rect_scale = Vector2( 2.45617, 2.11416 )
 alignment = 1
 __meta__ = {
@@ -68,33 +76,32 @@ margin_bottom = 32.0
 text = "0000000000"
 
 [node name="BombContainer" type="HBoxContainer" parent="."]
-margin_left = 998.647
-margin_top = 325.807
-margin_right = 1081.65
-margin_bottom = 362.807
+margin_left = 1024.53
+margin_top = 551.945
+margin_right = 1107.53
+margin_bottom = 565.945
 rect_scale = Vector2( 2.3, 1.8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="BombLabel" type="Label" parent="BombContainer"]
-margin_top = 11.0
 margin_right = 49.0
-margin_bottom = 25.0
+margin_bottom = 14.0
 text = "Bombs:"
 
 [node name="Bombs" type="Label" parent="BombContainer"]
 margin_left = 53.0
-margin_top = 11.0
 margin_right = 61.0
-margin_bottom = 25.0
+margin_bottom = 14.0
 text = "0"
 
 [node name="StageName" type="Label" parent="."]
-margin_left = 993.331
-margin_top = 36.7401
-margin_right = 1065.33
-margin_bottom = 50.7401
+visible = false
+margin_left = 1024.28
+margin_top = 492.498
+margin_right = 1096.28
+margin_bottom = 506.498
 rect_scale = Vector2( 2.3, 1.8 )
 text = "StageName"
 __meta__ = {
