@@ -13,7 +13,7 @@ func _ready():
 func selection_made(selection : int):
 	print("selected option %s " % selection)
 	$sfx_menuSelect.play()
-	yield(get_tree().create_timer(1.0), "timeout")
+	yield(get_tree().create_timer(2.0), "timeout")
 	match selection:
 		0:
 			var result = get_tree().change_scene_to(NEW_GAME_SCENE)

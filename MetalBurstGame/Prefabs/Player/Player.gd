@@ -101,6 +101,7 @@ func on_collision_start(area):
 func hit(object):
 	print("player is hit by =%s" % object.name)
 	lives-=1
+	$sfx_playerHit.play()
 	emit_signal("player_hit")
 
 
