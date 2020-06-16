@@ -8,12 +8,12 @@ extents = Vector2( 40.1669, 17.2103 )
 
 [node name="TestEnemy" type="Node2D"]
 script = ExtResource( 2 )
-_maxSpeed = 100.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0.596078, 0.2, 0.2, 1 )
 frames = ExtResource( 1 )
 animation = "MediumSpeed"
-frame = 2
+frame = 4
 playing = true
 
 [node name="EnemyArea" type="Area2D" parent="."]
