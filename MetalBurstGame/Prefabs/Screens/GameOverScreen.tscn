@@ -8,7 +8,6 @@
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource( 5 )
-TITLE_SCREEN = null
 
 [node name="SpaceBackground" parent="." instance=ExtResource( 4 )]
 

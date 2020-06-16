@@ -7,7 +7,7 @@
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Stages/Stage2Mountainous.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Enemies/EmberBlue.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Enemies/TinyEmberBlue.tscn" type="PackedScene" id=11]
@@ -626,15 +626,12 @@ speed = 150.0
 
 [node name="TinyEmberRed7" parent="StageDirector/Intro3R" instance=ExtResource( 12 )]
 position = Vector2( -25, -50 )
-speed = 100.0
 
 [node name="TinyEmberRed6" parent="StageDirector/Intro3R" instance=ExtResource( 12 )]
 position = Vector2( 25, -75 )
-speed = 100.0
 
 [node name="TinyEmberRed5" parent="StageDirector/Intro3R" instance=ExtResource( 12 )]
 position = Vector2( 75, -100 )
-speed = 100.0
 
 [node name="Intro1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 160, -25 )

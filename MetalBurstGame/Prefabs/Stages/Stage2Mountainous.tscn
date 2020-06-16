@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Prefabs/Backgrounds/DustParticles.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://Assets/Audio/BGM/MetalBurstBGM2 (Spliced).wav" type="AudioStream" id=5]
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Enemies/EmberPurple.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Enemies/TinyEmberPurple.tscn" type="PackedScene" id=11]
 
 [node name="Stage2RootNode" type="Node"]
 
@@ -60,7 +64,7 @@ hatch_marks = 28
 show_bounds = true
 bounds_color = Color( 1, 0, 0, 1 )
 T_U_N_I_N_G = ""
-duration = 10
+duration = 116.0
 D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
@@ -70,11 +74,285 @@ position = Vector2( 640, -5800 )
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 0, -5800 )
 B_A_S_E = ""
-event_time = 10
+event_time = 116.0
 P_O_S_I_T_O_N = ""
 override_time = false
 E_N_D = ""
 delay = 0.0
-Target = null
+Target = ExtResource( 10 )
+
+[node name="[Mark]End" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -5675 )
+B_A_S_E = ""
+event_time = 113.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="EmberPurple" parent="StageDirector/[Mark]End" instance=ExtResource( 9 )]
+
+[node name="[]RunOff-C6" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -5475 )
+B_A_S_E = ""
+event_time = 109.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]RunOff-C6" instance=ExtResource( 11 )]
+
+[node name="[]RunOff-C5" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -5300 )
+B_A_S_E = ""
+event_time = 106.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]RunOff-C5" instance=ExtResource( 11 )]
+
+[node name="[Mark]RunOffOutro" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -5100 )
+B_A_S_E = ""
+event_time = 102.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="EmberPurple" parent="StageDirector/[Mark]RunOffOutro" instance=ExtResource( 9 )]
+
+[node name="[]RunOff-C4" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -4900 )
+B_A_S_E = ""
+event_time = 98.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]RunOff-C4" instance=ExtResource( 11 )]
+
+[node name="[]RunOff-C3" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -4700 )
+B_A_S_E = ""
+event_time = 94.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]RunOff-C3" instance=ExtResource( 11 )]
+
+[node name="[]RunOff-C2" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -4500 )
+B_A_S_E = ""
+event_time = 90.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]RunOff-C2" instance=ExtResource( 11 )]
+
+[node name="[Mark]RunOff" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -4300 )
+B_A_S_E = ""
+event_time = 86.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="EmberPurple" parent="StageDirector/[Mark]RunOff" instance=ExtResource( 9 )]
+
+[node name="[Mark]MelodyA2" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -3775 )
+B_A_S_E = ""
+event_time = 75.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="EmberPurple" parent="StageDirector/[Mark]MelodyA2" instance=ExtResource( 9 )]
+
+[node name="[Mark]MelodyB" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -3250 )
+B_A_S_E = ""
+event_time = 65.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="EmberPurple" parent="StageDirector/[Mark]MelodyB" instance=ExtResource( 9 )]
+
+[node name="[Mark]MelodyA1" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -2725 )
+B_A_S_E = ""
+event_time = 54.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="EmberPurple" parent="StageDirector/[Mark]MelodyA1" instance=ExtResource( 9 )]
+
+[node name="[]BuildUp-C9" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -2575 )
+B_A_S_E = ""
+event_time = 51.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]BuildUp-C9" instance=ExtResource( 11 )]
+
+[node name="[]BuildUp-C8" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -2375 )
+B_A_S_E = ""
+event_time = 47.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]BuildUp-C8" instance=ExtResource( 11 )]
+
+[node name="[]BuildUp-C7" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -2175 )
+B_A_S_E = ""
+event_time = 43.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]BuildUp-C7" instance=ExtResource( 11 )]
+
+[node name="[]BuildUp-C6" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -1975 )
+B_A_S_E = ""
+event_time = 39.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]BuildUp-C6" instance=ExtResource( 11 )]
+
+[node name="[]BuildUp-C5" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -1775 )
+B_A_S_E = ""
+event_time = 35.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]BuildUp-C5" instance=ExtResource( 11 )]
+
+[node name="[]BuildUp-C4" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -1575 )
+B_A_S_E = ""
+event_time = 31.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]BuildUp-C4" instance=ExtResource( 11 )]
+
+[node name="[]BuildUp-C3" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -1375 )
+B_A_S_E = ""
+event_time = 27.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]BuildUp-C3" instance=ExtResource( 11 )]
+
+[node name="[]BuildUp-C2" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -1175 )
+B_A_S_E = ""
+event_time = 23.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]BuildUp-C2" instance=ExtResource( 11 )]
+
+[node name="[Mark]BuildUp" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -975 )
+B_A_S_E = ""
+event_time = 19.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="EmberPurple" parent="StageDirector/[Mark]BuildUp" instance=ExtResource( 9 )]
+
+[node name="[Mark]IntroTrans" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -850 )
+B_A_S_E = ""
+event_time = 17.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="EmberPurple" parent="StageDirector/[Mark]IntroTrans" instance=ExtResource( 9 )]
+
+[node name="[]Intro-C4" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -600 )
+B_A_S_E = ""
+event_time = 12.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]Intro-C4" instance=ExtResource( 11 )]
+
+[node name="[]Intro-C3" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -400 )
+B_A_S_E = ""
+event_time = 8.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]Intro-C3" instance=ExtResource( 11 )]
+
+[node name="[]Intro-C2" parent="StageDirector" instance=ExtResource( 8 )]
+position = Vector2( 0, -200 )
+B_A_S_E = ""
+event_time = 4.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TinyEmberPurple" parent="StageDirector/[]Intro-C2" instance=ExtResource( 11 )]
+
+[node name="[Mark]Intro" parent="StageDirector" instance=ExtResource( 8 )]
+B_A_S_E = ""
+event_time = 0.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="EmberPurple" parent="StageDirector/[Mark]Intro" instance=ExtResource( 9 )]
 
 [editable path="StageDirector"]
