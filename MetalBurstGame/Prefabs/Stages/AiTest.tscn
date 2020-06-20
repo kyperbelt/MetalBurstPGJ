@@ -92,7 +92,7 @@ _maxSpeed = 300.0
 [node name="MoveWithRotation" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -259.026, -80.0857 )
 B_A_S_E = ""
-event_time = 0.403336
+event_time = 0.403337
 P_O_S_I_T_O_N = ""
 override_time = false
 S_P_A_W_N = ""
@@ -103,9 +103,6 @@ position = Vector2( -126.142, 162.759 )
 _maxSpeed = 300.0
 
 [node name="MoveAtRotationTest" parent="StageDirector/MoveWithRotation/RotationEnemy" instance=ExtResource( 11 )]
-
-[node name="RotateTo" parent="StageDirector/MoveWithRotation/RotationEnemy/MoveAtRotationTest/Sequence/Parallel" index="0"]
-_angle = -45.0
 
 [node name="MoveWithRotation2" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 268.401, -78.235 )
@@ -124,10 +121,6 @@ _maxSpeed = 300.0
 
 [node name="RotateTo" parent="StageDirector/MoveWithRotation2/RotationEnemy/MoveAtRotationTest/Sequence" index="0"]
 _angle = 90.0
-
-[node name="RotateTo" parent="StageDirector/MoveWithRotation2/RotationEnemy/MoveAtRotationTest/Sequence/Parallel" index="0"]
-_angle = 45.0
-_time = 1.0
 
 [node name="Parallel2" type="Node" parent="StageDirector/MoveWithRotation2/RotationEnemy/MoveAtRotationTest/Sequence" index="3"]
 script = ExtResource( 14 )

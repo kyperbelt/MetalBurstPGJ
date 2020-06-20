@@ -22,6 +22,6 @@ func initiate():
 func _update_behavior(_delta:float)->int:
 	if(_self):
 		_self.position = ZoneMap.get_zone_position(_zone,_playContainer) + Vector2(_xOffset,_yOffset)
-		print("Zone is %s" % ZoneMap.Zones.keys()[_zone])
+		
 	
 	return RunState.Success

@@ -3,6 +3,11 @@ extends Node2D
 
 class_name EnemyControl, "res://Assets/Tools/boss.png"
 
+#avoid using soft dependencies 
+#move to all the needed variables out of the instance
+#and on to the script
+export(PackedScene) var BULLET_TEST 
+
 #behavior vars
 var _engineReady : bool = false#ready to roll baby
 var _myEngine : MBengine = null
@@ -25,6 +30,7 @@ func _ready():
 	if(Engine.is_editor_hint()):
 		pass
 	else:
+		var _val = $EnemyArea.connect("area_entered", self, "hit")
 		set_physics_process(true)
 		for child in get_children():
 			if(child is Brain):
@@ -82,6 +88,7 @@ func get_engine_ready()->bool:
 func get_engine()->MBengine:
 	return _myEngine
 
+
 ##########################################################
 #@@@@@@@@@@@@@@@@@@ EXPORT SETGETS @@@@@@@@@@@@@@@@@@@@@@#
 ##########################################################
@@ -96,7 +103,38 @@ func set_fire_rate(fireRate:float):
 #@@@@@@@@@@@@@@@@@@@@ Deprecated @@@@@@@@@@@@@@@@@@@@@@@@#
 ##########################################################
 #TODO: add shoot
+func shoot():
+	#attempt to shoot if already placed in correct engine layer
+	#otherwise return and do nothing
+	if(!_engineReady):
+		return
+	var bullet = BULLET_TEST.instance()#stop using this-use class
+	bullet.setProjectileType(1)# 1 = ENEMY_BULLET
+	bullet.position = position
+	#bullet.change_speed(speed)
+	_myEngine.add_child(bullet)
+	print("shoot")
+
 #TODO: add take damage
+func hit(object):
+	print("Enemy collision with " + object.name + " detected!")
+	#player damaged
+	
+	if(object is ProjectileComponent):
+		set_current_health(get_current_health()-object.get_damage())
+		print("Enemy[%s] took damage from Object[%s] "%[self.name,object.name])
+	#HP-Threshold SFX can also be done here ; more advanced
+	if get_current_health() <= 0:
+		#$FoeDeathSFX.play()
+		print(self.name + "has died!")
+		queue_free()
+	if object.name == 'PlayerCollisionArea':
+		#TODO: we should move this method out of here-
+		# right now the enemy is basically handling player collision with itself
+		# which should not be the case. 
+		object.get_parent().hit(self)
+		queue_free()
+
 #TODO: add death
 
 ##########################################################

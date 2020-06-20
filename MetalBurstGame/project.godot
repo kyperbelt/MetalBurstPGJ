@@ -44,6 +44,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Brain.gd"
 }, {
+"base": "Sprite",
+"class": "BulletTest",
+"language": "GDScript",
+"path": "res://Prefabs/Projectiles/BulletTest.gd"
+}, {
 "base": "Action",
 "class": "ChangeSpeed",
 "language": "GDScript",
@@ -134,6 +139,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Actions/Utility/Print.gd"
 }, {
+"base": "Area2D",
+"class": "ProjectileComponent",
+"language": "GDScript",
+"path": "res://Prefabs/Projectiles/ProjectileComponent.gd"
+}, {
 "base": "Sprite",
 "class": "Projectiles",
 "language": "GDScript",
@@ -194,6 +204,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Composites/Sequence.gd"
 }, {
+"base": "Action",
+"class": "ShootDown",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Actions/Projectile/ShootDown.gd"
+}, {
 "base": "PositionalEvent",
 "class": "SpawnEvent",
 "language": "GDScript",
@@ -242,6 +257,7 @@ _global_script_class_icons={
 "BackgroundLayer": "",
 "BehaviorNode": "",
 "Brain": "res://Assets/Tools/Behavior/brain.png",
+"BulletTest": "",
 "ChangeSpeed": "",
 "Composite": "res://Assets/Tools/Behavior/sequence.png",
 "Decorator": "res://Assets/Tools/Behavior/decorator.png",
@@ -260,6 +276,7 @@ _global_script_class_icons={
 "Player": "",
 "PositionalEvent": "res://Assets/Tools/pointA.png",
 "Print": "",
+"ProjectileComponent": "",
 "Projectiles": "",
 "RandomInt": "",
 "RandomSelector": "",
@@ -272,6 +289,7 @@ _global_script_class_icons={
 "ScrollingBackground": "",
 "Selector": "",
 "Sequence": "",
+"ShootDown": "",
 "SpawnEvent": "res://Assets/Tools/entity.png",
 "StageDirector": "res://Assets/Tools/director.png",
 "StageEvent": "res://Assets/Tools/open.png",

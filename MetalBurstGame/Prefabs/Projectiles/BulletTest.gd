@@ -1,5 +1,6 @@
 extends Sprite
 
+class_name BulletTest
 #This controls FoeBullets
 var speed
 
