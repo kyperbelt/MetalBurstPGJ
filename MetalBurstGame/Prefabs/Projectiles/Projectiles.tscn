@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Prefabs/Projectiles/Projectiles.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Projectiles/enemy_bullet.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Projectiles/player_bomb_sm.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Player/WideBulletPlayerPrototype.png" type="Texture" id=4]
+[ext_resource path="res://Prefabs/Projectiles/ProjectileComponent.gd" type="Script" id=5]
 
 [sub_resource type="AtlasTexture" id=1]
 resource_local_to_scene = true
@@ -24,6 +25,8 @@ PROJECTILE_TYPES = [ SubResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ]
 [node name="ProjectilesArea" type="Area2D" parent="."]
 collision_layer = 32
 collision_mask = 8
+script = ExtResource( 5 )
+_damage = 30.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectilesArea"]
 shape = SubResource( 2 )

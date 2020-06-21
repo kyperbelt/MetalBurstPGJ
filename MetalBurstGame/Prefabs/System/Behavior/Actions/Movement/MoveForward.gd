@@ -18,7 +18,6 @@ func initiate():
 func _update_behavior(delta:float)->int:
 	
 	var r : float = _self.get_rotation()+PI/2
-	print("rotation: %s" % r)
 	var x : float = cos(r)
 	var y : float = sin(r)
 	_self.set_velocity(x,y)
