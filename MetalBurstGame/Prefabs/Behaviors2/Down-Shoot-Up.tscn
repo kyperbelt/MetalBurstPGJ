@@ -1,0 +1,54 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveCardinal.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootDown.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/StopMove.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=8]
+
+[node name="Down-Shoot-Up" type="Node"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "-Enemy move down
+-Enemy stops movement and attacks
+-Enemy move up
+-Movement is accel/decel"
+}
+
+[node name="Sequence" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="ChangeSpeed" type="Node" parent="Sequence"]
+script = ExtResource( 5 )
+_speed = 135.0
+
+[node name="MoveCardinal" type="Node" parent="Sequence"]
+script = ExtResource( 3 )
+
+[node name="Wait" type="Node" parent="Sequence"]
+script = ExtResource( 4 )
+delay = 1.0
+
+[node name="StopMove" type="Node" parent="Sequence"]
+script = ExtResource( 7 )
+
+[node name="Repeater" type="Node" parent="Sequence"]
+script = ExtResource( 8 )
+amount = 3
+
+[node name="Sequence" type="Node" parent="Sequence/Repeater"]
+script = ExtResource( 2 )
+
+[node name="ShootDown" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 6 )
+
+[node name="Wait2" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 4 )
+delay = 0.5
+
+[node name="MoveCardinal2" type="Node" parent="Sequence"]
+script = ExtResource( 3 )
+_direction = 0

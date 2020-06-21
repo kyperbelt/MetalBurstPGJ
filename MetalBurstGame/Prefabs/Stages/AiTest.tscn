@@ -61,25 +61,16 @@ spawn_x = -273.87
 
 [node name="RandomZoneEnemy" parent="StageDirector/RandomZoneSpawner" instance=ExtResource( 9 )]
 position = Vector2( 57.4153, 100.477 )
-_maxSpeed = 100.0
-_maxHealth = 100.0
-_fireRate = 2.0
 
 [node name="TestBehavior" parent="StageDirector/RandomZoneSpawner/RandomZoneEnemy" instance=ExtResource( 2 )]
 
 [node name="RandomZoneEnemy2" parent="StageDirector/RandomZoneSpawner" instance=ExtResource( 9 )]
 position = Vector2( 57.4153, 100.477 )
-_maxSpeed = 100.0
-_maxHealth = 100.0
-_fireRate = 2.0
 
 [node name="TestBehavior" parent="StageDirector/RandomZoneSpawner/RandomZoneEnemy2" instance=ExtResource( 2 )]
 
 [node name="RandomZoneEnemy3" parent="StageDirector/RandomZoneSpawner" instance=ExtResource( 9 )]
 position = Vector2( 57.4153, 100.477 )
-_maxSpeed = 100.0
-_maxHealth = 100.0
-_fireRate = 2.0
 
 [node name="TestBehavior" parent="StageDirector/RandomZoneSpawner/RandomZoneEnemy3" instance=ExtResource( 2 )]
 
@@ -95,8 +86,6 @@ spawn_x = -14.3069
 [node name="RotationEnemy" parent="StageDirector/RotationTestSpawner" instance=ExtResource( 9 )]
 position = Vector2( 6.10352e-05, -93.7311 )
 _maxSpeed = 300.0
-_maxHealth = 100.0
-_fireRate = 2.0
 
 [node name="RotateTestBehavior" parent="StageDirector/RotationTestSpawner/RotationEnemy" instance=ExtResource( 12 )]
 
@@ -112,8 +101,6 @@ spawn_x = -259.026
 [node name="RotationEnemy" parent="StageDirector/MoveWithRotation" instance=ExtResource( 9 )]
 position = Vector2( -126.142, 162.759 )
 _maxSpeed = 300.0
-_maxHealth = 100.0
-_fireRate = 2.0
 
 [node name="MoveAtRotationTest" parent="StageDirector/MoveWithRotation/RotationEnemy" instance=ExtResource( 11 )]
 
@@ -129,8 +116,6 @@ spawn_x = 268.401
 [node name="RotationEnemy" parent="StageDirector/MoveWithRotation2" instance=ExtResource( 9 )]
 position = Vector2( 203.268, 188.667 )
 _maxSpeed = 300.0
-_maxHealth = 100.0
-_fireRate = 2.0
 
 [node name="MoveAtRotationTest" parent="StageDirector/MoveWithRotation2/RotationEnemy" instance=ExtResource( 11 )]
 
@@ -160,24 +145,18 @@ spawn_x = 33.8569
 [node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
 position = Vector2( -71.0901, -40.1814 )
 _maxSpeed = 300.0
-_maxHealth = 100.0
-_fireRate = 2.0
 
 [node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger" instance=ExtResource( 8 )]
 
 [node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
 position = Vector2( 0, -108.181 )
 _maxSpeed = 300.0
-_maxHealth = 100.0
-_fireRate = 2.0
 
 [node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger2" instance=ExtResource( 8 )]
 
 [node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
 position = Vector2( 83.4535, -52.5448 )
 _maxSpeed = 300.0
-_maxHealth = 100.0
-_fireRate = 2.0
 
 [node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger3" instance=ExtResource( 8 )]
 [connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]
