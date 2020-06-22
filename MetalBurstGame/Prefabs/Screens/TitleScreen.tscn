@@ -74,16 +74,16 @@ stream = ExtResource( 2 )
 bus = "OptionsAudioBus"
 
 [node name="Instructions" type="Label" parent="GuiLayer"]
-margin_left = 947.162
+margin_left = 887.328
 margin_top = 37.955
-margin_right = 1227.16
+margin_right = 1269.33
 margin_bottom = 322.955
 custom_fonts/font = ExtResource( 10 )
 text = "Instructions:
-Arrow Keys = Move
-Z = Fire
-X = Bomb
-SHIFT (hold) = Focus
+Arrow Keys / WASD = Move
+Z / K (hold) = Fire
+X / L = Bomb
+SHIFT / J (hold) = Focus
 ESC = Pause"
 __meta__ = {
 "_edit_use_anchors_": false
