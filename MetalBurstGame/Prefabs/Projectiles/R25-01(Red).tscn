@@ -6,11 +6,11 @@
 resource_local_to_scene = true
 flags = 4
 atlas = ExtResource( 1 )
-region = Rect2( 100, 0, 25, 25 )
+region = Rect2( 0, 0, 25, 25 )
 
 [sub_resource type="CircleShape2D" id=2]
 
-[node name="25x25Shot" type="Node2D"]
+[node name="R25-01(Red)" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = SubResource( 1 )
