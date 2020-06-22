@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Prefabs/Enemies/EmberGreen.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Enemies/BehaviorTest/TestAiEnemy.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/Behaviors2/Down-Shoot-Up.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Behaviors2/Arcing.tscn" type="PackedScene" id=8]
 
 [node name="Playground" type="Node"]
 __meta__ = {
@@ -66,5 +67,19 @@ position = Vector2( 160, -50 )
 position = Vector2( -160, -50 )
 
 [node name="Down-Shoot-Up" parent="StageDirector/AccelDecelTest/TestEnemy2" instance=ExtResource( 7 )]
+
+[node name="AccelDecelTest2" parent="StageDirector" instance=ExtResource( 4 )]
+position = Vector2( 0, -300 )
+B_A_S_E = ""
+event_time = 6.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
+
+[node name="TestEnemy" parent="StageDirector/AccelDecelTest2" instance=ExtResource( 6 )]
+position = Vector2( 0, -50 )
+
+[node name="Arcing" parent="StageDirector/AccelDecelTest2/TestEnemy" instance=ExtResource( 8 )]
 
 [editable path="StageDirector"]
