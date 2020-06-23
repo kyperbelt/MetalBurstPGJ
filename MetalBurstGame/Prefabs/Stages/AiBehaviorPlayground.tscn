@@ -50,6 +50,8 @@ spawn_x = 0.0
 [node name="EmberGreen" parent="StageDirector/Midpoint-10Sec" instance=ExtResource( 5 )]
 position = Vector2( 0, -50 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Midpoint-10Sec/EmberGreen" instance=ExtResource( 9 )]
+
 [node name="Midpoint-10Sec2" parent="StageDirector" instance=ExtResource( 4 )]
 position = Vector2( 160, -500 )
 B_A_S_E = ""
