@@ -239,19 +239,15 @@ spawn_x = 0.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust18" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust18" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust18" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust18" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="Dust17" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( 160, -2375 )
@@ -264,19 +260,15 @@ spawn_x = 160.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust17" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust17" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust17" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust17" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="Dust16" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -160, -2375 )
@@ -289,19 +281,15 @@ spawn_x = -160.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust16" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust16" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust16" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust16" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="[]BuildUp-C8" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -320, -2375 )
@@ -325,19 +313,15 @@ spawn_x = 120.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust20" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust20" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust20" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust20" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="Dust19" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -120, -2175 )
@@ -350,19 +334,15 @@ spawn_x = -120.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust19" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust19" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust19" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust19" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="[]BuildUp-C7" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -320, -2175 )
@@ -386,19 +366,15 @@ spawn_x = 0.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust15" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust15" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust15" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust15" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="Dust14" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( 160, -1975 )
@@ -411,19 +387,15 @@ spawn_x = 160.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust14" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust14" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust14" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust14" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="Dust13" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -160, -1975 )
@@ -436,19 +408,15 @@ spawn_x = -160.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust13" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust13" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust13" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust13" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="[]BuildUp-C6" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -320, -1975 )
@@ -472,19 +440,15 @@ spawn_x = 120.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust12" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust12" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust12" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust12" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="Dust11" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -120, -1775 )
@@ -497,19 +461,15 @@ spawn_x = -120.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust11" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust11" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust11" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust11" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="[]BuildUp-C5" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -320, -1775 )
@@ -533,19 +493,15 @@ spawn_x = 240.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust10" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust10" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust10" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust10" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="Dust9" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( 80, -1575 )
@@ -558,19 +514,15 @@ spawn_x = 80.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust9" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust9" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust9" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust9" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="Dust8" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -80, -1575 )
@@ -583,19 +535,15 @@ spawn_x = -80.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust8" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust8" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust8" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust8" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="Dust7" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -240, -1575 )
@@ -608,19 +556,15 @@ spawn_x = -240.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust7" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust7" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust7" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust7" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="[]BuildUp-C4" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -320, -1575 )
@@ -644,19 +588,15 @@ spawn_x = 0.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust6" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust6" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust6" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust6" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="Dust5" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( 160, -1375 )
@@ -669,19 +609,15 @@ spawn_x = 160.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust5" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust5" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust5" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust5" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="Dust4" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -160, -1375 )
@@ -694,19 +630,15 @@ spawn_x = -160.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust4" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust4" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust4" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust4" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="[]BuildUp-C3" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -320, -1375 )
@@ -730,19 +662,15 @@ spawn_x = 120.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust3" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust3" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust3" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust3" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="Dust2" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -120, -1175 )
@@ -755,19 +683,15 @@ spawn_x = -120.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust2" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust2" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust2" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust2" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="[]BuildUp-C2" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -320, -1175 )
@@ -791,19 +715,15 @@ spawn_x = 0.0
 
 [node name="SpinnerA4" parent="StageDirector/Dust1" instance=ExtResource( 14 )]
 position = Vector2( 0, -360 )
-speed = 150.0
 
 [node name="SpinnerA3" parent="StageDirector/Dust1" instance=ExtResource( 14 )]
 position = Vector2( 0, -260 )
-speed = 150.0
 
 [node name="SpinnerA2" parent="StageDirector/Dust1" instance=ExtResource( 14 )]
 position = Vector2( 0, -160 )
-speed = 150.0
 
 [node name="SpinnerA" parent="StageDirector/Dust1" instance=ExtResource( 14 )]
 position = Vector2( 0, -60 )
-speed = 150.0
 
 [node name="[Mark]BuildUp" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -320, -975 )
