@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateTo.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=7]
+
+[node name="Parallel-Repeatersv2" type="Node"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Difference from v1]
+-Rotates while moving
+-It's a cooler visual effect than \"stop-and-rotate\"
+-ISSUE: It slightly move to the right as it loops
+
+Desired Behavior:
+MOVEMENT
+-Start of moving down from the right hand side of the screen
+Loop:
+-Rotate left, Move left, Rotate right, Move right, [repeat]
+-Infinite behavior, does not stop
+
+ATTACKS
+-Copy from \"Hang-Fire2(Burst)\" and modify as I see fit
+-Does not need to sync with MOVEMENT
+
+EXPECTED RESULTS
+-A chaotic curtain of bullets"
+}
+
+[node name="Sequence" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="ChangeSpeed" type="Node" parent="Sequence"]
+script = ExtResource( 3 )
+_speed = 200.0
+
+[node name="MoveForward" type="Node" parent="Sequence"]
+script = ExtResource( 5 )
+
+[node name="Repeater" type="Node" parent="Sequence"]
+script = ExtResource( 7 )
+__meta__ = {
+"_editor_description_": "Motions Loop"
+}
+
+[node name="Sequence" type="Node" parent="Sequence/Repeater"]
+script = ExtResource( 2 )
+
+[node name="RotateTo" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 6 )
+_angle = 90.0
+_time = 1.0
+
+[node name="MoveForward2" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 5 )
+
+[node name="Wait2" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 4 )
+delay = 1.5
+
+[node name="RotateTo2" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 6 )
+_angle = -90.0
+_time = 1.0
+
+[node name="MoveForward3" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 5 )
+
+[node name="Wait3" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 4 )
+delay = 1.5

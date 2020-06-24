@@ -9,7 +9,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/StopMove.gd" type="Script" id=7]
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=8]
 
-[node name="Down-Shoot-Up" type="Node"]
+[node name="Hang-Fire1" type="Node"]
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": "-Enemy move down
