@@ -8,7 +8,7 @@
 [ext_resource path="res://Prefabs/Behaviors2/Parallel-Repeaters.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/Behaviors2/Hang-Fire1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Behaviors2/InfinityLoopx6.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Prefabs/Behaviors2/[Proto]SimpleAiReplica.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Behaviors2/[Proto]Velocity.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Behaviors2/Hang-Fire2(Burst).tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Enemies/EmberBlue.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=12]
@@ -44,9 +44,9 @@ LevelScene = NodePath("../Level")
 position = Vector2( 643.419, -1000 )
 
 [node name="Parallel-Repeaters" parent="StageDirector" instance=ExtResource( 4 )]
-position = Vector2( 250, -600 )
+position = Vector2( 250, -750 )
 B_A_S_E = ""
-event_time = 12.0
+event_time = 15.0
 P_O_S_I_T_O_N = ""
 override_time = false
 S_P_A_W_N = ""
@@ -58,7 +58,7 @@ _maxSpeed = 200.0
 
 [node name="Parallel-Repeaters" parent="StageDirector/Parallel-Repeaters/EmberGreen" instance=ExtResource( 6 )]
 
-[node name="10Sec-Simple" parent="StageDirector" instance=ExtResource( 4 )]
+[node name="Velocity Testing" parent="StageDirector" instance=ExtResource( 4 )]
 position = Vector2( 0, -500 )
 B_A_S_E = ""
 event_time = 10.0
@@ -67,10 +67,47 @@ override_time = false
 S_P_A_W_N = ""
 spawn_x = 0.0
 
-[node name="TinyEmberBlue" parent="StageDirector/10Sec-Simple" instance=ExtResource( 14 )]
-position = Vector2( 0, -50 )
+[node name="TinyEmberBlue" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
+position = Vector2( -240, -30 )
+_maxSpeed = 90.0
 
-[node name="[Proto]SimpleAiReplica" parent="StageDirector/10Sec-Simple/TinyEmberBlue" instance=ExtResource( 9 )]
+[node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue" instance=ExtResource( 9 )]
+
+[node name="TinyEmberBlue2" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
+position = Vector2( -160, -30 )
+_maxSpeed = 120.0
+
+[node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue2" instance=ExtResource( 9 )]
+
+[node name="TinyEmberBlue3" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
+position = Vector2( -80, -30 )
+_maxSpeed = 144.0
+
+[node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue3" instance=ExtResource( 9 )]
+
+[node name="TinyEmberBlue4" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
+position = Vector2( 0, -30 )
+_maxSpeed = 180.0
+
+[node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue4" instance=ExtResource( 9 )]
+
+[node name="TinyEmberBlue5" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
+position = Vector2( 80, -30 )
+_maxSpeed = 240.0
+
+[node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue5" instance=ExtResource( 9 )]
+
+[node name="TinyEmberBlue6" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
+position = Vector2( 160, -30 )
+_maxSpeed = 360.0
+
+[node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue6" instance=ExtResource( 9 )]
+
+[node name="TinyEmberBlue7" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
+position = Vector2( 240, -30 )
+_maxSpeed = 720.0
+
+[node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue7" instance=ExtResource( 9 )]
 
 [node name="InfinityLoopTest" parent="StageDirector" instance=ExtResource( 4 )]
 position = Vector2( 0, -300 )

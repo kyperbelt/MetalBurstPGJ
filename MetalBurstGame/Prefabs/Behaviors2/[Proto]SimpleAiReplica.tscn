@@ -19,7 +19,6 @@ script = ExtResource( 2 )
 
 [node name="Repeater" type="Node" parent="Parallel"]
 script = ExtResource( 7 )
-amount = -1
 
 [node name="Sequence" type="Node" parent="Parallel/Repeater"]
 script = ExtResource( 3 )
