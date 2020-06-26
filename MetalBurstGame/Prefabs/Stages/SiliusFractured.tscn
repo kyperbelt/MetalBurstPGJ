@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Audio/SiliusFractured/The Word Of Lawder - Fracture The Faultline - 10 Silius Fractured.ogg" type="AudioStream" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/Enemies/SpinnerA.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Behaviors2/[Proto]SimpleAiReplica.tscn" type="PackedScene" id=15]
 
 [node name="RootNode" type="Node"]
 
@@ -113,35 +114,27 @@ spawn_x = 0.0
 
 [node name="EmberRed" parent="StageDirector/Apex4" instance=ExtResource( 13 )]
 position = Vector2( 60, -80 )
-speed = 144.0
 
 [node name="EmberBlue" parent="StageDirector/Apex4" instance=ExtResource( 10 )]
 position = Vector2( -60, -80 )
-speed = 144.0
 
 [node name="TinyEmberBlue" parent="StageDirector/Apex4" instance=ExtResource( 11 )]
 position = Vector2( 120, -20 )
-speed = 144.0
 
 [node name="TinyEmberRed" parent="StageDirector/Apex4" instance=ExtResource( 12 )]
 position = Vector2( -120, -20 )
-speed = 144.0
 
 [node name="TinyEmberRed2" parent="StageDirector/Apex4" instance=ExtResource( 12 )]
 position = Vector2( 150, -70 )
-speed = 144.0
 
 [node name="TinyEmberBlue2" parent="StageDirector/Apex4" instance=ExtResource( 11 )]
 position = Vector2( -150, -70 )
-speed = 144.0
 
 [node name="TinyEmberBlue3" parent="StageDirector/Apex4" instance=ExtResource( 11 )]
 position = Vector2( 120, -120 )
-speed = 144.0
 
 [node name="TinyEmberRed3" parent="StageDirector/Apex4" instance=ExtResource( 12 )]
 position = Vector2( -120, -120 )
-speed = 144.0
 
 [node name="Apex3" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -2875 )
@@ -154,35 +147,27 @@ spawn_x = 0.0
 
 [node name="EmberRed" parent="StageDirector/Apex3" instance=ExtResource( 13 )]
 position = Vector2( 60, -80 )
-speed = 144.0
 
 [node name="EmberBlue" parent="StageDirector/Apex3" instance=ExtResource( 10 )]
 position = Vector2( -60, -80 )
-speed = 144.0
 
 [node name="TinyEmberBlue" parent="StageDirector/Apex3" instance=ExtResource( 11 )]
 position = Vector2( 120, -20 )
-speed = 144.0
 
 [node name="TinyEmberRed" parent="StageDirector/Apex3" instance=ExtResource( 12 )]
 position = Vector2( -120, -20 )
-speed = 144.0
 
 [node name="TinyEmberRed2" parent="StageDirector/Apex3" instance=ExtResource( 12 )]
 position = Vector2( 150, -70 )
-speed = 144.0
 
 [node name="TinyEmberBlue2" parent="StageDirector/Apex3" instance=ExtResource( 11 )]
 position = Vector2( -150, -70 )
-speed = 144.0
 
 [node name="TinyEmberBlue3" parent="StageDirector/Apex3" instance=ExtResource( 11 )]
 position = Vector2( 120, -120 )
-speed = 144.0
 
 [node name="TinyEmberRed3" parent="StageDirector/Apex3" instance=ExtResource( 12 )]
 position = Vector2( -120, -120 )
-speed = 144.0
 
 [node name="Apex2" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -2600 )
@@ -195,35 +180,27 @@ spawn_x = 0.0
 
 [node name="EmberRed" parent="StageDirector/Apex2" instance=ExtResource( 13 )]
 position = Vector2( 60, -80 )
-speed = 144.0
 
 [node name="EmberBlue" parent="StageDirector/Apex2" instance=ExtResource( 10 )]
 position = Vector2( -60, -80 )
-speed = 144.0
 
 [node name="TinyEmberBlue" parent="StageDirector/Apex2" instance=ExtResource( 11 )]
 position = Vector2( 120, -20 )
-speed = 144.0
 
 [node name="TinyEmberRed" parent="StageDirector/Apex2" instance=ExtResource( 12 )]
 position = Vector2( -120, -20 )
-speed = 144.0
 
 [node name="TinyEmberRed2" parent="StageDirector/Apex2" instance=ExtResource( 12 )]
 position = Vector2( 150, -70 )
-speed = 144.0
 
 [node name="TinyEmberBlue2" parent="StageDirector/Apex2" instance=ExtResource( 11 )]
 position = Vector2( -150, -70 )
-speed = 144.0
 
 [node name="TinyEmberBlue3" parent="StageDirector/Apex2" instance=ExtResource( 11 )]
 position = Vector2( 120, -120 )
-speed = 144.0
 
 [node name="TinyEmberRed3" parent="StageDirector/Apex2" instance=ExtResource( 12 )]
 position = Vector2( -120, -120 )
-speed = 144.0
 
 [node name="Apex1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -2325 )
@@ -236,35 +213,27 @@ spawn_x = 0.0
 
 [node name="EmberRed" parent="StageDirector/Apex1" instance=ExtResource( 13 )]
 position = Vector2( 60, -80 )
-speed = 144.0
 
 [node name="EmberBlue" parent="StageDirector/Apex1" instance=ExtResource( 10 )]
 position = Vector2( -60, -80 )
-speed = 144.0
 
 [node name="TinyEmberBlue" parent="StageDirector/Apex1" instance=ExtResource( 11 )]
 position = Vector2( 120, -20 )
-speed = 144.0
 
 [node name="TinyEmberRed" parent="StageDirector/Apex1" instance=ExtResource( 12 )]
 position = Vector2( -120, -20 )
-speed = 144.0
 
 [node name="TinyEmberRed2" parent="StageDirector/Apex1" instance=ExtResource( 12 )]
 position = Vector2( 150, -70 )
-speed = 144.0
 
 [node name="TinyEmberBlue2" parent="StageDirector/Apex1" instance=ExtResource( 11 )]
 position = Vector2( -150, -70 )
-speed = 144.0
 
 [node name="TinyEmberBlue3" parent="StageDirector/Apex1" instance=ExtResource( 11 )]
 position = Vector2( 120, -120 )
-speed = 144.0
 
 [node name="TinyEmberRed3" parent="StageDirector/Apex1" instance=ExtResource( 12 )]
 position = Vector2( -120, -120 )
-speed = 144.0
 
 [node name="[Mark]Apex" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
@@ -287,43 +256,33 @@ spawn_x = 0.0
 
 [node name="SpinnerA" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( -80, -40 )
-speed = 144.0
 
 [node name="SpinnerA2" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( -200, -40 )
-speed = 144.0
 
 [node name="SpinnerA3" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( -200, -160 )
-speed = 144.0
 
 [node name="SpinnerA4" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( -80, -160 )
-speed = 144.0
 
 [node name="SpinnerA5" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( 80, -40 )
-speed = 144.0
 
 [node name="SpinnerA6" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( 200, -40 )
-speed = 144.0
 
 [node name="SpinnerA7" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( 200, -160 )
-speed = 144.0
 
 [node name="SpinnerA8" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( 80, -160 )
-speed = 144.0
 
 [node name="SpinnerA9" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( 140, -100 )
-speed = 144.0
 
 [node name="SpinnerA10" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( -140, -100 )
-speed = 144.0
 
 [node name="Trans1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1825 )
@@ -336,43 +295,33 @@ spawn_x = 0.0
 
 [node name="SpinnerA" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( -30, -60 )
-speed = 120.0
 
 [node name="SpinnerA2" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( -90, -60 )
-speed = 144.0
 
 [node name="SpinnerA3" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( -180, -60 )
-speed = 144.0
 
 [node name="SpinnerA4" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( -270, -60 )
-speed = 120.0
 
 [node name="SpinnerA5" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( -180, -120 )
-speed = 120.0
 
 [node name="SpinnerA6" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( 30, -60 )
-speed = 120.0
 
 [node name="SpinnerA7" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( 90, -60 )
-speed = 144.0
 
 [node name="SpinnerA8" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( 180, -60 )
-speed = 144.0
 
 [node name="SpinnerA9" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( 270, -60 )
-speed = 120.0
 
 [node name="SpinnerA10" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( 180, -120 )
-speed = 120.0
 
 [node name="[Mark]Trans" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
@@ -395,11 +344,9 @@ spawn_x = 0.0
 
 [node name="EmberBlue" parent="StageDirector/Melody2b" instance=ExtResource( 10 )]
 position = Vector2( -40, -40 )
-speed = 310.0
 
 [node name="EmberBlue2" parent="StageDirector/Melody2b" instance=ExtResource( 10 )]
 position = Vector2( 40, -40 )
-speed = 310.0
 
 [node name="Melody2" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1550 )
@@ -418,11 +365,9 @@ position = Vector2( 60, -40 )
 
 [node name="EmberRed3" parent="StageDirector/Melody2" instance=ExtResource( 13 )]
 position = Vector2( -180, -40 )
-speed = 120.0
 
 [node name="EmberRed4" parent="StageDirector/Melody2" instance=ExtResource( 13 )]
 position = Vector2( 180, -40 )
-speed = 120.0
 
 [node name="Melody1b" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1400 )
@@ -435,11 +380,9 @@ spawn_x = 0.0
 
 [node name="EmberBlue" parent="StageDirector/Melody1b" instance=ExtResource( 10 )]
 position = Vector2( -140, -40 )
-speed = 310.0
 
 [node name="EmberBlue2" parent="StageDirector/Melody1b" instance=ExtResource( 10 )]
 position = Vector2( 140, -40 )
-speed = 310.0
 
 [node name="Melody1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1275 )
@@ -458,7 +401,6 @@ position = Vector2( 90, -40 )
 
 [node name="EmberRed3" parent="StageDirector/Melody1" instance=ExtResource( 13 )]
 position = Vector2( 0, -90 )
-speed = 150.0
 
 [node name="[Mark]Melody" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
@@ -609,7 +551,8 @@ position = Vector2( 25, -50 )
 
 [node name="TinyEmberRed5" parent="StageDirector/Intro3L" instance=ExtResource( 12 )]
 position = Vector2( 75, -25 )
-speed = 150.0
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Intro3L/TinyEmberRed5" instance=ExtResource( 15 )]
 
 [node name="Intro3R" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 160, -275 )
@@ -622,16 +565,23 @@ spawn_x = 160.0
 
 [node name="TinyEmberRed8" parent="StageDirector/Intro3R" instance=ExtResource( 12 )]
 position = Vector2( -75, -25 )
-speed = 150.0
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Intro3R/TinyEmberRed8" instance=ExtResource( 15 )]
 
 [node name="TinyEmberRed7" parent="StageDirector/Intro3R" instance=ExtResource( 12 )]
 position = Vector2( -25, -50 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Intro3R/TinyEmberRed7" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed6" parent="StageDirector/Intro3R" instance=ExtResource( 12 )]
 position = Vector2( 25, -75 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Intro3R/TinyEmberRed6" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed5" parent="StageDirector/Intro3R" instance=ExtResource( 12 )]
 position = Vector2( 75, -100 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Intro3R/TinyEmberRed5" instance=ExtResource( 15 )]
 
 [node name="Intro1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 160, -25 )
@@ -645,14 +595,22 @@ spawn_x = 160.0
 [node name="TinyEmberRed" parent="StageDirector/Intro1" instance=ExtResource( 12 )]
 position = Vector2( -75, -25 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Intro1/TinyEmberRed" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed2" parent="StageDirector/Intro1" instance=ExtResource( 12 )]
 position = Vector2( -25, -50 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Intro1/TinyEmberRed2" instance=ExtResource( 15 )]
 
 [node name="TinyEmberRed3" parent="StageDirector/Intro1" instance=ExtResource( 12 )]
 position = Vector2( 25, -75 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Intro1/TinyEmberRed3" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed4" parent="StageDirector/Intro1" instance=ExtResource( 12 )]
 position = Vector2( 75, -100 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Intro1/TinyEmberRed4" instance=ExtResource( 15 )]
 
 [node name="[Mark]Intro1" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
