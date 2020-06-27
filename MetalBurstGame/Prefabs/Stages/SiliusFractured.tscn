@@ -7,7 +7,7 @@
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Prefabs/Stages/Stage2Mountainous.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Enemies/EmberBlue.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Enemies/TinyEmberBlue.tscn" type="PackedScene" id=11]
@@ -115,26 +115,42 @@ spawn_x = 0.0
 [node name="EmberRed" parent="StageDirector/Apex4" instance=ExtResource( 13 )]
 position = Vector2( 60, -80 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex4/EmberRed" instance=ExtResource( 15 )]
+
 [node name="EmberBlue" parent="StageDirector/Apex4" instance=ExtResource( 10 )]
 position = Vector2( -60, -80 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex4/EmberBlue" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue" parent="StageDirector/Apex4" instance=ExtResource( 11 )]
 position = Vector2( 120, -20 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex4/TinyEmberBlue" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed" parent="StageDirector/Apex4" instance=ExtResource( 12 )]
 position = Vector2( -120, -20 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex4/TinyEmberRed" instance=ExtResource( 15 )]
 
 [node name="TinyEmberRed2" parent="StageDirector/Apex4" instance=ExtResource( 12 )]
 position = Vector2( 150, -70 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex4/TinyEmberRed2" instance=ExtResource( 15 )]
+
 [node name="TinyEmberBlue2" parent="StageDirector/Apex4" instance=ExtResource( 11 )]
 position = Vector2( -150, -70 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex4/TinyEmberBlue2" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue3" parent="StageDirector/Apex4" instance=ExtResource( 11 )]
 position = Vector2( 120, -120 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex4/TinyEmberBlue3" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed3" parent="StageDirector/Apex4" instance=ExtResource( 12 )]
 position = Vector2( -120, -120 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex4/TinyEmberRed3" instance=ExtResource( 15 )]
 
 [node name="Apex3" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -2875 )
@@ -148,26 +164,42 @@ spawn_x = 0.0
 [node name="EmberRed" parent="StageDirector/Apex3" instance=ExtResource( 13 )]
 position = Vector2( 60, -80 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex3/EmberRed" instance=ExtResource( 15 )]
+
 [node name="EmberBlue" parent="StageDirector/Apex3" instance=ExtResource( 10 )]
 position = Vector2( -60, -80 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex3/EmberBlue" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue" parent="StageDirector/Apex3" instance=ExtResource( 11 )]
 position = Vector2( 120, -20 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex3/TinyEmberBlue" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed" parent="StageDirector/Apex3" instance=ExtResource( 12 )]
 position = Vector2( -120, -20 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex3/TinyEmberRed" instance=ExtResource( 15 )]
 
 [node name="TinyEmberRed2" parent="StageDirector/Apex3" instance=ExtResource( 12 )]
 position = Vector2( 150, -70 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex3/TinyEmberRed2" instance=ExtResource( 15 )]
+
 [node name="TinyEmberBlue2" parent="StageDirector/Apex3" instance=ExtResource( 11 )]
 position = Vector2( -150, -70 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex3/TinyEmberBlue2" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue3" parent="StageDirector/Apex3" instance=ExtResource( 11 )]
 position = Vector2( 120, -120 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex3/TinyEmberBlue3" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed3" parent="StageDirector/Apex3" instance=ExtResource( 12 )]
 position = Vector2( -120, -120 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex3/TinyEmberRed3" instance=ExtResource( 15 )]
 
 [node name="Apex2" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -2600 )
@@ -181,26 +213,42 @@ spawn_x = 0.0
 [node name="EmberRed" parent="StageDirector/Apex2" instance=ExtResource( 13 )]
 position = Vector2( 60, -80 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex2/EmberRed" instance=ExtResource( 15 )]
+
 [node name="EmberBlue" parent="StageDirector/Apex2" instance=ExtResource( 10 )]
 position = Vector2( -60, -80 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex2/EmberBlue" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue" parent="StageDirector/Apex2" instance=ExtResource( 11 )]
 position = Vector2( 120, -20 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex2/TinyEmberBlue" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed" parent="StageDirector/Apex2" instance=ExtResource( 12 )]
 position = Vector2( -120, -20 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex2/TinyEmberRed" instance=ExtResource( 15 )]
 
 [node name="TinyEmberRed2" parent="StageDirector/Apex2" instance=ExtResource( 12 )]
 position = Vector2( 150, -70 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex2/TinyEmberRed2" instance=ExtResource( 15 )]
+
 [node name="TinyEmberBlue2" parent="StageDirector/Apex2" instance=ExtResource( 11 )]
 position = Vector2( -150, -70 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex2/TinyEmberBlue2" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue3" parent="StageDirector/Apex2" instance=ExtResource( 11 )]
 position = Vector2( 120, -120 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex2/TinyEmberBlue3" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed3" parent="StageDirector/Apex2" instance=ExtResource( 12 )]
 position = Vector2( -120, -120 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex2/TinyEmberRed3" instance=ExtResource( 15 )]
 
 [node name="Apex1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -2325 )
@@ -214,26 +262,42 @@ spawn_x = 0.0
 [node name="EmberRed" parent="StageDirector/Apex1" instance=ExtResource( 13 )]
 position = Vector2( 60, -80 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex1/EmberRed" instance=ExtResource( 15 )]
+
 [node name="EmberBlue" parent="StageDirector/Apex1" instance=ExtResource( 10 )]
 position = Vector2( -60, -80 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex1/EmberBlue" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue" parent="StageDirector/Apex1" instance=ExtResource( 11 )]
 position = Vector2( 120, -20 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex1/TinyEmberBlue" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed" parent="StageDirector/Apex1" instance=ExtResource( 12 )]
 position = Vector2( -120, -20 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex1/TinyEmberRed" instance=ExtResource( 15 )]
 
 [node name="TinyEmberRed2" parent="StageDirector/Apex1" instance=ExtResource( 12 )]
 position = Vector2( 150, -70 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex1/TinyEmberRed2" instance=ExtResource( 15 )]
+
 [node name="TinyEmberBlue2" parent="StageDirector/Apex1" instance=ExtResource( 11 )]
 position = Vector2( -150, -70 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex1/TinyEmberBlue2" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue3" parent="StageDirector/Apex1" instance=ExtResource( 11 )]
 position = Vector2( 120, -120 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex1/TinyEmberBlue3" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed3" parent="StageDirector/Apex1" instance=ExtResource( 12 )]
 position = Vector2( -120, -120 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Apex1/TinyEmberRed3" instance=ExtResource( 15 )]
 
 [node name="[Mark]Apex" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
@@ -257,32 +321,52 @@ spawn_x = 0.0
 [node name="SpinnerA" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( -80, -40 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans3/SpinnerA" instance=ExtResource( 15 )]
+
 [node name="SpinnerA2" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( -200, -40 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans3/SpinnerA2" instance=ExtResource( 15 )]
 
 [node name="SpinnerA3" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( -200, -160 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans3/SpinnerA3" instance=ExtResource( 15 )]
+
 [node name="SpinnerA4" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( -80, -160 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans3/SpinnerA4" instance=ExtResource( 15 )]
 
 [node name="SpinnerA5" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( 80, -40 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans3/SpinnerA5" instance=ExtResource( 15 )]
+
 [node name="SpinnerA6" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( 200, -40 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans3/SpinnerA6" instance=ExtResource( 15 )]
 
 [node name="SpinnerA7" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( 200, -160 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans3/SpinnerA7" instance=ExtResource( 15 )]
+
 [node name="SpinnerA8" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( 80, -160 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans3/SpinnerA8" instance=ExtResource( 15 )]
 
 [node name="SpinnerA9" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( 140, -100 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans3/SpinnerA9" instance=ExtResource( 15 )]
+
 [node name="SpinnerA10" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( -140, -100 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans3/SpinnerA10" instance=ExtResource( 15 )]
 
 [node name="Trans1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1825 )
@@ -296,32 +380,52 @@ spawn_x = 0.0
 [node name="SpinnerA" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( -30, -60 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans1/SpinnerA" instance=ExtResource( 15 )]
+
 [node name="SpinnerA2" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( -90, -60 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans1/SpinnerA2" instance=ExtResource( 15 )]
 
 [node name="SpinnerA3" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( -180, -60 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans1/SpinnerA3" instance=ExtResource( 15 )]
+
 [node name="SpinnerA4" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( -270, -60 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans1/SpinnerA4" instance=ExtResource( 15 )]
 
 [node name="SpinnerA5" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( -180, -120 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans1/SpinnerA5" instance=ExtResource( 15 )]
+
 [node name="SpinnerA6" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( 30, -60 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans1/SpinnerA6" instance=ExtResource( 15 )]
 
 [node name="SpinnerA7" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( 90, -60 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans1/SpinnerA7" instance=ExtResource( 15 )]
+
 [node name="SpinnerA8" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( 180, -60 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans1/SpinnerA8" instance=ExtResource( 15 )]
 
 [node name="SpinnerA9" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( 270, -60 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans1/SpinnerA9" instance=ExtResource( 15 )]
+
 [node name="SpinnerA10" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( 180, -120 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Trans1/SpinnerA10" instance=ExtResource( 15 )]
 
 [node name="[Mark]Trans" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
@@ -345,8 +449,12 @@ spawn_x = 0.0
 [node name="EmberBlue" parent="StageDirector/Melody2b" instance=ExtResource( 10 )]
 position = Vector2( -40, -40 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Melody2b/EmberBlue" instance=ExtResource( 15 )]
+
 [node name="EmberBlue2" parent="StageDirector/Melody2b" instance=ExtResource( 10 )]
 position = Vector2( 40, -40 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Melody2b/EmberBlue2" instance=ExtResource( 15 )]
 
 [node name="Melody2" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1550 )
@@ -360,14 +468,22 @@ spawn_x = 0.0
 [node name="EmberRed" parent="StageDirector/Melody2" instance=ExtResource( 13 )]
 position = Vector2( -60, -40 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Melody2/EmberRed" instance=ExtResource( 15 )]
+
 [node name="EmberRed2" parent="StageDirector/Melody2" instance=ExtResource( 13 )]
 position = Vector2( 60, -40 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Melody2/EmberRed2" instance=ExtResource( 15 )]
 
 [node name="EmberRed3" parent="StageDirector/Melody2" instance=ExtResource( 13 )]
 position = Vector2( -180, -40 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Melody2/EmberRed3" instance=ExtResource( 15 )]
+
 [node name="EmberRed4" parent="StageDirector/Melody2" instance=ExtResource( 13 )]
 position = Vector2( 180, -40 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Melody2/EmberRed4" instance=ExtResource( 15 )]
 
 [node name="Melody1b" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1400 )
@@ -381,8 +497,12 @@ spawn_x = 0.0
 [node name="EmberBlue" parent="StageDirector/Melody1b" instance=ExtResource( 10 )]
 position = Vector2( -140, -40 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Melody1b/EmberBlue" instance=ExtResource( 15 )]
+
 [node name="EmberBlue2" parent="StageDirector/Melody1b" instance=ExtResource( 10 )]
 position = Vector2( 140, -40 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Melody1b/EmberBlue2" instance=ExtResource( 15 )]
 
 [node name="Melody1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1275 )
@@ -396,11 +516,17 @@ spawn_x = 0.0
 [node name="EmberRed" parent="StageDirector/Melody1" instance=ExtResource( 13 )]
 position = Vector2( -90, -40 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Melody1/EmberRed" instance=ExtResource( 15 )]
+
 [node name="EmberRed2" parent="StageDirector/Melody1" instance=ExtResource( 13 )]
 position = Vector2( 90, -40 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Melody1/EmberRed2" instance=ExtResource( 15 )]
+
 [node name="EmberRed3" parent="StageDirector/Melody1" instance=ExtResource( 13 )]
 position = Vector2( 0, -90 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Melody1/EmberRed3" instance=ExtResource( 15 )]
 
 [node name="[Mark]Melody" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
@@ -424,26 +550,42 @@ spawn_x = -160.0
 [node name="TinyEmberBlue" parent="StageDirector/BuildUp2L" instance=ExtResource( 11 )]
 position = Vector2( 30, -30 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2L/TinyEmberBlue" instance=ExtResource( 15 )]
+
 [node name="TinyEmberBlue2" parent="StageDirector/BuildUp2L" instance=ExtResource( 11 )]
 position = Vector2( -30, -30 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2L/TinyEmberBlue2" instance=ExtResource( 15 )]
 
 [node name="TinyEmberRed" parent="StageDirector/BuildUp2L" instance=ExtResource( 12 )]
 position = Vector2( -60, -60 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2L/TinyEmberRed" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed2" parent="StageDirector/BuildUp2L" instance=ExtResource( 12 )]
 position = Vector2( 60, -60 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2L/TinyEmberRed2" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue3" parent="StageDirector/BuildUp2L" instance=ExtResource( 11 )]
 position = Vector2( 90, -90 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2L/TinyEmberBlue3" instance=ExtResource( 15 )]
+
 [node name="TinyEmberBlue4" parent="StageDirector/BuildUp2L" instance=ExtResource( 11 )]
 position = Vector2( -90, -90 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2L/TinyEmberBlue4" instance=ExtResource( 15 )]
 
 [node name="TinyEmberRed3" parent="StageDirector/BuildUp2L" instance=ExtResource( 12 )]
 position = Vector2( 120, -120 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2L/TinyEmberRed3" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed4" parent="StageDirector/BuildUp2L" instance=ExtResource( 12 )]
 position = Vector2( -120, -120 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2L/TinyEmberRed4" instance=ExtResource( 15 )]
 
 [node name="BuildUp2R" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 160, -1000 )
@@ -457,26 +599,42 @@ spawn_x = 160.0
 [node name="TinyEmberRed" parent="StageDirector/BuildUp2R" instance=ExtResource( 12 )]
 position = Vector2( -30, -30 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2R/TinyEmberRed" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed2" parent="StageDirector/BuildUp2R" instance=ExtResource( 12 )]
 position = Vector2( 30, -30 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2R/TinyEmberRed2" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue" parent="StageDirector/BuildUp2R" instance=ExtResource( 11 )]
 position = Vector2( 60, -60 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2R/TinyEmberBlue" instance=ExtResource( 15 )]
+
 [node name="TinyEmberBlue2" parent="StageDirector/BuildUp2R" instance=ExtResource( 11 )]
 position = Vector2( -60, -60 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2R/TinyEmberBlue2" instance=ExtResource( 15 )]
 
 [node name="TinyEmberRed3" parent="StageDirector/BuildUp2R" instance=ExtResource( 12 )]
 position = Vector2( 90, -90 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2R/TinyEmberRed3" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed4" parent="StageDirector/BuildUp2R" instance=ExtResource( 12 )]
 position = Vector2( -90, -90 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2R/TinyEmberRed4" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue3" parent="StageDirector/BuildUp2R" instance=ExtResource( 11 )]
 position = Vector2( 120, -120 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2R/TinyEmberBlue3" instance=ExtResource( 15 )]
+
 [node name="TinyEmberBlue4" parent="StageDirector/BuildUp2R" instance=ExtResource( 11 )]
 position = Vector2( -120, -120 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp2R/TinyEmberBlue4" instance=ExtResource( 15 )]
 
 [node name="BuildUp1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -750 )
@@ -490,26 +648,42 @@ spawn_x = 0.0
 [node name="TinyEmberRed" parent="StageDirector/BuildUp1" instance=ExtResource( 12 )]
 position = Vector2( -50, -30 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp1/TinyEmberRed" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed2" parent="StageDirector/BuildUp1" instance=ExtResource( 12 )]
 position = Vector2( 50, -30 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp1/TinyEmberRed2" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue" parent="StageDirector/BuildUp1" instance=ExtResource( 11 )]
 position = Vector2( 100, -60 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp1/TinyEmberBlue" instance=ExtResource( 15 )]
+
 [node name="TinyEmberBlue2" parent="StageDirector/BuildUp1" instance=ExtResource( 11 )]
 position = Vector2( -100, -60 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp1/TinyEmberBlue2" instance=ExtResource( 15 )]
 
 [node name="TinyEmberRed3" parent="StageDirector/BuildUp1" instance=ExtResource( 12 )]
 position = Vector2( 150, -90 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp1/TinyEmberRed3" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed4" parent="StageDirector/BuildUp1" instance=ExtResource( 12 )]
 position = Vector2( -150, -90 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp1/TinyEmberRed4" instance=ExtResource( 15 )]
 
 [node name="TinyEmberBlue3" parent="StageDirector/BuildUp1" instance=ExtResource( 11 )]
 position = Vector2( 200, -120 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp1/TinyEmberBlue3" instance=ExtResource( 15 )]
+
 [node name="TinyEmberBlue4" parent="StageDirector/BuildUp1" instance=ExtResource( 11 )]
 position = Vector2( -200, -120 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/BuildUp1/TinyEmberBlue4" instance=ExtResource( 15 )]
 
 [node name="[Mark]BuildUp" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
@@ -543,11 +717,17 @@ spawn_x = -160.0
 [node name="TinyEmberRed8" parent="StageDirector/Intro3L" instance=ExtResource( 12 )]
 position = Vector2( -75, -100 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Intro3L/TinyEmberRed8" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed7" parent="StageDirector/Intro3L" instance=ExtResource( 12 )]
 position = Vector2( -25, -75 )
 
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Intro3L/TinyEmberRed7" instance=ExtResource( 15 )]
+
 [node name="TinyEmberRed6" parent="StageDirector/Intro3L" instance=ExtResource( 12 )]
 position = Vector2( 25, -50 )
+
+[node name="[Proto]SimpleAiReplica" parent="StageDirector/Intro3L/TinyEmberRed6" instance=ExtResource( 15 )]
 
 [node name="TinyEmberRed5" parent="StageDirector/Intro3L" instance=ExtResource( 12 )]
 position = Vector2( 75, -25 )
