@@ -4,6 +4,7 @@ class_name BB
 const PLAYER    : String = "player"
 const SELF      : String = "self"
 const PLAY_AREA : String = "playArea" 
+const ENGINE    : String = "engine"
 
 
 ##########################################################

@@ -2,7 +2,6 @@ extends Sprite
 
 class_name BulletTest
 #This controls FoeBullets
-var speed
 
 const PLAYER_VELOCITY = Vector2(0, -300)
 const ENEMY_VELOCITY = Vector2(0, 200)
@@ -10,6 +9,8 @@ const ENEMY_VELOCITY = Vector2(0, 200)
 export(Array,Texture) var PROJECTILE_TYPES = []
 export (int, "PLAYER_BULLET", "ENEMY_BULLET") var projectileType setget setProjectileType
 
+var _velocity : Vector2 = ENEMY_VELOCITY
+var _speed : float = 200
 
 func setProjectileType(newProjectileType):
 	if newProjectileType != null:
@@ -24,7 +25,6 @@ func _ready():
 func _process(delta):
 	move(delta)
 	removeWenOffScreen()
-	#print(global_position)
 		
 func hit(object):
 	print("Bullet collision with " + object.name + " detected!")
@@ -38,15 +38,19 @@ func move(delta):
 	if (projectileType == 0):
 		global_position += (PLAYER_VELOCITY * (2 * delta))
 	else:
-		global_position += (ENEMY_VELOCITY * (2 * delta))
+		position += (_velocity * (_speed*delta))
 	#print("Bullet position: " + String(self.global_position))
 
-func change_speed(new_speed):
-	speed = new_speed
+func set_speed(newSpeed):
+	_speed = newSpeed
 
 func removeWenOffScreen():
 	if global_position.y < 0:
 		queue_free()
+
+func set_velocity(x:float,y:float):
+	_velocity.x = x
+	_velocity.y = y
 
 #func start(pos):
 #	position = pos

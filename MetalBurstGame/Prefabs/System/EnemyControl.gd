@@ -6,7 +6,7 @@ class_name EnemyControl, "res://Assets/Tools/boss.png"
 #avoid using soft dependencies 
 #move to all the needed variables out of the instance
 #and on to the script
-export(PackedScene) var BULLET_TEST 
+
 
 #behavior vars
 var _engineReady : bool = false#ready to roll baby
@@ -19,11 +19,11 @@ var _speed = 0
 var _velocity : Vector2 = Vector2(0,0) #velcity in the x and y directions this applies movement
 
 #combat vars
-export(float) var _maxHealth = 100 #TODO: make setget to prevent negatives
+export(float) var _maxHealth = 100 setget set_max_health
 var _currentHealth : float = _maxHealth
 
 export(float) var _fireRate = 2 setget set_fire_rate#shots per second 
-var _fireElapsed
+var _fireElapsed: float = 0
 
 export(float) var _despawnDistance = 600 #distance from screen center
 var _screenCenter : Vector2 = Vector2(0,0)
@@ -59,6 +59,10 @@ func set_speed(speed:float):
 func get_speed()->float:
 	return _speed
 
+func set_max_health(maxHealth:float):
+	_maxHealth = max(1,maxHealth)
+	_currentHealth = _maxHealth
+
 func set_current_health(health:float):
 	_currentHealth = min(max(health,0),_maxHealth)
 
@@ -73,7 +77,8 @@ func engine_ready(engine):
 		#TODO: Add ,pre variables
 		BB.SELF : self,
 		BB.PLAYER : Globals.get_player(),
-		BB.PLAY_AREA : _myEngine.get_play_container()
+		BB.PLAY_AREA : _myEngine.get_play_container(),
+		BB.ENGINE : _myEngine
 	})
 	_screenCenter = ZoneMap.get_zone_position(ZoneMap.Zones.Center,_myEngine.get_play_container())
 
@@ -110,17 +115,17 @@ func set_fire_rate(fireRate:float):
 #@@@@@@@@@@@@@@@@@@@@ Deprecated @@@@@@@@@@@@@@@@@@@@@@@@#
 ##########################################################
 #TODO: add shoot
-func shoot():
-	#attempt to shoot if already placed in correct engine layer
-	#otherwise return and do nothing
-	if(!_engineReady):
-		return
-	var bullet = BULLET_TEST.instance()#stop using this-use class
-	bullet.setProjectileType(1)# 1 = ENEMY_BULLET
-	bullet.position = position
-	#bullet.change_speed(speed)
-	_myEngine.add_child(bullet)
-	print("shoot")
+#func shoot():
+#	#attempt to shoot if already placed in correct engine layer
+#	#otherwise return and do nothing
+#	if(!_engineReady):
+#		return
+#	var bullet = Globals.Bullet.instance()
+#	bullet.setProjectileType(1)# 1 = ENEMY_BULLET
+#	bullet.position = position
+#	#bullet.change_speed(speed)
+#	_myEngine.add_child(bullet)
+#	print("shoot")
 
 #TODO: add take damage
 func hit(object):
