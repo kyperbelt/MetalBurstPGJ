@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveCardinal.gd" type="Script" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateTo.gd" type="Script" id=7]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/StopMove.gd" type="Script" id=8]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateBy.gd" type="Script" id=9]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=10]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootPlayer.gd" type="Script" id=11]
 
 [node name="RotateTestBehavior" type="Node"]
 script = ExtResource( 1 )
@@ -35,11 +37,28 @@ script = ExtResource( 7 )
 _angle = 90.0
 _time = 0.5
 
-[node name="Repeater" type="Node" parent="Sequence"]
+[node name="Parallel" type="Node" parent="Sequence"]
+script = ExtResource( 10 )
+
+[node name="Repeater" type="Node" parent="Sequence/Parallel"]
 script = ExtResource( 6 )
 amount = -1
 
-[node name="RotateBy" type="Node" parent="Sequence/Repeater"]
+[node name="Sequence" type="Node" parent="Sequence/Parallel/Repeater"]
+script = ExtResource( 3 )
+
+[node name="Wait" type="Node" parent="Sequence/Parallel/Repeater/Sequence"]
+script = ExtResource( 5 )
+delay = 2.0
+
+[node name="ShootPlayer" type="Node" parent="Sequence/Parallel/Repeater/Sequence"]
+script = ExtResource( 11 )
+
+[node name="Repeater2" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 6 )
+amount = -1
+
+[node name="RotateBy" type="Node" parent="Sequence/Parallel/Repeater2"]
 script = ExtResource( 9 )
 _angle = 90.0
 _time = 0.5

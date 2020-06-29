@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=2]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=5]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveTo.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/RandomInt.gd" type="Script" id=7]
 
@@ -34,3 +35,22 @@ _zone = 1
 _xOffset = 10.0
 _yOffset = 10.0
 _useValue = true
+
+[node name="ShootAngle" type="Node" parent="Repeater/Sequence"]
+script = ExtResource( 5 )
+_angle = -45.0
+
+[node name="ShootAngle2" type="Node" parent="Repeater/Sequence"]
+script = ExtResource( 5 )
+_angle = -20.0
+
+[node name="ShootAngle3" type="Node" parent="Repeater/Sequence"]
+script = ExtResource( 5 )
+
+[node name="ShootAngle4" type="Node" parent="Repeater/Sequence"]
+script = ExtResource( 5 )
+_angle = 20.0
+
+[node name="ShootAngle5" type="Node" parent="Repeater/Sequence"]
+script = ExtResource( 5 )
+_angle = 45.0
