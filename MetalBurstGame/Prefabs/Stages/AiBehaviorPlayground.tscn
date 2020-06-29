@@ -5,11 +5,11 @@
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Enemies/EmberGreen.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Prefabs/Behaviors2/Parallel-Repeaters.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/Behaviors2/Hang-Fire1.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Prefabs/Behaviors2/InfinityLoopx6.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Prefabs/Behaviors2/[Proto]Velocity.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Prefabs/Behaviors2/Hang-Fire2(Burst).tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Behaviors/TestBehaviors/Parallel-Repeaters.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Behaviors/TestBehaviors/Hang-Fire1.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Behaviors/TestBehaviors/InfinityLoopx6.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Behaviors/TestBehaviors/[Proto]Velocity.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Behaviors/TestBehaviors/Hang-Fire2(Burst).tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Enemies/EmberBlue.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Enemies/EmberPurple.tscn" type="PackedScene" id=13]
@@ -45,11 +45,7 @@ position = Vector2( 643.419, -1000 )
 
 [node name="Parallel-Repeaters" parent="StageDirector" instance=ExtResource( 4 )]
 position = Vector2( 250, -750 )
-B_A_S_E = ""
 event_time = 15.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 250.0
 
 [node name="EmberGreen" parent="StageDirector/Parallel-Repeaters" instance=ExtResource( 5 )]
@@ -60,12 +56,7 @@ _maxSpeed = 200.0
 
 [node name="Velocity Testing" parent="StageDirector" instance=ExtResource( 4 )]
 position = Vector2( 0, -500 )
-B_A_S_E = ""
 event_time = 10.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="TinyEmberBlue" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
 position = Vector2( -240, -30 )
@@ -111,12 +102,7 @@ _maxSpeed = 720.0
 
 [node name="InfinityLoopTest" parent="StageDirector" instance=ExtResource( 4 )]
 position = Vector2( 0, -300 )
-B_A_S_E = ""
 event_time = 6.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberPurple" parent="StageDirector/InfinityLoopTest" instance=ExtResource( 13 )]
 position = Vector2( 0, -50 )
@@ -125,12 +111,7 @@ position = Vector2( 0, -50 )
 
 [node name="Hang-Fire" parent="StageDirector" instance=ExtResource( 4 )]
 position = Vector2( 0, -200 )
-B_A_S_E = ""
 event_time = 4.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberRed" parent="StageDirector/Hang-Fire" instance=ExtResource( 12 )]
 position = Vector2( 160, -50 )
