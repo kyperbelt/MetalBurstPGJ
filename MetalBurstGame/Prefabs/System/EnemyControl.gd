@@ -19,7 +19,7 @@ var _speed = 0
 var _velocity : Vector2 = Vector2(0,0) #velcity in the x and y directions this applies movement
 
 #combat vars
-export(float) var _maxHealth = 100 #TODO: make setget to prevent negatives
+export(float) var _maxHealth = 100 setget set_max_health
 var _currentHealth : float = _maxHealth
 
 export(float) var _fireRate = 2 setget set_fire_rate#shots per second 
@@ -58,6 +58,10 @@ func set_speed(speed:float):
 
 func get_speed()->float:
 	return _speed
+
+func set_max_health(maxHealth:float):
+	_maxHealth = max(1,maxHealth)
+	_currentHealth = _maxHealth
 
 func set_current_health(health:float):
 	_currentHealth = min(max(health,0),_maxHealth)
