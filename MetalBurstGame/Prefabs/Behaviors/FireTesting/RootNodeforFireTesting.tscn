@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateBy.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=4]
+
+[node name="Brain" type="Node"]
+script = ExtResource( 4 )
+
+[node name="Parallel" type="Node" parent="."]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Insert 2 Repeaters under here]
+[1 for rotato-potato]
+[1 for firing tests]"
+}
+
+[node name="InfiniteRotation" type="Node" parent="Parallel"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": "[Makes sure rotation and firing are indipendent of each other]"
+}
+
+[node name="RotateBy" type="Node" parent="Parallel/InfiniteRotation"]
+script = ExtResource( 3 )
+_angle = 90.0
+_time = 1.0

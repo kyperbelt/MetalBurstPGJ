@@ -14,7 +14,9 @@
 [node name="Parallel-Repeaters" type="Node"]
 script = ExtResource( 10 )
 __meta__ = {
-"_editor_description_": "Desired Behavior:
+"_editor_description_": "SpawnEvent ; x = 250
+
+Desired Behavior:
 MOVEMENT
 -Start of moving down from the right hand side of the screen
 Loop:
@@ -54,6 +56,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_editor_description_": "Motions Loop"
 }
+amount = -1
 
 [node name="Sequence" type="Node" parent="Sequence/Parallel/Repeater"]
 script = ExtResource( 1 )
@@ -93,6 +96,7 @@ script = ExtResource( 5 )
 __meta__ = {
 "_editor_description_": "Attacks Loops"
 }
+amount = -1
 
 [node name="Sequence" type="Node" parent="Sequence/Parallel/Repeater2"]
 script = ExtResource( 1 )

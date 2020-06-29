@@ -10,10 +10,10 @@
 resource_local_to_scene = true
 flags = 4
 atlas = ExtResource( 4 )
-region = Rect2( 0, 120, 60, 20 )
+region = Rect2( 0, 40, 100, 20 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 60, 20 )
+extents = Vector2( 100, 20 )
 
 [node name="ProjectilesSprite" type="Sprite"]
 script = ExtResource( 1 )
@@ -26,7 +26,7 @@ PROJECTILE_TYPES = [ SubResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ]
 collision_layer = 32
 collision_mask = 8
 script = ExtResource( 5 )
-_damage = 30.0
+_damage = 100.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ProjectilesArea"]
 shape = SubResource( 2 )

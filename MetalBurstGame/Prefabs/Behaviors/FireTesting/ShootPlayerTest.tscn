@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootPlayer.gd" type="Script" id=5]
+
+[node name="ShootPlayerTest" type="Node"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": "Controls Repeater"
+}
+
+[node name="Sequence" type="Node" parent="."]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Neccessity]"
+}
+
+[node name="ShootPlayer" type="Node" parent="Sequence"]
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": "[Controls Velocity]"
+}
+_speed = 200.0
+
+[node name="Wait" type="Node" parent="Sequence"]
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": "[Controls Rate of Fire]"
+}
+delay = 1.5
