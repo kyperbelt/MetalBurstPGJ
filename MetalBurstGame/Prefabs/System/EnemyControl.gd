@@ -23,7 +23,7 @@ export(float) var _maxHealth = 100 setget set_max_health
 var _currentHealth : float = _maxHealth
 
 export(float) var _fireRate = 2 setget set_fire_rate#shots per second 
-var _fireElapsed
+var _fireElapsed: float = 0
 
 export(float) var _despawnDistance = 600 #distance from screen center
 var _screenCenter : Vector2 = Vector2(0,0)
