@@ -23,8 +23,10 @@ export(float) var _maxHealth = 100 #TODO: make setget to prevent negatives
 var _currentHealth : float = _maxHealth
 
 export(float) var _fireRate = 2 setget set_fire_rate#shots per second 
-var _fire_elapsed
+var _fireElapsed
 
+export(float) var _despawnDistance = 600 #distance from screen center
+var _screenCenter : Vector2 = Vector2(0,0)
 
 func _ready():
 	if(Engine.is_editor_hint()):
@@ -73,13 +75,18 @@ func engine_ready(engine):
 		BB.PLAYER : Globals.get_player(),
 		BB.PLAY_AREA : _myEngine.get_play_container()
 	})
+	_screenCenter = ZoneMap.get_zone_position(ZoneMap.Zones.Center,_myEngine.get_play_container())
 
 func _physics_process(delta:float):
-	if(!Engine.is_editor_hint()):
+	if(!Engine.is_editor_hint() && get_engine_ready()):
 		#update brain
 		var _finished = _brain.update_brain(delta)
 		#update movement
 		position = position + ((_velocity *get_speed())* delta)
+		if(self.position.distance_to(_screenCenter) >= _despawnDistance):
+			print("EnemyControl is too far from screen center -> Despawning")
+			self.queue_free()
+	
 		
 
 func get_engine_ready()->bool:
