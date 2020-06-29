@@ -34,7 +34,7 @@ func _update_behavior(_delta:float)->int:
 	if(_elapsed>=_time):
 		return RunState.Success
 	
-	return RunState.Success
+	return RunState.Running
 
 func set_speed(speed:float):
 	_speed = max(speed,0)
