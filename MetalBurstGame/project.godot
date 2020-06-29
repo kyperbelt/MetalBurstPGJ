@@ -54,11 +54,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd"
 }, {
-"base": "Action",
-"class": "CheckDistance",
-"language": "GDScript",
-"path": "res://Prefabs/System/Behavior/Actions/Utility/CheckDistance.gd"
-}, {
 "base": "BehaviorNode",
 "class": "Composite",
 "language": "GDScript",
@@ -169,11 +164,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Composites/RandomSequence.gd"
 }, {
-"base": "Action",
-"class": "RemoveEntity",
-"language": "GDScript",
-"path": "res://Prefabs/System/Behavior/Actions/Utility/RemoveEntity.gd"
-}, {
 "base": "Decorator",
 "class": "RepeatUntilFail",
 "language": "GDScript",
@@ -269,7 +259,6 @@ _global_script_class_icons={
 "Brain": "res://Assets/Tools/Behavior/brain.png",
 "BulletTest": "",
 "ChangeSpeed": "",
-"CheckDistance": "",
 "Composite": "res://Assets/Tools/Behavior/sequence.png",
 "Decorator": "res://Assets/Tools/Behavior/decorator.png",
 "EndNode": "",
@@ -292,7 +281,6 @@ _global_script_class_icons={
 "RandomInt": "",
 "RandomSelector": "",
 "RandomSequence": "",
-"RemoveEntity": "",
 "RepeatUntilFail": "",
 "Repeater": "",
 "RotateBy": "",

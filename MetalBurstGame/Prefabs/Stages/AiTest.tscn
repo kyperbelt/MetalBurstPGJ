@@ -52,7 +52,11 @@ scale = Vector2( 7.06361, 5.00941 )
 
 [node name="RandomZoneSpawner" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -273.87, -367.453 )
+B_A_S_E = ""
 event_time = 1.85061
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -273.87
 
 [node name="RandomZoneEnemy" parent="StageDirector/RandomZoneSpawner" instance=ExtResource( 9 )]
@@ -72,7 +76,11 @@ position = Vector2( 57.4153, 100.477 )
 
 [node name="RotationTestSpawner" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -14.3069, -320.587 )
+B_A_S_E = ""
 event_time = 1.61458
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -14.3069
 
 [node name="RotationEnemy" parent="StageDirector/RotationTestSpawner" instance=ExtResource( 9 )]
@@ -83,7 +91,11 @@ _maxSpeed = 300.0
 
 [node name="MoveWithRotation" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -259.026, -80.0857 )
+B_A_S_E = ""
 event_time = 0.403337
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -259.026
 
 [node name="RotationEnemy" parent="StageDirector/MoveWithRotation" instance=ExtResource( 9 )]
@@ -94,7 +106,11 @@ _maxSpeed = 300.0
 
 [node name="MoveWithRotation2" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 268.401, -78.235 )
+B_A_S_E = ""
 event_time = 0.394016
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 268.401
 
 [node name="RotationEnemy" parent="StageDirector/MoveWithRotation2" instance=ExtResource( 9 )]
@@ -118,9 +134,13 @@ _time = 2.0
 script = ExtResource( 15 )
 
 [node name="ZiggZaggerSpawner4" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 16.239, -617.885 )
-event_time = 3.11186
-spawn_x = 16.239
+position = Vector2( 33.8569, -846.918 )
+B_A_S_E = ""
+event_time = 4.26534
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 33.8569
 
 [node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
 position = Vector2( -71.0901, -40.1814 )
