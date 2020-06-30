@@ -21,7 +21,6 @@ delay = 2.0
 
 [node name="Repeater" type="Node" parent="Sequence"]
 script = ExtResource( 1 )
-amount = -1
 
 [node name="Sequence" type="Node" parent="Sequence/Repeater"]
 script = ExtResource( 5 )

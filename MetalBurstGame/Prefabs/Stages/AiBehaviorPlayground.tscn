@@ -5,7 +5,7 @@
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Enemies/EmberGreen.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Prefabs/Behaviors/FireTesting/ShootDownTest.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Behaviors/FireBehaviors/ShootDownTest.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/Behaviors/TestBehaviors/Hang-Fire1.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Behaviors/TestBehaviors/InfinityLoopx6.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Behaviors/TestBehaviors/[Proto]Velocity.tscn" type="PackedScene" id=9]
@@ -14,8 +14,11 @@
 [ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Enemies/EmberPurple.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/Enemies/TinyEmberBlue.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Prefabs/Behaviors/FireTesting/RootNodeforFireTesting.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Prefabs/Behaviors/FireTesting/ShootPlayerTest.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/Behaviors/MoveBehaviors/Poof-Fire-Rotate.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/Behaviors/FireBehaviors/ShootPlayerTest.tscn" type="PackedScene" id=16]
+
+
+
 
 [node name="Playground" type="Node"]
 __meta__ = {
