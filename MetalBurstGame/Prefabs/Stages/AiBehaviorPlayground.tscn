@@ -6,7 +6,7 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Enemies/EmberGreen.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Behaviors/FireBehaviors/BurstSalvoTest.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/Behaviors/FireBehaviors/BurstFireTest.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Behaviors/FireBehaviorP/ShootP-LV02a.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Behaviors/TestBehaviors/InfinityLoopx6.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Behaviors/TestBehaviors/[Proto]Velocity.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Behaviors/MoveBehaviors/Hang-Fire1.tscn" type="PackedScene" id=10]
@@ -15,8 +15,8 @@
 [ext_resource path="res://Prefabs/Enemies/EmberPurple.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/Enemies/TinyEmberBlue.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/Behaviors/MoveBehaviors/Poof-Fire-Rotate.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Prefabs/Behaviors/FireBehaviors/ShootPlayerTest.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Prefabs/Behaviors/FireBehaviors/SalvoFireTest.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Prefabs/Behaviors/FireBehaviorP/ShootP-LV01a.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/Behaviors/FireBehaviorP/ShootP-LV02b.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Prefabs/Behaviors/MoveBehaviors/Curve1.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Prefabs/Formations/TinyEmberx4-Right2.tscn" type="PackedScene" id=19]
 
@@ -138,16 +138,14 @@ position = Vector2( 160, -50 )
 
 [node name="Hang-Fire1" parent="StageDirector/Hang-Fire/EmberRed" instance=ExtResource( 10 )]
 
-[node name="BurstFireTest" parent="StageDirector/Hang-Fire/EmberRed/Hang-Fire1/Sequence/[InsertFireBehavior]" index="0" instance=ExtResource( 7 )]
-
-[node name="ShootPlayerTest" parent="StageDirector/Hang-Fire/EmberRed/Hang-Fire1/Sequence/[InsertFireBehavior]" index="1" instance=ExtResource( 16 )]
+[node name="ShootP-LV02a" parent="StageDirector/Hang-Fire/EmberRed/Hang-Fire1/Sequence/[InsertFireBehavior]" index="0" instance=ExtResource( 7 )]
 
 [node name="EmberBlue" parent="StageDirector/Hang-Fire" instance=ExtResource( 11 )]
 position = Vector2( -160, -50 )
 
 [node name="Hang-Fire1" parent="StageDirector/Hang-Fire/EmberBlue" instance=ExtResource( 10 )]
 
-[node name="SalvoFireTest" parent="StageDirector/Hang-Fire/EmberBlue/Hang-Fire1/Sequence/[InsertFireBehavior]" index="0" instance=ExtResource( 17 )]
+[node name="ShootP-LV02b" parent="StageDirector/Hang-Fire/EmberBlue/Hang-Fire1/Sequence/[InsertFireBehavior]" index="0" instance=ExtResource( 17 )]
 
 [editable path="StageDirector"]
 
