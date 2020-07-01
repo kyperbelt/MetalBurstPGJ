@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Behaviors/MoveBehaviors/Curve1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Behaviors/FireBehaviors/ShootPlayerTest.tscn" type="PackedScene" id=5]
+
+[node name="SpawnEvent" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "INTENDED USE
+Stage 1 ; Intro ; Spam Enemy
+
+COMPOSITION
+4x TinyEmberRed
+
+MOVEMENT BEHAVIORS
+Curve1
+
+FIRING REFERNCES
+ShootPlayer"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="TinyEmberRed" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -15 )
+
+[node name="Curve1" parent="TinyEmberRed" instance=ExtResource( 4 )]
+
+[node name="ShootPlayerTest" parent="TinyEmberRed/Curve1/Parallel/[InsertFireHere]" index="1" instance=ExtResource( 5 )]
+
+[node name="TinyEmberRed2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 20, -60 )
+rotation = 0.174533
+
+[node name="Curve1" parent="TinyEmberRed2" instance=ExtResource( 4 )]
+
+[node name="ShootPlayerTest" parent="TinyEmberRed2/Curve1/Parallel/[InsertFireHere]" index="1" instance=ExtResource( 5 )]
+
+[node name="TinyEmberRed3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 30, -120 )
+rotation = -0.0872665
+
+[node name="Curve1" parent="TinyEmberRed3" instance=ExtResource( 4 )]
+
+[node name="ShootPlayerTest" parent="TinyEmberRed3/Curve1/Parallel/[InsertFireHere]" index="1" instance=ExtResource( 5 )]
+
+[node name="TinyEmberRed4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 65.21, -84.2021 )
+rotation = 0.349066
+
+[node name="Curve1" parent="TinyEmberRed4" instance=ExtResource( 4 )]
+
+[node name="ShootPlayerTest" parent="TinyEmberRed4/Curve1/Parallel/[InsertFireHere]" index="1" instance=ExtResource( 5 )]
+
+[editable path="TinyEmberRed/Curve1"]
+
+[editable path="TinyEmberRed2/Curve1"]
+
+[editable path="TinyEmberRed3/Curve1"]
+
+[editable path="TinyEmberRed4/Curve1"]

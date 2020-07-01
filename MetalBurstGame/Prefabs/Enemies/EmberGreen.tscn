@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Audio/SFX/enemyDeath.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Enemies/EmberShadow.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Audio/SFX/enemyHit01.wav" type="AudioStream" id=3]
-[ext_resource path="res://Prefabs/Projectiles/BulletTest.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/System/EnemyControl.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Enemies/EmberSheet.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Enemies/EmberTrail.tres" type="SpriteFrames" id=8]
@@ -19,14 +18,15 @@ region = Rect2( 300, 0, 100, 100 )
 
 [node name="EmberGreen" type="Node2D"]
 script = ExtResource( 5 )
-BULLET_TEST = ExtResource( 4 )
+_maxSpeed = 720.0
 _maxHealth = 500.0
 
 [node name="Shadow" type="Sprite" parent="."]
-position = Vector2( 0, 10 )
+position = Vector2( 0, -23 )
 texture = ExtResource( 2 )
 
 [node name="EnemyArea" type="Area2D" parent="."]
+position = Vector2( 0, -33 )
 collision_layer = 8
 collision_mask = 100
 
@@ -36,12 +36,14 @@ shape = SubResource( 1 )
 
 [node name="Contrail" type="AnimatedSprite" parent="."]
 modulate = Color( 0.6, 0.635294, 0.0431373, 1 )
+position = Vector2( 0, -33 )
 frames = ExtResource( 8 )
 animation = "Default"
-frame = 4
+frame = 3
 playing = true
 
 [node name="Body1" type="Sprite" parent="."]
+position = Vector2( 0, -33 )
 texture = SubResource( 2 )
 
 [node name="FoeHitSFX" type="AudioStreamPlayer" parent="."]

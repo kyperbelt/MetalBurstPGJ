@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
@@ -17,6 +17,8 @@
 [ext_resource path="res://Prefabs/Behaviors/MoveBehaviors/Poof-Fire-Rotate.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/Behaviors/FireBehaviors/ShootPlayerTest.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/Behaviors/FireBehaviors/SalvoFireTest.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Prefabs/Behaviors/MoveBehaviors/Curve1.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Prefabs/Formations/TinyEmberx4-Right2.tscn" type="PackedScene" id=19]
 
 [node name="Playground" type="Node"]
 __meta__ = {
@@ -48,18 +50,10 @@ position = Vector2( 643.419, -1000 )
 
 [node name="Parallel-Repeaters" parent="StageDirector" instance=ExtResource( 4 )]
 position = Vector2( 0, -750 )
-B_A_S_E = ""
 event_time = 15.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberGreen" parent="StageDirector/Parallel-Repeaters" instance=ExtResource( 5 )]
 position = Vector2( 0, 50 )
-_maxSpeed = 720.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="Brain" parent="StageDirector/Parallel-Repeaters/EmberGreen" instance=ExtResource( 15 )]
 
@@ -67,100 +61,80 @@ _despawnDistance = 600.0
 
 [node name="Velocity Testing" parent="StageDirector" instance=ExtResource( 4 )]
 position = Vector2( 0, -500 )
-B_A_S_E = ""
 event_time = 10.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="TinyEmberBlue" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
 position = Vector2( -240, -30 )
 _maxSpeed = 90.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue" instance=ExtResource( 9 )]
 
 [node name="TinyEmberBlue2" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
 position = Vector2( -160, -30 )
 _maxSpeed = 120.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue2" instance=ExtResource( 9 )]
 
 [node name="TinyEmberBlue3" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
 position = Vector2( -80, -30 )
 _maxSpeed = 144.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue3" instance=ExtResource( 9 )]
 
 [node name="TinyEmberBlue4" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
 position = Vector2( 0, -30 )
 _maxSpeed = 180.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue4" instance=ExtResource( 9 )]
 
 [node name="TinyEmberBlue5" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
 position = Vector2( 80, -30 )
 _maxSpeed = 240.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue5" instance=ExtResource( 9 )]
 
 [node name="TinyEmberBlue6" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
 position = Vector2( 160, -30 )
 _maxSpeed = 360.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue6" instance=ExtResource( 9 )]
 
 [node name="TinyEmberBlue7" parent="StageDirector/Velocity Testing" instance=ExtResource( 14 )]
 position = Vector2( 240, -30 )
-_maxSpeed = 720.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="[Proto]Velocity" parent="StageDirector/Velocity Testing/TinyEmberBlue7" instance=ExtResource( 9 )]
 
+[node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 4 )]
+position = Vector2( 280, -350 )
+event_time = 7.0
+spawn_x = 280.0
+
+[node name="EmberGreen" parent="StageDirector/SpawnEvent" instance=ExtResource( 5 )]
+
+[node name="Curve1" parent="StageDirector/SpawnEvent/EmberGreen" instance=ExtResource( 18 )]
+
+[node name="ShootPlayerTest" parent="StageDirector/SpawnEvent/EmberGreen/Curve1/Parallel/[InsertFireHere]" index="1" instance=ExtResource( 16 )]
+
+[node name="SpawnEvent2" parent="StageDirector" instance=ExtResource( 19 )]
+position = Vector2( 280, -350 )
+event_time = 7.0
+spawn_x = 280.0
+
 [node name="InfinityLoopTest" parent="StageDirector" instance=ExtResource( 4 )]
 position = Vector2( 0, -300 )
-B_A_S_E = ""
 event_time = 6.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberPurple" parent="StageDirector/InfinityLoopTest" instance=ExtResource( 13 )]
 position = Vector2( 0, -50 )
-_maxSpeed = 100.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="InfinityLoopx6" parent="StageDirector/InfinityLoopTest/EmberPurple" instance=ExtResource( 8 )]
 
 [node name="Hang-Fire" parent="StageDirector" instance=ExtResource( 4 )]
 position = Vector2( 0, -200 )
-B_A_S_E = ""
 event_time = 4.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberRed" parent="StageDirector/Hang-Fire" instance=ExtResource( 12 )]
 position = Vector2( 160, -50 )
-_maxSpeed = 100.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="Hang-Fire1" parent="StageDirector/Hang-Fire/EmberRed" instance=ExtResource( 10 )]
 
@@ -170,9 +144,6 @@ _despawnDistance = 600.0
 
 [node name="EmberBlue" parent="StageDirector/Hang-Fire" instance=ExtResource( 11 )]
 position = Vector2( -160, -50 )
-_maxSpeed = 100.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="Hang-Fire1" parent="StageDirector/Hang-Fire/EmberBlue" instance=ExtResource( 10 )]
 
@@ -181,6 +152,8 @@ _despawnDistance = 600.0
 [editable path="StageDirector"]
 
 [editable path="StageDirector/Parallel-Repeaters/EmberGreen/Brain"]
+
+[editable path="StageDirector/SpawnEvent/EmberGreen/Curve1"]
 
 [editable path="StageDirector/Hang-Fire/EmberRed/Hang-Fire1"]
 
