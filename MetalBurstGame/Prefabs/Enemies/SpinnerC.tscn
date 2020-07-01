@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/Enemies/SpinnerSpriteGrey.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Prefabs/System/EnemyControl.gd" type="Script" id=2]
-[ext_resource path="res://Prefabs/Projectiles/BulletTest.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Audio/SFX/enemyHit01.wav" type="AudioStream" id=6]
 [ext_resource path="res://Assets/Audio/SFX/enemyDeath.wav" type="AudioStream" id=7]
 [ext_resource path="res://Assets/Enemies/Shadow.png" type="Texture" id=8]
@@ -12,7 +11,7 @@ radius = 35.0
 
 [node name="SpinnerC" type="Node2D"]
 script = ExtResource( 2 )
-BULLET_TEST = ExtResource( 4 )
+_maxSpeed = 720.0
 _maxHealth = 300.0
 
 [node name="Shadow" type="Sprite" parent="."]
@@ -30,14 +29,14 @@ shape = SubResource( 1 )
 rotation = 1.5708
 frames = ExtResource( 1 )
 animation = "24FPS"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Spinnning2" type="AnimatedSprite" parent="."]
 rotation = 1.5708
 frames = ExtResource( 1 )
 animation = "24FPS"
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 

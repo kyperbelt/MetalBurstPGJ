@@ -39,7 +39,7 @@ modulate = Color( 0.6, 0.635294, 0.0431373, 1 )
 position = Vector2( 0, -33 )
 frames = ExtResource( 8 )
 animation = "Default"
-frame = 3
+frame = 4
 playing = true
 
 [node name="Body1" type="Sprite" parent="."]

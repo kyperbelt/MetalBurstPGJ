@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Audio/SFX/enemyDeath.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Enemies/EmberShadow.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Audio/SFX/enemyHit01.wav" type="AudioStream" id=3]
-[ext_resource path="res://Prefabs/Projectiles/BulletTest.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/System/EnemyControl.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Enemies/EmberSheet.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Enemies/EmberTrail.tres" type="SpriteFrames" id=8]
@@ -19,7 +18,7 @@ region = Rect2( 200, 0, 100, 100 )
 
 [node name="EmberPurple" type="Node2D"]
 script = ExtResource( 5 )
-BULLET_TEST = ExtResource( 4 )
+_maxSpeed = 720.0
 _maxHealth = 500.0
 
 [node name="Shadow" type="Sprite" parent="."]

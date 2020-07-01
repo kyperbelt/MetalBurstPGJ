@@ -1,0 +1,115 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/System/EnemyControl.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/Behaviors/TestBehaviors/[Proto]SimpleAiReplica.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Enemies/SpinnerA.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=6]
+
+[node name="SpawnEvent" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="SpinnerA10" type="Node2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( -140, -100 )
+script = ExtResource( 3 )
+_maxHealth = 300.0
+
+[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA10" instance=ExtResource( 4 )]
+script = ExtResource( 6 )
+
+[node name="SpinnerA" type="Node2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( -80, -40 )
+script = ExtResource( 3 )
+_maxHealth = 300.0
+
+[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA" instance=ExtResource( 4 )]
+script = ExtResource( 6 )
+
+[node name="SpinnerA2" type="Node2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( -200, -40 )
+script = ExtResource( 3 )
+_maxHealth = 300.0
+
+[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA2" instance=ExtResource( 4 )]
+script = ExtResource( 6 )
+
+[node name="SpinnerA3" type="Node2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( -200, -160 )
+script = ExtResource( 3 )
+_maxHealth = 300.0
+
+[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA3" instance=ExtResource( 4 )]
+script = ExtResource( 6 )
+
+[node name="SpinnerA4" type="Node2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( -80, -160 )
+script = ExtResource( 3 )
+_maxHealth = 300.0
+
+[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA4" instance=ExtResource( 4 )]
+script = ExtResource( 6 )
+
+[node name="SpinnerA5" type="Node2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 80, -40 )
+script = ExtResource( 3 )
+_maxHealth = 300.0
+
+[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA5" instance=ExtResource( 4 )]
+script = ExtResource( 6 )
+
+[node name="SpinnerA6" type="Node2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 200, -40 )
+script = ExtResource( 3 )
+_maxHealth = 300.0
+
+[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA6" instance=ExtResource( 4 )]
+script = ExtResource( 6 )
+
+[node name="SpinnerA7" type="Node2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 200, -160 )
+script = ExtResource( 3 )
+_maxHealth = 300.0
+
+[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA7" instance=ExtResource( 4 )]
+script = ExtResource( 6 )
+
+[node name="SpinnerA8" type="Node2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 80, -160 )
+script = ExtResource( 3 )
+_maxHealth = 300.0
+
+[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA8" instance=ExtResource( 4 )]
+script = ExtResource( 6 )
+
+[node name="SpinnerA9" type="Node2D" parent="." instance=ExtResource( 5 )]
+position = Vector2( 140, -100 )
+script = ExtResource( 3 )
+_maxHealth = 300.0
+
+[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA9" instance=ExtResource( 4 )]
+script = ExtResource( 6 )
