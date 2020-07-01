@@ -16,8 +16,6 @@
 [ext_resource path="res://Prefabs/Enemies/SpinnerA.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/Behaviors/TestBehaviors/[Proto]SimpleAiReplica.tscn" type="PackedScene" id=15]
 
-
-
 [node name="RootNode" type="Node"]
 
 [node name="Level" parent="." instance=ExtResource( 1 )]
@@ -98,21 +96,12 @@ Target = ExtResource( 8 )
 [node name="[Mark]Outro" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( -320, -3425 )
-B_A_S_E = ""
 event_time = 68.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="Apex4" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -3150 )
-B_A_S_E = ""
 event_time = 63.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberRed" parent="StageDirector/Apex4" instance=ExtResource( 13 )]
 position = Vector2( 60, -80 )
@@ -156,12 +145,7 @@ position = Vector2( -120, -120 )
 
 [node name="Apex3" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -2875 )
-B_A_S_E = ""
 event_time = 57.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberRed" parent="StageDirector/Apex3" instance=ExtResource( 13 )]
 position = Vector2( 60, -80 )
@@ -205,12 +189,7 @@ position = Vector2( -120, -120 )
 
 [node name="Apex2" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -2600 )
-B_A_S_E = ""
 event_time = 52.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberRed" parent="StageDirector/Apex2" instance=ExtResource( 13 )]
 position = Vector2( 60, -80 )
@@ -254,12 +233,7 @@ position = Vector2( -120, -120 )
 
 [node name="Apex1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -2325 )
-B_A_S_E = ""
 event_time = 46.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberRed" parent="StageDirector/Apex1" instance=ExtResource( 13 )]
 position = Vector2( 60, -80 )
@@ -304,21 +278,12 @@ position = Vector2( -120, -120 )
 [node name="[Mark]Apex" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( -320, -2325 )
-B_A_S_E = ""
 event_time = 46.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="Trans3" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -2100 )
-B_A_S_E = ""
 event_time = 42.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="SpinnerA" parent="StageDirector/Trans3" instance=ExtResource( 14 )]
 position = Vector2( -80, -40 )
@@ -372,12 +337,7 @@ position = Vector2( -140, -100 )
 
 [node name="Trans1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1825 )
-B_A_S_E = ""
 event_time = 36.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="SpinnerA" parent="StageDirector/Trans1" instance=ExtResource( 14 )]
 position = Vector2( -30, -60 )
@@ -432,21 +392,12 @@ position = Vector2( 180, -120 )
 [node name="[Mark]Trans" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( -320, -1825 )
-B_A_S_E = ""
 event_time = 36.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="Melody2b" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1700 )
-B_A_S_E = ""
 event_time = 34.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberBlue" parent="StageDirector/Melody2b" instance=ExtResource( 10 )]
 position = Vector2( -40, -40 )
@@ -460,12 +411,7 @@ position = Vector2( 40, -40 )
 
 [node name="Melody2" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1550 )
-B_A_S_E = ""
 event_time = 31.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberRed" parent="StageDirector/Melody2" instance=ExtResource( 13 )]
 position = Vector2( -60, -40 )
@@ -489,12 +435,7 @@ position = Vector2( 180, -40 )
 
 [node name="Melody1b" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1400 )
-B_A_S_E = ""
 event_time = 28.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberBlue" parent="StageDirector/Melody1b" instance=ExtResource( 10 )]
 position = Vector2( -140, -40 )
@@ -508,12 +449,7 @@ position = Vector2( 140, -40 )
 
 [node name="Melody1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -1275 )
-B_A_S_E = ""
 event_time = 25.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="EmberRed" parent="StageDirector/Melody1" instance=ExtResource( 13 )]
 position = Vector2( -90, -40 )
@@ -533,20 +469,12 @@ position = Vector2( 0, -90 )
 [node name="[Mark]Melody" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( -320, -1275 )
-B_A_S_E = ""
 event_time = 25.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="BuildUp2L" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( -160, -1000 )
-B_A_S_E = ""
 event_time = 20.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -160.0
 
 [node name="TinyEmberBlue" parent="StageDirector/BuildUp2L" instance=ExtResource( 11 )]
@@ -591,11 +519,7 @@ position = Vector2( -120, -120 )
 
 [node name="BuildUp2R" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 160, -1000 )
-B_A_S_E = ""
 event_time = 20.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="TinyEmberRed" parent="StageDirector/BuildUp2R" instance=ExtResource( 12 )]
@@ -640,12 +564,7 @@ position = Vector2( -120, -120 )
 
 [node name="BuildUp1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -750 )
-B_A_S_E = ""
 event_time = 15.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="TinyEmberRed" parent="StageDirector/BuildUp1" instance=ExtResource( 12 )]
 position = Vector2( -50, -30 )
@@ -690,30 +609,18 @@ position = Vector2( -200, -120 )
 [node name="[Mark]BuildUp" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( -320, -750 )
-B_A_S_E = ""
 event_time = 15.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="[Mark]IntroTrans" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( -320, -550 )
-B_A_S_E = ""
 event_time = 11.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="Intro3L" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( -160, -275 )
-B_A_S_E = ""
 event_time = 5.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -160.0
 
 [node name="TinyEmberRed8" parent="StageDirector/Intro3L" instance=ExtResource( 12 )]
@@ -738,11 +645,7 @@ position = Vector2( 75, -25 )
 
 [node name="Intro3R" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 160, -275 )
-B_A_S_E = ""
 event_time = 5.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="TinyEmberRed8" parent="StageDirector/Intro3R" instance=ExtResource( 12 )]
@@ -767,11 +670,7 @@ position = Vector2( 75, -100 )
 
 [node name="Intro1" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 160, -25 )
-B_A_S_E = ""
 event_time = 0.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="TinyEmberRed" parent="StageDirector/Intro1" instance=ExtResource( 12 )]
@@ -797,11 +696,7 @@ position = Vector2( 75, -100 )
 [node name="[Mark]Intro1" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
 position = Vector2( -320, 0 )
-B_A_S_E = ""
 event_time = 0.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -320.0
 
 [editable path="StageDirector"]
