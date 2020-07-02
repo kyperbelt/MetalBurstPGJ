@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=3]
+
+[node name="SpawnEvent" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="EmberRed" parent="." instance=ExtResource( 3 )]
+position = Vector2( -64, -40 )
+
+[node name="EmberRed2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 64, -40 )
+
+[node name="EmberRed3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -192, -40 )
+
+[node name="EmberRed4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 192, -40 )

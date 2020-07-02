@@ -1,0 +1,66 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Behaviors/MoveBehaviors/Loop1-R.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Behaviors/FireBehaviorP/ShootP-LV01a.tscn" type="PackedScene" id=5]
+
+[node name="SpawnEvent" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "INTENDED USE
+Stage 1 ; Intro ; Spam Enemy
+
+COMPOSITION
+4x TinyEmberRed
+
+MOVEMENT BEHAVIORS
+Curve1
+
+FIRING REFERNCES
+ShootPlayer"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="TinyEmberRed" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -15 )
+
+[node name="Loop1-R" parent="TinyEmberRed" instance=ExtResource( 4 )]
+
+[node name="ShootP-LV01a" parent="TinyEmberRed/Loop1-R/Parallel/[InsertFireHere]" index="1" instance=ExtResource( 5 )]
+
+[node name="TinyEmberRed2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 20, -60 )
+rotation = 0.174533
+
+[node name="Loop1-R" parent="TinyEmberRed2" instance=ExtResource( 4 )]
+
+[node name="ShootP-LV01a" parent="TinyEmberRed2/Loop1-R/Parallel/[InsertFireHere]" index="1" instance=ExtResource( 5 )]
+
+[node name="TinyEmberRed3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 30, -120 )
+rotation = -0.0872665
+
+[node name="Loop1-R" parent="TinyEmberRed3" instance=ExtResource( 4 )]
+
+[node name="ShootP-LV01a" parent="TinyEmberRed3/Loop1-R/Parallel/[InsertFireHere]" index="1" instance=ExtResource( 5 )]
+
+[node name="TinyEmberRed4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 65.21, -84.2021 )
+rotation = 0.349066
+
+[node name="Loop1-R" parent="TinyEmberRed4" instance=ExtResource( 4 )]
+
+[node name="ShootP-LV01a" parent="TinyEmberRed4/Loop1-R/Parallel/[InsertFireHere]" index="1" instance=ExtResource( 5 )]
+
+[editable path="TinyEmberRed/Loop1-R"]
+
+[editable path="TinyEmberRed2/Loop1-R"]
+
+[editable path="TinyEmberRed3/Loop1-R"]
+
+[editable path="TinyEmberRed4/Loop1-R"]

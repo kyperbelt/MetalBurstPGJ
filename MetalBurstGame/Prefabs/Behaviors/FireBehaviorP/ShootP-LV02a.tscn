@@ -8,7 +8,10 @@
 [node name="ShootP-LV02a" type="Node"]
 script = ExtResource( 1 )
 __meta__ = {
-"_editor_description_": "Behavior:
+"_editor_description_": "Time:
+[???]
+
+Behavior:
 -Aim at Player
 -4 Bursts/Salvos total
 -1.5 reload (Slow)

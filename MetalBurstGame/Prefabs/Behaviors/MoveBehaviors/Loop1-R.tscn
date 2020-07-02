@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateBy.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=7]
+
+[node name="Loop1-R" type="Node"]
+script = ExtResource( 7 )
+__meta__ = {
+"_editor_description_": "Prerequisites:
+-Spawn Event must be on the right (x = positive)(x max = 280)
+
+Movement:
+-Move down
+-Curve to the Left
+-Loop back up
+-Loop back to where it enters
+
+Attacks:
+Attacks after wait of 1 sec
+Attacks in parallel with movement"
+}
+
+[node name="Parallel" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="[MoveSequence]" type="Node" parent="Parallel"]
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": "[Movement]"
+}
+
+[node name="ChangeSpeed" type="Node" parent="Parallel/[MoveSequence]"]
+script = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": "[Initialization]"
+}
+_speed = 180.0
+
+[node name="RotateBy2" type="Node" parent="Parallel/[MoveSequence]"]
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": "[Initialization]"
+}
+_angle = 20.0
+
+[node name="MoveForward" type="Node" parent="Parallel/[MoveSequence]"]
+script = ExtResource( 5 )
+
+[node name="Wait" type="Node" parent="Parallel/[MoveSequence]"]
+script = ExtResource( 1 )
+delay = 2.0
+
+[node name="Parallel" type="Node" parent="Parallel/[MoveSequence]"]
+script = ExtResource( 2 )
+
+[node name="RotateBy" type="Node" parent="Parallel/[MoveSequence]/Parallel"]
+script = ExtResource( 3 )
+_angle = 250.0
+_time = 4.0
+
+[node name="MoveForward" type="Node" parent="Parallel/[MoveSequence]/Parallel"]
+script = ExtResource( 5 )
+
+[node name="[InsertFireHere]" type="Node" parent="Parallel"]
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": "[Firing]"
+}
+
+[node name="PauseBeforeFire" type="Node" parent="Parallel/[InsertFireHere]"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "Determines pause before firing begins"
+}
+delay = 1.0
