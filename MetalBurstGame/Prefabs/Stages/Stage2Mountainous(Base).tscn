@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Prefabs/Backgrounds/DustParticles.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
@@ -8,7 +8,6 @@
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Prefabs/Bosses/B2-CrabBossEvent.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Enemies/EmberA.tscn" type="PackedScene" id=13]
 
@@ -162,10 +161,6 @@ spawn_x = -320.0
 [node name="EmberA" parent="StageDirector/[Mark]MelodyB" instance=ExtResource( 13 )]
 
 [node name="MidBoss" parent="StageDirector" instance=ExtResource( 8 )]
-position = Vector2( 0, -2750 )
-event_time = 55.0
-
-[node name="Boss2" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 0, -2750 )
 event_time = 55.0
 

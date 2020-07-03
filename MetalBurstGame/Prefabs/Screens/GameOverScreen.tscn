@@ -30,7 +30,7 @@ margin_left = -91.0262
 margin_top = 34.212
 margin_right = -20.0262
 margin_bottom = 48.212
-text = "Retry"
+text = "Main Menu"
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
