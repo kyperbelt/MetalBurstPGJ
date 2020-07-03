@@ -46,12 +46,12 @@ _angle = -135.0
 [node name="ShootAngle4" type="Node" parent="Parallel/Repeater/Sequence"]
 script = ExtResource( 6 )
 _speed = 250.0
-_angle = 45.0
+_angle = 90.0
 
 [node name="ShootAngle3" type="Node" parent="Parallel/Repeater/Sequence"]
 script = ExtResource( 6 )
 _speed = 250.0
-_angle = -45.0
+_angle = -90.0
 
 [node name="Wait" type="Node" parent="Parallel/Repeater/Sequence"]
 script = ExtResource( 7 )
