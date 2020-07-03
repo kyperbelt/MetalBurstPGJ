@@ -6,11 +6,12 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Formations/TinyEmberx4-Right.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Behaviors/TestBehaviors/InfinityLoopx6.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Prefabs/Behaviors/FireBehaviors/[Test]Hang-Fire1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/[Test]Hang-Fire1.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Enemies/EmberBlue.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Enemies/EmberPurple.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/Formations/TinyEmberx4-Left.tscn" type="PackedScene" id=19]
+
 
 [node name="Playground" type="Node"]
 __meta__ = {

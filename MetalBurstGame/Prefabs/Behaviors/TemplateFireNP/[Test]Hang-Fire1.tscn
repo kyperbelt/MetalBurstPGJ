@@ -4,10 +4,11 @@
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=2]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveCardinal.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=4]
-[ext_resource path="res://Prefabs/Behaviors/FireBehaviors/Scatter-Fire.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/Scatter-Fire.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/StopMove.gd" type="Script" id=7]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=8]
+
 
 [node name="Hang-Fire1" type="Node"]
 script = ExtResource( 8 )

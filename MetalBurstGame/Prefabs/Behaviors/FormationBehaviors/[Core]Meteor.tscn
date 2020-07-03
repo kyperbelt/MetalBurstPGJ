@@ -1,0 +1,58 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=8]
+
+[node name="Meteor" type="Node"]
+script = ExtResource( 7 )
+__meta__ = {
+"_editor_description_": "-Moves Forward in straight line
+-Set direction using \"rotation\"
+-Fires continuously while moving"
+}
+
+[node name="Parallel" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="ChangeSpeed" type="Node" parent="Parallel"]
+script = ExtResource( 8 )
+_speed = 250.0
+
+[node name="MoveForward" type="Node" parent="Parallel"]
+script = ExtResource( 5 )
+
+[node name="Repeater" type="Node" parent="Parallel"]
+script = ExtResource( 6 )
+
+[node name="Sequence" type="Node" parent="Parallel/Repeater"]
+script = ExtResource( 4 )
+
+[node name="ShootAngle" type="Node" parent="Parallel/Repeater/Sequence"]
+script = ExtResource( 2 )
+_speed = 250.0
+_angle = 135.0
+
+[node name="ShootAngle2" type="Node" parent="Parallel/Repeater/Sequence"]
+script = ExtResource( 2 )
+_speed = 250.0
+_angle = -135.0
+
+[node name="ShootAngle4" type="Node" parent="Parallel/Repeater/Sequence"]
+script = ExtResource( 2 )
+_speed = 250.0
+_angle = 90.0
+
+[node name="ShootAngle3" type="Node" parent="Parallel/Repeater/Sequence"]
+script = ExtResource( 2 )
+_speed = 250.0
+_angle = -90.0
+
+[node name="Wait" type="Node" parent="Parallel/Repeater/Sequence"]
+script = ExtResource( 1 )
+delay = 0.25

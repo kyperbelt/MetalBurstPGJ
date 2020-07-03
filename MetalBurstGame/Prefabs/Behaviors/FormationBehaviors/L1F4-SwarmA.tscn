@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootPlayer.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=8]
+
+[node name="L1F4-SwarmA" type="Node"]
+script = ExtResource( 7 )
+__meta__ = {
+"_editor_description_": "-Moves Forward in straight line
+-Set direction using \"rotation\"
+-Fires continuously while moving"
+}
+
+[node name="Sequence" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="ChangeSpeed" type="Node" parent="Sequence"]
+script = ExtResource( 8 )
+_speed = 150.0
+
+[node name="MoveForward" type="Node" parent="Sequence"]
+script = ExtResource( 5 )
+
+[node name="PauseBeforeFire" type="Node" parent="Sequence"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[The pause that occurs before firing occurs]"
+}
+delay = 0.75
+
+[node name="ShootP-LV01a" type="Node" parent="Sequence"]
+script = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": "Behavior:
+-Aim at Player
+-4 shots total (Low)
+-1.5 reload (Slow)
+-200 Velocity (Slow)"
+}
+amount = 4
+
+[node name="Sequence" type="Node" parent="Sequence/ShootP-LV01a"]
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": "[Neccessity]"
+}
+
+[node name="ShootPlayer" type="Node" parent="Sequence/ShootP-LV01a/Sequence"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": "[Controls Velocity]"
+}
+_speed = 300.0
+
+[node name="Wait" type="Node" parent="Sequence/ShootP-LV01a/Sequence"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Controls Rate of Fire]"
+}
+delay = 1.0

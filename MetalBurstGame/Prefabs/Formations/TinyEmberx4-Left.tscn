@@ -3,8 +3,10 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
 [ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/Behaviors/MoveBehaviors/Loop1-Invert.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Behaviors/FireBehaviorP/ShootP-LV01a.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Behaviors/TemplateMove/Loop1-Invert.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-LV01a.tscn" type="PackedScene" id=5]
+
+
 
 [node name="SpawnEvent" type="Node2D"]
 scale = Vector2( -1, 1 )
