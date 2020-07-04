@@ -1,41 +1,43 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=1]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootDown.gd" type="Script" id=2]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=3]
-[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootDown.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=4]
 
-[node name="BurstFireTest" type="Node"]
-script = ExtResource( 4 )
+[node name="BurstFire" type="Node"]
+script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": "[Repeater]
+1 Cycle = 2 Second
+
 BURST AMOUNT
 This determines how many bursts will be fired before this behavior is \"finished\""
 }
 amount = 4
 
 [node name="Sequence" type="Node" parent="."]
-script = ExtResource( 1 )
+script = ExtResource( 4 )
 
 [node name="BurstSize" type="Node" parent="Sequence"]
-script = ExtResource( 4 )
+script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": "[Repeater]
 This determines how many bullets/salvos is contained in one \"burst\""
 }
-amount = 3
+amount = 10
 
 [node name="Sequence" type="Node" parent="Sequence/BurstSize"]
-script = ExtResource( 1 )
+script = ExtResource( 4 )
 
 [node name="ShootDown" type="Node" parent="Sequence/BurstSize/Sequence"]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 __meta__ = {
 "_editor_description_": "This controls shot velocity"
 }
 
 [node name="Wait2" type="Node" parent="Sequence/BurstSize/Sequence"]
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": "[Wait]
 This determines the time it takes"
@@ -43,7 +45,7 @@ This determines the time it takes"
 delay = 0.1
 
 [node name="BurstReload" type="Node" parent="Sequence"]
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": "[Wait]
 This determines how many seconds elapses between each burst"

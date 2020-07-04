@@ -4,7 +4,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=2]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=3]
 
-[node name="Sequence" type="Node"]
+[node name="Scatter-Fire" type="Node"]
 script = ExtResource( 3 )
 
 [node name="Shot1" type="Node" parent="."]
@@ -104,7 +104,6 @@ _angle = 6.0
 
 [node name="ShootAngle2" type="Node" parent="Shot2"]
 script = ExtResource( 2 )
-_speed = 280.0
 _angle = 10.0
 
 [node name="ShootAngle3" type="Node" parent="Shot2"]
@@ -174,7 +173,6 @@ _angle = 6.0
 
 [node name="ShootAngle16" type="Node" parent="Shot2"]
 script = ExtResource( 2 )
-_speed = 280.0
 _angle = -25.0
 
 [node name="Wait2" type="Node" parent="."]

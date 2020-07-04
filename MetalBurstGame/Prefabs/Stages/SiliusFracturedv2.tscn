@@ -28,6 +28,7 @@ position = Vector2( -285.932, 0 )
 
 [node name="BGMmusic" type="AudioStreamPlayer" parent="Level"]
 stream = ExtResource( 2 )
+volume_db = -6.0
 autoplay = true
 bus = "Music"
 __meta__ = {
