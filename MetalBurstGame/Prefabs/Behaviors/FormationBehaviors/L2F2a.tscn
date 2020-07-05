@@ -74,17 +74,21 @@ delay = 1.0
 
 [node name="ShootAngle" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
 script = ExtResource( 2 )
+_speed = 250.0
 
 [node name="ShootAngle2" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
 script = ExtResource( 2 )
+_speed = 250.0
 _angle = 90.0
 
 [node name="ShootAngle3" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
 script = ExtResource( 2 )
+_speed = 250.0
 _angle = -90.0
 
 [node name="ShootAngle4" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
 script = ExtResource( 2 )
+_speed = 250.0
 _angle = 180.0
 
 [node name="Wait2" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
@@ -96,16 +100,20 @@ delay = 1.0
 
 [node name="ShootAngle5" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
 script = ExtResource( 2 )
+_speed = 250.0
 _angle = 45.0
 
 [node name="ShootAngle6" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
 script = ExtResource( 2 )
+_speed = 250.0
 _angle = -45.0
 
 [node name="ShootAngle7" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
 script = ExtResource( 2 )
+_speed = 250.0
 _angle = 135.0
 
 [node name="ShootAngle8" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
 script = ExtResource( 2 )
+_speed = 250.0
 _angle = -135.0

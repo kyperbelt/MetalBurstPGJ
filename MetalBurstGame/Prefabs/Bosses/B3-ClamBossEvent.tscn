@@ -43,8 +43,6 @@ texture = ExtResource( 2 )
 
 [node name="ClamBoss" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, -100 )
-_maxSpeed = 720.0
-_maxHealth = 3000.0
 
 [node name="Brain" type="Node" parent="ClamBoss"]
 script = ExtResource( 5 )
@@ -81,7 +79,7 @@ _speed = 60.0
 [node name="DownUp" type="Node" parent="ClamBoss/Brain/Sequence"]
 script = ExtResource( 15 )
 __meta__ = {
-"_editor_description_": "Lasts 10 Seconds"
+"_editor_description_": "Lasts 8 Seconds"
 }
 
 [node name="Sequence" type="Node" parent="ClamBoss/Brain/Sequence/DownUp"]
@@ -123,7 +121,7 @@ delay = 2.0
 [node name="RightLeft" type="Node" parent="ClamBoss/Brain/Sequence"]
 script = ExtResource( 15 )
 __meta__ = {
-"_editor_description_": "Lasts 10 Seconds"
+"_editor_description_": "Lasts 8 Seconds"
 }
 
 [node name="Sequence" type="Node" parent="ClamBoss/Brain/Sequence/RightLeft"]
@@ -166,7 +164,7 @@ delay = 2.0
 [node name="LeftRight" type="Node" parent="ClamBoss/Brain/Sequence"]
 script = ExtResource( 15 )
 __meta__ = {
-"_editor_description_": "Lasts 10 Seconds"
+"_editor_description_": "Lasts 8 Seconds"
 }
 
 [node name="Sequence" type="Node" parent="ClamBoss/Brain/Sequence/LeftRight"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Prefabs/Backgrounds/DustParticles.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
@@ -12,6 +12,9 @@
 [ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Formations/L2F1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Formations/L2F2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Formations/L2F1b-right.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Formations/L2F1a-left.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Formations/L2F3-a.tscn" type="PackedScene" id=15]
 
 [node name="Stage2RootNode" type="Node"]
 
@@ -131,6 +134,52 @@ position = Vector2( -320, -4300 )
 event_time = 86.0
 spawn_x = -320.0
 
+[node name="L2F1a-left4" parent="StageDirector" instance=ExtResource( 14 )]
+position = Vector2( 0, -5485.29 )
+event_time = 109.706
+
+[node name="L2F1b-right3" parent="StageDirector" instance=ExtResource( 13 )]
+position = Vector2( 0, -5295.35 )
+event_time = 105.907
+
+[node name="L2F1a-left3" parent="StageDirector" instance=ExtResource( 14 )]
+position = Vector2( 0, -5098.93 )
+event_time = 101.979
+
+[node name="L2F3-a7" parent="StageDirector" instance=ExtResource( 15 )]
+position = Vector2( 161.685, -5474.43 )
+event_time = 109.489
+spawn_x = 161.685
+
+[node name="L2F3-a6" parent="StageDirector" instance=ExtResource( 15 )]
+position = Vector2( -140.257, -5283.52 )
+event_time = 105.67
+spawn_x = -140.257
+
+[node name="L2F3-a5" parent="StageDirector" instance=ExtResource( 15 )]
+position = Vector2( 161.685, -5091.77 )
+event_time = 101.835
+spawn_x = 161.685
+
+[node name="L2F3-a4" parent="StageDirector" instance=ExtResource( 15 )]
+position = Vector2( -140.257, -4900.86 )
+event_time = 98.0172
+spawn_x = -140.257
+
+[node name="L2F3-a3" parent="StageDirector" instance=ExtResource( 15 )]
+position = Vector2( 161.685, -4709.95 )
+event_time = 94.1991
+spawn_x = 161.685
+
+[node name="L2F3-a2" parent="StageDirector" instance=ExtResource( 15 )]
+position = Vector2( -140.257, -4499.57 )
+event_time = 89.9914
+spawn_x = -140.257
+
+[node name="L2F3-a" parent="StageDirector" instance=ExtResource( 15 )]
+position = Vector2( 0, -4298.92 )
+event_time = 85.9784
+
 [node name="[Mark]MelodyA2" parent="StageDirector" instance=ExtResource( 8 )]
 modulate = Color( 0.639216, 0, 1, 1 )
 position = Vector2( -320, -3775 )
@@ -183,25 +232,45 @@ position = Vector2( -320, -1775 )
 event_time = 35.5
 spawn_x = -320.0
 
+[node name="L2F1-8xSwarm4" parent="StageDirector" instance=ExtResource( 11 )]
+position = Vector2( 0, -2568.13 )
+event_time = 51.3625
+
 [node name="L2F9" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 80.5609, -2347.05 )
 event_time = 46.941
 spawn_x = 80.5609
+
+[node name="L2F1a-left2" parent="StageDirector" instance=ExtResource( 14 )]
+position = Vector2( 0, -2347.05 )
+event_time = 46.941
 
 [node name="L2F8" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( -78.0433, -2148.17 )
 event_time = 42.9634
 spawn_x = -78.0433
 
+[node name="L2F1b-right2" parent="StageDirector" instance=ExtResource( 13 )]
+position = Vector2( 0, -2148.17 )
+event_time = 42.9634
+
 [node name="L2F7" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 80.5609, -1966.91 )
 event_time = 39.3382
 spawn_x = 80.5609
 
+[node name="L2F1a-left" parent="StageDirector" instance=ExtResource( 14 )]
+position = Vector2( 0, -1966.91 )
+event_time = 39.3382
+
 [node name="L2F6" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( -78.0433, -1768.02 )
 event_time = 35.3604
 spawn_x = -78.0433
+
+[node name="L2F1b-right" parent="StageDirector" instance=ExtResource( 13 )]
+position = Vector2( 0, -1768.02 )
+event_time = 35.3604
 
 [node name="L2F5" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 80.5609, -1554.03 )
