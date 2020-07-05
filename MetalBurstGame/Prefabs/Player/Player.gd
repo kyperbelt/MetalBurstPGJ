@@ -10,7 +10,7 @@ enum PROJECTILES {
 	
 }
 
-const RELOAD_TIME = 0.1 
+const RELOAD_TIME = 0.125 
 
 export var speed : float = 300
 var speed_reduced = 0

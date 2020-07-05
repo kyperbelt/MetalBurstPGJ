@@ -5,7 +5,7 @@ class_name Projectiles
 #This controls PlayerBullets
 var speed
 
-const PLAYER_VELOCITY = Vector2(0, -600)
+const PLAYER_VELOCITY = Vector2(0, -700)
 const ENEMY_VELOCITY = Vector2(0, 300)
 const PLAYER_BOMB_VELOCITY = Vector2(0, -100)
 
