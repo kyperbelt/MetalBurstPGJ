@@ -74,10 +74,10 @@ stream = ExtResource( 2 )
 bus = "OptionsAudioBus"
 
 [node name="Instructions" type="Label" parent="GuiLayer"]
-margin_left = 887.328
-margin_top = 37.955
-margin_right = 1269.33
-margin_bottom = 322.955
+margin_left = 782.75
+margin_top = 345.536
+margin_right = 1164.75
+margin_bottom = 630.536
 custom_fonts/font = ExtResource( 10 )
 text = "Instructions:
 Arrow Keys / WASD = Move
@@ -108,6 +108,7 @@ __meta__ = {
 }
 
 [node name="Notice2" type="Label" parent="GuiLayer"]
+visible = false
 margin_left = 607.641
 margin_top = 367.187
 margin_right = 1254.64
