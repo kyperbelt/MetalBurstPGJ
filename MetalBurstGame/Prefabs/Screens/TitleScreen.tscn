@@ -10,7 +10,7 @@
 [ext_resource path="res://Prefabs/Stages/SiliusFracturedv2.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Stages/Stage2Mountainousv2.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Screens/InstructionsFont.tres" type="DynamicFont" id=10]
-[ext_resource path="res://Prefabs/Stages/AiBehaviorPlayground.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/Stages/Stage1Forest(Base).tscn" type="PackedScene" id=11]
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource( 6 )
