@@ -23,6 +23,19 @@ gradient = SubResource( 3 )
 script = ExtResource( 4 )
 vertical_velocity = 20.0
 
+[node name="Prototype 1b" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1320.96, -26.2272 )
+rotation = 1.57079
+scale = Vector2( 0.378056, 1421.86 )
+texture = SubResource( 2 )
+centered = false
+__meta__ = {
+"_editor_description_": "A prototype background.
+Stage 1 (theoretically)
+Darker area at bottom"
+}
+
 [node name="Version1" type="Sprite" parent="."]
 visible = false
 position = Vector2( 100, 0 )
@@ -38,19 +51,6 @@ texture = ExtResource( 6 )
 script = ExtResource( 5 )
 __meta__ = {
 "_editor_description_": "This determines the color of the background"
-}
-
-[node name="Prototype 1b" type="Sprite" parent="."]
-visible = false
-position = Vector2( 1320.96, -26.2272 )
-rotation = 1.57079
-scale = Vector2( 0.378056, 1421.86 )
-texture = SubResource( 2 )
-centered = false
-__meta__ = {
-"_editor_description_": "A prototype background.
-Stage 1 (theoretically)
-Darker area at bottom"
 }
 
 [node name="Layer1" type="Sprite" parent="."]
