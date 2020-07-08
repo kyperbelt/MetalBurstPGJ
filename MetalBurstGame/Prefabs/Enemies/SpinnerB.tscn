@@ -15,7 +15,7 @@ _maxSpeed = 720.0
 _maxHealth = 300.0
 
 [node name="Shadow" type="Sprite" parent="."]
-scale = Vector2( 0.75, 0.75 )
+scale = Vector2( 1.25, 1.25 )
 texture = ExtResource( 8 )
 
 [node name="EnemyArea" type="Area2D" parent="."]
@@ -28,7 +28,6 @@ shape = SubResource( 1 )
 [node name="SpinnningSpriteBig" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
 animation = "24FPS"
-frame = 1
 playing = true
 
 [node name="SpinnningSpriteSmall" type="AnimatedSprite" parent="."]
@@ -36,7 +35,6 @@ modulate = Color( 1, 0, 0, 1 )
 scale = Vector2( 0.5, 0.5 )
 frames = ExtResource( 1 )
 animation = "24FPS"
-frame = 1
 playing = true
 flip_h = true
 
