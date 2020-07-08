@@ -19,6 +19,7 @@ script = ExtResource( 1 )
 vertical_velocity = 20.0
 
 [node name="BGtestA" type="Sprite" parent="."]
+visible = false
 position = Vector2( 640, 360 )
 texture = ExtResource( 2 )
 

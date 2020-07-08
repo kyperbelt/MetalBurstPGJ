@@ -20,7 +20,6 @@
 [node name="Level" parent="." instance=ExtResource( 1 )]
 
 [node name="01DustBackground" parent="Level" instance=ExtResource( 3 )]
-position = Vector2( -285.932, 0 )
 vertical_velocity = 40.0
 
 [node name="DustParticles" parent="Level" instance=ExtResource( 4 )]
