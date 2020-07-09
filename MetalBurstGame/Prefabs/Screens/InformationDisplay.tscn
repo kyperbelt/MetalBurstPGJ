@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screens/UItestA.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Screens/UItestB.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Screens/UItestC.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Screens/GUIfont.tres" type="DynamicFont" id=5]
 
 [node name="InformationDisplay" type="Control"]
 anchor_right = 1.0
@@ -12,6 +13,58 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Testing" type="VBoxContainer" parent="."]
+margin_left = 999.804
+margin_top = 38.5591
+margin_right = 1220.8
+margin_bottom = 182.559
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Score" type="Label" parent="Testing"]
+margin_right = 221.0
+margin_bottom = 45.0
+custom_fonts/font = ExtResource( 5 )
+text = "Score
+000,000,000"
+
+[node name="HSeparator" type="HSeparator" parent="Testing"]
+margin_top = 49.0
+margin_right = 221.0
+margin_bottom = 53.0
+
+[node name="HighScore" type="Label" parent="Testing"]
+margin_top = 57.0
+margin_right = 221.0
+margin_bottom = 102.0
+custom_fonts/font = ExtResource( 5 )
+text = "High Score
+000,000,000"
+
+[node name="HSeparator2" type="HSeparator" parent="Testing"]
+margin_top = 106.0
+margin_right = 221.0
+margin_bottom = 110.0
+
+[node name="ProgressBar" type="ProgressBar" parent="Testing"]
+margin_top = 114.0
+margin_right = 221.0
+margin_bottom = 128.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureProgress" type="TextureProgress" parent="Testing"]
+margin_top = 132.0
+margin_right = 221.0
+margin_bottom = 133.0
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Testing"]
+margin_top = 137.0
+margin_right = 221.0
+margin_bottom = 137.0
 
 [node name="UItestA" type="Sprite" parent="."]
 visible = false
