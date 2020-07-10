@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Stage1StageBGMv1.wav-187195fdcf7163dc53c651fc1d9b2a5b.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/BGM/Stage1StageBGMv1.wav"
+dest_files=[ "res://.import/Stage1StageBGMv1.wav-187195fdcf7163dc53c651fc1d9b2a5b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

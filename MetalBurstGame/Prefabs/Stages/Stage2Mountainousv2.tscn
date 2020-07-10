@@ -4,7 +4,7 @@
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Backgrounds/Stage2BG.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Audio/BGM/MetalBurstBGM2 (Spliced).wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Audio/BGM/Stage2StageBGMv2 (Spliced).wav" type="AudioStream" id=5]
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=8]
@@ -168,7 +168,7 @@ spawn_x = -140.257
 
 [node name="L2F3-a3" parent="StageDirector" instance=ExtResource( 15 )]
 position = Vector2( 161.685, -4709.95 )
-event_time = 94.1991
+event_time = 94.199
 spawn_x = 161.685
 
 [node name="L2F3-a2" parent="StageDirector" instance=ExtResource( 15 )]
@@ -234,7 +234,7 @@ spawn_x = -320.0
 
 [node name="L2F1-8xSwarm4" parent="StageDirector" instance=ExtResource( 11 )]
 position = Vector2( 0, -2568.13 )
-event_time = 51.3625
+event_time = 51.3626
 
 [node name="L2F9" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 80.5609, -2347.05 )

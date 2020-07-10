@@ -3,7 +3,7 @@
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Behaviors/TestBehavior.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Backgrounds/DustParticles.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/Audio/BGM/metal_burst-01.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Audio/BGM/Stage2BossThemev1.wav" type="AudioStream" id=4]
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=7]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateBy.gd" type="Script" id=13]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=14]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=15]
+
 
 [node name="Stage" type="Node"]
 

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Stage2BossBGMv1.wav-a55a61e6f46272eb14e4bf4b7d2b7e67.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/BGM/Stage2BossBGMv1.wav"
+dest_files=[ "res://.import/Stage2BossBGMv1.wav-a55a61e6f46272eb14e4bf4b7d2b7e67.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
