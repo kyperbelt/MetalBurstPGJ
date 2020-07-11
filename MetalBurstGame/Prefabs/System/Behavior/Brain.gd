@@ -65,7 +65,7 @@ func update_brain(delta)->bool:
 func _find_first_behavior()->BehaviorNode:
 	for child in get_children():
 		if(child.is_class("BehaviorNode")):
-			print("behavior found:"+child.get_name())
+			#print("behavior found:"+child.get_name())
 			return child as BehaviorNode
 	return null
 	

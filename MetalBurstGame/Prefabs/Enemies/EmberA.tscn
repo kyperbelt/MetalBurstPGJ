@@ -24,7 +24,7 @@ shape = SubResource( 1 )
 [node name="Emberv2" type="AnimatedSprite" parent="."]
 frames = ExtResource( 4 )
 animation = "MediumSpeed"
-frame = 3
+frame = 4
 playing = true
 
 [node name="FoeHitSFX" type="AudioStreamPlayer" parent="."]

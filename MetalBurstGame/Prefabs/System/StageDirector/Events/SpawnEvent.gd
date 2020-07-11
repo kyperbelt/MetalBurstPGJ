@@ -26,9 +26,9 @@ func _on_event_added():
 	var children = get_children()
 
 	for child in children:
-		print(child.get_class())
+		#print(child.get_class())
 		if(child.is_class("Enemy")):
-			print("added ")
+			#print("added ")
 			entities.append(child)
 			remove_child(child)
 			
@@ -41,7 +41,7 @@ func _execute_event():
 		entity.position = Vector2(new_x,new_y)
 		entity_layer.add_child(entity)
 		entity.engine_ready(engine)
-		print("SpawnEvent=[event_time:%s spawn_x:%s spawn_y=%s]" % [get_time(),new_x,new_y])
+		#print("SpawnEvent=[event_time:%s spawn_x:%s spawn_y=%s]" % [get_time(),new_x,new_y])
 	entities.clear()
 	pass
 

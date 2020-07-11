@@ -24,6 +24,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Actions/State/Alive.gd"
 }, {
+"base": "Node",
+"class": "AudioManager",
+"language": "GDScript",
+"path": "res://Prefabs/System/AudioManager.gd"
+}, {
 "base": "Reference",
 "class": "BB",
 "language": "GDScript",
@@ -230,6 +235,11 @@ _global_script_classes=[ {
 "path": "res://Prefabs/System/Behavior/Actions/Projectile/ShootPlayer.gd"
 }, {
 "base": "PositionalEvent",
+"class": "SoundEvent",
+"language": "GDScript",
+"path": "res://Prefabs/System/StageDirector/Events/SoundEvent.gd"
+}, {
+"base": "PositionalEvent",
 "class": "SpawnEvent",
 "language": "GDScript",
 "path": "res://Prefabs/System/StageDirector/Events/SpawnEvent.gd"
@@ -273,6 +283,7 @@ _global_script_class_icons={
 "Action": "res://Assets/Tools/Behavior/action.png",
 "AddPath": "",
 "Alive": "",
+"AudioManager": "res://Assets/Tools/wave.png",
 "BB": "",
 "BackgroundLayer": "",
 "BehaviorNode": "",
@@ -314,6 +325,7 @@ _global_script_class_icons={
 "ShootAngle": "",
 "ShootDown": "",
 "ShootPlayer": "",
+"SoundEvent": "res://Assets/Tools/audio.png",
 "SpawnEvent": "res://Assets/Tools/entity.png",
 "StageDirector": "res://Assets/Tools/director.png",
 "StageEvent": "res://Assets/Tools/open.png",

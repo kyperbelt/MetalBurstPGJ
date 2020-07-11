@@ -3,6 +3,9 @@ extends Node2D
 #This file contains important global information and functions
 #that can be accessed from anywhere in the program at any given 
 #time by calling Globals.something. 
+
+const DEBUGMODE : bool  = true;
+
 var screen_size
 var margin = 80
 var player_bullet_image
@@ -10,6 +13,7 @@ const Player : PackedScene = preload("res://Prefabs/Player/Player.tscn")
 const Bullet : PackedScene = preload("res://Prefabs/Projectiles/BulletTest.tscn")
 var _player = null
 var random : RandomNumberGenerator = RandomNumberGenerator.new()
+var audioManager : AudioManager = null;
 
 # Called when the node enters the scene tree for the first time.
 func _enter_tree():

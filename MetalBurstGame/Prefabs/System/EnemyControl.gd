@@ -89,7 +89,7 @@ func _physics_process(delta:float):
 		#update movement
 		position = position + ((_velocity *get_speed())* delta)
 		if(self.position.distance_to(_screenCenter) >= _despawnDistance):
-			print("EnemyControl is too far from screen center -> Despawning")
+			#print("EnemyControl is too far from screen center -> Despawning")
 			self.queue_free()
 	
 		
@@ -129,7 +129,7 @@ func set_fire_rate(fireRate:float):
 
 #TODO: add take damage
 func hit(object):
-	print("Enemy collision with " + object.name + " detected!")
+	#print("Enemy collision with " + object.name + " detected!")
 	#player damaged
 	
 	if(object is ProjectileComponent):
