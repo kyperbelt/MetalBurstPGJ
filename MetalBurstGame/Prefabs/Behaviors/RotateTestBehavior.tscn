@@ -53,6 +53,7 @@ delay = 2.0
 
 [node name="ShootPlayer" type="Node" parent="Sequence/Parallel/Repeater/Sequence"]
 script = ExtResource( 11 )
+_angleOffset = 30.0
 
 [node name="Repeater2" type="Node" parent="Sequence/Parallel"]
 script = ExtResource( 6 )
