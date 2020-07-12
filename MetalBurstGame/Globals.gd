@@ -4,39 +4,40 @@ extends Node2D
 #that can be accessed from anywhere in the program at any given 
 #time by calling Globals.something. 
 
-const DEBUGMODE : bool  = true;
+const DEBUGMODE: bool = true
 
 var screen_size
 var margin = 80
 var player_bullet_image
-const Player : PackedScene = preload("res://Prefabs/Player/Player.tscn")
-const Bullet : PackedScene = preload("res://Prefabs/Projectiles/BulletTest.tscn")
+const Player: PackedScene = preload("res://Prefabs/Player/Player.tscn")
+const Bullet: PackedScene = preload("res://Prefabs/Projectiles/BulletTest.tscn")
 var _player = null
-var random : RandomNumberGenerator = RandomNumberGenerator.new()
-var audioManager : AudioManager = null;
+var random: RandomNumberGenerator = RandomNumberGenerator.new()
+var audioManager: AudioManager = null
+
 
 # Called when the node enters the scene tree for the first time.
 func _enter_tree():
 	screen_size = OS.get_screen_size(0)
 	var window_size = OS.get_window_size()
-	OS.set_window_position(screen_size*0.5 - window_size*0.5)
+	OS.set_window_position(screen_size * 0.5 - window_size * 0.5)
 	player_bullet_image = preload("res://Assets/Projectiles/bullet.png")
 
 
 func get_player():
-	if(_player == null):
+	if _player == null:
 		_player = Player.instance()
 		print("new player created")
-	print("player returned from globals")
 	return _player
+
 
 func delete_player():
 	print("player deleted")
 	_player = null
 
 
-func repeat_string(s:String,times:int)->String:
+func repeat_string(s: String, times: int) -> String:
 	var s2 = ""
 	for _i in range(times):
-		s2+=s
+		s2 += s
 	return s2

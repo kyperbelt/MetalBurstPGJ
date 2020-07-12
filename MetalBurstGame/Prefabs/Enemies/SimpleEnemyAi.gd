@@ -53,7 +53,7 @@ func _process(delta):
 func hit(object):
 	print("Enemy collision with " + object.name + " detected!")
 	HP -= DMGreceived
-	$FoeHitSFX.play()
+	
 	#HP-Threshold SFX can also be done here ; more advanced
 	if HP <= 0:
 		$FoeDeathSFX.play()

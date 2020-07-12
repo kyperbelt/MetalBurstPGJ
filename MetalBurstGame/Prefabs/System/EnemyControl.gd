@@ -114,18 +114,7 @@ func set_fire_rate(fireRate:float):
 ##########################################################
 #@@@@@@@@@@@@@@@@@@@@ Deprecated @@@@@@@@@@@@@@@@@@@@@@@@#
 ##########################################################
-#TODO: add shoot
-#func shoot():
-#	#attempt to shoot if already placed in correct engine layer
-#	#otherwise return and do nothing
-#	if(!_engineReady):
-#		return
-#	var bullet = Globals.Bullet.instance()
-#	bullet.setProjectileType(1)# 1 = ENEMY_BULLET
-#	bullet.position = position
-#	#bullet.change_speed(speed)
-#	_myEngine.add_child(bullet)
-#	print("shoot")
+
 
 #TODO: add take damage
 func hit(object):
@@ -134,10 +123,14 @@ func hit(object):
 	
 	if(object is ProjectileComponent):
 		set_current_health(get_current_health()-object.get_damage())
+		
+		#example SOUND
+		var _value = Globals.audioManager.play_sound("sfx_foeHit")
 		print("Enemy[%s] took damage from Object[%s] "%[self.name,object.name])
 	#HP-Threshold SFX can also be done here ; more advanced
 	if get_current_health() <= 0:
 		#$FoeDeathSFX.play()
+		var _value = Globals.audioManager.play_sound("sfx_foeDeath")
 		print(self.name + "has died!")
 		queue_free()
 	if object.name == 'PlayerCollisionArea':

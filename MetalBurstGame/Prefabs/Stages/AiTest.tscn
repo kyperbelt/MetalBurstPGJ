@@ -50,59 +50,47 @@ scale = Vector2( 7.06361, 5.00941 )
 [node name="RandomZoneSpawner" parent="StageDirector" instance=ExtResource( 7 )]
 visible = false
 position = Vector2( -273.87, -323.706 )
-event_time = 1.85061
+event_time = 1.85062
 spawn_x = -273.87
 
 [node name="RandomZoneEnemy" parent="StageDirector/RandomZoneSpawner" instance=ExtResource( 9 )]
 visible = false
 position = Vector2( 57.4153, 100.477 )
-_maxHealth = 100.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="TestBehavior" parent="StageDirector/RandomZoneSpawner/RandomZoneEnemy" instance=ExtResource( 2 )]
 
 [node name="RotationTestSpawner" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 34.3949, -303.517 )
-event_time = 1.73519
+event_time = 1.7352
 spawn_x = 34.3949
 
 [node name="RotationEnemy" parent="StageDirector/RotationTestSpawner" instance=ExtResource( 9 )]
 position = Vector2( 2.58478, -92.4388 )
 _maxSpeed = 300.0
-_maxHealth = 100.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="RotateTestBehavior" parent="StageDirector/RotationTestSpawner/RotationEnemy" instance=ExtResource( 12 )]
 
 [node name="MoveWithRotation" parent="StageDirector" instance=ExtResource( 7 )]
 visible = false
 position = Vector2( -259.026, -70.5509 )
-event_time = 0.403336
+event_time = 0.403337
 spawn_x = -259.026
 
 [node name="RotationEnemy" parent="StageDirector/MoveWithRotation" instance=ExtResource( 9 )]
 position = Vector2( -126.142, 162.759 )
 _maxSpeed = 300.0
-_maxHealth = 100.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="MoveAtRotationTest" parent="StageDirector/MoveWithRotation/RotationEnemy" instance=ExtResource( 11 )]
 
 [node name="MoveWithRotation2" parent="StageDirector" instance=ExtResource( 7 )]
 visible = false
 position = Vector2( 268.401, -68.9206 )
-event_time = 0.394016
+event_time = 0.394017
 spawn_x = 268.401
 
 [node name="RotationEnemy" parent="StageDirector/MoveWithRotation2" instance=ExtResource( 9 )]
 position = Vector2( 203.268, 188.667 )
 _maxSpeed = 300.0
-_maxHealth = 100.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="MoveAtRotationTest" parent="StageDirector/MoveWithRotation2/RotationEnemy" instance=ExtResource( 11 )]
 
@@ -123,33 +111,24 @@ script = ExtResource( 15 )
 [node name="ZiggZaggerSpawner4" parent="StageDirector" instance=ExtResource( 7 )]
 visible = false
 position = Vector2( 16.239, -544.322 )
-event_time = 3.11186
+event_time = 3.11187
 spawn_x = 16.239
 
 [node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
 position = Vector2( -71.0901, -40.1814 )
 _maxSpeed = 300.0
-_maxHealth = 100.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger" instance=ExtResource( 8 )]
 
 [node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
 position = Vector2( 0, -108.181 )
 _maxSpeed = 300.0
-_maxHealth = 100.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger2" instance=ExtResource( 8 )]
 
 [node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
 position = Vector2( 83.4535, -52.5448 )
 _maxSpeed = 300.0
-_maxHealth = 100.0
-_fireRate = 2.0
-_despawnDistance = 600.0
 
 [node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger3" instance=ExtResource( 8 )]
 
@@ -157,8 +136,7 @@ _despawnDistance = 600.0
 position = Vector2( -14.7468, 110.423 )
 event_time = -0.631284
 _soundName = "bgm_testStage1"
-[connection signal="tree_entered" from="Level" to="Level" method="_on_Level_tree_entered"]
-[connection signal="tree_exited" from="Level" to="Level" method="_on_Level_tree_exited"]
+_eventType = 0
 
 [editable path="StageDirector"]
 
