@@ -1,13 +1,15 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Assets/Audio/BGM/MB_stage2_music.wav" type="AudioStream" id=1]
+[ext_resource path="res://Assets/Audio/BGM/Stage2StageBGMv1.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Audio/SFX/menu_select.wav" type="AudioStream" id=2]
 [ext_resource path="res://Assets/Audio/SFX/menu_scroll01.wav" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Audio/SFX/enemyHit01.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Audio/SFX/playerDeath.wav" type="AudioStream" id=5]
 [ext_resource path="res://Assets/Audio/SFX/playerShoot_vers04.wav" type="AudioStream" id=6]
-[ext_resource path="res://Assets/Audio/BGM/metal_burst-01.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Audio/BGM/Stage1BossBGMv1.wav" type="AudioStream" id=7]
 [ext_resource path="res://Prefabs/System/AudioManager.gd" type="Script" id=8]
+
+
 
 [node name="AudioManager" type="Node"]
 script = ExtResource( 8 )

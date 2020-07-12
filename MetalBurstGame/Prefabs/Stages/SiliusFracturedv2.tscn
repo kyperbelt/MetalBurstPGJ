@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Audio/SiliusFractured/The Word Of Lawder - Fracture The Faultline - 10 Silius Fractured.ogg" type="AudioStream" id=2]
@@ -14,8 +14,11 @@
 [ext_resource path="res://Prefabs/Formations/L1F4-8xTinyEmberSwarm.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Formations/L1F5-3xEmbers.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/Formations/L1F7-2xMeteor.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=15]
 
 [node name="RootNode" type="Node"]
+
+[node name="AudioManager" parent="." instance=ExtResource( 15 )]
 
 [node name="Level" parent="." instance=ExtResource( 1 )]
 

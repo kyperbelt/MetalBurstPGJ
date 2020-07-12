@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Prefabs/Backgrounds/DustParticles.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Prefabs/Formations/L2F1b-right.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/Formations/L2F1a-left.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/Formations/L2F3-a.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=16]
 
 [node name="Stage2RootNode" type="Node"]
 
@@ -45,6 +46,8 @@ Right Edge = \"x = 320\"
 86(16) - RunOff - y=-4300
 102(11.5) - RunOffOutro - y=-5100"
 }
+
+[node name="AudioManager" parent="." instance=ExtResource( 16 )]
 
 [node name="Level" parent="." instance=ExtResource( 2 )]
 

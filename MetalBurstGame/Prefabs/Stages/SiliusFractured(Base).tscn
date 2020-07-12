@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Audio/SiliusFractured/The Word Of Lawder - Fracture The Faultline - 10 Silius Fractured.ogg" type="AudioStream" id=2]
@@ -9,8 +9,11 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=10]
 
 [node name="RootNode" type="Node"]
+
+[node name="AudioManager" parent="." instance=ExtResource( 10 )]
 
 [node name="Level" parent="." instance=ExtResource( 1 )]
 

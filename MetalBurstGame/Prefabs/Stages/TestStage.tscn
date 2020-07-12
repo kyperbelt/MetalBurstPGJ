@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=2]
@@ -11,11 +11,11 @@
 [ext_resource path="res://Prefabs/Stages/TestStage2.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Backgrounds/Stage1BG.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=11]
-
-
-
+[ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=12]
 
 [node name="Stage" type="Node"]
+
+[node name="AudioManager" parent="." instance=ExtResource( 12 )]
 
 [node name="Level" parent="." instance=ExtResource( 1 )]
 
@@ -51,11 +51,7 @@ scale = Vector2( 7.06361, 5.00941 )
 
 [node name="Last one" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -4.13562, -816.965 )
-B_A_S_E = ""
 event_time = 13.2655
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -4.13562
 
 [node name="Enemy4" parent="StageDirector/Last one" groups=[
@@ -65,11 +61,7 @@ position = Vector2( 2.13269, -112.133 )
 
 [node name="2ndSwarm" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 1.84914, -616.143 )
-B_A_S_E = ""
-event_time = 10.0046
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
+event_time = 10.0047
 spawn_x = 1.84914
 
 [node name="TinyEmber" parent="StageDirector/2ndSwarm" instance=ExtResource( 11 )]
@@ -98,11 +90,7 @@ position = Vector2( -256.858, -116.558 )
 
 [node name="Big" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 2.72249, -407.994 )
-B_A_S_E = ""
-event_time = 6.62483
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
+event_time = 6.62482
 spawn_x = 2.72249
 
 [node name="Enemy4" parent="StageDirector/Big" groups=[
@@ -117,11 +105,7 @@ position = Vector2( -98.0303, -100.117 )
 
 [node name="StartSwarm" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 2.60532, -202.03 )
-B_A_S_E = ""
 event_time = 3.28047
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 2.60532
 
 [node name="TinyEmber" parent="StageDirector/StartSwarm" instance=ExtResource( 11 )]

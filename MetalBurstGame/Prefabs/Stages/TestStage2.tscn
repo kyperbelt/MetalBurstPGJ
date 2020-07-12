@@ -1,9 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Assets/Audio/BGM/Stage2StageBGMv2 (Spliced).wav" type="AudioStream" id=1]
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Backgrounds/Stage2BG.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=8]
@@ -20,6 +21,8 @@ __meta__ = {
 [Not deleted to prevent merge conflicts]
 [Actual Stage 2 will be in a seperate scene]"
 }
+
+[node name="AudioManager" parent="." instance=ExtResource( 5 )]
 
 [node name="Level" parent="." instance=ExtResource( 2 )]
 
@@ -102,7 +105,6 @@ position = Vector2( -117.235, -54.4812 )
 [node name="20stream" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( -1.19209e-07, -595.138 )
 event_time = 18.9062
-spawn_x = -1.19209e-07
 
 [node name="SpinnerA" parent="StageDirector/20stream" instance=ExtResource( 10 )]
 
