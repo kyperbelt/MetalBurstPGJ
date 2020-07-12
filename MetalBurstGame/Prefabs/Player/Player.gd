@@ -101,7 +101,7 @@ func on_collision_start(area):
 func hit(object):
 	print("player is hit by =%s" % object.name)
 	lives-=1
-	$sfx_playerHit.play()
+	var _value = Globals.audioManager.play_sound("sfx_playerHit")
 	emit_signal("player_hit")
 
 
@@ -115,7 +115,7 @@ func shoot():
 		var bullet = BULLET_PROJECTILE.instance()
 		bullet.setProjectileType(PROJECTILES.PLAYER_BULLET)
 		bullet.global_position = global_position
-		$sfx_playerShoot.play()
+		var _value = Globals.audioManager.play_sound("sfx_playerShoot")
 		#bullet.change_speed(speed)
 		if(!is_instance_valid(parent)):
 			parent = get_parent()
@@ -128,7 +128,7 @@ func bomb_away():
 		var bomb = BULLET_PROJECTILE.instance()
 		bomb.setProjectileType(PROJECTILES.PLAYER_BOMB)
 		bomb.global_position = global_position
-		$sfx_playerBomb.play()
+		var _value = Globals.audioManager.play_sound("sfx_playerBomb")
 		#bullet.change_speed(speed)
 		if(!is_instance_valid(parent)):
 			parent = get_parent()

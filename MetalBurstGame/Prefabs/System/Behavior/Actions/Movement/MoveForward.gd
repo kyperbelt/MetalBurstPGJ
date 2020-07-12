@@ -15,7 +15,7 @@ func initiate():
 	_self = get_blackboard()[BB.SELF]
 	_failed = !_self.has_method("get_rotation")
 
-func _update_behavior(delta:float)->int:
+func _update_behavior(_delta:float)->int:
 	
 	var r : float = _self.get_rotation()+PI/2
 	var x : float = cos(r)

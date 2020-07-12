@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SoundEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/audio.png" type="Texture" id=2]
+
+[node name="SoundEvent" type="Node2D"]
+script = ExtResource( 1 )
+B_A_S_E = ""
+event_time = null
+P_O_S_I_T_O_N = ""
+override_time = false
+S_O_U_N_D = ""
+_soundName = "Untitled"
+_soundType = 1
+_volume = 0.0
+
+[node name="PlaceHolder" type="Sprite" parent="."]
+position = Vector2( 1.07924, -6.47546 )
+scale = Vector2( 1.36694, 1.34536 )
+texture = ExtResource( 2 )

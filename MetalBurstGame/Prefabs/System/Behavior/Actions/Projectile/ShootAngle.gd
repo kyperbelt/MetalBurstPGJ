@@ -31,3 +31,4 @@ static func shoot(speed:float,angle:float,entity:Node2D,engine):
 	bullet.set_velocity(cos(_realAngle),sin(_realAngle))
 	#bullet.change_speed(speed)
 	engine.add_child(bullet)
+	var _value = Globals.audioManager.play_sound("sfx_menuSelect")
