@@ -14,9 +14,9 @@
 
 [node name="TitleScreen" type="Node2D"]
 script = ExtResource( 6 )
-TestStage1 = ExtResource( 8 )
+TestStage1 = ExtResource( 11 )
 TestStage2 = ExtResource( 9 )
-TestStage3 = ExtResource( 11 )
+TestStage3 = ExtResource( 8 )
 
 [node name="GuiLayer" type="CanvasLayer" parent="."]
 
@@ -43,28 +43,28 @@ __meta__ = {
 }
 
 [node name="option0" type="Label" parent="GuiLayer/OptionsMenu/options"]
-margin_right = 152.0
+margin_right = 167.0
 margin_bottom = 14.0
-text = "Testing: Silius Fractured"
+text = "Stage1: Forest"
 script = ExtResource( 7 )
 
 [node name="option1" type="Label" parent="GuiLayer/OptionsMenu/options"]
 margin_top = 18.0
-margin_right = 152.0
+margin_right = 167.0
 margin_bottom = 32.0
 text = "Stage2: Mountainous"
 script = ExtResource( 7 )
 
 [node name="option2" type="Label" parent="GuiLayer/OptionsMenu/options"]
 margin_top = 36.0
-margin_right = 152.0
+margin_right = 167.0
 margin_bottom = 50.0
-text = "AiBehaviorPlayground"
+text = "TestStage: Silius Fractured"
 script = ExtResource( 7 )
 
 [node name="option3" type="Label" parent="GuiLayer/OptionsMenu/options"]
 margin_top = 54.0
-margin_right = 152.0
+margin_right = 167.0
 margin_bottom = 68.0
 text = "Quit"
 script = ExtResource( 7 )
