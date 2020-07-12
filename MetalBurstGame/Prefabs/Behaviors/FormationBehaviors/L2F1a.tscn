@@ -62,20 +62,6 @@ __meta__ = {
 "_editor_description_": "[Neccessity]"
 }
 
-[node name="ShootPlayer" type="Node" parent="Parallel/[InsertFireHere]/ShootP-LV02b/Sequence"]
-script = ExtResource( 8 )
-__meta__ = {
-"_editor_description_": "[Controls Velocity]"
-}
-_speed = 200.0
-
-[node name="ShootPlayer2" type="Node" parent="Parallel/[InsertFireHere]/ShootP-LV02b/Sequence"]
-script = ExtResource( 8 )
-__meta__ = {
-"_editor_description_": "[Controls Velocity]"
-}
-_speed = 210.0
-
 [node name="ShootPlayer3" type="Node" parent="Parallel/[InsertFireHere]/ShootP-LV02b/Sequence"]
 script = ExtResource( 8 )
 __meta__ = {
@@ -96,13 +82,6 @@ __meta__ = {
 "_editor_description_": "[Controls Velocity]"
 }
 _speed = 240.0
-
-[node name="ShootPlayer4" type="Node" parent="Parallel/[InsertFireHere]/ShootP-LV02b/Sequence"]
-script = ExtResource( 8 )
-__meta__ = {
-"_editor_description_": "[Controls Velocity]"
-}
-_speed = 250.0
 
 [node name="Wait" type="Node" parent="Parallel/[InsertFireHere]/ShootP-LV02b/Sequence"]
 script = ExtResource( 1 )
