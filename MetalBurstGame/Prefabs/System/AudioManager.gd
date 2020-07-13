@@ -34,10 +34,11 @@ func play_music(music:String,volume_db:float = 0)->bool:
 	return false
 
 #attempt to play a sound - return false if unable to play sound
-func play_sound(sound:String,volume_db:float = 0)->bool:
+func play_sound(sound:String,volume_db:float = -999)->bool:
 	if(sound in _sfxStreams):
 		var player := _sfxStreams[sound] as AudioStreamPlayer
-		player.volume_db = volume_db
+		if(volume_db != -999):
+			player.volume_db = volume_db
 		player.play(0)#play from position 0
 		return true
 	printerr("ERROR: No sound named [%s] found in AudioManager"%sound)
