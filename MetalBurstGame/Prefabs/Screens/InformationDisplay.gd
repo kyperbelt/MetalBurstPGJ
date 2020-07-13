@@ -43,13 +43,13 @@ func set_stage_name(name:String):
 # the signals.
 ##################################
 
-func update_lives(lives,increment):
+func update_lives(lives,_increment):
 	$LivesContainer/Lives.set_text(str(lives) if lives <= 0 else Globals.repeat_string("@",lives))
 
 func update_score(score,_increment):
 	$ScoreContainer/Score.set_text("%010d" % score)
 
-func update_bombs(bombs,increment):		
+func update_bombs(bombs,_increment):		
 	$BombContainer/Bombs.set_text(str(bombs))
 
 func update_name(name):

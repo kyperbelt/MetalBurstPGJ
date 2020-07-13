@@ -32,14 +32,16 @@ var bombing = false
 var invulnerable : bool = false
 
 signal player_hit
+signal score_changed
 
 #######################
-var score: int = 0
+var score: int = 0 setget _set_score
 var lives: int = 4
 #percentage of energy for bomb 0 - 1
 var bomb_percentage:float=1.0
 #the cost of the bomb in energy percentage
 export(float,.01,1.0) var bomb_cost:float=.25 
+export(float) var _rechargeRate = .1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -62,7 +64,6 @@ func _process(delta):
 		else:
 			firing = false
 	if Input.is_action_pressed("player_bomb"):
-		print("bombing")
 		if bomb_timer <= 0:
 			bomb_away()
 			bombing = true
@@ -91,6 +92,8 @@ func _process(delta):
 	bullet_reloading -= delta
 	bomb_reloading -= delta
 
+	bomb_percentage = min(bomb_percentage+_rechargeRate*delta,1)
+
 #collision has started with something
 func on_collision_start(area):
 	#print_tree_pretty()
@@ -104,7 +107,9 @@ func hit(object):
 	var _value = Globals.audioManager.play_sound("sfx_playerHit")
 	emit_signal("player_hit")
 
-
+func _set_score(_score:int)->void:
+	score =_score
+	emit_signal("score_changed")
 
 func start(_pos):
 	position = _pos
@@ -124,7 +129,8 @@ func shoot():
 		bullet_reloading = RELOAD_TIME
 
 func bomb_away():
-	if bomb_reloading <= 0.0:
+	if bomb_reloading <= 0.0 && bomb_percentage>=bomb_cost:
+		bomb_percentage-=bomb_cost
 		var bomb = BULLET_PROJECTILE.instance()
 		bomb.setProjectileType(PROJECTILES.PLAYER_BOMB)
 		bomb.global_position = global_position

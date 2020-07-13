@@ -28,6 +28,9 @@ var _fireElapsed: float = 0
 export(float) var _despawnDistance = 600 #distance from screen center
 var _screenCenter : Vector2 = Vector2(0,0)
 
+#amount that this entity gives in score when it dies
+export(int) var _scoreValue = 100
+
 func _ready():
 	if(Engine.is_editor_hint()):
 		pass
@@ -68,6 +71,9 @@ func set_current_health(health:float):
 
 func get_current_health()->float: 
 	return _currentHealth
+
+func get_score_Value()->int:
+	return _scoreValue;
 
 #called by the engine when it adds it to the correct layer
 func engine_ready(engine):
@@ -132,6 +138,7 @@ func hit(object):
 		#$FoeDeathSFX.play()
 		var _value = Globals.audioManager.play_sound("sfx_foeDeath")
 		print(self.name + "has died!")
+		Globals.get_player().score += _scoreValue
 		queue_free()
 	if object.name == 'PlayerCollisionArea':
 		#TODO: we should move this method out of here-

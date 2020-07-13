@@ -16,6 +16,10 @@ var random: RandomNumberGenerator = RandomNumberGenerator.new()
 var audioManager: AudioManager = null
 
 
+# A dictionary holding highssores in {"stageName":Score} format
+var _highScores : Dictionary = {}
+
+
 # Called when the node enters the scene tree for the first time.
 func _enter_tree():
 	screen_size = OS.get_screen_size(0)
@@ -36,8 +40,15 @@ func delete_player():
 	_player = null
 
 
+func set_high_score(stageName:String)->int:
+	return _highScores[stageName] if (stageName in _highScores) else (set_get(_highScores,stageName,0))
+
 func repeat_string(s: String, times: int) -> String:
 	var s2 = ""
 	for _i in range(times):
 		s2 += s
 	return s2
+	
+func set_get(map:Dictionary,key,value):
+	map[key]=value
+	return value

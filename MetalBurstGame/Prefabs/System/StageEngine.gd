@@ -22,6 +22,7 @@ var play_area_height = 0
 func _ready():
 	player = Globals.get_player()
 	player.connect("player_hit",self,"player_hit")
+	player.connect("score_changed",self,"score_changed")
 	$PlayerLayer.add_child(player)
 	set_process(true)
 
@@ -29,12 +30,15 @@ func set_info_display(info_display):
 	informationDisplay = info_display
 	informationDisplay.set_lives(player.lives)
 	informationDisplay.set_score(player.score)
-	informationDisplay.set_bombs(floor(player.bomb_percentage / player.bomb_cost))
+	informationDisplay.set_bombs(int(floor(player.bomb_percentage / player.bomb_cost)))
 
-func _process(delta):
+func _process(_delta):
 	if(Input.is_action_just_pressed(("pause"))):
 		get_node(PauseScreen).show()
 		get_tree().paused = true
+	
+	informationDisplay.set_bombs(int(floor(player.bomb_percentage / player.bomb_cost)))
+
 
 func cleanup():
 	#remove player so that it doesnt get freed
@@ -61,6 +65,8 @@ func pre_process_entities():
 			if child.has_method("engine_ready"):
 				child.engine_ready(self)
 
+
+
 func add_child(node : Node, legible_unique_name: bool = false):
 	if(node is Projectiles):
 		$BulletLayer.add_child(node, legible_unique_name)
@@ -78,9 +84,13 @@ func center_player():
 		player.play_area_height = play_area_height;
 
 
+func score_changed():
+	informationDisplay.set_score(player.score,true)
+	
+
 func player_hit():
 	if(player.lives <= 0):
-		get_tree().change_scene("res://Prefabs/Screens/GameOverScreen.tscn")
+		var _val = get_tree().change_scene("res://Prefabs/Screens/GameOverScreen.tscn")
 		cleanup()
 		emit_signal("player_died")
 		player.lives = 4 #This resets players life to 4 ; Bandaid ; Mod "Player.gd"
