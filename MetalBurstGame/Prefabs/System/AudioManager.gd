@@ -16,7 +16,8 @@ func _ready():
 	#TODO: At some point we want to make this a singleton where it doesnt get instantiated more than once
 	# 	   unless we have some unique need like a different set of sounds that must be loaded whilst not requiring any of the old ones. 
 	if Globals.audioManager != null:
-		Globals.audioManager.queue_free()
+		# if weakref(Globals.audioManager).get_ref() :
+		# 	Globals.audioManager.queue_free()
 		Globals.audioManager = null
 	Globals.audioManager = self
 	
