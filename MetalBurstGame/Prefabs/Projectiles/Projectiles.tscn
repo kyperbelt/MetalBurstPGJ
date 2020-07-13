@@ -13,7 +13,7 @@ atlas = ExtResource( 4 )
 region = Rect2( 0, 80, 80, 20 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 80, 20 )
+extents = Vector2( 40, 10 )
 
 [node name="ProjectilesSprite" type="Sprite"]
 script = ExtResource( 1 )

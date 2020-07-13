@@ -12,7 +12,7 @@ region = Rect2( 90, 125, 15, 30 )
 radius = 5.0
 height = 10.0
 
-[node name="E15x30-05(Cyan)" type="Node2D"]
+[node name="E15x30-07(Purple)" type="Node2D"]
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = SubResource( 1 )
