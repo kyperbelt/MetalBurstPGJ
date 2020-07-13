@@ -1,11 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
 [ext_resource path="res://Prefabs/Enemies/SpinnerA.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/System/EnemyControl.gd" type="Script" id=7]
-[ext_resource path="res://Prefabs/Behaviors/TestBehaviors/[Proto]SimpleAiReplica.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=9]
 
 [node name="SpawnEvent" type="Node2D"]
 script = ExtResource( 1 )
@@ -34,82 +31,32 @@ event_time = null
 [node name="placeholder" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="SpinnerA10" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="SpinnerA10" parent="." instance=ExtResource( 3 )]
 position = Vector2( 180, -120 )
-script = ExtResource( 7 )
-_maxHealth = 300.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA10" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="SpinnerA" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="SpinnerA" parent="." instance=ExtResource( 3 )]
 position = Vector2( -30, -60 )
-script = ExtResource( 7 )
-_maxHealth = 300.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="SpinnerA2" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="SpinnerA2" parent="." instance=ExtResource( 3 )]
 position = Vector2( -90, -60 )
-script = ExtResource( 7 )
-_maxHealth = 300.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA2" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="SpinnerA3" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="SpinnerA3" parent="." instance=ExtResource( 3 )]
 position = Vector2( -180, -60 )
-script = ExtResource( 7 )
-_maxHealth = 300.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA3" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="SpinnerA4" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="SpinnerA4" parent="." instance=ExtResource( 3 )]
 position = Vector2( -270, -60 )
-script = ExtResource( 7 )
-_maxHealth = 300.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA4" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="SpinnerA5" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="SpinnerA5" parent="." instance=ExtResource( 3 )]
 position = Vector2( -180, -120 )
-script = ExtResource( 7 )
-_maxHealth = 300.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA5" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="SpinnerA6" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="SpinnerA6" parent="." instance=ExtResource( 3 )]
 position = Vector2( 30, -60 )
-script = ExtResource( 7 )
-_maxHealth = 300.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA6" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="SpinnerA7" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="SpinnerA7" parent="." instance=ExtResource( 3 )]
 position = Vector2( 90, -60 )
-script = ExtResource( 7 )
-_maxHealth = 300.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA7" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="SpinnerA8" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="SpinnerA8" parent="." instance=ExtResource( 3 )]
 position = Vector2( 180, -60 )
-script = ExtResource( 7 )
-_maxHealth = 300.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA8" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="SpinnerA9" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="SpinnerA9" parent="." instance=ExtResource( 3 )]
 position = Vector2( 270, -60 )
-script = ExtResource( 7 )
-_maxHealth = 300.0
-
-[node name="[Proto]SimpleAiReplica" type="Node" parent="SpinnerA9" instance=ExtResource( 8 )]
-script = ExtResource( 9 )

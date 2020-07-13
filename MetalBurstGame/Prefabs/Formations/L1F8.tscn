@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
@@ -6,9 +6,6 @@
 [ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Enemies/EmberBlue.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/System/EnemyControl.gd" type="Script" id=7]
-[ext_resource path="res://Prefabs/Behaviors/TestBehaviors/[Proto]SimpleAiReplica.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=9]
 
 [node name="SpawnEvent" type="Node2D"]
 script = ExtResource( 1 )
@@ -37,72 +34,26 @@ event_time = null
 [node name="placeholder" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="TinyEmberRed3" type="Node2D" parent="." instance=ExtResource( 4 )]
+[node name="TinyEmberRed3" parent="." instance=ExtResource( 4 )]
 position = Vector2( -120, -120 )
-script = ExtResource( 7 )
-_maxSpeed = 720.0
-_maxHealth = 200.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="TinyEmberRed3" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="EmberRed" type="Node2D" parent="." instance=ExtResource( 5 )]
+[node name="EmberRed" parent="." instance=ExtResource( 5 )]
 position = Vector2( 60, -80 )
-script = ExtResource( 7 )
-_maxHealth = 500.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="EmberRed" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="EmberBlue" type="Node2D" parent="." instance=ExtResource( 6 )]
+[node name="EmberBlue" parent="." instance=ExtResource( 6 )]
 position = Vector2( -60, -80 )
-script = ExtResource( 7 )
-_maxHealth = 500.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="EmberBlue" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="TinyEmberBlue" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="TinyEmberBlue" parent="." instance=ExtResource( 3 )]
 position = Vector2( 120, -20 )
-script = ExtResource( 7 )
-_maxSpeed = 720.0
-_maxHealth = 200.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="TinyEmberBlue" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="TinyEmberRed" type="Node2D" parent="." instance=ExtResource( 4 )]
+[node name="TinyEmberRed" parent="." instance=ExtResource( 4 )]
 position = Vector2( -120, -20 )
-script = ExtResource( 7 )
-_maxSpeed = 720.0
-_maxHealth = 200.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="TinyEmberRed" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="TinyEmberRed2" type="Node2D" parent="." instance=ExtResource( 4 )]
+[node name="TinyEmberRed2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 150, -70 )
-script = ExtResource( 7 )
-_maxSpeed = 720.0
-_maxHealth = 200.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="TinyEmberRed2" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="TinyEmberBlue2" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="TinyEmberBlue2" parent="." instance=ExtResource( 3 )]
 position = Vector2( -150, -70 )
-script = ExtResource( 7 )
-_maxSpeed = 720.0
-_maxHealth = 200.0
 
-[node name="[Proto]SimpleAiReplica" type="Node" parent="TinyEmberBlue2" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
-
-[node name="TinyEmberBlue3" type="Node2D" parent="." instance=ExtResource( 3 )]
+[node name="TinyEmberBlue3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 120, -120 )
-script = ExtResource( 7 )
-_maxSpeed = 720.0
-_maxHealth = 200.0
-
-[node name="[Proto]SimpleAiReplica" type="Node" parent="TinyEmberBlue3" instance=ExtResource( 8 )]
-script = ExtResource( 9 )
