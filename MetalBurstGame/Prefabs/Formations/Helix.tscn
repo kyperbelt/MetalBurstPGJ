@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Behaviors/FormationBehaviors/Helix1L.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Behaviors/FormationBehaviors/Helix1R.tscn" type="PackedScene" id=5]
+
+[node name="Helix" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="TinyEmberL1" parent="." instance=ExtResource( 3 )]
+position = Vector2( -55, -20 )
+
+[node name="Brain" parent="TinyEmberL1" instance=ExtResource( 4 )]
+
+[node name="TinyEmberR1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 55, -20 )
+
+[node name="Brain" parent="TinyEmberR1" instance=ExtResource( 5 )]
+
+[node name="TinyEmberL2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -55, -80 )
+
+[node name="Brain" parent="TinyEmberL2" instance=ExtResource( 4 )]
+
+[node name="TinyEmberR2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 55, -80 )
+
+[node name="Brain" parent="TinyEmberR2" instance=ExtResource( 5 )]
+
+[node name="TinyEmberL3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -55, -140 )
+
+[node name="Brain" parent="TinyEmberL3" instance=ExtResource( 4 )]
+
+[node name="TinyEmberR3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 55, -140 )
+
+[node name="Brain" parent="TinyEmberR3" instance=ExtResource( 5 )]
