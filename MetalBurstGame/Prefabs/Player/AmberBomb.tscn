@@ -57,12 +57,12 @@ tracks/0/keys = {
 
 [node name="Underlayer" type="Sprite" parent="."]
 modulate = Color( 0.929412, 0.807843, 0, 1 )
-rotation = -2.55313
+rotation = -4.61139
 texture = ExtResource( 1 )
 
 [node name="Overlayer" type="Sprite" parent="."]
 modulate = Color( 1, 0.960784, 0, 1 )
-rotation = 1.46093
+rotation = 0.792939
 texture = ExtResource( 2 )
 
 [node name="OverlayerAnimation" type="AnimationPlayer" parent="."]
