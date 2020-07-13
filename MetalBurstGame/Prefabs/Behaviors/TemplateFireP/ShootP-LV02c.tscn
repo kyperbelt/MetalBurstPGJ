@@ -5,7 +5,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootPlayer.gd" type="Script" id=4]
 
-[node name="ShootP-LV02b" type="Node"]
+[node name="ShootP-LV02c" type="Node"]
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": "Time:
@@ -18,7 +18,7 @@ Behavior:
 -3 Bullets per Burst (Medium)
 -250/225/200 Velocity (Medium-Slow)"
 }
-amount = 5
+amount = 4
 
 [node name="Sequence" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -38,56 +38,16 @@ script = ExtResource( 4 )
 __meta__ = {
 "_editor_description_": "[Controls Velocity]"
 }
-_speed = 160.0
+_speed = 150.0
+_angleOffset = 5.0
 
 [node name="ShootPlayer3" type="Node" parent="Sequence"]
 script = ExtResource( 4 )
 __meta__ = {
 "_editor_description_": "[Controls Velocity]"
 }
-_speed = 170.0
-
-[node name="ShootPlayer6" type="Node" parent="Sequence"]
-script = ExtResource( 4 )
-__meta__ = {
-"_editor_description_": "[Controls Velocity]"
-}
-_speed = 180.0
-
-[node name="ShootPlayer5" type="Node" parent="Sequence"]
-script = ExtResource( 4 )
-__meta__ = {
-"_editor_description_": "[Controls Velocity]"
-}
-_speed = 190.0
-
-[node name="ShootPlayer4" type="Node" parent="Sequence"]
-script = ExtResource( 4 )
-__meta__ = {
-"_editor_description_": "[Controls Velocity]"
-}
-_speed = 200.0
-
-[node name="ShootPlayer9" type="Node" parent="Sequence"]
-script = ExtResource( 4 )
-__meta__ = {
-"_editor_description_": "[Controls Velocity]"
-}
-_speed = 210.0
-
-[node name="ShootPlayer8" type="Node" parent="Sequence"]
-script = ExtResource( 4 )
-__meta__ = {
-"_editor_description_": "[Controls Velocity]"
-}
-_speed = 220.0
-
-[node name="ShootPlayer7" type="Node" parent="Sequence"]
-script = ExtResource( 4 )
-__meta__ = {
-"_editor_description_": "[Controls Velocity]"
-}
-_speed = 230.0
+_speed = 150.0
+_angleOffset = -5.0
 
 [node name="Wait" type="Node" parent="Sequence"]
 script = ExtResource( 3 )
