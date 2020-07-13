@@ -1,51 +1,51 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=1]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=2]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=4]
-[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=5]
-[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=6]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=7]
-[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=9]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateTo.gd" type="Script" id=10]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateTo.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=8]
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=9]
 
 [node name="L2F2a" type="Node"]
-script = ExtResource( 6 )
+script = ExtResource( 9 )
 __meta__ = {
 "_editor_description_": "Rotate base enemy behavior"
 }
 
 [node name="Parallel" type="Node" parent="."]
-script = ExtResource( 5 )
+script = ExtResource( 2 )
 
 [node name="[MoveSequence]" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
 
 [node name="ChangeSpeed" type="Node" parent="Parallel/[MoveSequence]"]
-script = ExtResource( 7 )
+script = ExtResource( 5 )
 _speed = 150.0
 
 [node name="MoveForward" type="Node" parent="Parallel/[MoveSequence]"]
-script = ExtResource( 3 )
+script = ExtResource( 8 )
 
 [node name="Wait" type="Node" parent="Parallel/[MoveSequence]"]
-script = ExtResource( 1 )
+script = ExtResource( 7 )
 delay = 2.0
 
 [node name="Parallel" type="Node" parent="Parallel/[MoveSequence]"]
-script = ExtResource( 5 )
+script = ExtResource( 2 )
 
 [node name="MoveForward2" type="Node" parent="Parallel/[MoveSequence]/Parallel"]
-script = ExtResource( 3 )
+script = ExtResource( 8 )
 
 [node name="RotateTo" type="Node" parent="Parallel/[MoveSequence]/Parallel"]
-script = ExtResource( 10 )
+script = ExtResource( 6 )
 _angle = 180.0
 _time = 0.25
 
 [node name="Plus-Ex-Alternate" type="Node" parent="Parallel"]
-script = ExtResource( 9 )
+script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": "Time:
 [???]
@@ -66,54 +66,54 @@ __meta__ = {
 }
 
 [node name="Wait" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
-script = ExtResource( 1 )
+script = ExtResource( 7 )
 __meta__ = {
 "_editor_description_": "[Controls Rate of Fire]"
 }
 delay = 1.0
 
 [node name="ShootAngle" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _speed = 250.0
 
 [node name="ShootAngle2" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _speed = 250.0
 _angle = 90.0
 
 [node name="ShootAngle3" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _speed = 250.0
 _angle = -90.0
 
 [node name="ShootAngle4" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _speed = 250.0
 _angle = 180.0
 
 [node name="Wait2" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
-script = ExtResource( 1 )
+script = ExtResource( 7 )
 __meta__ = {
 "_editor_description_": "[Controls Rate of Fire]"
 }
 delay = 1.0
 
 [node name="ShootAngle5" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _speed = 250.0
 _angle = 45.0
 
 [node name="ShootAngle6" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _speed = 250.0
 _angle = -45.0
 
 [node name="ShootAngle7" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _speed = 250.0
 _angle = 135.0
 
 [node name="ShootAngle8" type="Node" parent="Parallel/Plus-Ex-Alternate/Sequence"]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 _speed = 250.0
 _angle = -135.0

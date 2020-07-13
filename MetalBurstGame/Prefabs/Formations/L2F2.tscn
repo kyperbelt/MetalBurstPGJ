@@ -3,8 +3,9 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
 [ext_resource path="res://Prefabs/Enemies/SpinnerA.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/Behaviors/FormationBehaviors/L2F2a.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Behaviors/FormationBehaviors/L2F2b.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Formations/FormationBehaviors/L2F2a.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Formations/FormationBehaviors/L2F2b.tscn" type="PackedScene" id=5]
+
 
 [node name="L2F2" type="Node2D"]
 script = ExtResource( 1 )

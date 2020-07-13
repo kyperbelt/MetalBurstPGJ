@@ -4,7 +4,8 @@
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
 [ext_resource path="res://Prefabs/Enemies/TinyEmberBlue.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Behaviors/FormationBehaviors/L2F1a.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Formations/FormationBehaviors/L2F1a.tscn" type="PackedScene" id=6]
+
 
 [node name="L2F1b-right" type="Node2D"]
 script = ExtResource( 1 )
