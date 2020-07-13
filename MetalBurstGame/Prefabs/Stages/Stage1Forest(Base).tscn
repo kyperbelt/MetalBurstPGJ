@@ -9,7 +9,7 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Assets/Audio/BGM/Stage1StageBGMv1.wav" type="AudioStream" id=10]
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SoundEvent.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Formations/L1F4-8xTinyEmberSwarm.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Formations/TinyEmberx4-Right.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Formations/TinyEmberx4-Left.tscn" type="PackedScene" id=13]
@@ -27,14 +27,6 @@ vertical_velocity = 40.0
 
 [node name="DustParticles" parent="Level" instance=ExtResource( 4 )]
 position = Vector2( -285.932, 0 )
-
-[node name="BGMmusic" type="AudioStreamPlayer" parent="Level"]
-stream = ExtResource( 10 )
-autoplay = true
-bus = "Music"
-__meta__ = {
-"_editor_description_": ""
-}
 
 [node name="InformationDisplay" parent="Level" instance=ExtResource( 5 )]
 
@@ -249,5 +241,10 @@ event_time = 0.0
 spawn_x = -320.0
 
 [node name="EmberA" parent="StageDirector/[Mark]Intro1" instance=ExtResource( 2 )]
+
+[node name="SoundEvent" parent="StageDirector" instance=ExtResource( 10 )]
+position = Vector2( 0, -50 )
+event_time = 0.983871
+_soundName = "bgm_Stage1"
 
 [editable path="StageDirector"]

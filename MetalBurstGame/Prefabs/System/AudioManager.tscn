@@ -1,14 +1,19 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://Assets/Audio/BGM/Stage2StageBGMv1.wav" type="AudioStream" id=1]
+[ext_resource path="res://Assets/Audio/BGM/Stage2StageBGMv2 (Spliced).wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Audio/SFX/menu_select.wav" type="AudioStream" id=2]
 [ext_resource path="res://Assets/Audio/SFX/menu_scroll01.wav" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Audio/SFX/enemyHit02.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Audio/SFX/enemyDeath.wav" type="AudioStream" id=5]
 [ext_resource path="res://Assets/Audio/SFX/playerShoot_vers05.wav" type="AudioStream" id=6]
-[ext_resource path="res://Assets/Audio/BGM/Stage1BossBGMv1.wav" type="AudioStream" id=7]
+[ext_resource path="res://Assets/Audio/SiliusFractured/The Word Of Lawder - Fracture The Faultline - 10 Silius Fractured.ogg" type="AudioStream" id=7]
 [ext_resource path="res://Prefabs/System/AudioManager.gd" type="Script" id=8]
 [ext_resource path="res://Assets/Audio/SFX/playerBomb03.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Audio/BGM/Stage1StageBGMv1.wav" type="AudioStream" id=10]
+[ext_resource path="res://Assets/Audio/BGM/Stage2BossBGMv2.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Audio/BGM/Stage2StageBGMv4.wav" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Audio/BGM/Stage1BossBGMv2.wav" type="AudioStream" id=13]
+[ext_resource path="res://Assets/Audio/BGM/Stage3StageBGMv1or2.wav" type="AudioStream" id=14]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource( 8 )
@@ -21,6 +26,7 @@ Purpose of this scene is to act as a \"repository\" for all sfx and bgm used in 
 
 [node name="bgm_testStage2" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 1 )
+volume_db = 4.0
 bus = "Music"
 __meta__ = {
 "_editor_description_": "Connected to \"TestStage2.tscn\"
@@ -30,29 +36,42 @@ Plays: On Stage 2 as Stage BGM"
 
 [node name="bgm_testStage1" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 7 )
+volume_db = -6.0
 bus = "Music"
 __meta__ = {
-"_editor_description_": "Connected to \"TestStage.tscn\"
+"_editor_description_": "Connected to \"???\"
+Plays: On Stage 1 as Stage BGM
 
-Plays: On Stage 1 as Stage BGM"
+IMPORTANT NOTE:
+-This is a metal remix by a person named \"Sinvicta\"
+-The name of the remix is \"Silius Fractured\"
+-The source game is \"Journey to Silius\"
+-The original track was the stage 1/5 track
+-This track is used for demonstration/testing purposes only
+-It will not be in the final game"
 }
 
 [node name="bgm_MainMenu" type="AudioStreamPlayer" parent="Music"]
 bus = "Music"
 
 [node name="bgm_Stage1" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 10 )
 bus = "Music"
 
 [node name="bgm_Stage1Boss" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 13 )
 bus = "Music"
 
 [node name="bgm_Stage2" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 12 )
 bus = "Music"
 
 [node name="bgm_Stage2Boss" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 11 )
 bus = "Music"
 
 [node name="bgm_Stage3" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 14 )
 bus = "Music"
 
 [node name="bgm_Stage3Boss" type="AudioStreamPlayer" parent="Music"]
