@@ -4,9 +4,7 @@
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
 [ext_resource path="res://Prefabs/Enemies/TinyEmberBlue.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Formations/L1F4-SwarmAI.tscn" type="PackedScene" id=7]
-
-
+[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-Arrowhead3-AI.tscn" type="PackedScene" id=7]
 
 
 [node name="SpawnEvent" type="Node2D"]

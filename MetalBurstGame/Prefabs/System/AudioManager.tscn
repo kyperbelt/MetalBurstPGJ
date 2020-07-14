@@ -64,6 +64,7 @@ bus = "Music"
 
 [node name="bgm_Stage2" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 12 )
+volume_db = 4.0
 bus = "Music"
 
 [node name="bgm_Stage2Boss" type="AudioStreamPlayer" parent="Music"]
