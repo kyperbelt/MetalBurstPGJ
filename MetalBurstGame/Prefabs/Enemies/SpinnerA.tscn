@@ -23,66 +23,68 @@ texture = ExtResource( 4 )
 [node name="Contrail" type="AnimatedSprite" parent="."]
 modulate = Color( 0.52549, 0.85098, 0.964706, 1 )
 frames = ExtResource( 8 )
-animation = "Default"
-frame = 4
+animation = "Smooth"
+frame = 2
 playing = true
 
 [node name="Contrail2" type="AnimatedSprite" parent="."]
 modulate = Color( 0.52549, 0.85098, 0.964706, 1 )
 rotation = -3.14159
 frames = ExtResource( 8 )
-animation = "Default"
-frame = 5
+animation = "Smooth"
+frame = 2
 playing = true
 
 [node name="Contrail4" type="AnimatedSprite" parent="."]
 modulate = Color( 0.52549, 0.85098, 0.964706, 1 )
 rotation = 1.5708
 frames = ExtResource( 8 )
-animation = "Default"
-frame = 4
+animation = "Smooth"
+frame = 2
 playing = true
 
 [node name="Contrail3" type="AnimatedSprite" parent="."]
 modulate = Color( 0.52549, 0.85098, 0.964706, 1 )
 rotation = 4.71239
 frames = ExtResource( 8 )
-animation = "Default"
-frame = 5
+animation = "Smooth"
+frame = 2
 playing = true
 
 [node name="Contrail8" type="AnimatedSprite" parent="."]
 modulate = Color( 0.52549, 0.85098, 0.964706, 1 )
 rotation = 0.785398
 frames = ExtResource( 8 )
-animation = "Default"
-frame = 3
+animation = "Smooth"
+frame = 6
 playing = true
 
 [node name="Contrail7" type="AnimatedSprite" parent="."]
 modulate = Color( 0.52549, 0.85098, 0.964706, 1 )
 rotation = 2.35619
 frames = ExtResource( 8 )
-animation = "Default"
+animation = "Smooth"
+frame = 6
 playing = true
 
 [node name="Contrail6" type="AnimatedSprite" parent="."]
 modulate = Color( 0.52549, 0.85098, 0.964706, 1 )
 rotation = 3.92699
 frames = ExtResource( 8 )
-animation = "Default"
-frame = 2
+animation = "Smooth"
+frame = 6
 playing = true
 
 [node name="Contrail5" type="AnimatedSprite" parent="."]
 modulate = Color( 0.52549, 0.85098, 0.964706, 1 )
 rotation = 5.49779
 frames = ExtResource( 8 )
-animation = "Default"
-frame = 2
+animation = "Smooth"
+frame = 6
 playing = true
 
 [node name="EnemyArea" type="Area2D" parent="."]
+visible = false
 collision_layer = 8
 collision_mask = 100
 
@@ -93,7 +95,7 @@ shape = SubResource( 1 )
 visible = false
 frames = ExtResource( 5 )
 animation = "6 Frame"
-frame = 3
+frame = 2
 playing = true
 
 [node name="TopSprite" type="Sprite" parent="."]
