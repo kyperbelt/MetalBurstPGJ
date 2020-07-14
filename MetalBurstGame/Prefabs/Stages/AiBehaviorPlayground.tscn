@@ -6,10 +6,10 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Formations/AiPlaygroundSpawns/FiringTests.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Bosses/B3-ClamBossEvent.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-WhipArms.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Behaviors/TestBehaviors/InfinityLoopx6.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Enemies/EmberPurple.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Prefabs/Formations/Helix.tscn" type="PackedScene" id=15]
 
 [node name="Playground" type="Node"]
 __meta__ = {
@@ -65,7 +65,7 @@ position = Vector2( 160, -130 )
 event_time = 2.6
 spawn_x = 160.0
 
-[node name="Helix" parent="StageDirector" instance=ExtResource( 15 )]
+[node name="Heavy-WhipArms" parent="StageDirector" instance=ExtResource( 7 )]
 event_time = 0.0
 
 [editable path="StageDirector"]

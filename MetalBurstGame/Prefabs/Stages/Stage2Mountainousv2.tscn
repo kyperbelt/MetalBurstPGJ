@@ -10,12 +10,15 @@
 [ext_resource path="res://Prefabs/Bosses/B3-ClamBossEvent.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Formations/L2F1.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Prefabs/Formations/L2F2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Formations/CrossFormations/L2F2.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Formations/L2F1b-right.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/Formations/L2F1a-left.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Prefabs/Formations/L2F3-a.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-Caterpillar.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SoundEvent.tscn" type="PackedScene" id=17]
+
+
+
 
 [node name="Stage2RootNode" type="Node"]
 

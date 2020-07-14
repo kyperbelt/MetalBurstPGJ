@@ -12,9 +12,13 @@
 [ext_resource path="res://Prefabs/Formations/TinyEmberx4-Right.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Formations/TinyEmberx4-Left.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Formations/L1F4-8xTinyEmberSwarm.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Prefabs/Formations/L1F5-3xEmbers.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Prefabs/Formations/L1F7-2xMeteor.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-RandoSpread.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-Meteor.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=15]
+
+
+
+
 
 [node name="RootNode" type="Node"]
 

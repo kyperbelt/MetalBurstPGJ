@@ -3,8 +3,14 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
 [ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/Formations/FormationBehaviors/Helix1L.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Formations/FormationBehaviors/Helix1R.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Formations/HelixAI-L.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Formations/HelixAI-R.tscn" type="PackedScene" id=5]
+
+
+
+
+
+
 
 
 [node name="Helix" type="Node2D"]

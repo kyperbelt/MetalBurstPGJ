@@ -1,0 +1,144 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/StopMove.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateTo.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=8]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=9]
+
+[node name="WhipArms" type="Node"]
+script = ExtResource( 8 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Sequence" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="ChangeSpeed" type="Node" parent="Sequence"]
+script = ExtResource( 3 )
+_speed = 200.0
+
+[node name="MoveForward" type="Node" parent="Sequence"]
+script = ExtResource( 7 )
+
+[node name="Wait" type="Node" parent="Sequence"]
+script = ExtResource( 6 )
+delay = 1.0
+
+[node name="StopMove" type="Node" parent="Sequence"]
+script = ExtResource( 4 )
+
+[node name="Repeater" type="Node" parent="Sequence"]
+script = ExtResource( 1 )
+amount = 2
+
+[node name="Sequence" type="Node" parent="Sequence/Repeater"]
+script = ExtResource( 2 )
+
+[node name="ShootAngleR1" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = -2.5
+
+[node name="ShootAngleL1" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = 2.5
+
+[node name="Wait" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 6 )
+delay = 0.125
+
+[node name="ShootAngleR2" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = -7.5
+
+[node name="ShootAngleL2" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = 7.5
+
+[node name="Wait2" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 6 )
+delay = 0.125
+
+[node name="ShootAngleR3" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = -12.5
+
+[node name="ShootAngleL3" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = 12.5
+
+[node name="Wait3" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 6 )
+delay = 0.125
+
+[node name="ShootAngleR4" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = -17.5
+
+[node name="ShootAngleL4" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = 17.5
+
+[node name="Wait4" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 6 )
+delay = 0.125
+
+[node name="ShootAngleR5" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = -17.5
+
+[node name="ShootAngleL5" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = 17.5
+
+[node name="Wait5" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 6 )
+delay = 0.125
+
+[node name="ShootAngleR6" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = -12.5
+
+[node name="ShootAngleL6" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = 12.5
+
+[node name="Wait6" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 6 )
+delay = 0.125
+
+[node name="ShootAngleR7" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = -7.5
+
+[node name="ShootAngleL7" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = 7.5
+
+[node name="Wait7" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 6 )
+delay = 0.125
+
+[node name="ShootAngleR8" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = -2.5
+
+[node name="ShootAngleL8" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 9 )
+_angle = 2.5
+
+[node name="Wait8" type="Node" parent="Sequence/Repeater/Sequence"]
+script = ExtResource( 6 )
+delay = 0.125
+
+[node name="RotateTo2" type="Node" parent="Sequence"]
+script = ExtResource( 5 )
+_angle = 180.0
+
+[node name="MoveForward2" type="Node" parent="Sequence"]
+script = ExtResource( 7 )
