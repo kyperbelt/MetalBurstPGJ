@@ -12,7 +12,7 @@
 [ext_resource path="res://Assets/Audio/BGM/Stage1StageBGMv1.wav" type="AudioStream" id=10]
 [ext_resource path="res://Assets/Audio/BGM/Stage2BossBGMv2.wav" type="AudioStream" id=11]
 [ext_resource path="res://Assets/Audio/BGM/Stage2StageBGMv4.wav" type="AudioStream" id=12]
-[ext_resource path="res://Assets/Audio/BGM/Stage1BossBGMv2.wav" type="AudioStream" id=13]
+[ext_resource path="res://Assets/Audio/BGM/Stage1BossBGMv2.1.wav" type="AudioStream" id=13]
 [ext_resource path="res://Assets/Audio/BGM/Stage3StageBGMv1or2.wav" type="AudioStream" id=14]
 
 [node name="AudioManager" type="Node"]
