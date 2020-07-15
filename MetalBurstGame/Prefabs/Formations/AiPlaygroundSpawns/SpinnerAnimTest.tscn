@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
-[ext_resource path="res://Prefabs/Enemies/SpinnerA.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Enemies/SpinnerBlue.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=5]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=6]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveCardinal.gd" type="Script" id=9]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateBy.gd" type="Script" id=10]
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=11]
+
 
 [node name="Cross-RotateTest" type="Node2D"]
 script = ExtResource( 1 )

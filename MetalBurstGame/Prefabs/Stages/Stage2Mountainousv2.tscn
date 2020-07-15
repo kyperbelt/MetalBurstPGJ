@@ -17,14 +17,6 @@
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SoundEvent.tscn" type="PackedScene" id=17]
 
-
-
-
-
-
-
-
-
 [node name="Stage2RootNode" type="Node"]
 
 [node name="NOTES" type="Node" parent="."]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/path13872-1-3-0.png-5abb2f4db13fb1eca4589e35f10aae08.stex"
+path="res://.import/SpinnerSheet.png-a8c4369c4a0fd84dd67ccd8f183c1fd2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Enemies/path13872-1-3-0.png"
-dest_files=[ "res://.import/path13872-1-3-0.png-5abb2f4db13fb1eca4589e35f10aae08.stex" ]
+source_file="res://Assets/Enemies/SpinnerSheet.png"
+dest_files=[ "res://.import/SpinnerSheet.png-a8c4369c4a0fd84dd67ccd8f183c1fd2.stex" ]
 
 [params]
 

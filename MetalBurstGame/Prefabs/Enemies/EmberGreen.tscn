@@ -1,8 +1,6 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Assets/Audio/SFX/enemyDeath.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Enemies/EmberShadow.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Audio/SFX/enemyHit01.wav" type="AudioStream" id=3]
 [ext_resource path="res://Prefabs/System/EnemyControl.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Enemies/EmberSheet.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Enemies/EmberTrail.tres" type="SpriteFrames" id=8]
@@ -39,15 +37,9 @@ modulate = Color( 0.6, 0.635294, 0.0431373, 1 )
 position = Vector2( 0, -33 )
 frames = ExtResource( 8 )
 animation = "Default"
-frame = 4
+frame = 2
 playing = true
 
 [node name="Body1" type="Sprite" parent="."]
 position = Vector2( 0, -33 )
 texture = SubResource( 2 )
-
-[node name="FoeHitSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-
-[node name="FoeDeathSFX" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 1 )
