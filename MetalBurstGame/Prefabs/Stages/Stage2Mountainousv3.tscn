@@ -134,94 +134,114 @@ position = Vector2( -320, -600 )
 event_time = 12.0
 spawn_x = -320.0
 
-[node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( 1.71082, -192.317 )
-event_time = 3.84634
-spawn_x = 1.71082
-
-[node name="SpawnEvent2" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -0.939209, -404.318 )
-event_time = 8.08636
-spawn_x = -0.939209
-
 [node name="SpawnEvent3" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( 166.012, -616.32 )
-event_time = 12.3264
+position = Vector2( 166.012, -1410.18 )
+event_time = 28.2036
 spawn_x = 166.012
 
 [node name="SpawnEvent4" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -162.591, -804.472 )
-event_time = 16.0894
+position = Vector2( -162.591, -1598.33 )
+event_time = 31.9667
 spawn_x = -162.591
 
 [node name="SpawnEvent5" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( 168.662, -1003.22 )
-event_time = 20.0644
+position = Vector2( 168.662, -1797.08 )
+event_time = 35.9416
 spawn_x = 168.662
 
 [node name="SpawnEvent6" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -165.241, -1207.28 )
-event_time = 24.1456
+position = Vector2( -165.241, -2001.14 )
+event_time = 40.0228
 spawn_x = -165.241
 
 [node name="SpawnEvent7" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -241.344, -1405.94 )
-event_time = 28.1188
+position = Vector2( -241.344, -215.147 )
+event_time = 4.30293
 spawn_x = -241.344
 
 [node name="SpawnEvent8" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 238.31, -1594.1 )
-event_time = 31.882
+position = Vector2( 238.31, -403.307 )
+event_time = 8.06614
 spawn_x = 238.31
 
 [node name="SpawnEvent9" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -254.594, -1806.1 )
-event_time = 36.122
+position = Vector2( -254.594, -605.546 )
+event_time = 12.1109
 spawn_x = -254.594
 
 [node name="SpawnEvent10" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 238.31, -1991.6 )
-event_time = 39.832
+position = Vector2( 238.31, -599.088 )
+event_time = 11.9818
 spawn_x = 238.31
 
+[node name="SpawnEvent31" parent="StageDirector" instance=ExtResource( 14 )]
+position = Vector2( -254.594, -807.265 )
+event_time = 16.1453
+spawn_x = -254.594
+
+[node name="SpawnEvent30" parent="StageDirector" instance=ExtResource( 12 )]
+position = Vector2( 254.578, -804.06 )
+event_time = 16.0812
+spawn_x = 254.578
+
+[node name="SpawnEvent35" parent="StageDirector" instance=ExtResource( 14 )]
+position = Vector2( -254.594, -1028.51 )
+event_time = 20.5701
+spawn_x = -254.594
+
+[node name="SpawnEvent34" parent="StageDirector" instance=ExtResource( 12 )]
+position = Vector2( 238.31, -1022.05 )
+event_time = 20.4409
+spawn_x = 238.31
+
+[node name="SpawnEvent33" parent="StageDirector" instance=ExtResource( 14 )]
+position = Vector2( -254.594, -1230.22 )
+event_time = 24.6045
+spawn_x = -254.594
+
+[node name="SpawnEvent32" parent="StageDirector" instance=ExtResource( 12 )]
+position = Vector2( 254.578, -1227.02 )
+event_time = 24.5404
+spawn_x = 254.578
+
 [node name="L2F1-8xSwarm" parent="StageDirector" instance=ExtResource( 15 )]
-position = Vector2( -0.19165, -2203.6 )
-event_time = 44.072
+position = Vector2( -0.19165, -3003.97 )
+event_time = 60.0794
 spawn_x = -0.19165
 
 [node name="L2F1-8xSwarm2" parent="StageDirector" instance=ExtResource( 15 )]
-position = Vector2( -2.84167, -2405 )
-event_time = 48.1
+position = Vector2( -2.84167, -3205.37 )
+event_time = 64.1074
 spawn_x = -2.84167
 
 [node name="L2F1-8xSwarm3" parent="StageDirector" instance=ExtResource( 15 )]
-position = Vector2( -0.19165, -2603.75 )
-event_time = 52.075
+position = Vector2( -0.19165, -3404.12 )
+event_time = 68.0824
 spawn_x = -0.19165
 
 [node name="L2F1-8xSwarm4" parent="StageDirector" instance=ExtResource( 15 )]
-position = Vector2( -5.4917, -2802.5 )
-event_time = 56.05
+position = Vector2( -5.4917, -3602.87 )
+event_time = 72.0574
 spawn_x = -5.4917
 
 [node name="L2F1a-left" parent="StageDirector" instance=ExtResource( 16 )]
-position = Vector2( -0.19165, -3003.91 )
-event_time = 60.0782
+position = Vector2( -0.19165, -2197.03 )
+event_time = 43.9407
 spawn_x = -0.19165
 
 [node name="L2F1b-right" parent="StageDirector" instance=ExtResource( 17 )]
-position = Vector2( -2.84167, -3202.66 )
-event_time = 64.0532
+position = Vector2( -2.84167, -2395.78 )
+event_time = 47.9157
 spawn_x = -2.84167
 
 [node name="L2F1a-left2" parent="StageDirector" instance=ExtResource( 16 )]
-position = Vector2( 2.45837, -3396.11 )
-event_time = 67.9222
+position = Vector2( 2.45837, -2589.23 )
+event_time = 51.7847
 spawn_x = 2.45837
 
 [node name="L2F1b-right2" parent="StageDirector" instance=ExtResource( 17 )]
-position = Vector2( 10.4084, -3610.76 )
-event_time = 72.2152
+position = Vector2( 10.4084, -2803.88 )
+event_time = 56.0777
 spawn_x = 10.4084
 
 [node name="L2F3-a" parent="StageDirector" instance=ExtResource( 18 )]
