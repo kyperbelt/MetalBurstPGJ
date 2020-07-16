@@ -10,7 +10,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=8]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=9]
 
-[node name="L2F1a" type="Node"]
+[node name="SideEnterAI" type="Node"]
 script = ExtResource( 9 )
 __meta__ = {
 "_editor_description_": "Rotate base enemy behavior"

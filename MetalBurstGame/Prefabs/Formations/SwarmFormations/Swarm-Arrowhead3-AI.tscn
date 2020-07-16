@@ -8,7 +8,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=7]
 
-[node name="L1F4-SwarmA" type="Node"]
+[node name="Arrowhead3AI" type="Node"]
 script = ExtResource( 7 )
 __meta__ = {
 "_editor_description_": "-Moves Forward in straight line
@@ -55,7 +55,7 @@ script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": "[Controls Velocity]"
 }
-_speed = 300.0
+_speed = 250.0
 
 [node name="Wait" type="Node" parent="Sequence/ShootP-LV01a/Sequence"]
 script = ExtResource( 5 )

@@ -9,7 +9,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=7]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=8]
 
-[node name="Meteor" type="Node"]
+[node name="MeteorAI" type="Node"]
 script = ExtResource( 8 )
 __meta__ = {
 "_editor_description_": "-Moves Forward in straight line
@@ -29,6 +29,7 @@ script = ExtResource( 7 )
 
 [node name="Repeater" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
+amount = -1
 
 [node name="Sequence" type="Node" parent="Parallel/Repeater"]
 script = ExtResource( 3 )

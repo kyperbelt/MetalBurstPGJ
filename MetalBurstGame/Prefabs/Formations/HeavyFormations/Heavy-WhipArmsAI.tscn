@@ -10,7 +10,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=8]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=9]
 
-[node name="WhipArms" type="Node"]
+[node name="WhipArmsAI" type="Node"]
 script = ExtResource( 8 )
 __meta__ = {
 "_editor_description_": ""

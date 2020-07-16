@@ -13,7 +13,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=11]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=12]
 
-[node name="L2F3-a" type="Node2D"]
+[node name="H-Caterpillar" type="Node2D"]
 script = ExtResource( 3 )
 __meta__ = {
 "_editor_description_": "[Duplicate this thing to start a formation]
@@ -42,6 +42,9 @@ texture = ExtResource( 7 )
 
 [node name="EmberBlue" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -50 )
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="Brain" type="Node" parent="EmberBlue"]
 script = ExtResource( 12 )

@@ -6,7 +6,7 @@
 [ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-Arrowhead3-AI.tscn" type="PackedScene" id=7]
 
-[node name="SpawnEvent" type="Node2D"]
+[node name="Arrowhead3" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": "[Duplicate this thing to start a formation]
@@ -36,12 +36,18 @@ texture = ExtResource( 2 )
 [node name="TinyEmberBlueR1" parent="." instance=ExtResource( 3 )]
 position = Vector2( 30, -30 )
 rotation = -0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="L1F4-SwarmA" parent="TinyEmberBlueR1" instance=ExtResource( 7 )]
 
 [node name="TinyEmberRedR2" parent="." instance=ExtResource( 4 )]
 position = Vector2( 60, -60 )
 rotation = -0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="L1F4-SwarmA" parent="TinyEmberRedR2" instance=ExtResource( 7 )]
 
@@ -51,12 +57,18 @@ delay = 1.0
 [node name="TinyEmberBlueR3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 90, -90 )
 rotation = -0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="L1F4-SwarmA" parent="TinyEmberBlueR3" instance=ExtResource( 7 )]
 
 [node name="TinyEmberRedR4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 120, -120 )
 rotation = -0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="L1F4-SwarmA" parent="TinyEmberRedR4" instance=ExtResource( 7 )]
 
@@ -66,12 +78,18 @@ delay = 1.0
 [node name="TinyEmberBlueL1" parent="." instance=ExtResource( 3 )]
 position = Vector2( -30, -30 )
 rotation = 0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="L1F4-SwarmA" parent="TinyEmberBlueL1" instance=ExtResource( 7 )]
 
 [node name="TinyEmberRedL2" parent="." instance=ExtResource( 4 )]
 position = Vector2( -60, -60 )
 rotation = 0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="L1F4-SwarmA" parent="TinyEmberRedL2" instance=ExtResource( 7 )]
 
@@ -81,12 +99,18 @@ delay = 1.0
 [node name="TinyEmberBlueL3" parent="." instance=ExtResource( 3 )]
 position = Vector2( -90, -90 )
 rotation = 0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="L1F4-SwarmA" parent="TinyEmberBlueL3" instance=ExtResource( 7 )]
 
 [node name="TinyEmberRedL4" parent="." instance=ExtResource( 4 )]
 position = Vector2( -120, -120 )
 rotation = 0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="L1F4-SwarmA" parent="TinyEmberRedL4" instance=ExtResource( 7 )]
 

@@ -5,8 +5,7 @@
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=3]
 [ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-MeteorAI.tscn" type="PackedScene" id=4]
 
-
-[node name="SpawnEvent" type="Node2D"]
+[node name="H-Meteor" type="Node2D"]
 script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": "[Duplicate this thing to start a formation]
@@ -36,11 +35,17 @@ texture = ExtResource( 3 )
 [node name="EmberBlue" parent="." instance=ExtResource( 1 )]
 position = Vector2( -160, -40 )
 rotation = -0.174533
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="Meteor" parent="EmberBlue" instance=ExtResource( 4 )]
 
 [node name="EmberBlue2" parent="." instance=ExtResource( 1 )]
 position = Vector2( 160, -40 )
 rotation = 0.174533
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="Meteor" parent="EmberBlue2" instance=ExtResource( 4 )]

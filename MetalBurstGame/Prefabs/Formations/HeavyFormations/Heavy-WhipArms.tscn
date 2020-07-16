@@ -5,7 +5,7 @@
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=3]
 [ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-WhipArmsAI.tscn" type="PackedScene" id=4]
 
-[node name="Heavy-WhipArms" type="Node2D"]
+[node name="H-WhipArms" type="Node2D"]
 script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": "[Duplicate this thing to start a formation]
@@ -34,10 +34,16 @@ texture = ExtResource( 3 )
 
 [node name="EmberRedL" parent="." instance=ExtResource( 1 )]
 position = Vector2( -120, -40 )
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="WhipArms" parent="EmberRedL" instance=ExtResource( 4 )]
 
 [node name="EmberRedR" parent="." instance=ExtResource( 1 )]
 position = Vector2( 120, -40 )
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
 
 [node name="WhipArms" parent="EmberRedR" instance=ExtResource( 4 )]
