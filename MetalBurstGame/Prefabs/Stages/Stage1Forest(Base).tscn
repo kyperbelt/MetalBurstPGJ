@@ -16,13 +16,6 @@
 [ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-RandoSpread.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=15]
 
-
-
-
-
-
-
-
 [node name="RootNode" type="Node"]
 
 [node name="AudioManager" parent="." instance=ExtResource( 15 )]
@@ -83,6 +76,18 @@ Right Edge = \"x = 320\"
 68(03) - Outro - y=-3400"
 }
 
+[node name="SoundEvent" parent="StageDirector" instance=ExtResource( 10 )]
+position = Vector2( 0, -50 )
+B_A_S_E = ""
+event_time = 0.983871
+P_O_S_I_T_O_N = ""
+override_time = false
+S_O_U_N_D = ""
+_soundName = "bgm_Stage1"
+_soundType = 1
+_eventType = 0
+_volume = -4.0
+
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 0, -6200 )
 B_A_S_E = ""
@@ -95,55 +100,106 @@ Target = ExtResource( 8 )
 
 [node name="SpawnEvent11" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -3040.68 )
+B_A_S_E = ""
 event_time = 59.8327
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="SpawnEvent10" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -2778.84 )
+B_A_S_E = ""
 event_time = 54.6804
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="SpawnEvent9" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -2490.44 )
+B_A_S_E = ""
 event_time = 49.0054
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="SpawnEvent8" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -2228.6 )
+B_A_S_E = ""
 event_time = 43.8531
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="SpawnEvent7" parent="StageDirector" instance=ExtResource( 11 )]
 position = Vector2( 0, -1954.12 )
+B_A_S_E = ""
 event_time = 38.452
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="SpawnEvent6" parent="StageDirector" instance=ExtResource( 11 )]
 position = Vector2( 0, -1669.51 )
+B_A_S_E = ""
 event_time = 32.8517
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="SpawnEvent5" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -320, -1403.06 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
+B_A_S_E = ""
 event_time = 27.6086
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="SpawnEvent4" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 320, -1132.76 )
+B_A_S_E = ""
 event_time = 22.2898
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 320.0
 
 [node name="SpawnEvent2" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -320, -575.803 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
+B_A_S_E = ""
 event_time = 11.3303
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="SpawnEvent3" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 320, -305.5 )
+B_A_S_E = ""
 event_time = 6.01145
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 320.0
 
 [node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 11 )]
 position = Vector2( 0, -872.607 )
+B_A_S_E = ""
 event_time = 17.1707
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="[Mark]-Transition" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 0.992157, 1, 0, 1 )
@@ -248,10 +304,5 @@ event_time = 0.0
 spawn_x = -320.0
 
 [node name="EmberA" parent="StageDirector/[Mark]Intro1" instance=ExtResource( 2 )]
-
-[node name="SoundEvent" parent="StageDirector" instance=ExtResource( 10 )]
-position = Vector2( 0, -50 )
-event_time = 0.983871
-_soundName = "bgm_Stage1"
 
 [editable path="StageDirector"]

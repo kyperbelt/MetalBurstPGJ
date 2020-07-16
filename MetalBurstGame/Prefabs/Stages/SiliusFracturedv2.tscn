@@ -16,15 +16,6 @@
 [ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-Meteor.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=15]
 
-
-
-
-
-
-
-
-
-
 [node name="RootNode" type="Node"]
 
 [node name="AudioManager" parent="." instance=ExtResource( 15 )]
@@ -133,19 +124,39 @@ spawn_x = -320.0
 
 [node name="Melody2c" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -1700 )
+B_A_S_E = ""
 event_time = 34.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Melody2" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( 0, -1550 )
+B_A_S_E = ""
 event_time = 31.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Melody1c" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -1400 )
+B_A_S_E = ""
 event_time = 28.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Melody1" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( 0, -1275 )
+B_A_S_E = ""
 event_time = 25.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="[Mark]Melody" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
@@ -165,11 +176,21 @@ spawn_x = 160.0
 
 [node name="BuildUp2" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 0, -1000 )
+B_A_S_E = ""
 event_time = 20.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="BuildUp1" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 0, -750 )
+B_A_S_E = ""
 event_time = 15.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="[Mark]BuildUp" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
@@ -185,12 +206,20 @@ spawn_x = -320.0
 
 [node name="Intro3L" parent="StageDirector" instance=ExtResource( 11 )]
 position = Vector2( -280, -275 )
+B_A_S_E = ""
 event_time = 5.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -280.0
 
 [node name="Intro1R" parent="StageDirector" instance=ExtResource( 10 )]
 position = Vector2( 280, -25 )
+B_A_S_E = ""
 event_time = 0.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 280.0
 
 [node name="[Mark]Intro1" parent="StageDirector" instance=ExtResource( 9 )]
@@ -201,7 +230,14 @@ spawn_x = -320.0
 
 [node name="SoundEvent" parent="StageDirector" instance=ExtResource( 2 )]
 position = Vector2( 0, 50 )
+B_A_S_E = ""
 event_time = -1.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_O_U_N_D = ""
 _soundName = "bgm_testStage1"
+_soundType = 1
+_eventType = 0
+_volume = -6.0
 
 [editable path="StageDirector"]
