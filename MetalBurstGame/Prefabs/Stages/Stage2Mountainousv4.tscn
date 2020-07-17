@@ -88,6 +88,67 @@ event_time = 152.0
 
 [node name="Marks" type="Node" parent="StageDirector"]
 
+[node name="[12]ThrashReprise2" parent="StageDirector/Marks" instance=ExtResource( 8 )]
+modulate = Color( 0, 0.764706, 1, 1 )
+position = Vector2( 320, -6850 )
+spawn_x = 320.0
+
+[node name="[11]ThrashReprise" parent="StageDirector/Marks" instance=ExtResource( 8 )]
+modulate = Color( 0, 0.764706, 1, 1 )
+position = Vector2( 320, -6325 )
+event_time = 126.5
+spawn_x = 320.0
+
+[node name="[10]CooldownRunoff" parent="StageDirector/Marks" instance=ExtResource( 8 )]
+modulate = Color( 0, 0.764706, 1, 1 )
+position = Vector2( 320, -5675 )
+spawn_x = 320.0
+
+[node name="[09]Melody2" parent="StageDirector/Marks" instance=ExtResource( 8 )]
+modulate = Color( 0, 0.764706, 1, 1 )
+position = Vector2( 320, -5150 )
+spawn_x = 320.0
+
+[node name="[08]Thrash2" parent="StageDirector/Marks" instance=ExtResource( 8 )]
+modulate = Color( 0, 0.764706, 1, 1 )
+position = Vector2( 320, -4475 )
+spawn_x = 320.0
+
+[node name="[07]Thrash" parent="StageDirector/Marks" instance=ExtResource( 8 )]
+modulate = Color( 0, 0.764706, 1, 1 )
+position = Vector2( 320, -3800 )
+spawn_x = 320.0
+
+[node name="[06]BuildUpTransition2" parent="StageDirector/Marks" instance=ExtResource( 8 )]
+modulate = Color( 0, 0.764706, 1, 1 )
+position = Vector2( 320, -3225 )
+spawn_x = 320.0
+
+[node name="[05]BuildUp2" parent="StageDirector/Marks" instance=ExtResource( 8 )]
+modulate = Color( 0, 0.764706, 1, 1 )
+position = Vector2( 320, -2700 )
+spawn_x = 320.0
+
+[node name="[04]Melody" parent="StageDirector/Marks" instance=ExtResource( 8 )]
+modulate = Color( 0, 0.764706, 1, 1 )
+position = Vector2( 320, -2200 )
+spawn_x = 320.0
+
+[node name="[03]BuildUpTransition" parent="StageDirector/Marks" instance=ExtResource( 8 )]
+modulate = Color( 0, 0.764706, 1, 1 )
+position = Vector2( 320, -1650 )
+spawn_x = 320.0
+
+[node name="[02]BuildUp" parent="StageDirector/Marks" instance=ExtResource( 8 )]
+modulate = Color( 0, 0.764706, 1, 1 )
+position = Vector2( 320, -1100 )
+spawn_x = 320.0
+
+[node name="[01]IntroMelody" parent="StageDirector/Marks" instance=ExtResource( 8 )]
+modulate = Color( 0, 0.764706, 1, 1 )
+position = Vector2( 320, -600 )
+spawn_x = 320.0
+
 [node name="[Mark]Min6" parent="StageDirector/Marks" instance=ExtResource( 8 )]
 modulate = Color( 0.639216, 0, 1, 1 )
 position = Vector2( 320, -18000 )
@@ -141,12 +202,6 @@ _soundName = "bgm_Stage2"
 _soundType = 1
 _eventType = 0
 _volume = 4.0
-
-[node name="[]Intro-C4" parent="StageDirector" instance=ExtResource( 8 )]
-modulate = Color( 0, 0.764706, 1, 1 )
-position = Vector2( -320, -600 )
-event_time = 12.0
-spawn_x = -320.0
 
 [node name="Arrowhead8" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( 0, -7200 )
@@ -230,113 +285,109 @@ event_time = 108.0
 
 [node name="H-Meteor2" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( 0, -5200 )
+event_time = 104.0
 
 [node name="H-RandoSpread2" parent="StageDirector" instance=ExtResource( 20 )]
 position = Vector2( 0, -5000 )
+event_time = 100.0
 
 [node name="H-Meteor" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( 0, -4800 )
+event_time = 96.0
 
 [node name="H-RandoSpread" parent="StageDirector" instance=ExtResource( 20 )]
 position = Vector2( 0, -4600 )
+event_time = 92.0
 
 [node name="H-Caterpillar5" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( 180, -4400 )
+event_time = 88.0
 spawn_x = 180.0
 
 [node name="H-Caterpillar4" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( -180, -4400 )
+event_time = 88.0
 spawn_x = -180.0
 
 [node name="H-Caterpillar3" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( 180, -4200 )
+event_time = 84.0
 spawn_x = 180.0
 
 [node name="H-Caterpillar2" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( -180, -4000 )
+event_time = 80.0
 spawn_x = -180.0
 
 [node name="H-Caterpillar" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( 0, -3800 )
+event_time = 76.0
 
 [node name="SideEnter4" parent="StageDirector" instance=ExtResource( 15 )]
 position = Vector2( 0, -3600 )
+event_time = 72.0
 
 [node name="SideEnter3" parent="StageDirector" instance=ExtResource( 15 )]
 position = Vector2( 0, -3400 )
+event_time = 68.0
 
 [node name="SideEnter2" parent="StageDirector" instance=ExtResource( 15 )]
 position = Vector2( 0, -3200 )
-
-[node name="SideEnter" parent="StageDirector" instance=ExtResource( 15 )]
-position = Vector2( 0, -3000 )
+event_time = 64.0
 
 [node name="SideEnterR2" parent="StageDirector" instance=ExtResource( 17 )]
-position = Vector2( 0, -2800 )
+position = Vector2( 0, -2950 )
+event_time = 59.0
 
 [node name="SideEnterL2" parent="StageDirector" instance=ExtResource( 16 )]
-position = Vector2( 0, -2600 )
+position = Vector2( 0, -2700 )
+event_time = 54.0
 
-[node name="SideEnterR" parent="StageDirector" instance=ExtResource( 17 )]
-position = Vector2( 0, -2400 )
+[node name="H-Caterpillar8" parent="StageDirector" instance=ExtResource( 18 )]
+position = Vector2( 180, -2450 )
+spawn_x = 180.0
 
-[node name="SideEnterL" parent="StageDirector" instance=ExtResource( 16 )]
+[node name="H-Caterpillar7" parent="StageDirector" instance=ExtResource( 18 )]
+position = Vector2( -180, -2450 )
+spawn_x = -180.0
+
+[node name="H-Caterpillar6" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( 0, -2200 )
 
+[node name="Arrowhead14" parent="StageDirector" instance=ExtResource( 13 )]
+position = Vector2( 0, -1900 )
+event_time = 38.0
+
 [node name="Arrowhead6" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -160, -2000 )
-event_time = 40.0
+position = Vector2( -160, -1700 )
+event_time = 34.0
 spawn_x = -160.0
 
 [node name="Arrowhead5" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( 160, -1800 )
-event_time = 36.0
+position = Vector2( 160, -1500 )
+event_time = 30.0
 spawn_x = 160.0
 
 [node name="Arrowhead4" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -160, -1600 )
-event_time = 32.0
+position = Vector2( -160, -1300 )
+event_time = 26.0
 spawn_x = -160.0
 
 [node name="Arrowhead3" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( 160, -1400 )
-event_time = 28.0
+position = Vector2( 160, -1100 )
+event_time = 22.0
 spawn_x = 160.0
 
-[node name="CurveArcL5" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -230, -1200 )
-rotation = 3.14159
-scale = Vector2( 1, -1 )
-event_time = 24.0
-spawn_x = -230.0
-
-[node name="CurveArcR5" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 230, -1200 )
-event_time = 24.0
-spawn_x = 230.0
-
-[node name="CurveArcL4" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -230, -1000 )
-rotation = -3.14159
-scale = Vector2( 1, -1 )
-event_time = 20.0
-spawn_x = -230.0
-
-[node name="CurveArcR4" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 230, -1000 )
-event_time = 20.0
-spawn_x = 230.0
-
 [node name="CurveArcL3" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -230, -800 )
+position = Vector2( -230, -850 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-event_time = 16.0
+event_time = 17.0
 spawn_x = -230.0
 
 [node name="CurveArcR3" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 230, -800 )
-event_time = 16.0
+position = Vector2( 230, -850 )
+event_time = 17.0
 spawn_x = 230.0
 
 [node name="CurveArcL2" parent="StageDirector" instance=ExtResource( 14 )]
