@@ -1,13 +1,17 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
-[ext_resource path="res://Prefabs/Bosses/CrabBoss.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2AI-RedSpin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Enemies/SpinnerBlue.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Enemies/SpinnerRed.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Enemies/EmberBlue.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2AI-EmberBlue.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2AI-BlueSpin.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2AI-EmberRed.tscn" type="PackedScene" id=10]
 
-[node name="SpawnEvent" type="Node2D"]
+[node name="Midboss2" type="Node2D"]
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": "[Duplicate this thing to start a formation]
@@ -31,44 +35,120 @@ FIRING REFERNCES
 }
 event_time = null
 
+[node name="DPS Notes" type="Node" parent="."]
+__meta__ = {
+"_editor_description_": "Player DPS:
+Cooldown = 0.125 ; 8 shots per second
+Damage = 75
+DPS = 600
+
+Total Encounter Length = 27 Seconds
+
+Total HP Value of all foes in formation = 16200
+1200 = HP of all Units
+6 Red Embers
+3 Blue Embers
+4 Red Spinners
+1 Blue Spinner"
+}
+
 [node name="placeholder" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="CrabBoss" parent="." instance=ExtResource( 3 )]
-visible = false
-position = Vector2( 0, -70 )
-_maxSpeed = 100.0
-_maxHealth = 100.0
-_fireRate = 2.0
-_despawnDistance = 600.0
-_scoreValue = 100
+[node name="EmberRed3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -264, -50 )
+_maxHealth = 1200.0
+_scoreValue = 2500
 
-[node name="EmberRed" parent="." instance=ExtResource( 4 )]
-position = Vector2( 64, -50 )
-_fireRate = 2.0
-_despawnDistance = 600.0
-_scoreValue = 100
+[node name="Midboss2AI-EmberRed" parent="EmberRed3" instance=ExtResource( 10 )]
+
+[node name="EmberRed4" parent="." instance=ExtResource( 4 )]
+position = Vector2( -164, -50 )
+_maxHealth = 1200.0
+_scoreValue = 2500
+
+[node name="Midboss2AI-EmberRed" parent="EmberRed4" instance=ExtResource( 10 )]
 
 [node name="EmberRed2" parent="." instance=ExtResource( 4 )]
 position = Vector2( -64, -50 )
-_fireRate = 2.0
-_despawnDistance = 600.0
-_scoreValue = 100
+_maxHealth = 1200.0
+_scoreValue = 2500
 
-[node name="SpinnerBlue" parent="." instance=ExtResource( 5 )]
-position = Vector2( 0, -110 )
-_fireRate = 2.0
-_despawnDistance = 600.0
-_scoreValue = 100
+[node name="Midboss2AI-EmberRed" parent="EmberRed2" instance=ExtResource( 10 )]
+
+[node name="EmberRed" parent="." instance=ExtResource( 4 )]
+position = Vector2( 64, -50 )
+_maxHealth = 1200.0
+_scoreValue = 2500
+
+[node name="Midboss2AI-EmberRed" parent="EmberRed" instance=ExtResource( 10 )]
+
+[node name="EmberRed5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 164, -50 )
+_maxHealth = 1200.0
+_scoreValue = 2500
+
+[node name="Midboss2AI-EmberRed" parent="EmberRed5" instance=ExtResource( 10 )]
+
+[node name="EmberRed6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 264, -50 )
+_maxHealth = 1200.0
+_scoreValue = 2500
+
+[node name="Midboss2AI-EmberRed" parent="EmberRed6" instance=ExtResource( 10 )]
 
 [node name="SpinnerRed" parent="." instance=ExtResource( 6 )]
-position = Vector2( 100, -110 )
-_fireRate = 2.0
-_despawnDistance = 600.0
-_scoreValue = 100
+position = Vector2( -164, -120 )
+_maxHealth = 1200.0
+_scoreValue = 2500
+
+[node name="Midboss2AI-RedSpinner" parent="SpinnerRed" instance=ExtResource( 3 )]
 
 [node name="SpinnerRed2" parent="." instance=ExtResource( 6 )]
-position = Vector2( -100, -110 )
-_fireRate = 2.0
-_despawnDistance = 600.0
-_scoreValue = 100
+position = Vector2( -64, -120 )
+_maxHealth = 1200.0
+_scoreValue = 2500
+
+[node name="Midboss2AI-RedSpinner" parent="SpinnerRed2" instance=ExtResource( 3 )]
+
+[node name="SpinnerRed4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 164, -120 )
+_maxHealth = 1200.0
+_scoreValue = 2500
+
+[node name="Midboss2AI-RedSpinner" parent="SpinnerRed4" instance=ExtResource( 3 )]
+
+[node name="SpinnerRed3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 64, -120 )
+_maxHealth = 1200.0
+_scoreValue = 2500
+
+[node name="Midboss2AI-RedSpinner" parent="SpinnerRed3" instance=ExtResource( 3 )]
+
+[node name="SpinnerBlue" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, -170 )
+_maxHealth = 1200.0
+_scoreValue = 2500
+
+[node name="Midboss2AI-BlueSpinner" parent="SpinnerBlue" instance=ExtResource( 9 )]
+
+[node name="EmberBlue3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 0, -95 )
+_maxHealth = 1200.0
+_scoreValue = 2500
+
+[node name="Midboss2AI-EmberBlue" parent="EmberBlue3" instance=ExtResource( 8 )]
+
+[node name="EmberBlue2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 0, -65 )
+_maxHealth = 1200.0
+_scoreValue = 2500
+
+[node name="Midboss2AI-EmberBlue" parent="EmberBlue2" instance=ExtResource( 8 )]
+
+[node name="EmberBlue" parent="." instance=ExtResource( 7 )]
+position = Vector2( 0, -35 )
+_maxHealth = 1200.0
+_scoreValue = 2500
+
+[node name="Midboss2AI-EmberBlue" parent="EmberBlue" instance=ExtResource( 8 )]
