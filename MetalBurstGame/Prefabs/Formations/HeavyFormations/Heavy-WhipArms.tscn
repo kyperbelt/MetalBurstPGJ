@@ -32,18 +32,8 @@ event_time = null
 [node name="placeholder" type="Sprite" parent="."]
 texture = ExtResource( 3 )
 
-[node name="EmberRedL" parent="." instance=ExtResource( 1 )]
-position = Vector2( -120, -40 )
-_fireRate = 2.0
-_despawnDistance = 600.0
+[node name="EmberRed" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, -40 )
 _scoreValue = 100
 
-[node name="WhipArms" parent="EmberRedL" instance=ExtResource( 4 )]
-
-[node name="EmberRedR" parent="." instance=ExtResource( 1 )]
-position = Vector2( 120, -40 )
-_fireRate = 2.0
-_despawnDistance = 600.0
-_scoreValue = 100
-
-[node name="WhipArms" parent="EmberRedR" instance=ExtResource( 4 )]
+[node name="WhipArms" parent="EmberRed" instance=ExtResource( 4 )]
