@@ -5,7 +5,7 @@
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Formations/AiPlaygroundSpawns/FiringTests.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=14]
 
 [node name="Playground" type="Node"]
@@ -47,7 +47,7 @@ spawn_x = -321.935
 [node name="FiringTests" parent="StageDirector" instance=ExtResource( 5 )]
 event_time = 0.0
 
-[node name="Midboss2" parent="StageDirector" instance=ExtResource( 6 )]
+[node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 6 )]
 position = Vector2( 0, -250 )
 event_time = 5.0
 

@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1AI(Base).tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=6]
+
+[node name="BlueSpinnerAI" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Midboss1AI-Base" parent="." instance=ExtResource( 2 )]
+
+[node name="Repeater" type="Node" parent="Midboss1AI-Base/Parallel" index="1"]
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": "1 Fire Sequence about 3 Sec?"
+}
+amount = 8
+
+[node name="Sequence" type="Node" parent="Midboss1AI-Base/Parallel/Repeater"]
+script = ExtResource( 6 )
+
+[node name="Repeater" type="Node" parent="Midboss1AI-Base/Parallel/Repeater/Sequence"]
+script = ExtResource( 3 )
+amount = 7
+
+[node name="Sequence" type="Node" parent="Midboss1AI-Base/Parallel/Repeater/Sequence/Repeater"]
+script = ExtResource( 6 )
+
+[node name="ShootAngle" type="Node" parent="Midboss1AI-Base/Parallel/Repeater/Sequence/Repeater/Sequence"]
+script = ExtResource( 5 )
+_speed = 120.0
+
+[node name="Wait2" type="Node" parent="Midboss1AI-Base/Parallel/Repeater/Sequence/Repeater/Sequence"]
+script = ExtResource( 4 )
+delay = 0.1
+
+[node name="Wait" type="Node" parent="Midboss1AI-Base/Parallel/Repeater/Sequence"]
+script = ExtResource( 4 )
+delay = 2.0
+
+[editable path="Midboss1AI-Base"]

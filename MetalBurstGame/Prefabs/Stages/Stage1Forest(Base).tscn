@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-WhipArms.tscn" type="PackedScene" id=2]
@@ -10,16 +10,18 @@
 [ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SoundEvent.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-Meteor.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/Formations/CrossFormations/XPluss.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-CurveArcR.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-CurveArcL.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnterR.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Formations/CrossFormations/SideEnterL.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=15]
-[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnter.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnterL.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Prefabs/Formations/CrossFormations/SideEnterR.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1.tscn" type="PackedScene" id=17]
 
 [node name="RootNode" type="Node"]
+__meta__ = {
+"_editor_description_": "Max Score = About 47600"
+}
 
 [node name="AudioManager" parent="." instance=ExtResource( 15 )]
 
@@ -161,50 +163,61 @@ E_N_D = ""
 delay = 0.0
 Target = ExtResource( 8 )
 
-[node name="Midboss2" parent="StageDirector" instance=ExtResource( 18 )]
-position = Vector2( -3.76782, -3307.17 )
-spawn_x = -3.76782
+[node name="Midboss1" parent="StageDirector" instance=ExtResource( 17 )]
+position = Vector2( 0, -3300 )
 
-[node name="SideEnter3" parent="StageDirector" instance=ExtResource( 16 )]
-position = Vector2( -1.60938, -3083.79 )
-spawn_x = -1.60938
+[node name="CurveArcL7" parent="StageDirector" instance=ExtResource( 13 )]
+position = Vector2( -249.271, -3087.75 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+event_time = 61.755
+spawn_x = -249.271
 
-[node name="SideEnter2" parent="StageDirector" instance=ExtResource( 16 )]
-position = Vector2( -3.76782, -2903.85 )
-spawn_x = -3.76782
+[node name="CurveArcR7" parent="StageDirector" instance=ExtResource( 12 )]
+position = Vector2( 236.951, -2947.94 )
+event_time = 58.9588
+spawn_x = 236.951
 
-[node name="H-Meteor" parent="StageDirector" instance=ExtResource( 11 )]
-position = Vector2( 3.52594, -2743.23 )
-spawn_x = 3.52594
+[node name="Cross-XPluss" parent="StageDirector" instance=ExtResource( 11 )]
+position = Vector2( 0, -2739.75 )
+event_time = 54.7951
 
-[node name="SideEnter" parent="StageDirector" instance=ExtResource( 16 )]
-position = Vector2( 0.549072, -2512.79 )
-spawn_x = 0.549072
+[node name="Cross-SideEnterL2" parent="StageDirector" instance=ExtResource( 14 )]
+position = Vector2( 0, -2557.26 )
+event_time = 51.1451
 
-[node name="SideEnterL" parent="StageDirector" instance=ExtResource( 17 )]
-position = Vector2( -3.76782, -2364.81 )
-spawn_x = -3.76782
+[node name="Cross-SideEnterR2" parent="StageDirector" instance=ExtResource( 16 )]
+position = Vector2( 0, -2516.25 )
+event_time = 50.3249
 
-[node name="SideEnterR" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( 0.549133, -2219.31 )
-spawn_x = 0.549133
+[node name="Cross-SideEnterL" parent="StageDirector" instance=ExtResource( 14 )]
+position = Vector2( 0, -2370.66 )
+event_time = 47.4132
+
+[node name="Cross-SideEnterR" parent="StageDirector" instance=ExtResource( 16 )]
+position = Vector2( 0, -2224.18 )
+event_time = 44.4836
 
 [node name="H-WhipArms4" parent="StageDirector" instance=ExtResource( 2 )]
 position = Vector2( -155.976, -1907.41 )
+event_time = 38.1482
 spawn_x = -155.976
 
 [node name="H-WhipArms5" parent="StageDirector" instance=ExtResource( 2 )]
 position = Vector2( 167.794, -1900.93 )
+event_time = 38.0186
 spawn_x = 167.794
 
 [node name="CurveArcL6" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -231.522, -2028.28 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
+event_time = 40.5656
 spawn_x = -231.522
 
 [node name="CurveArcR6" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 234.706, -2036.92 )
+event_time = 40.7384
 spawn_x = 234.706
 
 [node name="H-WhipArms3" parent="StageDirector" instance=ExtResource( 2 )]
@@ -216,6 +229,7 @@ spawn_x = 216.105
 position = Vector2( -166.768, -1643.74 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
+event_time = 32.8748
 spawn_x = -166.768
 
 [node name="H-WhipArms2" parent="StageDirector" instance=ExtResource( 2 )]
@@ -225,6 +239,7 @@ spawn_x = -183.21
 
 [node name="CurveArcR5" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 221.464, -1361.39 )
+event_time = 27.2278
 spawn_x = 221.464
 
 [node name="H-WhipArms" parent="StageDirector" instance=ExtResource( 2 )]

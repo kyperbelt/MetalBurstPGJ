@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Enemies/SpinnerRed.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Enemies/SpinnerBlue.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Formations/CrossFormations/SideEnter-AI.tscn" type="PackedScene" id=5]
+
+[node name="Cross-SideEnterR" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="SpinnerBlue2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 425, 50 )
+rotation = 1.5708
+
+[node name="SideEnterAI" parent="SpinnerBlue2" instance=ExtResource( 5 )]
+
+[node name="SpinnerRed2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 400, 100 )
+rotation = 1.5708
+
+[node name="SideEnterAI" parent="SpinnerRed2" instance=ExtResource( 5 )]
+
+[node name="SpinnerBlue" parent="." instance=ExtResource( 4 )]
+position = Vector2( 375, 150 )
+rotation = 1.5708
+
+[node name="SideEnterAI" parent="SpinnerBlue" instance=ExtResource( 5 )]
+
+[node name="SpinnerRed" parent="." instance=ExtResource( 3 )]
+position = Vector2( 350, 200 )
+rotation = 1.5708
+
+[node name="SideEnterAI" parent="SpinnerRed" instance=ExtResource( 5 )]

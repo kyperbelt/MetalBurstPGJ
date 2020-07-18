@@ -49,7 +49,10 @@ Total HP Value of all foes in formation = 16200
 6 Red Embers
 3 Blue Embers
 4 Red Spinners
-1 Blue Spinner"
+1 Blue Spinner
+
+Score Value = 2500 Per Enemy
+Score Value Total = 50000"
 }
 
 [node name="placeholder" type="Sprite" parent="."]
