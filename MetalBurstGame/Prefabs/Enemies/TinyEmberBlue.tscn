@@ -32,19 +32,5 @@ shape = SubResource( 1 )
 position = Vector2( 0, -7 )
 frames = ExtResource( 1 )
 animation = "TinyEmberBlue"
+frame = 2
 playing = true
-
-[node name="FoeHitSFX" type="AudioStreamPlayer" parent="."]
-__meta__ = {
-"_editor_description_": "*DELETE LATER*
--Audio manager will replace this
--This is here to make sure \"SimpleAI\" Script doesn't break
-"
-}
-
-[node name="FoeDeathSFX" type="AudioStreamPlayer" parent="."]
-__meta__ = {
-"_editor_description_": "*DELETE LATER*
--Audio manager will replace this
--This is here to make sure \"SimpleAI\" Script doesn't break"
-}

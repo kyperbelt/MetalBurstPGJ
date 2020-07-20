@@ -1,0 +1,70 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Enemies/TinyEmberBlue.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnter-AI.tscn" type="PackedScene" id=6]
+
+[node name="SideEnterL" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="TinyEmberBlue4" parent="." instance=ExtResource( 3 )]
+position = Vector2( -374.737, 65 )
+rotation = -1.57079
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
+
+[node name="L2F1" parent="TinyEmberBlue4" instance=ExtResource( 6 )]
+
+[node name="TinyEmberRed4" parent="." instance=ExtResource( 4 )]
+position = Vector2( -374.737, 112.241 )
+rotation = -1.57079
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
+
+[node name="L2F1" parent="TinyEmberRed4" instance=ExtResource( 6 )]
+
+[node name="TinyEmberBlue3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -340, 166.809 )
+rotation = -1.57079
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
+
+[node name="L2F1" parent="TinyEmberBlue3" instance=ExtResource( 6 )]
+
+[node name="TinyEmberRed3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -340, 214.331 )
+rotation = -1.57079
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
+
+[node name="L2F1" parent="TinyEmberRed3" instance=ExtResource( 6 )]

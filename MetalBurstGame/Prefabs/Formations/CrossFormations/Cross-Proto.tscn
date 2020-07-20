@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Enemies/SpinnerBlue.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Formations/CrossFormations/Cross-ProtoA-AI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Formations/CrossFormations/Cross-ProtoB-AI.tscn" type="PackedScene" id=5]
+
+
+
+[node name="L2F2" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="SpinnerA2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -192, -80 )
+rotation = -0.261799
+
+[node name="L2F2b" parent="SpinnerA2" instance=ExtResource( 5 )]
+
+[node name="SpinnerA" parent="." instance=ExtResource( 3 )]
+position = Vector2( -64, -60 )
+rotation = 0.261799
+
+[node name="L2F2a" parent="SpinnerA" instance=ExtResource( 4 )]
+
+[node name="SpinnerA3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 64, -50 )
+rotation = -0.261799
+
+[node name="L2F2a" parent="SpinnerA3" instance=ExtResource( 4 )]
+
+[node name="SpinnerA4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 192, -70 )
+rotation = 0.261799
+
+[node name="L2F2b" parent="SpinnerA4" instance=ExtResource( 5 )]
+
+[node name="SpinnerA8" parent="." instance=ExtResource( 3 )]
+position = Vector2( -187.919, -177.947 )
+rotation = -0.261799
+
+[node name="L2F2a" parent="SpinnerA8" instance=ExtResource( 4 )]
+
+[node name="SpinnerA7" parent="." instance=ExtResource( 3 )]
+position = Vector2( 63.8748, -147.064 )
+rotation = 0.261799
+
+[node name="L2F2b" parent="SpinnerA7" instance=ExtResource( 5 )]
+
+[node name="SpinnerA6" parent="." instance=ExtResource( 3 )]
+position = Vector2( -46.1901, -153.388 )
+rotation = -0.261799
+
+[node name="L2F2b" parent="SpinnerA6" instance=ExtResource( 5 )]
+
+[node name="SpinnerA5" parent="." instance=ExtResource( 3 )]
+position = Vector2( 186.559, -173.388 )
+rotation = 0.261799
+
+[node name="L2F2a" parent="SpinnerA5" instance=ExtResource( 4 )]

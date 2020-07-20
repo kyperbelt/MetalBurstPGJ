@@ -4,18 +4,18 @@
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Backgrounds/Stage2BG.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Audio/BGM/Stage2StageBGMv2 (Spliced).wav" type="AudioStream" id=5]
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Bosses/B3-ClamBossEvent.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Prefabs/Formations/L2F1.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Prefabs/Formations/L2F2.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Prefabs/Formations/L2F1b-right.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Prefabs/Formations/L2F1a-left.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Prefabs/Formations/L2F3-a.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnter.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/Formations/CrossFormations/Cross-Proto.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnterR.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnterL.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-Caterpillar.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SoundEvent.tscn" type="PackedScene" id=17]
 
 [node name="Stage2RootNode" type="Node"]
 
@@ -56,12 +56,6 @@ position = Vector2( -285.932, 0 )
 
 [node name="DustParticles" parent="Level" instance=ExtResource( 1 )]
 position = Vector2( -285.932, 0 )
-
-[node name="BGMstage2v2Spliced" type="AudioStreamPlayer" parent="Level"]
-stream = ExtResource( 5 )
-volume_db = 4.0
-autoplay = true
-bus = "Music"
 
 [node name="InformationDisplay" parent="Level" instance=ExtResource( 4 )]
 
@@ -361,5 +355,9 @@ modulate = Color( 0.639216, 0, 1, 1 )
 position = Vector2( -320, 0 )
 event_time = 0.0
 spawn_x = -320.0
+
+[node name="SoundEvent" parent="StageDirector" instance=ExtResource( 17 )]
+event_time = 0.0
+_soundName = "bgm_testStage2"
 
 [editable path="StageDirector"]

@@ -2,10 +2,13 @@ extends Node2D
 
 export(PackedScene) var TITLE_SCREEN
 
+var GameOverScore = Globals.get_player().score
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#ReimJ: Added to view score at GameOver
+	$Score.set_text("%010d" % GameOverScore)
 	pass # Replace with function body.
-
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
@@ -29,8 +32,6 @@ func selection_made(selection : int):
 		_:
 			print("%s is not a valid selection" % selection)
 	pass
-
-
 
 func _on_OptionsMenu_focus_entered():
 	$TitleAudioStreamPlayer.play()

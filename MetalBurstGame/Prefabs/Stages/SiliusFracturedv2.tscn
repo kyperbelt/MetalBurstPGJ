@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Assets/Audio/SiliusFractured/The Word Of Lawder - Fracture The Faultline - 10 Silius Fractured.ogg" type="AudioStream" id=2]
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SoundEvent.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Backgrounds/Stage1BG.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Backgrounds/DustParticles.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=5]
@@ -9,11 +9,11 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Prefabs/Formations/TinyEmberx4-Right.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Prefabs/Formations/TinyEmberx4-Left.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Prefabs/Formations/L1F4-8xTinyEmberSwarm.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Prefabs/Formations/L1F5-3xEmbers.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Prefabs/Formations/L1F7-2xMeteor.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-CurveArcR.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-CurveArcL.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-Arrowhead3.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-RandoSpread.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-Meteor.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=15]
 
 [node name="RootNode" type="Node"]
@@ -27,21 +27,6 @@ vertical_velocity = 40.0
 
 [node name="DustParticles" parent="Level" instance=ExtResource( 4 )]
 position = Vector2( -285.932, 0 )
-
-[node name="BGMmusic" type="AudioStreamPlayer" parent="Level"]
-stream = ExtResource( 2 )
-volume_db = -6.0
-autoplay = true
-bus = "Music"
-__meta__ = {
-"_editor_description_": "IMPORTANT NOTE:
--This is a metal remix by a person named \"Sinvicta\"
--The name of the remix is \"Silius Fractured\"
--The source game is \"Journey to Silius\"
--The original track was the stage 1/5 track
--This track is used for demonstration/testing purposes only
--It will not be in the final game"
-}
 
 [node name="InformationDisplay" parent="Level" instance=ExtResource( 5 )]
 
@@ -139,19 +124,39 @@ spawn_x = -320.0
 
 [node name="Melody2c" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -1700 )
+B_A_S_E = ""
 event_time = 34.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Melody2" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( 0, -1550 )
+B_A_S_E = ""
 event_time = 31.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Melody1c" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -1400 )
+B_A_S_E = ""
 event_time = 28.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Melody1" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( 0, -1275 )
+B_A_S_E = ""
 event_time = 25.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="[Mark]Melody" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
@@ -171,11 +176,21 @@ spawn_x = 160.0
 
 [node name="BuildUp2" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 0, -1000 )
+B_A_S_E = ""
 event_time = 20.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="BuildUp1" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 0, -750 )
+B_A_S_E = ""
 event_time = 15.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="[Mark]BuildUp" parent="StageDirector" instance=ExtResource( 9 )]
 modulate = Color( 1, 0, 0, 1 )
@@ -191,12 +206,20 @@ spawn_x = -320.0
 
 [node name="Intro3L" parent="StageDirector" instance=ExtResource( 11 )]
 position = Vector2( -280, -275 )
+B_A_S_E = ""
 event_time = 5.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -280.0
 
 [node name="Intro1R" parent="StageDirector" instance=ExtResource( 10 )]
 position = Vector2( 280, -25 )
+B_A_S_E = ""
 event_time = 0.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 280.0
 
 [node name="[Mark]Intro1" parent="StageDirector" instance=ExtResource( 9 )]
@@ -204,5 +227,17 @@ modulate = Color( 1, 0, 0, 1 )
 position = Vector2( -320, 0 )
 event_time = 0.0
 spawn_x = -320.0
+
+[node name="SoundEvent" parent="StageDirector" instance=ExtResource( 2 )]
+position = Vector2( 0, 50 )
+B_A_S_E = ""
+event_time = -1.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_O_U_N_D = ""
+_soundName = "bgm_testStage1"
+_soundType = 1
+_eventType = 0
+_volume = -6.0
 
 [editable path="StageDirector"]

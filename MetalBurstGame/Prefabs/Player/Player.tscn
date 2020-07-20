@@ -22,7 +22,15 @@ position = Vector2( 0, 18 )
 scale = Vector2( 1.25, 2 )
 texture = ExtResource( 3 )
 
-[node name="CoreV3a" type="Sprite" parent="."]
+[node name="CoreV3a(Blue)" type="Sprite" parent="."]
+modulate = Color( 0.501961, 0.741176, 1, 1 )
+position = Vector2( 0, 18 )
+scale = Vector2( 0.66, 0.66 )
+texture = ExtResource( 2 )
+
+[node name="CoreV3a(Green)" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0.5, 1, 0.75, 1 )
 position = Vector2( 0, 18 )
 scale = Vector2( 0.66, 0.66 )
 texture = ExtResource( 2 )
@@ -36,7 +44,7 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 6 )
 animation = "Glowing"
-frame = 1
+frame = 5
 playing = true
 
 [node name="PlayerCollisionArea" type="Area2D" parent="."]

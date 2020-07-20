@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=2]
+
+[node name="FirePluss" type="Node"]
+script = ExtResource( 2 )
+
+[node name="ShootAngle" type="Node" parent="."]
+script = ExtResource( 1 )
+_speed = 240.0
+
+[node name="ShootAngle2" type="Node" parent="."]
+script = ExtResource( 1 )
+_speed = 240.0
+_angle = 90.0
+
+[node name="ShootAngle3" type="Node" parent="."]
+script = ExtResource( 1 )
+_speed = 240.0
+_angle = 180.0
+
+[node name="ShootAngle4" type="Node" parent="."]
+script = ExtResource( 1 )
+_speed = 240.0
+_angle = 270.0

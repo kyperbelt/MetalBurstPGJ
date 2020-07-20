@@ -1,0 +1,126 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Enemies/TinyEmberBlue.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Enemies/TinyEmberRed.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-Arrowhead3-AI.tscn" type="PackedScene" id=7]
+
+[node name="Arrowhead3" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="TinyEmberBlueR1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 30, -30 )
+rotation = -0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
+
+[node name="L1F4-SwarmA" parent="TinyEmberBlueR1" instance=ExtResource( 7 )]
+
+[node name="TinyEmberRedR2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 60, -60 )
+rotation = -0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
+
+[node name="L1F4-SwarmA" parent="TinyEmberRedR2" instance=ExtResource( 7 )]
+
+[node name="PauseBeforeFire" parent="TinyEmberRedR2/L1F4-SwarmA/Sequence" index="2"]
+delay = 1.0
+
+[node name="TinyEmberBlueR3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 90, -90 )
+rotation = -0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
+
+[node name="L1F4-SwarmA" parent="TinyEmberBlueR3" instance=ExtResource( 7 )]
+
+[node name="TinyEmberRedR4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 120, -120 )
+rotation = -0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
+
+[node name="L1F4-SwarmA" parent="TinyEmberRedR4" instance=ExtResource( 7 )]
+
+[node name="PauseBeforeFire" parent="TinyEmberRedR4/L1F4-SwarmA/Sequence" index="2"]
+delay = 1.0
+
+[node name="TinyEmberBlueL1" parent="." instance=ExtResource( 3 )]
+position = Vector2( -30, -30 )
+rotation = 0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
+
+[node name="L1F4-SwarmA" parent="TinyEmberBlueL1" instance=ExtResource( 7 )]
+
+[node name="TinyEmberRedL2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -60, -60 )
+rotation = 0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
+
+[node name="L1F4-SwarmA" parent="TinyEmberRedL2" instance=ExtResource( 7 )]
+
+[node name="PauseBeforeFire" parent="TinyEmberRedL2/L1F4-SwarmA/Sequence" index="2"]
+delay = 1.0
+
+[node name="TinyEmberBlueL3" parent="." instance=ExtResource( 3 )]
+position = Vector2( -90, -90 )
+rotation = 0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
+
+[node name="L1F4-SwarmA" parent="TinyEmberBlueL3" instance=ExtResource( 7 )]
+
+[node name="TinyEmberRedL4" parent="." instance=ExtResource( 4 )]
+position = Vector2( -120, -120 )
+rotation = 0.0872665
+_fireRate = 2.0
+_despawnDistance = 600.0
+_scoreValue = 100
+
+[node name="L1F4-SwarmA" parent="TinyEmberRedL4" instance=ExtResource( 7 )]
+
+[node name="PauseBeforeFire" parent="TinyEmberRedL4/L1F4-SwarmA/Sequence" index="2"]
+delay = 1.0
+
+[editable path="TinyEmberRedR2/L1F4-SwarmA"]
+
+[editable path="TinyEmberRedR4/L1F4-SwarmA"]
+
+[editable path="TinyEmberRedL2/L1F4-SwarmA"]
+
+[editable path="TinyEmberRedL4/L1F4-SwarmA"]

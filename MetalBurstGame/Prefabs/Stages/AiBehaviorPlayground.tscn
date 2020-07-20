@@ -1,18 +1,11 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Formations/L2F1.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Prefabs/Bosses/B3-ClamBossEvent.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/Bosses/SpinFireTest.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Prefabs/Behaviors/TestBehaviors/InfinityLoopx6.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Prefabs/Formations/L2F3-a.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/[Test]Hang-Fire1.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Prefabs/Enemies/EmberBlue.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Prefabs/Enemies/EmberPurple.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Formations/AiPlaygroundSpawns/FiringTests.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=14]
 
 [node name="Playground" type="Node"]
@@ -38,56 +31,24 @@ hatch_marks = 3
 show_bounds = true
 bounds_color = Color( 1, 0, 0, 1 )
 T_U_N_I_N_G = ""
-duration = 20.0
+duration = 40.0
 D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
-position = Vector2( 643.419, -1000 )
+position = Vector2( 640, -2000 )
 
-[node name="Boss3" parent="StageDirector" instance=ExtResource( 6 )]
-position = Vector2( 0, -750 )
-event_time = 15.0
+[node name="[Mark] 30 Sec" parent="StageDirector" instance=ExtResource( 4 )]
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( -321.935, -1500 )
+event_time = 30.0
+spawn_x = -321.935
 
-[node name="[Mark] 15 Sec" parent="StageDirector" instance=ExtResource( 4 )]
-position = Vector2( 0, -750 )
-event_time = 15.0
+[node name="FiringTests" parent="StageDirector" instance=ExtResource( 5 )]
+event_time = 0.0
 
-[node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 9 )]
-position = Vector2( -1.42566, -249.572 )
-event_time = 4.99144
-spawn_x = -1.42566
-
-[node name="SpinFireTest" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 237.165, -600 )
-event_time = 12.0
-spawn_x = 237.165
-
-[node name="L2F1-8xSwarm" parent="StageDirector" instance=ExtResource( 5 )]
-position = Vector2( 0, -522.669 )
-event_time = 10.4534
-
-[node name="MoveTest - Center" parent="StageDirector" instance=ExtResource( 4 )]
-position = Vector2( 0, -375 )
-event_time = 7.5
-
-[node name="EmberPurple" parent="StageDirector/MoveTest - Center" instance=ExtResource( 13 )]
-position = Vector2( 0, -50 )
-
-[node name="InfinityLoopx6" parent="StageDirector/MoveTest - Center/EmberPurple" instance=ExtResource( 8 )]
-
-[node name="FireTest" parent="StageDirector" instance=ExtResource( 4 )]
-position = Vector2( 0, -125 )
-event_time = 2.5
-
-[node name="EmberRed" parent="StageDirector/FireTest" instance=ExtResource( 12 )]
-position = Vector2( 160, -50 )
-
-[node name="Hang-Fire1" parent="StageDirector/FireTest/EmberRed" instance=ExtResource( 10 )]
-
-[node name="EmberBlue" parent="StageDirector/FireTest" instance=ExtResource( 11 )]
-position = Vector2( -160, -50 )
-
-[node name="Hang-Fire1" parent="StageDirector/FireTest/EmberBlue" instance=ExtResource( 10 )]
+[node name="SpawnEvent" parent="StageDirector" instance=ExtResource( 6 )]
+position = Vector2( 0, -250 )
+event_time = 5.0
 
 [editable path="StageDirector"]
