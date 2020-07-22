@@ -7,7 +7,7 @@
 [node name="ClamBoss" type="Node2D"]
 script = ExtResource( 1 )
 _maxSpeed = 720.0
-_maxHealth = 12000.0
+_maxHealth = 1e+07
 
 [node name="Shadow" type="Sprite" parent="."]
 scale = Vector2( 1.125, 1.125 )

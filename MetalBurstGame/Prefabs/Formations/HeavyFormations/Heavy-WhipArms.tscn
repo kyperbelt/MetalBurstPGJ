@@ -34,6 +34,5 @@ texture = ExtResource( 3 )
 
 [node name="EmberRed" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -40 )
-_scoreValue = 100
 
 [node name="WhipArms" parent="EmberRed" instance=ExtResource( 4 )]

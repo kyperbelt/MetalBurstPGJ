@@ -45,7 +45,6 @@ texture = ExtResource( 2 )
 [node name="CrabBoss" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, -65 )
 _maxSpeed = 720.0
-_maxHealth = 3000.0
 
 [node name="Brain" type="Node" parent="CrabBoss"]
 script = ExtResource( 5 )

@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=4]
+
+[node name="5-Fingers" type="Node"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": "1 Cycle = 1 Sec
+Total = 10 Sec"
+}
+amount = 10
+
+[node name="Sequence" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="ShootAngle" type="Node" parent="Sequence"]
+script = ExtResource( 4 )
+_speed = 300.0
+
+[node name="ShootAngle2" type="Node" parent="Sequence"]
+script = ExtResource( 4 )
+_speed = 300.0
+_angle = 45.0
+
+[node name="ShootAngle3" type="Node" parent="Sequence"]
+script = ExtResource( 4 )
+_speed = 300.0
+_angle = -45.0
+
+[node name="ShootAngle4" type="Node" parent="Sequence"]
+script = ExtResource( 4 )
+_speed = 300.0
+_angle = 90.0
+
+[node name="ShootAngle5" type="Node" parent="Sequence"]
+script = ExtResource( 4 )
+_speed = 300.0
+_angle = -90.0
+
+[node name="Wait" type="Node" parent="Sequence"]
+script = ExtResource( 3 )
+delay = 1.0

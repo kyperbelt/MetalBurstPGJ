@@ -1,0 +1,69 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Enemies/SpinnerRed.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=8]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=9]
+[ext_resource path="res://Prefabs/Bosses/B1P-2Ball.tscn" type="PackedScene" id=10]
+
+[node name="B1-Support1" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="SpinnerRed" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -60 )
+
+[node name="Brain" type="Node" parent="SpinnerRed"]
+script = ExtResource( 5 )
+
+[node name="Parallel" type="Node" parent="SpinnerRed/Brain"]
+script = ExtResource( 4 )
+
+[node name="ChangeSpeed" type="Node" parent="SpinnerRed/Brain/Parallel"]
+script = ExtResource( 7 )
+_speed = 120.0
+
+[node name="MoveForward" type="Node" parent="SpinnerRed/Brain/Parallel"]
+script = ExtResource( 6 )
+
+[node name="Sequence" type="Node" parent="SpinnerRed/Brain/Parallel"]
+script = ExtResource( 8 )
+
+[node name="PauseBeforeFire" type="Node" parent="SpinnerRed/Brain/Parallel/Sequence"]
+script = ExtResource( 9 )
+delay = 1.0
+
+[node name="2-Ball" parent="SpinnerRed/Brain/Parallel/Sequence" instance=ExtResource( 10 )]
+amount = 1
+
+[node name="ChangeSpeed2" type="Node" parent="SpinnerRed/Brain/Parallel/Sequence"]
+script = ExtResource( 7 )
+_speed = 360.0
