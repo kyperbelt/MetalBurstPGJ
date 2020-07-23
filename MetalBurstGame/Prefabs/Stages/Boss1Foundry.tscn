@@ -151,22 +151,22 @@ Target = ExtResource( 8 )
 
 [node name="B1-Support12" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( -160, -4009.09 )
-event_time = 80.1819
+event_time = 80.1818
 spawn_x = -160.0
 
 [node name="B1-Support11" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 160, -3834.09 )
-event_time = 76.6819
+event_time = 76.6818
 spawn_x = 160.0
 
 [node name="B1-Support10" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( -160, -3659.09 )
-event_time = 73.1819
+event_time = 73.1818
 spawn_x = -160.0
 
 [node name="B1-Support9" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 160, -3484.09 )
-event_time = 69.6819
+event_time = 69.6818
 spawn_x = 160.0
 
 [node name="B1-Support8" parent="StageDirector" instance=ExtResource( 12 )]
@@ -210,6 +210,7 @@ spawn_x = -160.0
 
 [node name="B1-Support1" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 160, -2150 )
+event_time = 43.0
 spawn_x = 160.0
 
 [node name="B1Shrimp" parent="StageDirector" instance=ExtResource( 11 )]

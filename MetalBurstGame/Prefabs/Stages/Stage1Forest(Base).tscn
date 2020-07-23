@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-WhipArms.tscn" type="PackedScene" id=2]
@@ -17,6 +17,10 @@
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/Formations/CrossFormations/SideEnterR.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=18]
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=19]
+[ext_resource path="res://Prefabs/Bosses/B1-ShrimpBossEvent.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Prefabs/Bosses/B1-SupportEvent1.tscn" type="PackedScene" id=21]
 
 [node name="RootNode" type="Node"]
 __meta__ = {
@@ -39,31 +43,30 @@ position = Vector2( -285.932, 0 )
 position = Vector2( 640, 0 )
 G_U_I_D_E_S = ""
 show_timeline = true
-hatch_marks = 21
+hatch_marks = 45
 show_bounds = true
 bounds_color = Color( 1, 0, 0, 1 )
 T_U_N_I_N_G = ""
-duration = 122.0
+duration = 230.0
 D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
-position = Vector2( 640, -6100 )
+position = Vector2( 640, -11500 )
 
 [node name="NOTES" type="Node" parent="StageDirector"]
 __meta__ = {
 "_editor_description_": "[All markers are a tad bit early]
 
-
-
-
+230 seconds long
+11500 Y-Axis
+120 = Stage Music
+110 = Boss Music
 
 ###Links###
 -End of Stage links to GAME OVER
 
 ###Y-Transforms###
--70 seconds long
--\"END\" transform is \"y = -3500\"
 -10 Seconds = \"y = -500\"
 -1 Second = \"y = -50\"
 
@@ -142,7 +145,18 @@ modulate = Color( 0.996078, 0.572549, 0.572549, 1 )
 position = Vector2( 320, -550 )
 spawn_x = 320.0
 
+[node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
+position = Vector2( 0, -11500 )
+B_A_S_E = ""
+event_time = 230.0
+P_O_S_I_T_O_N = ""
+override_time = false
+E_N_D = ""
+delay = 0.0
+Target = ExtResource( 8 )
+
 [node name="StageBGM" parent="StageDirector" instance=ExtResource( 10 )]
+position = Vector2( 320, 0 )
 B_A_S_E = ""
 event_time = 0.0
 P_O_S_I_T_O_N = ""
@@ -153,18 +167,389 @@ _soundType = 1
 _eventType = 0
 _volume = -4.0
 
-[node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 0, -6100 )
+[node name="StageBGM2" parent="StageDirector" instance=ExtResource( 10 )]
+position = Vector2( 320, -6100 )
 B_A_S_E = ""
 event_time = 122.0
 P_O_S_I_T_O_N = ""
 override_time = false
-E_N_D = ""
-delay = 0.0
-Target = ExtResource( 8 )
+S_O_U_N_D = ""
+_soundName = "bgm_Stage1Boss"
+_soundType = 1
+_eventType = 0
+_volume = -3.0
+
+[node name="B1-Support12" type="Node2D" parent="StageDirector" instance=ExtResource( 21 )]
+position = Vector2( -160, -10009.1 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+spawn_x = -160.0
+
+[node name="B1-Support11" type="Node2D" parent="StageDirector" instance=ExtResource( 21 )]
+position = Vector2( 160, -9834.09 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+spawn_x = 160.0
+
+[node name="B1-Support10" type="Node2D" parent="StageDirector" instance=ExtResource( 21 )]
+position = Vector2( -160, -9659.09 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+spawn_x = -160.0
+
+[node name="B1-Support9" type="Node2D" parent="StageDirector" instance=ExtResource( 21 )]
+position = Vector2( 160, -9484.09 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+spawn_x = 160.0
+
+[node name="B1-Support8" type="Node2D" parent="StageDirector" instance=ExtResource( 21 )]
+position = Vector2( -160, -9350 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+spawn_x = -160.0
+
+[node name="B1-Support7" type="Node2D" parent="StageDirector" instance=ExtResource( 21 )]
+position = Vector2( 160, -9175 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+spawn_x = 160.0
+
+[node name="B1-Support6" type="Node2D" parent="StageDirector" instance=ExtResource( 21 )]
+position = Vector2( -160, -9000 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+spawn_x = -160.0
+
+[node name="B1-Support5" type="Node2D" parent="StageDirector" instance=ExtResource( 21 )]
+position = Vector2( 160, -8825 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+spawn_x = 160.0
+
+[node name="B1Shrimp2" type="Node2D" parent="StageDirector" instance=ExtResource( 20 )]
+position = Vector2( 0, -8850 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Match with Song]
+
+Section 1
+Section 2
+Section 3
+Section 4
+Section 5
+Section 6
+Section 7
+Section 8"
+}
+event_time = null
+
+[node name="B1-Support4" type="Node2D" parent="StageDirector" instance=ExtResource( 21 )]
+position = Vector2( -160, -8675 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+spawn_x = -160.0
+
+[node name="B1-Support3" type="Node2D" parent="StageDirector" instance=ExtResource( 21 )]
+position = Vector2( 160, -8500 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+spawn_x = 160.0
+
+[node name="B1-Support2" type="Node2D" parent="StageDirector" instance=ExtResource( 21 )]
+position = Vector2( -160, -8325 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+spawn_x = -160.0
+
+[node name="B1-Support1" type="Node2D" parent="StageDirector" instance=ExtResource( 21 )]
+position = Vector2( 160, -8150 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+spawn_x = 160.0
+
+[node name="B1Shrimp" type="Node2D" parent="StageDirector" instance=ExtResource( 20 )]
+position = Vector2( 0, -6100 )
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": "[Match with Song]
+
+Section 1
+Section 2
+Section 3
+Section 4
+Section 5
+Section 6
+Section 7
+Section 8"
+}
+event_time = null
+
+[node name="[BossImportNode]" type="Node2D" parent="StageDirector"]
+position = Vector2( 0, -6000 )
+
+[node name="[2-Sec Interlude]" type="Sprite" parent="StageDirector"]
+position = Vector2( -320, -6000 )
+texture = ExtResource( 18 )
+
+[node name="Cross-XPluss5" parent="StageDirector" instance=ExtResource( 11 )]
+position = Vector2( 0, -5700 )
+event_time = 114.0
+
+[node name="Cross-XPluss4" parent="StageDirector" instance=ExtResource( 11 )]
+position = Vector2( 0, -5400 )
+event_time = 108.0
+
+[node name="Cross-XPluss3" parent="StageDirector" instance=ExtResource( 11 )]
+position = Vector2( 0, -5100 )
+event_time = 102.0
+
+[node name="Cross-XPluss2" parent="StageDirector" instance=ExtResource( 11 )]
+position = Vector2( 0, -4800 )
 
 [node name="Midboss1" parent="StageDirector" instance=ExtResource( 17 )]
 position = Vector2( 0, -3300 )
+event_time = 66.0
 
 [node name="CurveArcL7" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -249.271, -3087.75 )
@@ -179,16 +564,16 @@ event_time = 58.9588
 spawn_x = 236.951
 
 [node name="Cross-XPluss" parent="StageDirector" instance=ExtResource( 11 )]
-position = Vector2( 0, -2739.75 )
-event_time = 54.7951
+position = Vector2( 0, -2750 )
+event_time = 55.0
 
 [node name="Cross-SideEnterL2" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -2557.26 )
-event_time = 51.1451
+event_time = 51.1452
 
 [node name="Cross-SideEnterR2" parent="StageDirector" instance=ExtResource( 16 )]
 position = Vector2( 0, -2516.25 )
-event_time = 50.3249
+event_time = 50.325
 
 [node name="Cross-SideEnterL" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -2370.66 )
