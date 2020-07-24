@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=4]
+
+[node name="VGrip" type="Node"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": "1 Cycle = ??? Sec
+Total = ??? Sec"
+}
+amount = 3
+
+[node name="Sequence2" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="BurstSize" type="Node" parent="Sequence2"]
+script = ExtResource( 2 )
+amount = 10
+
+[node name="Sequence" type="Node" parent="Sequence2/BurstSize"]
+script = ExtResource( 4 )
+
+[node name="ShootAngle" type="Node" parent="Sequence2/BurstSize/Sequence"]
+script = ExtResource( 3 )
+_speed = 240.0
+_angle = 5.0
+
+[node name="ShootAngle2" type="Node" parent="Sequence2/BurstSize/Sequence"]
+script = ExtResource( 3 )
+_speed = 240.0
+_angle = -5.0
+
+[node name="Wait" type="Node" parent="Sequence2/BurstSize/Sequence"]
+script = ExtResource( 1 )
+delay = 0.1
+
+[node name="BurstCooldown" type="Node" parent="Sequence2"]
+script = ExtResource( 1 )
+delay = 1.0
