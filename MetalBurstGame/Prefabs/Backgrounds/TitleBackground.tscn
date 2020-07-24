@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Assets/Backgrounds/spr_stars02.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Backgrounds/spr_stars01.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Backgrounds/blackbackground.png" type="Texture" id=3]
+[ext_resource path="res://Prefabs/Backgrounds/ScrollingBackground.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/Backgrounds/BackgroundLayer.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/Backgrounds/CloudParticles.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/Backgrounds/TitleBG1A.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Backgrounds/TitleBG1B.png" type="Texture" id=8]
+[ext_resource path="res://Prefabs/Backgrounds/DustParticlesv2.tscn" type="PackedScene" id=9]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0.25, 0.25, 0.25, 0.784314, 0.5, 0.333333, 0.25, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[node name="TitleBackground" type="Node2D"]
+script = ExtResource( 4 )
+vertical_velocity = -80.0
+
+[node name="DarkBack" type="Sprite" parent="."]
+position = Vector2( 1327.9, -26.2272 )
+rotation = 1.57079
+scale = Vector2( 5, 9.88 )
+texture = ExtResource( 3 )
+centered = false
+__meta__ = {
+"_editor_description_": "A prototype background.
+Stage 1 (theoretically)
+Darker area at bottom"
+}
+
+[node name="Gradient" type="Sprite" parent="."]
+position = Vector2( 1329.75, -26.2272 )
+rotation = 1.57079
+scale = Vector2( 0.37896, 1430.65 )
+texture = SubResource( 2 )
+centered = false
+__meta__ = {
+"_editor_description_": "A prototype background.
+Stage 1 (theoretically)
+Darker area at top"
+}
+
+[node name="Layer1" type="Sprite" parent="."]
+visible = false
+texture = ExtResource( 2 )
+centered = false
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": "This controls Particles FX"
+}
+multiplier = 0.5
+
+[node name="Layer2" type="Sprite" parent="."]
+visible = false
+position = Vector2( -920.916, -444.302 )
+texture = ExtResource( 1 )
+centered = false
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": "This controls Particles FX"
+}
+
+[node name="TitleBG1A" type="Sprite" parent="."]
+modulate = Color( 0.5, 0.25, 0.25, 1 )
+texture = ExtResource( 7 )
+centered = false
+
+[node name="TitleBG1B" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 640, 450 )
+texture = ExtResource( 8 )
+
+[node name="DustParticlesv2(Vertical)" parent="." instance=ExtResource( 9 )]
+position = Vector2( 650.709, 958.94 )
+rotation = 3.14159
+
+[node name="Cloudparticles(Horiz)" parent="." instance=ExtResource( 6 )]
+modulate = Color( 1, 1, 1, 0.2 )
+position = Vector2( 1280, 0 )
+rotation = 1.5708
+scale = Vector2( 1, 1.2 )
+
+[node name="Cloudparticles(Vert)" parent="." instance=ExtResource( 6 )]
+modulate = Color( 1, 1, 1, 0.2 )
+position = Vector2( 0, 720 )
+rotation = 3.14159
+scale = Vector2( 2, 1 )
