@@ -29,43 +29,46 @@ repeat = true
 playback/repeat = true
 
 [node name="OptionsMenu" parent="GuiLayer" instance=ExtResource( 5 )]
-margin_left = 52.4141
-margin_top = 249.414
-margin_right = -1067.59
-margin_bottom = -390.586
-rect_scale = Vector2( 2.74306, 3.52391 )
+margin_left = 100.0
+margin_top = 300.0
+margin_right = -860.0
+margin_bottom = -180.0
 
 [node name="options" type="VBoxContainer" parent="GuiLayer/OptionsMenu"]
-margin_right = 40.0
-margin_bottom = 40.0
+margin_right = 300.0
+margin_bottom = 200.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="option0" type="Label" parent="GuiLayer/OptionsMenu/options"]
-margin_right = 133.0
-margin_bottom = 14.0
+margin_right = 300.0
+margin_bottom = 45.0
+custom_fonts/font = ExtResource( 10 )
 text = "Stage1: Forest"
 script = ExtResource( 7 )
 
 [node name="option1" type="Label" parent="GuiLayer/OptionsMenu/options"]
-margin_top = 18.0
-margin_right = 133.0
-margin_bottom = 32.0
+margin_top = 49.0
+margin_right = 300.0
+margin_bottom = 94.0
+custom_fonts/font = ExtResource( 10 )
 text = "Stage2: Mountainous"
 script = ExtResource( 7 )
 
 [node name="option2" type="Label" parent="GuiLayer/OptionsMenu/options"]
-margin_top = 36.0
-margin_right = 133.0
-margin_bottom = 50.0
+margin_top = 98.0
+margin_right = 300.0
+margin_bottom = 143.0
+custom_fonts/font = ExtResource( 10 )
 text = "Practice: Boss 2"
 script = ExtResource( 7 )
 
 [node name="option3" type="Label" parent="GuiLayer/OptionsMenu/options"]
-margin_top = 54.0
-margin_right = 133.0
-margin_bottom = 68.0
+margin_top = 147.0
+margin_right = 300.0
+margin_bottom = 192.0
+custom_fonts/font = ExtResource( 10 )
 text = "Quit"
 script = ExtResource( 7 )
 
@@ -74,10 +77,10 @@ stream = ExtResource( 2 )
 bus = "OptionsAudioBus"
 
 [node name="Instructions" type="Label" parent="GuiLayer"]
-margin_left = 782.75
-margin_top = 345.536
-margin_right = 1164.75
-margin_bottom = 630.536
+margin_left = 800.0
+margin_top = 300.0
+margin_right = 1200.0
+margin_bottom = 600.0
 custom_fonts/font = ExtResource( 10 )
 text = "Instructions:
 Arrow Keys / WASD = Move

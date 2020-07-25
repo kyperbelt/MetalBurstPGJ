@@ -1,16 +1,17 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Prefabs/Screens/PauseScreen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screens/pauseOverlay.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Screens/paused.png" type="Texture" id=3]
 [ext_resource path="res://Prefabs/System/OptionsMenu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/System/MenuOption.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Screens/InstructionsFont.tres" type="DynamicFont" id=6]
 
 [node name="PauseScreens" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -1024.0
-margin_bottom = -576.0
+margin_right = -17.0
+margin_bottom = -6.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -23,38 +24,41 @@ scale = Vector2( 41.424, 23.9634 )
 texture = ExtResource( 2 )
 
 [node name="paused" type="Sprite" parent="."]
-position = Vector2( 496.936, 126.664 )
+position = Vector2( 640, 200 )
 texture = ExtResource( 3 )
 
 [node name="OptionsMenu" parent="." instance=ExtResource( 4 )]
-anchor_right = 0.0
-anchor_bottom = 0.0
-margin_left = 498.498
-margin_top = 303.162
-margin_right = 498.498
-margin_bottom = 303.162
+anchor_left = 0.31
+anchor_top = 0.466
+anchor_right = 0.522
+anchor_bottom = 0.685
+margin_left = 98.47
+margin_top = 67.276
+margin_right = 130.714
+margin_bottom = 60.91
 
 [node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu"]
-margin_left = -56.2568
-margin_top = 81.0227
-margin_right = -4.25684
-margin_bottom = 121.023
-rect_scale = Vector2( 2.25823, 2.53196 )
+anchor_right = 0.439
+anchor_bottom = 0.5
+margin_right = -117.545
+margin_bottom = -78.183
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="resume" type="Label" parent="OptionsMenu/VBoxContainer"]
-margin_right = 52.0
-margin_bottom = 14.0
-text = "Resume"
+margin_right = 252.0
+margin_bottom = 45.0
+custom_fonts/font = ExtResource( 6 )
+text = "Resume Game"
 script = ExtResource( 5 )
 
 [node name="quit" type="Label" parent="OptionsMenu/VBoxContainer"]
-margin_top = 18.0
-margin_right = 52.0
-margin_bottom = 32.0
-text = "Quit"
+margin_top = 49.0
+margin_right = 252.0
+margin_bottom = 94.0
+custom_fonts/font = ExtResource( 6 )
+text = "Exit to Main Menu"
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false

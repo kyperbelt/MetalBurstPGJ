@@ -7,7 +7,7 @@
 [ext_resource path="res://Prefabs/Backgrounds/BackgroundLayer.gd" type="Script" id=5]
 
 [sub_resource type="Gradient" id=1]
-colors = PoolColorArray( 0.247059, 0.247059, 0.247059, 1, 0.611765, 0.439216, 0.32549, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.17, 0.28, 0.5, 1 )
 
 [sub_resource type="GradientTexture" id=2]
 gradient = SubResource( 1 )
@@ -18,7 +18,7 @@ colors = PoolColorArray( 0.611765, 0.439216, 0.32549, 1, 0.247059, 0.247059, 0.2
 [sub_resource type="GradientTexture" id=4]
 gradient = SubResource( 3 )
 
-[node name="SpaceBackground" type="Node2D"]
+[node name="GameOverBG" type="Node2D"]
 script = ExtResource( 4 )
 vertical_velocity = -80.0
 
