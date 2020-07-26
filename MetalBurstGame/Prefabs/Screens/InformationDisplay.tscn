@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screens/UItestA.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Screens/UItestB.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Screens/UItestC.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Screens/GUIfont.tres" type="DynamicFont" id=5]
-[ext_resource path="res://Assets/Screens/InstructionsFont.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Assets/Screens/UItestD.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Screens/UItestDguide.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Screens/UItestDshadow.png" type="Texture" id=9]
@@ -128,14 +127,14 @@ __meta__ = {
 [node name="LivesLabel" type="Label" parent="LivesContainer"]
 margin_right = 72.0
 margin_bottom = 45.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 text = "Lives:"
 
 [node name="Lives" type="Label" parent="LivesContainer"]
 margin_left = 76.0
 margin_right = 148.0
 margin_bottom = 45.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 text = "@@@"
 
 [node name="ScoreContainer" type="VBoxContainer" parent="."]
@@ -151,7 +150,7 @@ __meta__ = {
 [node name="ScoreLabel" type="Label" parent="ScoreContainer"]
 margin_right = 170.0
 margin_bottom = 45.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 text = "Score:"
 align = 1
 
@@ -159,7 +158,7 @@ align = 1
 margin_top = 49.0
 margin_right = 170.0
 margin_bottom = 94.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 text = "0000000000"
 
 [node name="BombContainer" type="HBoxContainer" parent="."]
@@ -174,14 +173,14 @@ __meta__ = {
 [node name="BombLabel" type="Label" parent="BombContainer"]
 margin_right = 92.0
 margin_bottom = 45.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 text = "Bombs:"
 
 [node name="Bombs" type="Label" parent="BombContainer"]
 margin_left = 96.0
 margin_right = 113.0
 margin_bottom = 45.0
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 text = "0"
 
 [node name="StageName" type="Label" parent="."]
@@ -190,7 +189,7 @@ margin_left = 1044.91
 margin_top = 64.0954
 margin_right = 1187.91
 margin_bottom = 109.095
-custom_fonts/font = ExtResource( 6 )
+custom_fonts/font = ExtResource( 5 )
 text = "StageName"
 __meta__ = {
 "_edit_use_anchors_": false

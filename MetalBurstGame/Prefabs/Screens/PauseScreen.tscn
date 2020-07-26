@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Prefabs/Screens/PauseScreen.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screens/pauseOverlay.png" type="Texture" id=2]
@@ -6,12 +6,11 @@
 [ext_resource path="res://Prefabs/System/OptionsMenu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/System/MenuOption.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Screens/InstructionsFont.tres" type="DynamicFont" id=6]
+[ext_resource path="res://Assets/Screens/LargeSizeFont.res" type="DynamicFont" id=7]
 
 [node name="PauseScreens" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -17.0
-margin_bottom = -6.0
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -26,6 +25,18 @@ texture = ExtResource( 2 )
 [node name="paused" type="Sprite" parent="."]
 position = Vector2( 640, 200 )
 texture = ExtResource( 3 )
+
+[node name="Large" type="Label" parent="."]
+visible = false
+margin_left = 452.502
+margin_top = 125.642
+margin_right = 828.502
+margin_bottom = 279.642
+custom_fonts/font = ExtResource( 7 )
+text = "PAUSED"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="OptionsMenu" parent="." instance=ExtResource( 4 )]
 anchor_left = 0.31

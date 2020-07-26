@@ -13,6 +13,13 @@ func _ready():
 
 func set_selected(selected : bool):
 	_selected = selected;
-	set("custom_colors/font_color", Color.crimson if selected else Color.white)
+	set("custom_colors/font_color", Color.white if selected else Color.darkgray)
+	set("custom_colors/font_color_shadow", Color.black if selected else Color.black)
+	set("custom_constants/shadow_offset_x", 3 if selected else 2)
+	set("custom_constants/shadow_offset_y", 3 if selected else 2)
+	#set("custom_colors/font_color", Color.green if selected else Color.crimson)
+	#set("custom_colors/font_color_shadow", Color.black if selected else Color.black)
+	#set("custom_constants/shadow_offset_x", 3 if selected else 1)
+	#set("custom_constants/shadow_offset_y", 3 if selected else 1)
 	pass
 
