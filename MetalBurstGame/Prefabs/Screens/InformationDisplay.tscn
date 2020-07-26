@@ -104,93 +104,83 @@ margin_top = 137.0
 margin_right = 220.0
 margin_bottom = 137.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-margin_left = 1012.0
-margin_top = 496.0
-margin_right = 1236.0
-margin_bottom = 680.0
-color = Color( 0, 0, 0, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="LivesContainer" type="HBoxContainer" parent="."]
-margin_left = 1045.23
-margin_top = 164.098
-margin_right = 1193.23
-margin_bottom = 209.098
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="LivesLabel" type="Label" parent="LivesContainer"]
-margin_right = 72.0
-margin_bottom = 45.0
-custom_fonts/font = ExtResource( 5 )
-text = "Lives:"
-
-[node name="Lives" type="Label" parent="LivesContainer"]
-margin_left = 76.0
-margin_right = 148.0
-margin_bottom = 45.0
-custom_fonts/font = ExtResource( 5 )
-text = "@@@"
-
-[node name="ScoreContainer" type="VBoxContainer" parent="."]
-margin_left = 1034.26
-margin_top = 62.4586
-margin_right = 1204.26
-margin_bottom = 156.459
+[node name="VerticalStack" type="VBoxContainer" parent="."]
+margin_left = 1030.0
+margin_top = 50.0
+margin_right = 1210.0
+margin_bottom = 360.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ScoreLabel" type="Label" parent="ScoreContainer"]
-margin_right = 170.0
-margin_bottom = 45.0
+[node name="ScoreLabel" type="Label" parent="VerticalStack"]
+margin_top = 2.0
+margin_right = 180.0
+margin_bottom = 47.0
 custom_fonts/font = ExtResource( 5 )
-text = "Score:"
+text = "Score"
 align = 1
 
-[node name="Score" type="Label" parent="ScoreContainer"]
-margin_top = 49.0
-margin_right = 170.0
-margin_bottom = 94.0
+[node name="Score" type="Label" parent="VerticalStack"]
+margin_top = 51.0
+margin_right = 180.0
+margin_bottom = 96.0
 custom_fonts/font = ExtResource( 5 )
 text = "0000000000"
+align = 1
 
-[node name="BombContainer" type="HBoxContainer" parent="."]
-margin_left = 1045.8
-margin_top = 214.416
-margin_right = 1158.8
-margin_bottom = 259.416
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="HSeparator" type="HSeparator" parent="VerticalStack"]
+margin_top = 100.0
+margin_right = 180.0
+margin_bottom = 104.0
 
-[node name="BombLabel" type="Label" parent="BombContainer"]
-margin_right = 92.0
-margin_bottom = 45.0
+[node name="LivesLabel" type="Label" parent="VerticalStack"]
+margin_top = 108.0
+margin_right = 180.0
+margin_bottom = 153.0
 custom_fonts/font = ExtResource( 5 )
-text = "Bombs:"
+text = "Armor"
+align = 1
 
-[node name="Bombs" type="Label" parent="BombContainer"]
-margin_left = 96.0
-margin_right = 113.0
-margin_bottom = 45.0
+[node name="Lives" type="Label" parent="VerticalStack"]
+margin_top = 157.0
+margin_right = 180.0
+margin_bottom = 202.0
+custom_fonts/font = ExtResource( 5 )
+text = "@@@"
+align = 1
+
+[node name="HSeparator2" type="HSeparator" parent="VerticalStack"]
+margin_top = 206.0
+margin_right = 180.0
+margin_bottom = 210.0
+
+[node name="BombLabel" type="Label" parent="VerticalStack"]
+margin_top = 214.0
+margin_right = 180.0
+margin_bottom = 259.0
+custom_fonts/font = ExtResource( 5 )
+text = "Energy"
+align = 1
+
+[node name="Bombs" type="Label" parent="VerticalStack"]
+margin_top = 263.0
+margin_right = 180.0
+margin_bottom = 308.0
 custom_fonts/font = ExtResource( 5 )
 text = "0"
+align = 1
 
 [node name="StageName" type="Label" parent="."]
 visible = false
-margin_left = 1044.91
-margin_top = 64.0954
-margin_right = 1187.91
-margin_bottom = 109.095
+margin_left = 1034.26
+margin_top = 62.4586
+margin_right = 1204.26
+margin_bottom = 107.459
 custom_fonts/font = ExtResource( 5 )
 text = "StageName"
+align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
