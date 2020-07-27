@@ -54,7 +54,8 @@ spawn_x = -273.87
 
 [node name="RandomZoneEnemy" parent="StageDirector/RandomZoneSpawner" instance=ExtResource( 9 )]
 position = Vector2( 57.4153, 100.477 )
-_scoreValue = 100
+_deathValue = 100
+_hitValue = 10
 
 [node name="TestBehavior" parent="StageDirector/RandomZoneSpawner/RandomZoneEnemy" instance=ExtResource( 2 )]
 
@@ -66,7 +67,8 @@ spawn_x = 34.3949
 [node name="RotationEnemy" parent="StageDirector/RotationTestSpawner" instance=ExtResource( 9 )]
 position = Vector2( 2.58478, -92.4388 )
 _maxSpeed = 300.0
-_scoreValue = 100
+_deathValue = 100
+_hitValue = 10
 
 [node name="RotateTestBehavior" parent="StageDirector/RotationTestSpawner/RotationEnemy" instance=ExtResource( 12 )]
 
@@ -78,7 +80,8 @@ spawn_x = -259.026
 [node name="RotationEnemy" parent="StageDirector/MoveWithRotation" instance=ExtResource( 9 )]
 position = Vector2( -126.142, 162.759 )
 _maxSpeed = 300.0
-_scoreValue = 100
+_deathValue = 100
+_hitValue = 10
 
 [node name="MoveAtRotationTest" parent="StageDirector/MoveWithRotation/RotationEnemy" instance=ExtResource( 11 )]
 
@@ -90,7 +93,8 @@ spawn_x = 268.401
 [node name="RotationEnemy" parent="StageDirector/MoveWithRotation2" instance=ExtResource( 9 )]
 position = Vector2( 203.268, 188.667 )
 _maxSpeed = 300.0
-_scoreValue = 100
+_deathValue = 100
+_hitValue = 10
 
 [node name="MoveAtRotationTest" parent="StageDirector/MoveWithRotation2/RotationEnemy" instance=ExtResource( 11 )]
 
@@ -116,21 +120,24 @@ spawn_x = 16.239
 [node name="ZigZagger" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
 position = Vector2( -71.0901, -40.1814 )
 _maxSpeed = 300.0
-_scoreValue = 100
+_deathValue = 100
+_hitValue = 10
 
 [node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger" instance=ExtResource( 8 )]
 
 [node name="ZigZagger2" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
 position = Vector2( 0, -108.181 )
 _maxSpeed = 300.0
-_scoreValue = 100
+_deathValue = 100
+_hitValue = 10
 
 [node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger2" instance=ExtResource( 8 )]
 
 [node name="ZigZagger3" parent="StageDirector/ZiggZaggerSpawner4" instance=ExtResource( 9 )]
 position = Vector2( 83.4535, -52.5448 )
 _maxSpeed = 300.0
-_scoreValue = 100
+_deathValue = 100
+_hitValue = 10
 
 [node name="ZigZaggerBrain" parent="StageDirector/ZiggZaggerSpawner4/ZigZagger3" instance=ExtResource( 8 )]
 
@@ -144,6 +151,7 @@ S_O_U_N_D = ""
 _soundName = "bgm_testStage1"
 _soundType = 1
 _eventType = 0
+_overrideVolume = false
 _volume = 0.0
 
 [editable path="StageDirector"]
