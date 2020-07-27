@@ -12,8 +12,15 @@ enum PROJECTILES {
 
 const RELOAD_TIME = 0.125 
 
-export var speed : float = 300
-var speed_reduced = 0
+# player invinvibility frames duration
+export(float) var _invincibilityAmount = 2.5;
+var _invincibilityTimer : float = 0;#the timer is set to the duration above. whilst in this state we are invulnerable/invincible
+
+#speed management variables 
+export(float) var _speed : float = 300  #normal speed of play
+export(float) var _focusSpeed : = 50 	#speed refuced from focus
+var _speedMultiplier:float = 1.0 		#speed multiplier - can be used to add speed boosts within the game
+var _currentSpeed = _speed 				#the current speed of the player (will be swaped out in code with _speed and _focusSpeed dpending on state)
 
 var play_area_width : int = 640
 var play_area_height : int = 540
@@ -50,14 +57,15 @@ func _ready():
 
 
 func _process(delta):
-	
-	var move : Vector2 = Vector2(0,0);
+
+	#invinvibility frames countdown
+	_invincibilityTimer -= delta
+	_animate_invincibility()
 
 	# shot_timer -= delta
 	shot_timer = -1
 	bomb_timer -= delta
 	if Input.is_action_pressed("fire"):
-		print("firing")
 		if shot_timer <= 0:
 			shoot()
 			firing = true
@@ -69,30 +77,40 @@ func _process(delta):
 			bombing = true
 		else:
 			bombing = false
+
+	########################################
+	# 				MOVEMENT 
+	var move : Vector2 = Vector2(0,0);#temporary vector used to store movement data for this frame
+	#input handling
 	if Input.is_action_pressed("move_up"):
-		move.y-=speed + speed_reduced
+		move.y-=_currentSpeed *_speedMultiplier
 	if Input.is_action_pressed("move_down"):
-		move.y+=speed + speed_reduced
+		move.y+=_currentSpeed *_speedMultiplier 
 	if Input.is_action_pressed("move_left"):
-		move.x-=speed + speed_reduced
+		move.x-=_currentSpeed *_speedMultiplier
 	if Input.is_action_pressed("move_right"):
-		move.x+=speed + speed_reduced
+		move.x+=_currentSpeed *_speedMultiplier
 	if Input.is_action_pressed("move_slower"):
-		speed_reduced = -150
-		#Insert Animation Code Here
+		_currentSpeed = _focusSpeed;
+		#TODO: Insert Animation trigger for focus mode
 	else:
-		speed_reduced = 0
+		_currentSpeed = _speed
+	#apply move vector translation	
 	translate(move*delta)
-	
+
+	#clamping code - keeps player withing the bounds of the play area
 	if(position.x < 0) : position.x = 0
 	if(position.x > play_area_width) : position.x = play_area_width
 	if(position.y < 0) : position.y = 0;
 	if(position.y > play_area_height): position.y = play_area_height
 
+	#########################################
 	bullet_reloading -= delta
 	bomb_reloading -= delta
 
 	bomb_percentage = min(bomb_percentage+_rechargeRate*delta,1)
+
+
 
 #collision has started with something
 func on_collision_start(area):
@@ -102,14 +120,51 @@ func on_collision_start(area):
 
 
 func hit(object):
+	if ( _invincibilityTimer >= 0) :return 
 	print("player is hit by =%s" % object.name)
 	lives-=1
 	var _value = Globals.audioManager.play_sound("sfx_playerHit")
 	emit_signal("player_hit")
+	_invincibilityTimer=_invincibilityAmount;
 
 func _set_score(_score:int)->void:
 	score =_score
 	emit_signal("score_changed")
+
+#use modulate to animate invincibility
+func _animate_invincibility():
+	if ( _invincibilityTimer >= 0) :# invinsibility
+		#animation tweak START
+
+		#dont touch this delta - it is used to get a value from 0 to 1 
+		#it is dependant on _invincibilityAmount export variable
+		var delta:float = 1-(_invincibilityTimer/_invincibilityAmount)
+		
+		#use this to tweak the frequency of the effect
+		var freq:float = 30 #########
+		##############################
+		
+		#use this to tweak the amount of fade - higher value means less fading happens
+		# DO NOT EXCEED 1 - if 1 then there will be no effect
+		var vShift = .65 ###
+		####################
+
+		#use these to set the color when fading
+		var r:float = 1.0  #red
+		var g:float = 0.0  #green
+		var b:float = 0.0  #blue
+		#######################################
+
+		modulate = Color(r,g,b,1.0-vShift*cos(freq*delta)+vShift)
+
+		#animation tweak END
+
+	else : #no invinsibility
+		#set everything back to normal
+		modulate = Color(1,1,1,1);
+		#############################
+
+
 
 func start(_pos):
 	position = _pos
@@ -121,7 +176,7 @@ func shoot():
 		bullet.setProjectileType(PROJECTILES.PLAYER_BULLET)
 		bullet.global_position = global_position
 		var _value = Globals.audioManager.play_sound("sfx_playerShoot")
-		#bullet.change_speed(speed)
+		#bullet.change_speed(_speed)
 		if(!is_instance_valid(parent)):
 			parent = get_parent()
 		parent.add_child(bullet)
@@ -135,7 +190,7 @@ func bomb_away():
 		bomb.setProjectileType(PROJECTILES.PLAYER_BOMB)
 		bomb.global_position = global_position
 		var _value = Globals.audioManager.play_sound("sfx_playerBomb")
-		#bullet.change_speed(speed)
+		#bullet.change_speed(_speed)
 		if(!is_instance_valid(parent)):
 			parent = get_parent()
 		parent.add_child(bomb)
