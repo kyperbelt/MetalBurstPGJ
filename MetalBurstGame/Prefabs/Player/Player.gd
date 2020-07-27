@@ -57,7 +57,6 @@ func _process(delta):
 	shot_timer = -1
 	bomb_timer -= delta
 	if Input.is_action_pressed("fire"):
-		print("firing")
 		if shot_timer <= 0:
 			shoot()
 			firing = true

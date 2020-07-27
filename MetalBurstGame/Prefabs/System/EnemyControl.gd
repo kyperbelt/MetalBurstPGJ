@@ -29,7 +29,9 @@ export(float) var _despawnDistance = 600 #distance from screen center
 var _screenCenter : Vector2 = Vector2(0,0)
 
 #amount that this entity gives in score when it dies
-export(int) var _scoreValue = 100
+export(int) var _deathValue = 100
+#amount that this entity gives in score when it is hit
+export(int) var _hitValue = 10
 
 func _ready():
 	if(Engine.is_editor_hint()):
@@ -72,8 +74,11 @@ func set_current_health(health:float):
 func get_current_health()->float: 
 	return _currentHealth
 
-func get_score_Value()->int:
-	return _scoreValue;
+func get_death_value()->int:
+	return _deathValue
+
+func get_hit_value()->int:
+	return _hitValue;
 
 #called by the engine when it adds it to the correct layer
 func engine_ready(engine):
@@ -132,13 +137,14 @@ func hit(object):
 		
 		#example SOUND
 		var _value = Globals.audioManager.play_sound("sfx_foeHit")
+		Globals.get_player().score += get_hit_value()
 		print("Enemy[%s] took damage from Object[%s] "%[self.name,object.name])
 	#HP-Threshold SFX can also be done here ; more advanced
 	if get_current_health() <= 0:
 		#$FoeDeathSFX.play()
 		var _value = Globals.audioManager.play_sound("sfx_foeDeath")
 		print(self.name + "has died!")
-		Globals.get_player().score += _scoreValue
+		Globals.get_player().score += get_death_value()
 		queue_free()
 	if object.name == 'PlayerCollisionArea':
 		#TODO: we should move this method out of here-
