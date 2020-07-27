@@ -24,7 +24,7 @@
 [node name="Level" parent="." instance=ExtResource( 1 )]
 
 [node name="Stage1BG" parent="Level" instance=ExtResource( 10 )]
-position = Vector2( -268.314, -26.427 )
+position = Vector2( 0.857208, -3.06512 )
 
 [node name="DustParticles" parent="Level" instance=ExtResource( 3 )]
 position = Vector2( -285.932, 0 )

@@ -13,8 +13,8 @@ enum PROJECTILES {
 const RELOAD_TIME = 0.125 
 
 # player invinvibility frames duration
-export(float) var _invinvibilityAmount = 2.5;
-var _invinvibilityTimer : float = 0;#the timer is set to the duration above. whilst in this state we are invulnerable/invincible
+export(float) var _invincibilityAmount = 2.5;
+var _invincibilityTimer : float = 0;#the timer is set to the duration above. whilst in this state we are invulnerable/invincible
 
 #speed management variables 
 export(float) var _speed : float = 300  #normal speed of play
@@ -59,7 +59,7 @@ func _ready():
 func _process(delta):
 
 	#invinvibility frames countdown
-	_invinvibilityTimer -= delta
+	_invincibilityTimer -= delta
 	_animate_invincibility()
 
 	# shot_timer -= delta
@@ -120,12 +120,12 @@ func on_collision_start(area):
 
 
 func hit(object):
-	if ( _invinvibilityTimer >= 0) :return 
+	if ( _invincibilityTimer >= 0) :return 
 	print("player is hit by =%s" % object.name)
 	lives-=1
 	var _value = Globals.audioManager.play_sound("sfx_playerHit")
 	emit_signal("player_hit")
-	_invinvibilityTimer=_invinvibilityAmount;
+	_invincibilityTimer=_invincibilityAmount;
 
 func _set_score(_score:int)->void:
 	score =_score
@@ -133,12 +133,36 @@ func _set_score(_score:int)->void:
 
 #use modulate to animate invincibility
 func _animate_invincibility():
-	if ( _invinvibilityTimer >= 0) :# invinsibility
-		var delta:float = 1-(_invinvibilityTimer/_invinvibilityAmount);
-		var freq:float = 30;
-		modulate = Color(1,0,0,.35*cos(freq*delta)+.65);
+	if ( _invincibilityTimer >= 0) :# invinsibility
+		#animation tweak START
+
+		#dont touch this delta - it is used to get a value from 0 to 1 
+		#it is dependant on _invincibilityAmount export variable
+		var delta:float = 1-(_invincibilityTimer/_invincibilityAmount)
+		
+		#use this to tweak the frequency of the effect
+		var freq:float = 30 #########
+		##############################
+		
+		#use this to tweak the amount of fade - higher value means less fading happens
+		# DO NOT EXCEED 1 - if 1 then there will be no effect
+		var vShift = .65 ###
+		####################
+
+		#use these to set the color when fading
+		var r:float = 1.0  #red
+		var g:float = 0.0  #green
+		var b:float = 0.0  #blue
+		#######################################
+
+		modulate = Color(r,g,b,1.0-vShift*cos(freq*delta)+vShift)
+
+		#animation tweak END
+
 	else : #no invinsibility
+		#set everything back to normal
 		modulate = Color(1,1,1,1);
+		#############################
 
 
 
