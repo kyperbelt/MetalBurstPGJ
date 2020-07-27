@@ -12,6 +12,10 @@ enum PROJECTILES {
 
 const RELOAD_TIME = 0.125 
 
+# player invinvibility frames duration
+export(float) var _invinvibilityAmount = 2.5;
+var _invinvibilityTimer : float = 0;#the timer is set to the duration above. whilst in this state we are invulnerable/invincible
+
 export var speed : float = 300
 var speed_reduced = 0
 
@@ -50,7 +54,10 @@ func _ready():
 
 
 func _process(delta):
-	
+
+	#invinvibility frames countdown
+	_invinvibilityTimer -= delta;
+
 	var move : Vector2 = Vector2(0,0);
 
 	# shot_timer -= delta
@@ -101,6 +108,7 @@ func on_collision_start(area):
 
 
 func hit(object):
+	if ( _invinvibilityTimer >= 0) :return 
 	print("player is hit by =%s" % object.name)
 	lives-=1
 	var _value = Globals.audioManager.play_sound("sfx_playerHit")
@@ -109,6 +117,9 @@ func hit(object):
 func _set_score(_score:int)->void:
 	score =_score
 	emit_signal("score_changed")
+
+func _animate_invinvibility():
+	pass
 
 func start(_pos):
 	position = _pos
