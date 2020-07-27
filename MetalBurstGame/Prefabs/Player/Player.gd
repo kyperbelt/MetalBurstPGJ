@@ -16,8 +16,11 @@ const RELOAD_TIME = 0.125
 export(float) var _invinvibilityAmount = 2.5;
 var _invinvibilityTimer : float = 0;#the timer is set to the duration above. whilst in this state we are invulnerable/invincible
 
-export var speed : float = 300
-var speed_reduced = 0
+#speed management variables 
+export(float) var _speed : float = 300  #normal speed of play
+export(float) var _focusSpeed : = 50 	#speed refuced from focus
+var _speedMultiplier:float = 1.0 		#speed multiplier - can be used to add speed boosts within the game
+var _currentSpeed = _speed 				#the current speed of the player (will be swaped out in code with _speed and _focusSpeed dpending on state)
 
 var play_area_width : int = 640
 var play_area_height : int = 540
@@ -59,8 +62,6 @@ func _process(delta):
 	_invinvibilityTimer -= delta
 	_animate_invincibility()
 
-	var move : Vector2 = Vector2(0,0);
-
 	# shot_timer -= delta
 	shot_timer = -1
 	bomb_timer -= delta
@@ -76,26 +77,34 @@ func _process(delta):
 			bombing = true
 		else:
 			bombing = false
+
+	########################################
+	# 				MOVEMENT 
+	var move : Vector2 = Vector2(0,0);#temporary vector used to store movement data for this frame
+	#input handling
 	if Input.is_action_pressed("move_up"):
-		move.y-=speed + speed_reduced
+		move.y-=_currentSpeed *_speedMultiplier
 	if Input.is_action_pressed("move_down"):
-		move.y+=speed + speed_reduced
+		move.y+=_currentSpeed *_speedMultiplier 
 	if Input.is_action_pressed("move_left"):
-		move.x-=speed + speed_reduced
+		move.x-=_currentSpeed *_speedMultiplier
 	if Input.is_action_pressed("move_right"):
-		move.x+=speed + speed_reduced
+		move.x+=_currentSpeed *_speedMultiplier
 	if Input.is_action_pressed("move_slower"):
-		speed_reduced = -150
-		#Insert Animation Code Here
+		_currentSpeed = _focusSpeed;
+		#TODO: Insert Animation trigger for focus mode
 	else:
-		speed_reduced = 0
+		_currentSpeed = _speed
+	#apply move vector translation	
 	translate(move*delta)
-	
+
+	#clamping code - keeps player withing the bounds of the play area
 	if(position.x < 0) : position.x = 0
 	if(position.x > play_area_width) : position.x = play_area_width
 	if(position.y < 0) : position.y = 0;
 	if(position.y > play_area_height): position.y = play_area_height
 
+	#########################################
 	bullet_reloading -= delta
 	bomb_reloading -= delta
 
@@ -143,7 +152,7 @@ func shoot():
 		bullet.setProjectileType(PROJECTILES.PLAYER_BULLET)
 		bullet.global_position = global_position
 		var _value = Globals.audioManager.play_sound("sfx_playerShoot")
-		#bullet.change_speed(speed)
+		#bullet.change_speed(_speed)
 		if(!is_instance_valid(parent)):
 			parent = get_parent()
 		parent.add_child(bullet)
@@ -157,7 +166,7 @@ func bomb_away():
 		bomb.setProjectileType(PROJECTILES.PLAYER_BOMB)
 		bomb.global_position = global_position
 		var _value = Globals.audioManager.play_sound("sfx_playerBomb")
-		#bullet.change_speed(speed)
+		#bullet.change_speed(_speed)
 		if(!is_instance_valid(parent)):
 			parent = get_parent()
 		parent.add_child(bomb)
