@@ -30,12 +30,16 @@ func get_sep():
 export(String) var _soundName = "Untitled"
 export(SoundType) var _soundType = SoundType.Music
 export(EventType) var _eventType = EventType.Start
-export(float) var _volume = 0;
+export(bool) var _overrideVolume = false;
+export(float) var _volume = -999;
 
 func _on_event_added():
 	pass
 
 func _execute_event():
+	if(!_overrideVolume):
+		_volume = -999
+		
 	match _soundType:
 		SoundType.Music:
 			match _eventType:
