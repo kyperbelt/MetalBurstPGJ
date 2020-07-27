@@ -146,12 +146,8 @@ func hit(object):
 		print(self.name + "has died!")
 		Globals.get_player().score += get_death_value()
 		queue_free()
-	# if object.name == 'PlayerCollisionArea':
-	# 	#TODO: we should move this method out of here-
-	# 	# right now the enemy is basically handling player collision with itself
-	# 	# which should not be the case. 
-	# 	object.get_parent().hit(self)
-	# 	queue_free()
+	if object.name == 'PlayerCollisionArea':
+		object.get_parent().hit(self)
 
 #TODO: add death
 

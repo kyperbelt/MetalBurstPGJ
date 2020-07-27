@@ -56,7 +56,8 @@ func _ready():
 func _process(delta):
 
 	#invinvibility frames countdown
-	_invinvibilityTimer -= delta;
+	_invinvibilityTimer -= delta
+	_animate_invincibility()
 
 	var move : Vector2 = Vector2(0,0);
 
@@ -100,6 +101,8 @@ func _process(delta):
 
 	bomb_percentage = min(bomb_percentage+_rechargeRate*delta,1)
 
+
+
 #collision has started with something
 func on_collision_start(area):
 	#print_tree_pretty()
@@ -113,13 +116,22 @@ func hit(object):
 	lives-=1
 	var _value = Globals.audioManager.play_sound("sfx_playerHit")
 	emit_signal("player_hit")
+	_invinvibilityTimer=_invinvibilityAmount;
 
 func _set_score(_score:int)->void:
 	score =_score
 	emit_signal("score_changed")
 
-func _animate_invinvibility():
-	pass
+#use modulate to animate invincibility
+func _animate_invincibility():
+	if ( _invinvibilityTimer >= 0) :# invinsibility
+		var delta:float = 1-(_invinvibilityTimer/_invinvibilityAmount);
+		var freq:float = 30;
+		modulate = Color(1,0,0,.35*cos(freq*delta)+.65);
+	else : #no invinsibility
+		modulate = Color(1,1,1,1);
+
+
 
 func start(_pos):
 	position = _pos
