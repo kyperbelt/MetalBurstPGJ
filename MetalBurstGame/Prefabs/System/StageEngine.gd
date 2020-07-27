@@ -23,6 +23,7 @@ func _ready():
 	player = Globals.get_player()
 	player.connect("player_hit",self,"player_hit")
 	player.connect("score_changed",self,"score_changed")
+	player.connect("score_multiplier_changed",self,"multiplier_changed")
 	$PlayerLayer.add_child(player)
 	set_process(true)
 
@@ -52,7 +53,7 @@ func pre_process_entities():
 	for child in level_children:
 		var added : bool = false
 		if(child.is_in_group("Enemy")):
-			print("please use SceneDirector SPawnEvents to add to Entities to Stage [failed to add "+child.name+" to entitylayer]")
+			#print("please use SceneDirector SPawnEvents to add to Entities to Stage [failed to add "+child.name+" to entitylayer]")
 			child.get_parent().remove_child(child)
 			$EntityLayer.add_child(child)
 			added = true
@@ -66,8 +67,11 @@ func pre_process_entities():
 				child.engine_ready(self)
 
 
-
+##HEERE WE Handle adding entities to different layers
 func add_child(node : Node, legible_unique_name: bool = false):
+	
+	#projectiles get added to bullet layer
+	#TODO: set this to projectileComponent
 	if(node is Projectiles):
 		$BulletLayer.add_child(node, legible_unique_name)
 	else:
@@ -86,7 +90,11 @@ func center_player():
 
 func score_changed():
 	informationDisplay.set_score(player.score,true)
+
 	
+func multiplier_changed(mult:int):
+	print("multiplier changed TO : %s------------------ "%mult);
+	informationDisplay.set_multiplier(mult)
 
 func player_hit():
 	if(player.lives <= 0):
@@ -100,3 +108,5 @@ func player_hit():
 
 func get_play_container()->ViewportContainer:
 	return get_node(Level).get_node("Container") as ViewportContainer
+
+

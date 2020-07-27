@@ -52,3 +52,8 @@ func repeat_string(s: String, times: int) -> String:
 func set_get(map:Dictionary,key,value):
 	map[key]=value
 	return value
+
+##MATHS
+#log with base
+func logB(value,base)->float:
+	return log(value)/log(base)

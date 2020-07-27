@@ -10,6 +10,16 @@ enum PROJECTILES {
 	
 }
 
+#MULTIPLIER
+# can be set individually for each player type or left at default values
+export(float) var _multiplierDeadZone 		= 4.0 #deadzone meaning :the time of inactivity it takes to lose multiplier
+export(float) var _scoreExpIncrementRate 	= 200 #the increment at which to up the multiploer (increases exponentially at a rate of 2 to the power of)
+export(int) var _deadZoneMultDropLimit		= 2 # deazone will not drop the multiplier lower than this
+var _scoreAccumValue:float = 0 #The value of accumulated multiplier increment - based on score
+var _deadZoneElapsed = 0 #when this reaches
+var _scoreMultiplier:int = 1
+
+
 const RELOAD_TIME = 0.125 
 
 # player invinvibility frames duration
@@ -19,7 +29,7 @@ var _invincibilityTimer : float = 0;#the timer is set to the duration above. whi
 #speed management variables 
 export(float) var _speed : float = 300  #normal speed of play
 export(float) var _focusSpeed : = 50 	#speed refuced from focus
-var _speedMultiplier:float = 1.0 		#speed multiplier - can be used to add speed boosts within the game
+var _speedMultiplier:int = 1.0 		#speed multiplier - can be used to add speed boosts within the game
 var _currentSpeed = _speed 				#the current speed of the player (will be swaped out in code with _speed and _focusSpeed dpending on state)
 
 var play_area_width : int = 640
@@ -40,6 +50,8 @@ var invulnerable : bool = false
 
 signal player_hit
 signal score_changed
+signal score_multiplier_changed
+
 
 #######################
 var score: int = 0 setget _set_score
@@ -110,7 +122,33 @@ func _process(delta):
 
 	bomb_percentage = min(bomb_percentage+_rechargeRate*delta,1)
 
+	###########################################
+	#     MULTIPLIER
+	
+	_deadZoneElapsed+=delta
+	#drop 1 multiplier level if the player has not ggained new score in a while
+	#this is to punish players for playing too passively and reward those who 
+	#play more aggressively 
+	var deadZoneScoreLimit = get_score_from_mult(_deadZoneMultDropLimit)
+	if(_deadZoneElapsed >= _multiplierDeadZone && _scoreAccumValue > deadZoneScoreLimit):
+		_scoreAccumValue=max(deadZoneScoreLimit,get_score_from_mult(_scoreMultiplier-1))
+		_deadZoneElapsed = 0 #reset DeadZone timer
+	
 
+	var newMult = get_mult_from_accum(_scoreAccumValue)
+	#print("scoreMultiplier[%s] _scoreAccum[%s]  scoreAccumMult[%s]"%[_scoreMultiplier,_scoreAccumValue,newMult])	
+	if(newMult!=_scoreMultiplier):
+		_set_score_multiplier(newMult)
+
+
+# get a score value for the specified multiplier
+func get_score_from_mult(mult:int)->int:
+	return ((pow(2,mult)-2) * _scoreExpIncrementRate) as int
+
+#get the multiplier for the accumulated score
+func get_mult_from_accum(accumScore:float)->int:
+	return floor(Globals.logB(accumScore/_scoreExpIncrementRate+2.0,2.0)) as int
+	
 
 #collision has started with something
 func on_collision_start(area):
@@ -121,6 +159,7 @@ func on_collision_start(area):
 
 func hit(object):
 	if ( _invincibilityTimer >= 0) :return 
+	_scoreAccumValue = 0;#reset multiplier score accumulation 
 	print("player is hit by =%s" % object.name)
 	lives-=1
 	var _value = Globals.audioManager.play_sound("sfx_playerHit")
@@ -128,8 +167,16 @@ func hit(object):
 	_invincibilityTimer=_invincibilityAmount;
 
 func _set_score(_score:int)->void:
-	score =_score
+	var _difference_value = _score-score;
+	_scoreAccumValue+= _difference_value#add to accum
+	_deadZoneElapsed = 0;#reset deadzone
+	score += _difference_value*_scoreMultiplier
 	emit_signal("score_changed")
+
+func _set_score_multiplier(mult:int):
+	print("score multiplier set to :%s ---------"%mult)
+	_scoreMultiplier = mult;
+	emit_signal("score_multiplier_changed",mult)
 
 #use modulate to animate invincibility
 func _animate_invincibility():

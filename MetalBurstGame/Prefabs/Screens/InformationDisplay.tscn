@@ -28,6 +28,7 @@ texture = ExtResource( 3 )
 centered = false
 
 [node name="UItestC" type="Sprite" parent="."]
+visible = false
 texture = ExtResource( 4 )
 centered = false
 
@@ -53,56 +54,56 @@ centered = false
 
 [node name="Testing" type="VBoxContainer" parent="."]
 visible = false
-margin_left = 999.804
-margin_top = 38.5591
-margin_right = 1220.8
-margin_bottom = 182.559
+margin_left = 725.542
+margin_top = -274.38
+margin_right = 946.538
+margin_bottom = -41.3802
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Score" type="Label" parent="Testing"]
 margin_right = 220.0
-margin_bottom = 45.0
+margin_bottom = 93.0
 custom_fonts/font = ExtResource( 5 )
 text = "Score
 000,000,000"
 
 [node name="HSeparator" type="HSeparator" parent="Testing"]
-margin_top = 49.0
+margin_top = 97.0
 margin_right = 220.0
-margin_bottom = 53.0
+margin_bottom = 101.0
 
 [node name="HighScore" type="Label" parent="Testing"]
-margin_top = 57.0
+margin_top = 105.0
 margin_right = 220.0
-margin_bottom = 102.0
+margin_bottom = 198.0
 custom_fonts/font = ExtResource( 5 )
 text = "High Score
 000,000,000"
 
 [node name="HSeparator2" type="HSeparator" parent="Testing"]
-margin_top = 106.0
+margin_top = 202.0
 margin_right = 220.0
-margin_bottom = 110.0
+margin_bottom = 206.0
 
 [node name="ProgressBar" type="ProgressBar" parent="Testing"]
-margin_top = 114.0
+margin_top = 210.0
 margin_right = 220.0
-margin_bottom = 128.0
+margin_bottom = 224.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="TextureProgress" type="TextureProgress" parent="Testing"]
-margin_top = 132.0
+margin_top = 228.0
 margin_right = 220.0
-margin_bottom = 133.0
+margin_bottom = 229.0
 
 [node name="ReferenceRect" type="ReferenceRect" parent="Testing"]
-margin_top = 137.0
+margin_top = 233.0
 margin_right = 220.0
-margin_bottom = 137.0
+margin_bottom = 233.0
 
 [node name="VerticalStack" type="VBoxContainer" parent="."]
 margin_left = 1030.0
@@ -184,3 +185,27 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="MultiplierContainer" type="HBoxContainer" parent="."]
+margin_left = 66.8073
+margin_top = 618.847
+margin_right = 249.807
+margin_bottom = 663.847
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MultiplierLabel" type="Label" parent="MultiplierContainer"]
+margin_right = 145.0
+margin_bottom = 45.0
+custom_fonts/font = ExtResource( 5 )
+text = "Multiplier:"
+align = 1
+
+[node name="Multiplier" type="Label" parent="MultiplierContainer"]
+margin_left = 149.0
+margin_right = 183.0
+margin_bottom = 45.0
+custom_fonts/font = ExtResource( 5 )
+text = "X2"
+align = 1
