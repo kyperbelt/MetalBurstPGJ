@@ -14,10 +14,11 @@ enum PROJECTILES {
 # can be set individually for each player type or left at default values
 export(float) var _multiplierDeadZone 		= 4.0 #deadzone meaning :the time of inactivity it takes to lose multiplier
 export(float) var _scoreExpIncrementRate 	= 200 #the increment at which to up the multiploer (increases exponentially at a rate of 2 to the power of)
+export(int) var _scoreMultiplierGrowth   	= 2   # The growth of the multiplier past stage 2(example: stage3=x4 stage4=x8 stage 5=x16)
 export(int) var _deadZoneMultDropLimit		= 2 # deazone will not drop the multiplier lower than this
 var _scoreAccumValue:float = 0 #The value of accumulated multiplier increment - based on score
 var _deadZoneElapsed = 0 #when this reaches
-var _scoreMultiplier:int = 1
+var _scoreMultiplier:int = 1 #this is the stage the multiplier is at
 
 
 const RELOAD_TIME = 0.125 
@@ -170,13 +171,16 @@ func _set_score(_score:int)->void:
 	var _difference_value = _score-score;
 	_scoreAccumValue+= _difference_value#add to accum
 	_deadZoneElapsed = 0;#reset deadzone
-	score += _difference_value*_scoreMultiplier
+	score += _difference_value*get_true_score_multiplier()
 	emit_signal("score_changed")
 
 func _set_score_multiplier(mult:int):
 	print("score multiplier set to :%s ---------"%mult)
 	_scoreMultiplier = mult;
-	emit_signal("score_multiplier_changed",mult)
+	emit_signal("score_multiplier_changed",get_true_score_multiplier())
+
+func get_true_score_multiplier()->float:
+	return pow(_scoreMultiplierGrowth,_scoreMultiplier-1)
 
 #use modulate to animate invincibility
 func _animate_invincibility():
@@ -202,7 +206,7 @@ func _animate_invincibility():
 		var b:float = 0.0  #blue
 		#######################################
 
-		modulate = Color(r,g,b,1.0-vShift*cos(freq*delta)+vShift)
+		modulate = Color(r,g,b,(1.0-vShift)*cos(freq*delta)+vShift)
 
 		#animation tweak END
 

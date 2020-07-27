@@ -53,6 +53,8 @@ func update_lives(lives,_increment):
 
 func update_score(score,_increment):
 	$VerticalStack/Score.set_text("%010d" % score)
+	#going to get a bit hacky here
+	update_progressBar()
 
 func update_bombs(bombs,_increment):		
 	$VerticalStack/Bombs.set_text(Globals.repeat_string("O ",bombs))
@@ -61,4 +63,15 @@ func update_name(name):
 	$StageName.set_text(name)
 
 func update_multiplier(mult:int):
-	$MultiplierContainer/Multiplier.set_text("X%s"%mult);
+	update_progressBar()
+	$MultiplierContainer/Multiplier.set_text("X %s"%mult);
+
+func update_progressBar():
+	var player = Globals.get_player();
+	var _currentAccumValue = player._scoreAccumValue;
+	var _currentMultiplierScoreValue = player.get_score_from_mult(player._scoreMultiplier)
+	var _nextMultiplierScoreValue = player.get_score_from_mult(player._scoreMultiplier+1)
+	var _amountRequired = _nextMultiplierScoreValue - _currentMultiplierScoreValue
+	var _amountAchieved = _currentAccumValue - _currentMultiplierScoreValue
+	var delta = _amountAchieved/_amountRequired * 15
+	$MultiplierProgressBar.set_text(Globals.reverseString("|%15s|"%(">"+Globals.repeat_string("=",delta))));

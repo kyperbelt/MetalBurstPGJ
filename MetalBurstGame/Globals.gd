@@ -43,12 +43,23 @@ func delete_player():
 func set_high_score(stageName:String)->int:
 	return _highScores[stageName] if (stageName in _highScores) else (set_get(_highScores,stageName,0))
 
+##STRING UTILS
 func repeat_string(s: String, times: int) -> String:
 	var s2 = ""
 	for _i in range(times):
 		s2 += s
 	return s2
+
+func reverseString(s:String)->String:
+	var length = len(s)
 	
+	var chars:String = "";
+	for i in range(length-1,-1,-1):
+		print("length=%s char=%s index=%s" % [length,s[i],i])
+		chars+=s[i];
+	return chars
+
+
 func set_get(map:Dictionary,key,value):
 	map[key]=value
 	return value
