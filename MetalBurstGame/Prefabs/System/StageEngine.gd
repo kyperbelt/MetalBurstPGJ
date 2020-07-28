@@ -20,6 +20,7 @@ var play_area_height = 0
 
 
 func _ready():
+	Globals._currentEngine = self
 	player = Globals.get_player()
 	player.connect("player_hit",self,"player_hit")
 	player.connect("score_changed",self,"score_changed")
@@ -72,8 +73,10 @@ func add_child(node : Node, legible_unique_name: bool = false):
 	
 	#projectiles get added to bullet layer
 	#TODO: set this to projectileComponent
-	if(node is Projectiles):
+	if(node is ProjectileComponent):
 		$BulletLayer.add_child(node, legible_unique_name)
+		if node.has_method("engine_ready"):
+			node.engine_ready(self)
 	else:
 		.add_child(node, legible_unique_name)
 
@@ -109,4 +112,5 @@ func player_hit():
 func get_play_container()->ViewportContainer:
 	return get_node(Level).get_node("Container") as ViewportContainer
 
-
+func tree_exited():
+	Globals._currentEngine = null

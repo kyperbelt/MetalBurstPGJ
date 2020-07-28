@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Assets/Projectiles/AllFoeBullets.png" type="Texture" id=1]
+[ext_resource path="res://Prefabs/Projectiles/ProjectileComponent.gd" type="Script" id=2]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.0
@@ -13,8 +14,11 @@ atlas = ExtResource( 1 )
 region = Rect2( 0, 125, 15, 30 )
 
 [node name="E15x30-01(Red)" type="Area2D"]
-collision_layer = 16
-collision_mask = 68
+collision_layer = 32
+collision_mask = 8
+script = ExtResource( 2 )
+_damage = 75.0
+_speed = 600.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

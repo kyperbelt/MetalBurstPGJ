@@ -8,13 +8,13 @@ const DEBUGMODE: bool = true
 
 var screen_size
 var margin = 80
-var player_bullet_image
+#var player_bullet_image
 const Player: PackedScene = preload("res://Prefabs/Player/Player.tscn")
 const Bullet: PackedScene = preload("res://Prefabs/Projectiles/BulletTest.tscn")
 var _player = null
 var random: RandomNumberGenerator = RandomNumberGenerator.new()
 var audioManager: AudioManager = null
-var _currentEngine:MBengine = null
+var _currentEngine = null
 
 
 # A dictionary holding highssores in {"stageName":Score} format
@@ -26,9 +26,9 @@ func _enter_tree():
 	screen_size = OS.get_screen_size(0)
 	var window_size = OS.get_window_size()
 	OS.set_window_position(screen_size * 0.5 - window_size * 0.5)
-	player_bullet_image = preload("res://Assets/Projectiles/bullet.png")
+	#player_bullet_image = preload("res://Assets/Projectiles/bullet.png")
 
-func get_engine()->MBengine:
+func get_engine():
 	return _currentEngine
 
 func get_player():
@@ -58,7 +58,7 @@ func reverseString(s:String)->String:
 	
 	var chars:String = "";
 	for i in range(length-1,-1,-1):
-		print("length=%s char=%s index=%s" % [length,s[i],i])
+		# print("length=%s char=%s index=%s" % [length,s[i],i])
 		chars+=s[i];
 	return chars
 
