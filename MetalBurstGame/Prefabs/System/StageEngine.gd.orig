@@ -46,15 +46,12 @@ func _process(delta):
 	if(elapsed>=max_duration):
 		elapsed=0
 
-<<<<<<< HEAD:MetalBurstGame/systems/StageEngine.gd
 func cleanup():
 	#remove player so that it doesnt get freed
 	player.get_parent().remove_child(player) #=================?????
-=======
 		var code = get_tree().change_scene("res://Prefabs_UIScreens/GameOverScreen.tscn")
 		if(code != OK):
 			print("failed to change to gameover screen")
->>>>>>> origin/reimj-things1:MetalBurstGame/systems/Engine.gd
 
 #proceess the entities in the level by adding them to engine
 #so that logic works properly

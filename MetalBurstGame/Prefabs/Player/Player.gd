@@ -227,7 +227,7 @@ func shoot():
 		var bullet :ProjectileComponent = BULLET.instance() as ProjectileComponent
 		#bullet.setProjectileType(PROJECTILES.PLAYER_BULLET)
 		bullet.global_position = global_position
-		var _value = Globals.audioManager.play_sound("sfx_playerShoot")
+		#var _value = Globals.audioManager.play_sound("sfx_playerShoot")
 		#bullet.change_speed(_speed)
 		if(!is_instance_valid(parent)):
 			parent = get_parent()

@@ -14,6 +14,7 @@ const Bullet: PackedScene = preload("res://Prefabs/Projectiles/BulletTest.tscn")
 var _player = null
 var random: RandomNumberGenerator = RandomNumberGenerator.new()
 var audioManager: AudioManager = null
+var _currentEngine:MBengine = null
 
 
 # A dictionary holding highssores in {"stageName":Score} format
@@ -27,6 +28,8 @@ func _enter_tree():
 	OS.set_window_position(screen_size * 0.5 - window_size * 0.5)
 	player_bullet_image = preload("res://Assets/Projectiles/bullet.png")
 
+func get_engine()->MBengine:
+	return _currentEngine
 
 func get_player():
 	if _player == null:
