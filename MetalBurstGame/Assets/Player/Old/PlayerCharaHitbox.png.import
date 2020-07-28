@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayerCharaHitbox.png-b30ec85c42b0dbb90d44dd5fa1fd244d.stex"
+path="res://.import/PlayerCharaHitbox.png-04ffe2f3d63f58026591c22572fea324.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/PlayerCharaHitbox.png"
-dest_files=[ "res://.import/PlayerCharaHitbox.png-b30ec85c42b0dbb90d44dd5fa1fd244d.stex" ]
+source_file="res://Assets/Player/Old/PlayerCharaHitbox.png"
+dest_files=[ "res://.import/PlayerCharaHitbox.png-04ffe2f3d63f58026591c22572fea324.stex" ]
 
 [params]
 

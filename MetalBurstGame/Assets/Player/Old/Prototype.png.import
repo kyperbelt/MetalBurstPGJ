@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GreenSkull.png-d1f24b456c30e7f89dbeb2691af51ae8.stex"
+path="res://.import/Prototype.png-27d9f9901a6bab1b8a156765550e7ad1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/GreenSkull.png"
-dest_files=[ "res://.import/GreenSkull.png-d1f24b456c30e7f89dbeb2691af51ae8.stex" ]
+source_file="res://Assets/Player/Old/Prototype.png"
+dest_files=[ "res://.import/Prototype.png-27d9f9901a6bab1b8a156765550e7ad1.stex" ]
 
 [params]
 

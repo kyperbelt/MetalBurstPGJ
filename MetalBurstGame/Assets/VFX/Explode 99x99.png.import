@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KritaTest2.png-3e00e203468acd47e988348b87a05fbe.stex"
+path="res://.import/Explode 99x99.png-515a73d42c9b5ab66d6d1465071e0089.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/KritaTest2.png"
-dest_files=[ "res://.import/KritaTest2.png-3e00e203468acd47e988348b87a05fbe.stex" ]
+source_file="res://Assets/VFX/Explode 99x99.png"
+dest_files=[ "res://.import/Explode 99x99.png-515a73d42c9b5ab66d6d1465071e0089.stex" ]
 
 [params]
 

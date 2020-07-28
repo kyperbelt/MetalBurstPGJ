@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/deer_placeholder.png-84439071f524313c5f2f76822195b7e2.stex"
+path="res://.import/Explode 15x15.png-e04306c98a7bb7158de3a49d0f5c5056.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/deer_placeholder.png"
-dest_files=[ "res://.import/deer_placeholder.png-84439071f524313c5f2f76822195b7e2.stex" ]
+source_file="res://Assets/VFX/Explode 15x15.png"
+dest_files=[ "res://.import/Explode 15x15.png-e04306c98a7bb7158de3a49d0f5c5056.stex" ]
 
 [params]
 

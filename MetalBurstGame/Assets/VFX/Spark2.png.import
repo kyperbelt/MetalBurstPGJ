@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BlueSkull.png-61b1fa4e715612328ea45145323291a6.stex"
+path="res://.import/Spark2.png-1732f2cc46fd202e0c0138ba13a78def.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/BlueSkull.png"
-dest_files=[ "res://.import/BlueSkull.png-61b1fa4e715612328ea45145323291a6.stex" ]
+source_file="res://Assets/VFX/Spark2.png"
+dest_files=[ "res://.import/Spark2.png-1732f2cc46fd202e0c0138ba13a78def.stex" ]
 
 [params]
 

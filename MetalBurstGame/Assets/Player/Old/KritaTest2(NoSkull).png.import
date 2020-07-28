@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KritaTest2(NoSkull).png-14c33b3c789ba84710051c6df1062626.stex"
+path="res://.import/KritaTest2(NoSkull).png-227df8a7abe0a2b70e86b247a32f589e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Player/KritaTest2(NoSkull).png"
-dest_files=[ "res://.import/KritaTest2(NoSkull).png-14c33b3c789ba84710051c6df1062626.stex" ]
+source_file="res://Assets/Player/Old/KritaTest2(NoSkull).png"
+dest_files=[ "res://.import/KritaTest2(NoSkull).png-227df8a7abe0a2b70e86b247a32f589e.stex" ]
 
 [params]
 
