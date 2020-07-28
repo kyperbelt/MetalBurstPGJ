@@ -308,7 +308,7 @@ _global_script_class_icons={
 "Player": "",
 "PositionalEvent": "res://Assets/Tools/pointA.png",
 "Print": "",
-"ProjectileComponent": "",
+"ProjectileComponent": "res://Assets/Tools/projectile.png",
 "Projectiles": "",
 "RandomInt": "",
 "RandomSelector": "",

@@ -74,4 +74,4 @@ func update_progressBar():
 	var _amountRequired = _nextMultiplierScoreValue - _currentMultiplierScoreValue
 	var _amountAchieved = _currentAccumValue - _currentMultiplierScoreValue
 	var delta = _amountAchieved/_amountRequired * 15
-	$MultiplierProgressBar.set_text(Globals.reverseString("|%15s|"%(">"+Globals.repeat_string("=",delta))));
+	$MultiplierProgressBar.set_text(Globals.reverseString("|%15s|"%(">"+Globals.repeat_string("=",delta-1))));

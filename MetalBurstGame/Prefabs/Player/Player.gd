@@ -2,13 +2,14 @@ extends Node2D
 
 class_name Player
 
-export(PackedScene) var BULLET_PROJECTILE 
 
-enum PROJECTILES {
-	PLAYER_BULLET,
-	PLAYER_BOMB = 2
-	
-}
+#Projectiles explained -------
+# We can now individually set the type of projectile
+# Some cool things to Note:
+#  - Bombs are considered Projectiles
+#  - We can programatically change projectiles at runtime
+export(PackedScene) var BULLET #bullet
+export(PackedScene) var BOMB   #bomb 
 
 #MULTIPLIER
 # can be set individually for each player type or left at default values
@@ -223,8 +224,8 @@ func start(_pos):
 
 func shoot():
 	if bullet_reloading <= 0.0:
-		var bullet = BULLET_PROJECTILE.instance()
-		bullet.setProjectileType(PROJECTILES.PLAYER_BULLET)
+		var bullet :ProjectileComponent = BULLET.instance() as ProjectileComponent
+		#bullet.setProjectileType(PROJECTILES.PLAYER_BULLET)
 		bullet.global_position = global_position
 		var _value = Globals.audioManager.play_sound("sfx_playerShoot")
 		#bullet.change_speed(_speed)
