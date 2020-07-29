@@ -182,26 +182,14 @@ spawn_x = 320.0
 
 [node name="BossBGM" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 320, -7600 )
-B_A_S_E = ""
 event_time = 152.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_O_U_N_D = ""
 _soundName = "bgm_Stage2Boss"
-_soundType = 1
-_eventType = 0
 _volume = -4.0
 
 [node name="StageBGM" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 320, 0 )
-B_A_S_E = ""
 event_time = 0.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_O_U_N_D = ""
 _soundName = "bgm_Stage2"
-_soundType = 1
-_eventType = 0
 _volume = 4.0
 
 [node name="Arrowhead8" parent="StageDirector" instance=ExtResource( 13 )]
@@ -216,11 +204,13 @@ event_time = 140.0
 position = Vector2( 0, -6800 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+event_time = 136.0
 
 [node name="SideEnter5" parent="StageDirector" instance=ExtResource( 15 )]
 position = Vector2( 0, -6550 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+event_time = 131.0
 
 [node name="CurveArcL8" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( -230, -6325 )
@@ -272,6 +262,7 @@ spawn_x = 230.0
 
 [node name="H-Caterpillar3" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( -160, -5500 )
+event_time = 110.0
 spawn_x = -160.0
 
 [node name="CurveArcR10" parent="StageDirector" instance=ExtResource( 12 )]
@@ -281,6 +272,7 @@ spawn_x = 230.0
 
 [node name="H-Caterpillar2" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( 160, -5350 )
+event_time = 107.0
 spawn_x = 160.0
 
 [node name="CurveArcL10" parent="StageDirector" instance=ExtResource( 14 )]
@@ -292,6 +284,7 @@ spawn_x = -230.0
 
 [node name="H-Caterpillar" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( 0, -5150 )
+event_time = 103.0
 
 [node name="Midboss2" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( 0, -3800 )
