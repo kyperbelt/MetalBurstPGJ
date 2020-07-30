@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Screens/gameover.png" type="Texture" id=1]
 [ext_resource path="res://Prefabs/System/MenuOption.gd" type="Script" id=2]
@@ -7,9 +7,15 @@
 [ext_resource path="res://Prefabs/Screens/GameOverScreen.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Screens/InstructionsFont.tres" type="DynamicFont" id=6]
 [ext_resource path="res://Assets/Screens/LargeSizeFont.res" type="DynamicFont" id=7]
+[ext_resource path="res://Assets/Audio/BGM/GameOver.ogg" type="AudioStream" id=8]
 
 [node name="GameOver" type="Node2D"]
 script = ExtResource( 5 )
+
+[node name="GameOverRiff" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+bus = "Music"
 
 [node name="GameOverBG" parent="." instance=ExtResource( 4 )]
 

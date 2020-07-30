@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
+[ext_resource path="res://Assets/Audio/SFX/bombRecharge_SFX.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Audio/SFX/menu_select.wav" type="AudioStream" id=2]
 [ext_resource path="res://Assets/Audio/SFX/menu_scroll01.wav" type="AudioStream" id=3]
 [ext_resource path="res://Assets/Audio/SFX/enemyHit02.wav" type="AudioStream" id=4]
@@ -83,15 +84,6 @@ __meta__ = {
 "
 }
 
-[node name="sfx_playerBomb" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource( 9 )
-bus = "Player Bomb"
-__meta__ = {
-"_editor_description_": "Connected to \"Player.tscn\"
-
-Plays: When the player fires a \"bomb\". Can be long, loud, and fancy. Bombs currently not coded yet."
-}
-
 [node name="sfx_playerShoot" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 6 )
 volume_db = -3.0
@@ -101,6 +93,18 @@ __meta__ = {
 
 Plays: When the player fires a shot (\"Z\"). Will be heard very often. Does not need to draw too much attention."
 }
+
+[node name="sfx_playerBomb" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 9 )
+bus = "Player Bomb"
+__meta__ = {
+"_editor_description_": "Connected to \"Player.tscn\"
+
+Plays: When the player fires a \"bomb\". Can be long, loud, and fancy. Bombs currently not coded yet."
+}
+
+[node name="sfx_playerRegen" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 1 )
 
 [node name="sfx_menuSelect" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 2 )
