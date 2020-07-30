@@ -8,9 +8,11 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/StopMove.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=7]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateTo.gd" type="Script" id=8]
-[ext_resource path="res://Prefabs/Formations/CrossFormations/AI-FireExx.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Prefabs/Formations/CrossFormations/AI-FirePluss.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Formations/CrossFormations/XPluss-FireExx.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Formations/CrossFormations/XPluss-FirePluss.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveCardinal.gd" type="Script" id=11]
+
+
 
 [node name="XPluss-AI1" type="Node"]
 script = ExtResource( 3 )
