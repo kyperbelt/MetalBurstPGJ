@@ -16,7 +16,7 @@
 [ext_resource path="res://Prefabs/Formations/CrossFormations/SideEnterL.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/Formations/CrossFormations/SideEnterR.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1Purple.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=18]
 [ext_resource path="res://Prefabs/Bosses/B1-ShrimpBossEvent.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Prefabs/Bosses/B1-SupportEvent1.tscn" type="PackedScene" id=21]
@@ -257,9 +257,8 @@ event_time = 102.146
 position = Vector2( 0, -4804.63 )
 event_time = 96.0926
 
-[node name="Midboss1" parent="StageDirector" instance=ExtResource( 17 )]
+[node name="Midboss1Purp" parent="StageDirector" instance=ExtResource( 17 )]
 position = Vector2( 0, -3300 )
-event_time = 66.0
 
 [node name="CurveArcL7" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -249.271, -3087.75 )
