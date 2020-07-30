@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Prefabs/Backgrounds/DustParticles.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
@@ -18,7 +18,10 @@
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnterL.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnterR.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-Caterpillar.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Prefabs/Formations/SwarmFormations/Helix.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-CornerSpreadL.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-CornerSpreadR.tscn" type="PackedScene" id=22]
 
 [node name="Stage2RootNode" type="Node"]
 __meta__ = {
@@ -260,27 +263,23 @@ position = Vector2( 230, -5675 )
 event_time = 113.5
 spawn_x = 230.0
 
+[node name="Swarm-CornerSpreadR4" parent="StageDirector" instance=ExtResource( 22 )]
+position = Vector2( 320, -5500 )
+spawn_x = 320.0
+
 [node name="H-Caterpillar3" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( -160, -5500 )
 event_time = 110.0
 spawn_x = -160.0
 
-[node name="CurveArcR10" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 230, -5500 )
-event_time = 110.0
-spawn_x = 230.0
+[node name="Swarm-CornerSpreadR3" parent="StageDirector" instance=ExtResource( 20 )]
+position = Vector2( -320, -5350 )
+spawn_x = -320.0
 
 [node name="H-Caterpillar2" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( 160, -5350 )
 event_time = 107.0
 spawn_x = 160.0
-
-[node name="CurveArcL10" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -230, -5350 )
-rotation = -3.14159
-scale = Vector2( 1, -1 )
-event_time = 107.0
-spawn_x = -230.0
 
 [node name="H-Caterpillar" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( 0, -5150 )
@@ -348,38 +347,36 @@ position = Vector2( 120, -1100 )
 event_time = 22.0
 spawn_x = 120.0
 
-[node name="CurveArcL3" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -230, -850 )
-rotation = -3.14159
+[node name="Swarm-CornerSpreadR" parent="StageDirector" instance=ExtResource( 20 )]
+position = Vector2( -320, -850 )
+spawn_x = -320.0
+
+[node name="Swarm-CornerSpreadR2" parent="StageDirector" instance=ExtResource( 22 )]
+position = Vector2( 320, -850 )
+spawn_x = 320.0
+
+[node name="Helix4" parent="StageDirector" instance=ExtResource( 19 )]
+position = Vector2( 160, -600 )
+rotation = 3.14159
 scale = Vector2( 1, -1 )
-event_time = 17.0
-spawn_x = -230.0
+spawn_x = 160.0
 
-[node name="CurveArcR3" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 230, -850 )
-event_time = 17.0
-spawn_x = 230.0
-
-[node name="CurveArcL2" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -230, -600 )
-rotation = -3.14159
+[node name="Helix3" parent="StageDirector" instance=ExtResource( 19 )]
+position = Vector2( -160, -600 )
+rotation = 3.14159
 scale = Vector2( 1, -1 )
-event_time = 12.0
-spawn_x = -230.0
+spawn_x = -160.0
 
-[node name="CurveArcR2" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 230, -600 )
-event_time = 12.0
-spawn_x = 230.0
+[node name="Helix2" parent="StageDirector" instance=ExtResource( 19 )]
+position = Vector2( 160, -400 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+spawn_x = 160.0
 
-[node name="CurveArcL" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -230, -200 )
-event_time = 4.0
-spawn_x = -230.0
-
-[node name="CurveArcR" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 230, -400 )
-event_time = 8.0
-spawn_x = 230.0
+[node name="Helix" parent="StageDirector" instance=ExtResource( 19 )]
+position = Vector2( -160, -200 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+spawn_x = -160.0
 
 [editable path="StageDirector"]

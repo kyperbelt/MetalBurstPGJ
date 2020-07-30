@@ -16,6 +16,7 @@ __meta__ = {
 "_editor_description_": ""
 }
 BULLET_PROJECTILE = ExtResource( 5 )
+_focusSpeed = 150.0
 
 [node name="Shadow" type="Sprite" parent="."]
 position = Vector2( 0, 18 )
@@ -44,7 +45,7 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 6 )
 animation = "Glowing"
-frame = 4
+frame = 1
 playing = true
 
 [node name="PlayerCollisionArea" type="Area2D" parent="."]
