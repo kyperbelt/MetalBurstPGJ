@@ -160,10 +160,10 @@ event_time = 0.0
 _soundName = "bgm_Stage1"
 _volume = -4.0
 
-[node name="StageBGM2" parent="StageDirector" instance=ExtResource( 10 )]
+[node name="BossBGMv1" parent="StageDirector" instance=ExtResource( 10 )]
 position = Vector2( 320, -6100 )
 event_time = 122.0
-_soundName = "bgm_Stage1Boss"
+_soundName = "bgm_Stage1Boss(test)"
 _volume = -3.0
 
 [node name="B1-Support12" parent="StageDirector" instance=ExtResource( 21 )]
@@ -259,6 +259,7 @@ event_time = 96.0926
 
 [node name="Midboss1Purp" parent="StageDirector" instance=ExtResource( 17 )]
 position = Vector2( 0, -3300 )
+event_time = 66.0
 
 [node name="CurveArcL7" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -249.271, -3087.75 )

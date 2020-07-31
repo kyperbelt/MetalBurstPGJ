@@ -45,7 +45,7 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 6 )
 animation = "Glowing"
-frame = 1
+frame = 4
 playing = true
 
 [node name="PlayerCollisionArea" type="Area2D" parent="."]

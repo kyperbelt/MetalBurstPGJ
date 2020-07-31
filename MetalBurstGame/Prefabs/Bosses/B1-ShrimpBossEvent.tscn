@@ -2,7 +2,6 @@
 
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
-[ext_resource path="res://Prefabs/Bosses/ClamBoss.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/StopMove.gd" type="Script" id=5]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=6]
@@ -15,6 +14,7 @@
 [ext_resource path="res://Prefabs/Bosses/B1NP-SplitRay.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=14]
 [ext_resource path="res://Prefabs/Bosses/B1M-Sec1.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/Bosses/ShieldShrimpBoss.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/Bosses/B1M-Sec2b.tscn" type="PackedScene" id=18]
 
 [node name="B1ShrimpPT1" type="Node2D"]
@@ -36,37 +36,37 @@ event_time = null
 [node name="placeholder" type="Sprite" parent="."]
 texture = ExtResource( 2 )
 
-[node name="ClamBoss" parent="." instance=ExtResource( 3 )]
+[node name="ShieldShrimpBoss" parent="." instance=ExtResource( 16 )]
 position = Vector2( 0, -100 )
 
-[node name="Brain" type="Node" parent="ClamBoss"]
+[node name="Brain" type="Node" parent="ShieldShrimpBoss"]
 script = ExtResource( 4 )
 
-[node name="Sequence" type="Node" parent="ClamBoss/Brain"]
+[node name="Sequence" type="Node" parent="ShieldShrimpBoss/Brain"]
 script = ExtResource( 6 )
 
-[node name="SequenceIntro" type="Node" parent="ClamBoss/Brain/Sequence"]
+[node name="SequenceIntro" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
 script = ExtResource( 6 )
 __meta__ = {
 "_editor_description_": "Sequence
 2 Sec"
 }
 
-[node name="ChangeSpeed" type="Node" parent="ClamBoss/Brain/Sequence/SequenceIntro"]
+[node name="ChangeSpeed" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/SequenceIntro"]
 script = ExtResource( 7 )
 _speed = 250.0
 
-[node name="MoveCardinal" type="Node" parent="ClamBoss/Brain/Sequence/SequenceIntro"]
+[node name="MoveCardinal" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/SequenceIntro"]
 script = ExtResource( 8 )
 
-[node name="Wait" type="Node" parent="ClamBoss/Brain/Sequence/SequenceIntro"]
+[node name="Wait" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/SequenceIntro"]
 script = ExtResource( 9 )
 delay = 1.0
 
-[node name="StopMove" type="Node" parent="ClamBoss/Brain/Sequence/SequenceIntro"]
+[node name="StopMove" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/SequenceIntro"]
 script = ExtResource( 5 )
 
-[node name="ParallelSec1" type="Node" parent="ClamBoss/Brain/Sequence"]
+[node name="ParallelSec1" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
 script = ExtResource( 14 )
 __meta__ = {
 "_editor_description_": "Parallel
@@ -74,13 +74,13 @@ Section1 - Low Point
 12 Sec"
 }
 
-[node name="Movement" parent="ClamBoss/Brain/Sequence/ParallelSec1" instance=ExtResource( 15 )]
+[node name="Movement" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1" instance=ExtResource( 15 )]
 
-[node name="2-Ball" parent="ClamBoss/Brain/Sequence/ParallelSec1" instance=ExtResource( 12 )]
+[node name="2-Ball" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1" instance=ExtResource( 12 )]
 
-[node name="5-Fingers" parent="ClamBoss/Brain/Sequence/ParallelSec1" instance=ExtResource( 11 )]
+[node name="5-Fingers" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1" instance=ExtResource( 11 )]
 
-[node name="ParallelSec2a" type="Node" parent="ClamBoss/Brain/Sequence"]
+[node name="ParallelSec2a" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
 script = ExtResource( 14 )
 __meta__ = {
 "_editor_description_": "Parallel
@@ -88,56 +88,48 @@ Section2 - High Point
 5 Sec"
 }
 
-[node name="SplitRay" parent="ClamBoss/Brain/Sequence/ParallelSec2a" instance=ExtResource( 13 )]
+[node name="SplitRay" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec2a" instance=ExtResource( 13 )]
 
-[node name="7-Ray" parent="ClamBoss/Brain/Sequence/ParallelSec2a" instance=ExtResource( 10 )]
+[node name="7-Ray" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec2a" instance=ExtResource( 10 )]
 
-[node name="ParallelSec2b" type="Node" parent="ClamBoss/Brain/Sequence"]
+[node name="ParallelSec2b" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
 script = ExtResource( 14 )
 
-[node name="Movement" parent="ClamBoss/Brain/Sequence/ParallelSec2b" instance=ExtResource( 18 )]
+[node name="Movement" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec2b" instance=ExtResource( 18 )]
 
-[node name="5-Fingers" parent="ClamBoss/Brain/Sequence/ParallelSec2b" instance=ExtResource( 11 )]
+[node name="5-Fingers" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec2b" instance=ExtResource( 11 )]
 amount = 8
 
-[node name="2-Ball" parent="ClamBoss/Brain/Sequence/ParallelSec2b" instance=ExtResource( 12 )]
+[node name="2-Ball" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec2b" instance=ExtResource( 12 )]
 
-[node name="ParallelSec3a" type="Node" parent="ClamBoss/Brain/Sequence"]
+[node name="ParallelSec3a" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
 script = ExtResource( 14 )
 
-[node name="SplitRay2" parent="ClamBoss/Brain/Sequence/ParallelSec3a" instance=ExtResource( 13 )]
+[node name="SplitRay2" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec3a" instance=ExtResource( 13 )]
 
-[node name="7-Ray2" parent="ClamBoss/Brain/Sequence/ParallelSec3a" instance=ExtResource( 10 )]
+[node name="7-Ray2" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec3a" instance=ExtResource( 10 )]
 
-[node name="ParallelSec3b" type="Node" parent="ClamBoss/Brain/Sequence"]
+[node name="ParallelSec3b" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
 script = ExtResource( 14 )
 
-[node name="Movement" parent="ClamBoss/Brain/Sequence/ParallelSec3b" instance=ExtResource( 18 )]
+[node name="Movement" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec3b" instance=ExtResource( 18 )]
 
-[node name="MoveCardinal" parent="ClamBoss/Brain/Sequence/ParallelSec3b/Movement" index="1"]
-_direction = 6
-
-[node name="MoveCardinal2" parent="ClamBoss/Brain/Sequence/ParallelSec3b/Movement" index="5"]
-_direction = 2
-
-[node name="5-Fingers" parent="ClamBoss/Brain/Sequence/ParallelSec3b" instance=ExtResource( 11 )]
+[node name="5-Fingers" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec3b" instance=ExtResource( 11 )]
 amount = 8
 
-[node name="2-Ball" parent="ClamBoss/Brain/Sequence/ParallelSec3b" instance=ExtResource( 12 )]
+[node name="2-Ball" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec3b" instance=ExtResource( 12 )]
 
-[node name="SequenceOutro" type="Node" parent="ClamBoss/Brain/Sequence"]
+[node name="SequenceOutro" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
 script = ExtResource( 6 )
 __meta__ = {
 "_editor_description_": "Sequence
 2 Sec"
 }
 
-[node name="ChangeSpeed" type="Node" parent="ClamBoss/Brain/Sequence/SequenceOutro"]
+[node name="ChangeSpeed" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/SequenceOutro"]
 script = ExtResource( 7 )
 _speed = 250.0
 
-[node name="MoveCardinal" type="Node" parent="ClamBoss/Brain/Sequence/SequenceOutro"]
+[node name="MoveCardinal" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/SequenceOutro"]
 script = ExtResource( 8 )
 _direction = 0
-
-[editable path="ClamBoss/Brain/Sequence/ParallelSec3b/Movement"]
