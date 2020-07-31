@@ -3,25 +3,6 @@ extends Area2D
 # this will eventually move to be our base projectile class
 class_name ProjectileComponent, "res://Assets/Tools/projectile.png"
 
-
-var _colBits:Dictionary = {
-	Default = 1,
-	Background = 2,
-	Player = 4,
-	Enemy = 8,
-	EnemyBullet = 16,
-	PlayerBullet = 32,
-	PlayerBomb = 64,
-	Item = 128
-}
-
-var _colMasks:Dictionary = {
-	PlayerBulletDefault = (_colBits.Enemy),
-	EnemyBulletDefault = (_colBits.Player)
-}
-
-var _colLayer = _colBits.PlayerBullet
-
 enum ProjectileType{
 	PlayerProjectile,
 	EnemyProjectile
@@ -34,7 +15,8 @@ export(float) var _damage = 10
 export(float) var _speed = 100
 var _velocity : Vector2 = Vector2(0,0) #velcity in the x and y directions this applies movement
 
-## SFX played by this entity on init
+## SFX played by this entity on initialization 
+#(this is projectile initialization and not object initialization)
 export(String) var _soundFX = "sfx_playerShoot"
 #make sure this is a brain behavior
 #if empty then this projectile will just move 
@@ -58,6 +40,16 @@ func _process(delta:float):
 		if(!_screenBounds.has_point(position)):
 			#not in the screen
 			self.queue_free()
+
+#set the collisionLayer for this object
+func set_collision_layer(layer:int):
+	collision_layer = layer
+
+#set the collisionMask for this object
+#these are the objects that this projectile
+#collides with
+func set_collision_mask(mask:int):
+	collision_mask = mask
 
 func engine_ready(engine):
 	_engineReady = true
