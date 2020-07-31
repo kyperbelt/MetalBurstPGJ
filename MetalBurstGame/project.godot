@@ -64,6 +64,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Actions/Utility/CheckDistance.gd"
 }, {
+"base": "Node2D",
+"class": "CollisionBits",
+"language": "GDScript",
+"path": "res://Prefabs/System/CollisionBits.gd"
+}, {
 "base": "BehaviorNode",
 "class": "Composite",
 "language": "GDScript",
@@ -291,6 +296,7 @@ _global_script_class_icons={
 "BulletTest": "",
 "ChangeSpeed": "",
 "CheckDistance": "",
+"CollisionBits": "",
 "Composite": "res://Assets/Tools/Behavior/sequence.png",
 "Decorator": "res://Assets/Tools/Behavior/decorator.png",
 "EndNode": "",

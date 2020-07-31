@@ -3,6 +3,25 @@ extends Area2D
 # this will eventually move to be our base projectile class
 class_name ProjectileComponent, "res://Assets/Tools/projectile.png"
 
+
+var _colBits:Dictionary = {
+	Default = 1,
+	Background = 2,
+	Player = 4,
+	Enemy = 8,
+	EnemyBullet = 16,
+	PlayerBullet = 32,
+	PlayerBomb = 64,
+	Item = 128
+}
+
+var _colMasks:Dictionary = {
+	PlayerBulletDefault = (_colBits.Enemy),
+	EnemyBulletDefault = (_colBits.Player)
+}
+
+var _colLayer = _colBits.PlayerBullet
+
 enum ProjectileType{
 	PlayerProjectile,
 	EnemyProjectile
@@ -28,6 +47,7 @@ var _engine = null
 var _screenBounds : Rect2
 
 func _process(delta:float):
+	
 	if(_engineReady):
 		#update brain if it exists
 		if(_behaviorScene!=null):
