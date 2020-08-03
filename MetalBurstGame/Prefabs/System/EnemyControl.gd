@@ -138,12 +138,12 @@ func hit(object):
 		#example SOUND
 		var _value = Globals.audioManager.play_sound("sfx_foeHit")
 		Globals.get_player().score += get_hit_value()
-		print("Enemy[%s] took damage from Object[%s] "%[self.name,object.name])
+		# print("Enemy[%s] took damage from Object[%s] "%[self.name,object.name])
 	#HP-Threshold SFX can also be done here ; more advanced
 	if get_current_health() <= 0:
 		#$FoeDeathSFX.play()
 		var _value = Globals.audioManager.play_sound("sfx_foeDeath")
-		print(self.name + "has died!")
+		# print(self.name + "has died!")
 		Globals.get_player().score += get_death_value()
 		queue_free()
 	if object.name == 'PlayerCollisionArea':

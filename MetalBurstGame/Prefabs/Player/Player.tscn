@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Assets/Player/Version1c.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/Version1b.png" type="Texture" id=2]
@@ -6,16 +6,20 @@
 [ext_resource path="res://Prefabs/Player/Player.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/Projectiles/Variants/TestProjectile(RED).tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Player/PlayerHitbox.tres" type="SpriteFrames" id=6]
+[ext_resource path="res://Prefabs/Player/AmberBomb.tscn" type="PackedScene" id=7]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 4.0
 
-[node name="Player" type="Node2D"]
+[node name="Player" type="Area2D"]
+collision_layer = 4
+collision_mask = 152
 script = ExtResource( 4 )
-__meta__ = {
-"_editor_description_": ""
-}
 BULLET = ExtResource( 5 )
+BOMB = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
 
 [node name="Shadow" type="Sprite" parent="."]
 position = Vector2( 0, 18 )
@@ -44,17 +48,8 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 6 )
 animation = "Glowing"
-frame = 4
+frame = 5
 playing = true
-
-[node name="PlayerCollisionArea" type="Area2D" parent="."]
-input_pickable = false
-collision_layer = 4
-collision_mask = 24
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerCollisionArea"]
-shape = SubResource( 1 )
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]
 position = Vector2( 0, -45.5898 )
-[connection signal="area_entered" from="PlayerCollisionArea" to="." method="on_collision_start"]

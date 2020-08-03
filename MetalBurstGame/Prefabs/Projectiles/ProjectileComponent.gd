@@ -11,6 +11,8 @@ enum ProjectileType { PlayerProjectile, EnemyProjectile }
 
 #this damage is only relavant when the player is firing the projectile
 export (float) var _damage = 10
+export (float) var _fireRate = 0.125 #shots per second
+export (bool) var  _destroyOnHit = true
 
 ## MOVEMENT 
 export (float) var _speed = 100
@@ -60,6 +62,11 @@ func set_collision_layer(layer: int):
 func set_collision_mask(mask: int):
 	collision_mask = mask
 
+func get_fire_rate()->float:
+	return _fireRate
+
+func set_fire_rate(fireRate:float):
+	_fireRate = fireRate
 
 func engine_ready(engine):
 	_engineReady = true
@@ -93,14 +100,22 @@ func hit(_object):
 	# but for now we just free the bullet
 
 	#TODO: insert impact animation
-	queue_free()
+	if(_destroyOnHit):	
+		queue_free()
 
+#do not use 
 func destroy():
 	_onDestroy.call_func()
 
 
 func get_damage() -> float:
 	return _damage
+
+func set_damage(damage:float):
+	_damage = damage
+
+func get_engine():
+	return _engine
 
 #get the range of this projectile
 #in pixel that it still have left

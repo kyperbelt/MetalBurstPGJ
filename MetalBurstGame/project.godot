@@ -225,6 +225,11 @@ _global_script_classes=[ {
 "path": "res://Prefabs/System/Behavior/Composites/Sequence.gd"
 }, {
 "base": "Action",
+"class": "Shoot",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd"
+}, {
+"base": "Action",
 "class": "ShootAngle",
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd"
@@ -328,6 +333,7 @@ _global_script_class_icons={
 "ScrollingBackground": "",
 "Selector": "",
 "Sequence": "",
+"Shoot": "",
 "ShootAngle": "",
 "ShootDown": "",
 "ShootPlayer": "",

@@ -1,14 +1,20 @@
-extends Node2D
+extends Area2D
 
 class_name Player
+
+#DEPRECATED
+#this will get overrriden by projectiles
+const RELOAD_TIME = 0.125
 
 #Projectiles explained -------
 # We can now individually set the type of projectile
 # Some cool things to Note:
 #  - Bombs are considered Projectiles
 #  - We can programatically change projectiles at runtime
-export (PackedScene) var BULLET  #bullet
-export (PackedScene) var BOMB  #bomb 
+export (PackedScene) var BULLET  setget set_bullet#bullet
+var _bulletFireRate = RELOAD_TIME
+export (PackedScene) var BOMB  setget set_bomb #bomb 
+var _bombFireRate = RELOAD_TIME
 
 #MULTIPLIER
 # can be set individually for each player type or left at default values
@@ -20,7 +26,7 @@ var _scoreAccumValue: float = 0  #The value of accumulated multiplier increment 
 var _deadZoneElapsed = 0  #when this reaches
 var _scoreMultiplier: int = 1  #this is the stage the multiplier is at
 
-const RELOAD_TIME = 0.125
+
 
 # player invinvibility frames duration
 export (float) var _invincibilityAmount = 2.5
@@ -59,35 +65,40 @@ var lives: int = 4
 var bomb_percentage: float = 1.0
 #the cost of the bomb in energy percentage
 export (float, .01, 1.0) var bomb_cost: float = .25
-export (float) var _rechargeRate = .1
+export (float) var _rechargeRate = .9
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	parent = get_parent()
 	set_process(true)
+	var _i = connect("area_entered",self,"on_collision_start")
 
+func set_bullet(bullet):
+	BULLET = bullet
+	_bulletFireRate = bullet.instance().get_fire_rate()
+
+func set_bomb(bomb):
+	BOMB = bomb
+	_bombFireRate = bomb.instance().get_fire_rate()
 
 func _process(delta):
 	#invinvibility frames countdown
 	_invincibilityTimer -= delta
 	_animate_invincibility()
 
+	########################################
+	#        PROJECTILES 
 	# shot_timer -= delta
-	shot_timer = -1
-	bomb_timer -= delta
 	if Input.is_action_pressed("fire"):
-		if shot_timer <= 0:
 			shoot()
-			firing = true
-		else:
-			firing = false
 	if Input.is_action_pressed("player_bomb"):
-		if bomb_timer <= 0:
 			bomb_away()
-			bombing = true
-		else:
-			bombing = false
+	bullet_reloading -= delta
+	bomb_reloading -= delta
+
+	bomb_percentage = min(bomb_percentage + _rechargeRate * delta, 1)
+
 
 	########################################
 	# 				MOVEMENT 
@@ -119,11 +130,7 @@ func _process(delta):
 	if position.y > play_area_height:
 		position.y = play_area_height
 
-	#########################################
-	bullet_reloading -= delta
-	bomb_reloading -= delta
-
-	bomb_percentage = min(bomb_percentage + _rechargeRate * delta, 1)
+	
 
 	###########################################
 	#     MULTIPLIER
@@ -158,7 +165,6 @@ func on_collision_start(area):
 	#print_tree_pretty()
 	var node = area
 	print("collision with " + node.get_class() + " detected!")
-
 
 func hit(object):
 	if _invincibilityTimer >= 0:
@@ -231,13 +237,7 @@ func start(_pos):
 func shoot():
 	if bullet_reloading <= 0.0:
 		var bullet: ProjectileComponent = BULLET.instance() as ProjectileComponent
-		#bullet.setProjectileType(PROJECTILES.PLAYER_BULLET)
-		# bullet.global_position = global_position
-		#var _value = Globals.audioManager.play_sound("sfx_playerShoot")
-		#bullet.change_speed(_speed)
-		# if(!is_instance_valid(parent)):
-		# 	parent = get_parent()
-		# parent.add_child(bullet)
+	
 		bullet.projectile_init(
 			$ProjectileSpawnPosition.global_position,
 			Vector2(0, -1),
@@ -246,19 +246,21 @@ func shoot():
 
 		Globals.get_engine().add_child(bullet)
 		shot_timer = cooldown
-		bullet_reloading = RELOAD_TIME
+		bullet_reloading = _bulletFireRate
 
 
 func bomb_away():
 	if bomb_reloading <= 0.0 && bomb_percentage >= bomb_cost:
-		# bomb_percentage-=bomb_cost
-		# var bomb = BULLET_PROJECTILE.instance()
-		# bomb.setProjectileType(PROJECTILES.PLAYER_BOMB)
-		# bomb.global_position = global_position
-		# var _value = Globals.audioManager.play_sound("sfx_playerBomb")
-		#bullet.change_speed(_speed)
-		# if(!is_instance_valid(parent)):
-		# 	parent = get_parent()
-		# parent.add_child(bomb)
+		bomb_percentage -= bomb_cost
+		var bomb = BOMB.instance()
+		bomb.global_position = global_position
+
+		bomb.projectile_init(
+			$ProjectileSpawnPosition.global_position,
+			Vector2(0, -1),
+			ProjectileComponent.ProjectileType.PlayerProjectile
+		)
+
+		Globals.get_engine().add_child(bomb)
 		bomb_timer = bomb_cooldown
-		bomb_reloading = RELOAD_TIME
+		bomb_reloading = _bombFireRate
