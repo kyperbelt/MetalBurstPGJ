@@ -28,7 +28,7 @@ func _process(delta):
 		
 func hit(object):
 	print("Bullet collision with " + object.name + " detected!")
-	object.get_parent().hit(self)
+	object.hit(self)
 	queue_free()
 
 func _on_PlayerBulletArea_area_entered(area):

@@ -7,5 +7,5 @@
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
 animation = "Version2"
-frame = 3
+frame = 2
 playing = true
