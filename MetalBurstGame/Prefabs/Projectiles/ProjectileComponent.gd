@@ -35,13 +35,15 @@ var _engineReady: bool = false  #ready to roll baby
 var _engine = null
 var _screenBounds: Rect2
 var _onDestroy : FuncRef
+var _brain : Brain = null
 
 
 func _process(delta: float):
 	if _engineReady:
 		#update brain if it exists
-		if _behaviorScene != null:
-			var _finished = _behaviorScene.update_brain(delta)
+		if _brain != null:
+			var _finished = _brain.update_brain(delta)
+			
 		#update movement
 
 		position = position + ((_velocity.normalized() * _speed) * delta)
@@ -74,7 +76,9 @@ func engine_ready(engine):
 	var _i = connect("area_entered", self, "hit")
 	set_process(true)
 	if _behaviorScene != null:
-		_behaviorScene.start(
+		_brain = _behaviorScene.instance()
+		self.add_child(_brain)
+		_brain.start(
 			{
 				BB.SELF: self,
 				BB.PLAYER: Globals.get_player(),
@@ -86,15 +90,19 @@ func engine_ready(engine):
 	_screenBounds = Rect2(0, 0, container.rect_size.x, container.rect_size.y)
 
 #called to initialize the projectile and play its appropriate sound effect
-func projectile_init(spawn_position: Vector2, initial_heading: Vector2, type: int = 1):
+func projectile_init(spawn_position: Vector2, initial_heading: Vector2, type: int = -1):
 	if Globals.audioManager.play_sound(_soundFX):
 		pass
 	position = spawn_position
 	_velocity = initial_heading
+	#TODO: modify further
 	set_type(type)
 
 
 func hit(_object):
+
+	if(_object.is_class("Player")):
+		_object.hit(self)
 	#some collision happened
 	# we can specify unique behavior 
 	# but for now we just free the bullet
@@ -145,6 +153,15 @@ func get_class() -> String:
 
 #projectile type 0=player 1=enemy (default=1)
 func set_type(type: int = 1):
+
+	match type:
+		ProjectileType.PlayerProjectile:
+			pass
+		ProjectileType.EnemyProjectile:
+			pass
+		_:	
+			#do nothing if not a valid Projectyle Type
+			pass
 	_type = type
 
 

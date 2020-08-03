@@ -10,7 +10,8 @@ var screen_size
 var margin = 80
 #var player_bullet_image
 const Player: PackedScene = preload("res://Prefabs/Player/Player.tscn")
-const Bullet: PackedScene = preload("res://Prefabs/Projectiles/BulletTest.tscn")
+const DefaultProjectile: PackedScene = preload("res://Prefabs/Projectiles/Variants/EnemyTestProjectile.tscn")
+
 var _player = null
 var random: RandomNumberGenerator = RandomNumberGenerator.new()
 var audioManager: AudioManager = null

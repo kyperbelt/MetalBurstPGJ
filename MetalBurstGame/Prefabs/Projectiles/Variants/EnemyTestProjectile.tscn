@@ -12,10 +12,13 @@ flags = 4
 atlas = ExtResource( 1 )
 region = Rect2( 0, 25, 50, 50 )
 
-[node name="DefaultEnemyProjectile" type="Area2D"]
+[node name="DefaultProjectileEnemy" type="Area2D"]
+scale = Vector2( 0.489672, 0.478172 )
 collision_layer = 16
 collision_mask = 68
 script = ExtResource( 2 )
+_speed = 400.0
+_soundFX = "sfx_foeShoot"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

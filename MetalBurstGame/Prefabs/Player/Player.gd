@@ -65,7 +65,7 @@ var lives: int = 4
 var bomb_percentage: float = 1.0
 #the cost of the bomb in energy percentage
 export (float, .01, 1.0) var bomb_cost: float = .25
-export (float) var _rechargeRate = .9
+export (float) var _rechargeRate = .02#very slow recovery rate
 
 
 # Called when the node enters the scene tree for the first time.
@@ -264,3 +264,9 @@ func bomb_away():
 		Globals.get_engine().add_child(bomb)
 		bomb_timer = bomb_cooldown
 		bomb_reloading = _bombFireRate
+
+func get_class() -> String:
+	return "Player"
+
+func is_class(object)->bool:
+	return object == get_class() if object is String else object.get_class() == get_class()

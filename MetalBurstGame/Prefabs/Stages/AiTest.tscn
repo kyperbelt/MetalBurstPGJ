@@ -11,11 +11,12 @@
 [ext_resource path="res://Prefabs/Backgrounds/Stage1BG.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Behaviors/MoveAtRotationTest.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Behaviors/RotateTestBehavior.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateBy.gd" type="Script" id=13]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/RotateBy.gd" type="Script" id=13]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=14]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=15]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/MoveForward.gd" type="Script" id=15]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SoundEvent.tscn" type="PackedScene" id=17]
+
 
 [node name="Stage" type="Node"]
 

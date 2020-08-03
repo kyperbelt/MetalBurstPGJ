@@ -1,12 +1,13 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateBy.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/RotateBy.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=2]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=4]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/MoveForward.gd" type="Script" id=5]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=6]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/ChangeSpeed.gd" type="Script" id=7]
+
 
 [node name="Loop1-R" type="Node"]
 script = ExtResource( 6 )

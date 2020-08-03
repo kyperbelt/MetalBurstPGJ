@@ -4,10 +4,10 @@
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
 [ext_resource path="res://Prefabs/Bosses/ClamBoss.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=4]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/StopMove.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/StopMove.gd" type="Script" id=5]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=6]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=7]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveCardinal.gd" type="Script" id=8]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/ChangeSpeed.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/MoveCardinal.gd" type="Script" id=8]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=9]
 [ext_resource path="res://Prefabs/Bosses/B1NP-7Ray.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Bosses/B1NP-5Fingers.tscn" type="PackedScene" id=11]
@@ -16,6 +16,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=14]
 [ext_resource path="res://Prefabs/Bosses/B1M-Sec1.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/Bosses/B1M-Sec2b.tscn" type="PackedScene" id=18]
+
 
 [node name="B1ShrimpPT1" type="Node2D"]
 script = ExtResource( 1 )

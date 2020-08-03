@@ -2,13 +2,14 @@
 
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=2]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=3]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/StopMove.gd" type="Script" id=4]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateTo.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/ChangeSpeed.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/StopMove.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/RotateTo.gd" type="Script" id=5]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=6]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/MoveForward.gd" type="Script" id=7]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=8]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=9]
+
 
 [node name="WhipArmsAI" type="Node"]
 script = ExtResource( 8 )
