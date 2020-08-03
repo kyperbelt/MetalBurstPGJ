@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/Player/Version1b.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Enemies/Shadow.png" type="Texture" id=3]
 [ext_resource path="res://Prefabs/Player/Player.gd" type="Script" id=4]
-[ext_resource path="res://Prefabs/Projectiles/Variants/TestProjectile(RED).tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Player/PlayerShotV2a.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Player/PlayerHitbox.tres" type="SpriteFrames" id=6]
 [ext_resource path="res://Prefabs/Player/AmberBomb.tscn" type="PackedScene" id=7]
 
@@ -17,6 +17,7 @@ collision_mask = 152
 script = ExtResource( 4 )
 BULLET = ExtResource( 5 )
 BOMB = ExtResource( 7 )
+_focusSpeed = 150.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -48,7 +49,7 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 6 )
 animation = "Glowing"
-frame = 1
+frame = 4
 playing = true
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]
