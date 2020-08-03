@@ -18,6 +18,11 @@ var informationDisplay : InformationDisplay = null
 var play_area_width = 0
 var play_area_height = 0
 
+# a list for tracking special entities 
+# this will contain the player for redundancy sake but
+# player should alaways be retrieved using Globals.get_player()
+var _specialEntitiesList = {}
+
 
 func _ready():
 	Globals._currentEngine = self
@@ -41,6 +46,15 @@ func _process(_delta):
 	
 	informationDisplay.set_bombs(int(floor(player.bomb_percentage / player.bomb_cost)))
 
+#get the special entity by name
+func get_special_entity(name:String):
+	return _specialEntitiesList[name]
+
+#add special entity by name :
+#this will override the last special entity 
+#of the same name if there is one
+func add_special_entity(name:String,entity):
+	_specialEntitiesList[name] = entity
 
 func cleanup():
 	#remove player so that it doesnt get freed
@@ -114,3 +128,4 @@ func get_play_container()->ViewportContainer:
 
 func tree_exited():
 	Globals._currentEngine = null
+	cleanup()

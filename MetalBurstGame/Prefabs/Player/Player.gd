@@ -238,7 +238,7 @@ func shoot():
 		# if(!is_instance_valid(parent)):
 		# 	parent = get_parent()
 		# parent.add_child(bullet)
-		bullet.initialize(
+		bullet.projectile_init(
 			$ProjectileSpawnPosition.global_position,
 			Vector2(0, -1),
 			ProjectileComponent.ProjectileType.PlayerProjectile
