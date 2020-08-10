@@ -10,8 +10,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/StopMove.gd" type="Script" id=8]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/RotateBy.gd" type="Script" id=9]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=10]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootPlayer.gd" type="Script" id=11]
-
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=11]
 
 [node name="RotateTestBehavior" type="Node"]
 script = ExtResource( 1 )
@@ -52,9 +51,11 @@ script = ExtResource( 3 )
 script = ExtResource( 5 )
 delay = 2.0
 
-[node name="ShootPlayer" type="Node" parent="Sequence/Parallel/Repeater/Sequence"]
+[node name="Shoot" type="Node" parent="Sequence/Parallel/Repeater/Sequence"]
 script = ExtResource( 11 )
-_angleOffset = 30.0
+_collisionLayer = 16
+_collisionMask = 68
+_targetName = "player"
 
 [node name="Repeater2" type="Node" parent="Sequence/Parallel"]
 script = ExtResource( 6 )

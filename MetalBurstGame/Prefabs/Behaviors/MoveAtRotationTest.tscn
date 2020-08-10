@@ -10,7 +10,6 @@
 [ext_resource path="res://Prefabs/Behaviors/Base/CheckEntityRemove.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=9]
 
-
 [node name="MoveAtRotationTest" type="Node"]
 script = ExtResource( 1 )
 
