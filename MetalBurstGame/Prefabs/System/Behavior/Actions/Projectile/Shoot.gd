@@ -42,8 +42,9 @@ export (PackedScene) var _projectileScene
 #default behavior for the projectile
 export (PackedScene) var _behaviorScene
 
-#TODO:this will be used to mimic - shootATplayer but more general
-export (String, "Target", "NoTarget") var _hasTarget
+#get the target from the blackboard
+export (String) var _targetName 
+export (Vector2) var _offset
 
 var _self = null
 var _engine = null
@@ -75,6 +76,8 @@ func initiate():
 	if _behaviorScene != null:
 		_projectile._behaviorScene = _behaviorScene
 
+	_target = get_blackboard()[_targetName]
+
 
 func _update_behavior(_delta: float) -> int:
 	shoot()
@@ -83,8 +86,12 @@ func _update_behavior(_delta: float) -> int:
 
 func shoot():
 	var angle = _initialHeading * PI / 180
+	var angleTarget :float = 0 
+	if _target != null:
+		 angleTarget = atan2(_target.position.y - _self.position.y, _target.position.x - _self.position.x)
+	angle += angleTarget
 
-	var spawn_position: Vector2 = _self.global_position
+	var spawn_position: Vector2 = _self.global_position + _offset
 	var initial_heading: Vector2 = Vector2(cos(angle), sin(angle))
 	_projectile.projectile_init(spawn_position, initial_heading)
 	if _initialSpeed>=0:

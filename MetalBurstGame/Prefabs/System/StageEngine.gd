@@ -44,6 +44,10 @@ func _process(_delta):
 		get_node(PauseScreen).show()
 		get_tree().paused = true
 	
+	#clean up special entities if they are not in tree
+	for ent in _specialEntitiesList.keys():
+		if !_specialEntitiesList[ent].is_inside_tree():
+			_specialEntitiesList.erase(ent);
 	informationDisplay.set_bombs(int(floor(player.bomb_percentage / player.bomb_cost)))
 
 #get the special entity by name
@@ -89,6 +93,10 @@ func add_child(node : Node, legible_unique_name: bool = false):
 	#TODO: set this to projectileComponent
 	if(node is ProjectileComponent):
 		$BulletLayer.add_child(node, legible_unique_name)
+		if node.has_method("engine_ready"):
+			node.engine_ready(self)
+	elif(node is Enemy):
+		$EntityLayer.add_child(node, legible_unique_name)
 		if node.has_method("engine_ready"):
 			node.engine_ready(self)
 	else:
