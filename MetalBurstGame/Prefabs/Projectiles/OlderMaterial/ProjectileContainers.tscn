@@ -4,8 +4,6 @@
 [ext_resource path="res://Prefabs/Projectiles/Variants/E15x30-05(Cyan).tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Projectiles/Variants/E15x30-07(Purple).tscn" type="PackedScene" id=3]
 
-
-
 [node name="Container" type="Node"]
 
 [node name="E15x30-05(Cyan)" parent="." instance=ExtResource( 2 )]

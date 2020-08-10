@@ -25,8 +25,6 @@
 [ext_resource path="res://Prefabs/Projectiles/Variants/R50-04(Green).tscn" type="PackedScene" id=23]
 [ext_resource path="res://Prefabs/Projectiles/Variants/R50-05(Cyan).tscn" type="PackedScene" id=24]
 
-
-
 [node name="BulletContainer" type="Node"]
 
 [node name="R25-01(Red)" parent="." instance=ExtResource( 11 )]

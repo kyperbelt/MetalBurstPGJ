@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Prefabs/Projectiles/BulletTest.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/Projectiles/OlderMaterial/BulletTest.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Projectiles/bullet.png" type="Texture" id=3]
 
 [sub_resource type="StreamTexture" id=1]

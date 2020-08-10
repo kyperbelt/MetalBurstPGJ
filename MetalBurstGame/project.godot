@@ -57,7 +57,7 @@ _global_script_classes=[ {
 "base": "Sprite",
 "class": "BulletTest",
 "language": "GDScript",
-"path": "res://Prefabs/Projectiles/BulletTest.gd"
+"path": "res://Prefabs/Projectiles/OlderMaterial/BulletTest.gd"
 }, {
 "base": "Action",
 "class": "ChangeCollision",
@@ -182,7 +182,7 @@ _global_script_classes=[ {
 "base": "Sprite",
 "class": "Projectiles",
 "language": "GDScript",
-"path": "res://Prefabs/Projectiles/Projectiles.gd"
+"path": "res://Prefabs/Projectiles/OlderMaterial/Projectiles.gd"
 }, {
 "base": "Action",
 "class": "RandomInt",
