@@ -11,10 +11,15 @@ const RELOAD_TIME = 0.125
 # Some cool things to Note:
 #  - Bombs are considered Projectiles
 #  - We can programatically change projectiles at runtime
-export (PackedScene) var BULLET  setget set_bullet#bullet
+export (PackedScene) var BULLET  #bullet
+export (PackedScene) var ALT_BULLET  
 var _bulletFireRate = RELOAD_TIME
-export (PackedScene) var BOMB  setget set_bomb #bomb 
+var _currentBullet = null 
+
+export (PackedScene) var BOMB  #bomb 
+export (PackedScene) var ALT_BOMB
 var _bombFireRate = RELOAD_TIME
+var _currentBomb = null 
 
 #MULTIPLIER
 # can be set individually for each player type or left at default values
@@ -67,19 +72,31 @@ var bomb_percentage: float = 1.0
 export (float, .01, 1.0) var bomb_cost: float = .25
 export (float) var _rechargeRate = .02#very slow recovery rate
 
+#name to use
+export(String) var _name
+#short description 
+export(String) var _descritpion
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	parent = get_parent()
 	set_process(true)
 	var _i = connect("area_entered",self,"on_collision_start")
+	set_bullet(BULLET)
+	set_bomb(BOMB)
+	
 
 func set_bullet(bullet):
-	BULLET = bullet
+	if _currentBullet == bullet:
+		return 
+	_currentBullet = bullet
 	_bulletFireRate = bullet.instance().get_fire_rate()
 
 func set_bomb(bomb):
-	BOMB = bomb
+	if _currentBomb == bomb:
+		return
+	_currentBomb = bomb
 	_bombFireRate = bomb.instance().get_fire_rate()
 
 func _process(delta):
@@ -115,10 +132,17 @@ func _process(delta):
 	if Input.is_action_pressed("move_slower"):
 		_currentSpeed = _focusSpeed
 		#TODO: Insert Animation trigger for focus mode
+		if ALT_BULLET!=null :
+			set_bullet(ALT_BULLET)
+		if ALT_BOMB!=null : 
+			set_bomb(ALT_BOMB)
 	else:
 		_currentSpeed = _speed
+		set_bullet(BULLET)
+		set_bomb(BOMB)
 	#apply move vector translation	
 	translate(move * delta)
+
 
 	#clamping code - keeps player withing the bounds of the play area
 	if position.x < 0:
@@ -236,7 +260,7 @@ func start(_pos):
 
 func shoot():
 	if bullet_reloading <= 0.0:
-		var bullet: ProjectileComponent = BULLET.instance() as ProjectileComponent
+		var bullet: ProjectileComponent = _currentBullet.instance() as ProjectileComponent
 	
 		bullet.projectile_init(
 			$ProjectileSpawnPosition.global_position,
@@ -252,7 +276,7 @@ func shoot():
 func bomb_away():
 	if bomb_reloading <= 0.0 && bomb_percentage >= bomb_cost:
 		bomb_percentage -= bomb_cost
-		var bomb = BOMB.instance()
+		var bomb = _currentBomb.instance()
 		bomb.global_position = global_position
 
 		bomb.projectile_init(

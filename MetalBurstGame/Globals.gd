@@ -9,7 +9,7 @@ const DEBUGMODE: bool = true
 var screen_size
 var margin = 80
 #var player_bullet_image
-const Player: PackedScene = preload("res://Prefabs/Player/Player.tscn")
+var Player: PackedScene = preload("res://Prefabs/Player/Player.tscn") ##DEFAULT PLAEYER === CHANGED THROUGH PLAYER SELECT
 const DefaultProjectile: PackedScene = preload("res://Prefabs/Projectiles/Variants/EnemyTestProjectile.tscn")
 
 var _player = null

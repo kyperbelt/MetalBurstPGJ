@@ -76,7 +76,7 @@ func initiate():
 	if _behaviorScene != null:
 		_projectile._behaviorScene = _behaviorScene
 
-	_target = get_blackboard()[_targetName]
+	_target = get_blackboard()[_targetName] if get_blackboard().has(_targetName) else null
 
 
 func _update_behavior(_delta: float) -> int:
