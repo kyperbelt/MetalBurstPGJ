@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Prefabs/Player/PlayerSelect.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Player/PlayerForm2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Screens/GUIfont.tres" type="DynamicFont" id=3]
 [ext_resource path="res://Prefabs/Player/PlayerForm1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Audio/SFX/menu_select02.wav" type="AudioStream" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 109.662, 140.541 )
@@ -132,7 +133,7 @@ size_flags_vertical = 0
 [node name="RangeLabel" type="Label" parent="Stats/Range"]
 margin_right = 50.0
 margin_bottom = 14.0
-text = "Range   "
+text = "Reach   "
 
 [node name="Prog" type="ProgressBar" parent="Stats/Range"]
 margin_left = 54.0
@@ -160,3 +161,7 @@ margin_bottom = 14.0
 size_flags_horizontal = 3
 max_value = 10.0
 step = 1.0
+
+[node name="sfx_menuSelect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -3.25
