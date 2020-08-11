@@ -76,12 +76,16 @@ export (float) var _rechargeRate = .02#very slow recovery rate
 export(String) var _name
 #short description 
 export(String) var _descritpion
+export(int,0,10) var _difficultyInfo
+export(int,0,10) var _damageInfo 
+export(int,0,10) var _speedInfo
+export(int,0,10) var _rangeInfo
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	parent = get_parent()
-	set_process(true)
+	set_process(!Globals._inCharacterSelect)
 	var _i = connect("area_entered",self,"on_collision_start")
 	set_bullet(BULLET)
 	set_bomb(BOMB)
@@ -100,6 +104,9 @@ func set_bomb(bomb):
 	_bombFireRate = bomb.instance().get_fire_rate()
 
 func _process(delta):
+	if(Globals._inCharacterSelect):
+		return #dont process logic if in character select
+
 	#invinvibility frames countdown
 	_invincibilityTimer -= delta
 	_animate_invincibility()
