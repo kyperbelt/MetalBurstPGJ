@@ -49,7 +49,8 @@ func set_multiplier(mult:int):
 ##################################
 
 func update_lives(lives,_increment):
-	$VerticalStack/Lives.set_text(str(lives) if lives <= 0 else Globals.repeat_string("[^]",lives))
+	($VerticalStack/LivesContainer as ImageRepeater).set_amount(lives)
+	# $VerticalStack/Lives.set_text(str(lives) if lives <= 0 else Globals.repeat_string("[^]",lives))
 
 func update_score(score,_increment):
 	$VerticalStack/Score.set_text("%010d" % score)
@@ -57,7 +58,8 @@ func update_score(score,_increment):
 	update_progressBar()
 
 func update_bombs(bombs,_increment):		
-	$VerticalStack/Bombs.set_text(Globals.repeat_string("O ",bombs))
+	# $VerticalStack/Bombs.set_text(Globals.repeat_string("O ",bombs))
+	($VerticalStack/BombsContainer as ImageRepeater).set_amount(bombs)
 
 func update_name(name):
 	$StageName.set_text(name)

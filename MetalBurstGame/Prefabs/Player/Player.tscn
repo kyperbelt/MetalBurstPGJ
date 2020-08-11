@@ -17,6 +17,12 @@ collision_mask = 152
 script = ExtResource( 4 )
 BULLET = ExtResource( 5 )
 BOMB = ExtResource( 7 )
+_name = "TestPlayerName"
+_descritpion = "This is a test description for the current player"
+_difficultyInfo = 4
+_damageInfo = 3
+_speedInfo = 6
+_rangeInfo = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

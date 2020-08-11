@@ -17,6 +17,8 @@ var random: RandomNumberGenerator = RandomNumberGenerator.new()
 var audioManager: AudioManager = null
 var _currentEngine = null
 
+var _inCharacterSelect : bool = false
+var _selectedStage : PackedScene = preload("res://Prefabs/Stages/AiTest.tscn")
 
 # A dictionary holding highssores in {"stageName":Score} format
 var _highScores : Dictionary = {}
@@ -43,9 +45,26 @@ func delete_player():
 	print("player deleted")
 	_player = null
 
-
-func set_high_score(stageName:String)->int:
+func get_high_score(stageName:String)->int:
 	return _highScores[stageName] if (stageName in _highScores) else (set_get(_highScores,stageName,0))
+
+func set_high_score(stageName:String,highScore:int):
+	_highScores[stageName] = highScore
+
+func save_scores():
+	var save = File.new()
+	save.open("metal_burst_save.game",File.WRITE)
+	save.store_line(to_json(_highScores))
+	save.close()
+
+func load_scores():
+	var save = File.new()
+	if !save.file_exists("metal_burst_save.game"):
+		return
+	save.open("metal_burst_save.game")
+	_highScores = parse_json(save.get_line())
+	save.close()
+
 
 ##STRING UTILS
 func repeat_string(s: String, times: int) -> String:
