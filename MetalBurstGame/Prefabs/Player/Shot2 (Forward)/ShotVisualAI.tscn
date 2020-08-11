@@ -6,6 +6,9 @@
 
 [node name="Brain" type="Node"]
 script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": "This influence shot direction."
+}
 
 [node name="Sequence" type="Node" parent="."]
 script = ExtResource( 2 )

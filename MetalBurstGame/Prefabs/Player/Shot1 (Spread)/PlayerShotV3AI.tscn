@@ -1,76 +1,76 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=1]
-[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=2]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=3]
-[ext_resource path="res://Prefabs/Player/PlayerShotV2b.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Player/PlayerShotV2c.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/Player/Shot1 (Spread)/PlayerShotV2c.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Player/Shot1 (Spread)/PlayerShotV2b.tscn" type="PackedScene" id=5]
 
 [node name="Brain" type="Node"]
-script = ExtResource( 2 )
-
-[node name="Parallel" type="Node" parent="."]
 script = ExtResource( 1 )
 
-[node name="ShootL" type="Node" parent="Parallel"]
+[node name="Parallel" type="Node" parent="."]
 script = ExtResource( 3 )
+
+[node name="ShootL" type="Node" parent="Parallel"]
+script = ExtResource( 2 )
 _initialSpeed = 1000.0
 _damage = 25.0
 _initialHeading = -96.0
 _collisionLayer = 32
 _collisionMask = 8
-_projectileScene = ExtResource( 4 )
+_projectileScene = ExtResource( 5 )
 
 [node name="ShootL2" type="Node" parent="Parallel"]
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 _initialSpeed = 800.0
 _damage = 15.0
 _initialHeading = -94.0
 _collisionLayer = 32
 _collisionMask = 8
-_projectileScene = ExtResource( 5 )
+_projectileScene = ExtResource( 4 )
 
 [node name="ShootL1" type="Node" parent="Parallel"]
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 _initialSpeed = 800.0
 _damage = 15.0
 _initialHeading = -92.0
 _collisionLayer = 32
 _collisionMask = 8
-_projectileScene = ExtResource( 5 )
+_projectileScene = ExtResource( 4 )
 
 [node name="ShootC" type="Node" parent="Parallel"]
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 _initialSpeed = 1000.0
 _damage = 25.0
 _initialHeading = -90.0
 _collisionLayer = 32
 _collisionMask = 8
-_projectileScene = ExtResource( 4 )
+_projectileScene = ExtResource( 5 )
 
 [node name="ShootR1" type="Node" parent="Parallel"]
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 _initialSpeed = 800.0
 _damage = 15.0
 _initialHeading = -88.0
 _collisionLayer = 32
 _collisionMask = 8
-_projectileScene = ExtResource( 5 )
+_projectileScene = ExtResource( 4 )
 
 [node name="ShootR2" type="Node" parent="Parallel"]
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 _initialSpeed = 800.0
 _damage = 15.0
 _initialHeading = -86.0
 _collisionLayer = 32
 _collisionMask = 8
-_projectileScene = ExtResource( 5 )
+_projectileScene = ExtResource( 4 )
 
 [node name="ShootR" type="Node" parent="Parallel"]
-script = ExtResource( 3 )
+script = ExtResource( 2 )
 _initialSpeed = 1000.0
 _damage = 25.0
 _initialHeading = -84.0
 _collisionLayer = 32
 _collisionMask = 8
-_projectileScene = ExtResource( 4 )
+_projectileScene = ExtResource( 5 )

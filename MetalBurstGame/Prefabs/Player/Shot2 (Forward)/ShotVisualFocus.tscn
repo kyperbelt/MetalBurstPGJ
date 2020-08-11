@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Prefabs/Projectiles/ProjectileComponent.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Player/PlayerShotV2.png" type="Texture" id=2]
-[ext_resource path="res://Prefabs/Player/PlayerShotV4AI2.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Player/PlayerShotV2 (mono).png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Player/Shot2 (Forward)/ShotVisualAI.tscn" type="PackedScene" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
@@ -12,14 +12,27 @@ height = 40.0
 collision_layer = 32
 collision_mask = 8
 script = ExtResource( 1 )
-_damage = 75.0
-_speed = 1000.0
+_damage = 60.0
+_fireRate = 0.0
+_speed = 1500.0
+_projectileRange = 1000.0
 _behaviorScene = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( 0, 18 )
 shape = SubResource( 1 )
 
 [node name="PlayerShotV2" type="Sprite" parent="."]
+modulate = Color( 0, 0.717647, 1, 1 )
 position = Vector2( 0, 20 )
 texture = ExtResource( 2 )
+
+[node name="NOTES" type="Node" parent="."]
+__meta__ = {
+"_editor_description_": "Damage = Influencable
+Speed = Influencable
+Range = Influencable
+Visuals = Influencable
+Rof = not determined here"
+}
