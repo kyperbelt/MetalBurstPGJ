@@ -9,9 +9,8 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/MoveCardinal.gd" type="Script" id=7]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=8]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/StopMove.gd" type="Script" id=9]
-[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/SalvoFireTest.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Formations/AiPlaygroundSpawns/NewBullets.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=11]
-
 
 [node name="FiringTests" type="Node2D"]
 script = ExtResource( 1 )
@@ -76,7 +75,7 @@ __meta__ = {
 Insert as many Firing Behaviors as you desire here"
 }
 
-[node name="SalvoFire" parent="EmberPurple/Hang-Fire1/Sequence/[InsertFireBehavior]" instance=ExtResource( 10 )]
+[node name="NewBullets" parent="EmberPurple/Hang-Fire1/Sequence/[InsertFireBehavior]" instance=ExtResource( 10 )]
 
 [node name="MoveCardinal2" type="Node" parent="EmberPurple/Hang-Fire1/Sequence"]
 script = ExtResource( 7 )
