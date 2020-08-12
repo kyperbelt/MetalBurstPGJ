@@ -10,6 +10,7 @@ class_name EnemyControl, "res://Assets/Tools/boss.png"
 #the default projectile this enemy shoots
 #this will be pushed to the blackboard
 export(PackedScene) var _defaultProjectile
+export(PackedScene) var _deathSpawn
 
 #behavior vars
 var _engineReady : bool = false#ready to roll baby
@@ -145,7 +146,10 @@ func hit(object):
 	#HP-Threshold SFX can also be done here ; more advanced
 	if get_current_health() <= 0:
 		var _value = Globals.audioManager.play_sound("sfx_foeDeath")
-		# print(self.name + "has died!")
+		if _deathSpawn != null:
+			var dp = _deathSpawn.instance()
+			dp.position = position
+			_myEngine.add_child(dp)
 		Globals.get_player().score += get_death_value()
 		queue_free()
 	if object is Player:
