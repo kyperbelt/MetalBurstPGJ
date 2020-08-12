@@ -5,6 +5,7 @@
 
 [node name="FoeExplode2" type="Particles2D"]
 amount = 50
+one_shot = true
 explosiveness = 1.0
 process_material = ExtResource( 2 )
 texture = ExtResource( 1 )

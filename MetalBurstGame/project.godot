@@ -159,12 +159,17 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Prefabs/System/Behavior/Composites/Parallel.gd"
 }, {
+"base": "Action",
+"class": "PlaySound",
+"language": "GDScript",
+"path": "res://Prefabs/System/Behavior/Actions/Utility/PlaySound.gd"
+}, {
 "base": "Area2D",
 "class": "Player",
 "language": "GDScript",
 "path": "res://Prefabs/Player/Player.gd"
 }, {
-"base": "Node2D",
+"base": "Control",
 "class": "PlayerSelect",
 "language": "GDScript",
 "path": "res://Prefabs/Player/PlayerSelect.gd"
@@ -355,6 +360,7 @@ _global_script_class_icons={
 "MoveForward": "",
 "MoveTo": "",
 "Parallel": "",
+"PlaySound": "",
 "Player": "",
 "PlayerSelect": "",
 "PositionalEvent": "res://Assets/Tools/pointA.png",

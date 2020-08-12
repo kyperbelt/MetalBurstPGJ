@@ -22,8 +22,8 @@ BOMB = ExtResource( 7 )
 _focusSpeed = 150.0
 _name = "Spread"
 _descritpion = "A form that focuses on careful movement and wide spread"
-_difficultyInfo = 4
-_damageInfo = 3
+_difficultyInfo = 2
+_damageInfo = 5
 _speedInfo = 6
 _rangeInfo = 8
 
@@ -50,7 +50,7 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 6 )
 animation = "Glowing"
-frame = 1
+frame = 5
 playing = true
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]
