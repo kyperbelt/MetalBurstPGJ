@@ -34,5 +34,10 @@ texture = ExtResource( 3 )
 
 [node name="EmberRed" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -40 )
+_defaultProjectile = null
+_fireRate = 2.0
+_despawnDistance = 600.0
+_deathValue = 100
+_hitValue = 10
 
 [node name="WhipArms" parent="EmberRed" instance=ExtResource( 4 )]

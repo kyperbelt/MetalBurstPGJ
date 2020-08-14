@@ -9,7 +9,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/MoveCardinal.gd" type="Script" id=7]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=8]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/StopMove.gd" type="Script" id=9]
-[ext_resource path="res://Prefabs/Formations/AiPlaygroundSpawns/NewBullets.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Formations/AiPlaygroundSpawns/NB-360.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=11]
 
 [node name="FiringTests" type="Node2D"]
@@ -41,6 +41,11 @@ texture = ExtResource( 2 )
 
 [node name="EmberPurple" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, -50 )
+_defaultProjectile = null
+_fireRate = 2.0
+_despawnDistance = 600.0
+_deathValue = 100
+_hitValue = 10
 
 [node name="Hang-Fire1" type="Node" parent="EmberPurple"]
 script = ExtResource( 11 )
@@ -75,7 +80,7 @@ __meta__ = {
 Insert as many Firing Behaviors as you desire here"
 }
 
-[node name="NewBullets" parent="EmberPurple/Hang-Fire1/Sequence/[InsertFireBehavior]" instance=ExtResource( 10 )]
+[node name="12x360" parent="EmberPurple/Hang-Fire1/Sequence/[InsertFireBehavior]" instance=ExtResource( 10 )]
 
 [node name="MoveCardinal2" type="Node" parent="EmberPurple/Hang-Fire1/Sequence"]
 script = ExtResource( 7 )
