@@ -18,7 +18,7 @@ func selection_made(selection : int):
 	print("selected option %s " % selection)
 	match selection:
 		0:
-			var scene = "res://Prefabs/Screens/TitleScreen.tscn"
+			var scene = "res://Prefabs/Stages/Stage1Forest(Base).tscn"
 			var result = get_tree().change_scene(scene)
 			if(result != OK):
 				print("could not change scene")
