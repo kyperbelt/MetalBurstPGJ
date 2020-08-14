@@ -19,7 +19,7 @@ region = Rect2( 100, 0, 100, 100 )
 script = ExtResource( 5 )
 _deathSpawn = ExtResource( 1 )
 _maxSpeed = 720.0
-_maxHealth = 500.0
+_maxHealth = 1000.0
 
 [node name="Shadow" type="Sprite" parent="."]
 position = Vector2( 0, 10 )
@@ -37,7 +37,7 @@ shape = SubResource( 1 )
 modulate = Color( 0.52549, 0.85098, 0.964706, 1 )
 frames = ExtResource( 8 )
 animation = "Default"
-frame = 3
+frame = 1
 playing = true
 
 [node name="Body1" type="Sprite" parent="."]

@@ -20,11 +20,11 @@ BULLET = ExtResource( 5 )
 ALT_BULLET = ExtResource( 8 )
 BOMB = ExtResource( 7 )
 _focusSpeed = 150.0
-_name = "Spread"
-_descritpion = "A form that focuses on careful movement and wide spread"
+_name = "Spread Form"
+_descritpion = "An easy to use form that has a wide attack reach."
 _difficultyInfo = 2
-_damageInfo = 5
-_speedInfo = 6
+_damageInfo = 6
+_speedInfo = 5
 _rangeInfo = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -50,8 +50,21 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 6 )
 animation = "Glowing"
-frame = 5
+frame = 4
 playing = true
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]
 position = Vector2( 0, -45.5898 )
+
+[node name="NOTES" type="Node" parent="."]
+__meta__ = {
+"_editor_description_": "RoF = 0.125 (8 shots per second)
+NormalSpread = 30 Degrees / 92 Degrees
+FocusSpread = 12 Degrees
+Velocity = 800 / 1000
+
+Normal = 25*3 ; 15*4 ; 15*4
+Focus = 25*3 ; 15*4
+Normal = 1080 DPS + 480 DPS
+Focus = 1080 DPS"
+}

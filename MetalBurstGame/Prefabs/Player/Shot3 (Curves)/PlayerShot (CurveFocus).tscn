@@ -1,7 +1,9 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Prefabs/Projectiles/ProjectileComponent.gd" type="Script" id=1]
-[ext_resource path="res://Prefabs/Player/Shot2 (Forward)/PlayerShotV4AI.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Player/Shot3 (Curves)/PlayerShotAIFocus.tscn" type="PackedScene" id=2]
+
+
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 8.0
