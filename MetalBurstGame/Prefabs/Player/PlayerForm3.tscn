@@ -21,7 +21,6 @@ ALT_BULLET = ExtResource( 8 )
 BOMB = ExtResource( 7 )
 _speed = 325.0
 _focusSpeed = 150.0
-_rechargeRate = 0.02
 _name = "Claw Form"
 _descritpion = "A difficult to use form with an oddly pathed, but powerful attack."
 _difficultyInfo = 8
@@ -53,7 +52,6 @@ texture = ExtResource( 4 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 5 )
 animation = "Glowing"
-frame = 2
 playing = true
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]
@@ -62,12 +60,12 @@ position = Vector2( 0, -45.5898 )
 [node name="NOTES" type="Node" parent="."]
 __meta__ = {
 "_editor_description_": "RoF = 0.125 (8 shots per second)
-NormalSpread = ???
-FocusSpread = ???
-Velocity = ???
+NormalSpread = 90 Degrees
+FocusSpread = 90 Degrees
+Velocity = 700
 
-Normal = 25*6
-Focus = 25*6
-Normal = 1200 DPS
-Focus = 1200 DPS"
+Normal = 30*3 ; 30*3
+Focus = 30*3 ; 30*3
+Normal = 720 DPS + 720 DPS
+Focus = 1440 DPS"
 }

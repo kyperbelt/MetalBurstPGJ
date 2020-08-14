@@ -9,7 +9,10 @@
 
 [node name="ArrowFireDown" type="Node"]
 script = ExtResource( 3 )
-amount = 4
+__meta__ = {
+"_editor_description_": "1 Cycle = 0.5 Sec"
+}
+amount = 10
 
 [node name="Sequence" type="Node" parent="."]
 script = ExtResource( 2 )
@@ -63,4 +66,4 @@ _projectileScene = ExtResource( 6 )
 
 [node name="Wait" type="Node" parent="Sequence"]
 script = ExtResource( 1 )
-delay = 1.5
+delay = 0.5

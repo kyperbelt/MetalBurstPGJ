@@ -37,16 +37,18 @@ __meta__ = {
 Cooldown = 0.125 ; 8 shots per second
 Damage = 75
 DPS = 600
+Form 1 = 1000
+Form 2 = 1250
+Form 3 = 1500
+Total Encounter Length = 30 Seconds Max ; 20 Seconds Min
 
-Total Encounter Length = 30? Seconds
-
-Total HP Value of all foes in formation = 14000
-3500 = HP of all Individual Units
+Total HP Value of all foes in formation = 30000
+7500 = HP of all Individual Units
 2 Red Embers
 2 Blue Spinner
 
-Score Value = 8000 Per Enemy
-Score Value Total = 24000"
+Score Value = 80000 Per Enemy
+Score Value Total = 320000 Total"
 }
 
 [node name="placeholder" type="Sprite" parent="."]
@@ -54,7 +56,7 @@ texture = ExtResource( 2 )
 
 [node name="SpinnerPurpleL" parent="." instance=ExtResource( 8 )]
 position = Vector2( -60, -85 )
-_maxHealth = 3500.0
+_maxHealth = 7500.0
 _deathValue = 2000
 _hitValue = 20
 
@@ -62,7 +64,7 @@ _hitValue = 20
 
 [node name="SpinnerPurpleR" parent="." instance=ExtResource( 8 )]
 position = Vector2( 60, -85 )
-_maxHealth = 3500.0
+_maxHealth = 7500.0
 _deathValue = 2000
 _hitValue = 20
 
@@ -70,7 +72,7 @@ _hitValue = 20
 
 [node name="EmberPurpleTop" parent="." instance=ExtResource( 7 )]
 position = Vector2( 0, -160 )
-_maxHealth = 3500.0
+_maxHealth = 7500.0
 _deathValue = 2000
 _hitValue = 20
 
@@ -78,7 +80,7 @@ _hitValue = 20
 
 [node name="EmberPurpleBot" parent="." instance=ExtResource( 7 )]
 position = Vector2( 0, -40 )
-_maxHealth = 3500.0
+_maxHealth = 7500.0
 _deathValue = 2000
 _hitValue = 20
 

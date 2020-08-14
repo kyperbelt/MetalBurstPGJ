@@ -29,9 +29,6 @@ texture = ExtResource( 2 )
 
 [node name="TinyEmberRed" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, -15 )
-_fireRate = 2.0
-_despawnDistance = 600.0
-_scoreValue = 100
 
 [node name="Curve1" parent="TinyEmberRed" instance=ExtResource( 4 )]
 
@@ -40,9 +37,6 @@ _scoreValue = 100
 [node name="TinyEmberRed2" parent="." instance=ExtResource( 3 )]
 position = Vector2( 20, -60 )
 rotation = 0.174533
-_fireRate = 2.0
-_despawnDistance = 600.0
-_scoreValue = 100
 
 [node name="Curve1" parent="TinyEmberRed2" instance=ExtResource( 4 )]
 
@@ -51,9 +45,6 @@ _scoreValue = 100
 [node name="TinyEmberRed3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 30, -120 )
 rotation = -0.0872665
-_fireRate = 2.0
-_despawnDistance = 600.0
-_scoreValue = 100
 
 [node name="Curve1" parent="TinyEmberRed3" instance=ExtResource( 4 )]
 
@@ -62,9 +53,6 @@ _scoreValue = 100
 [node name="TinyEmberRed4" parent="." instance=ExtResource( 3 )]
 position = Vector2( 65.21, -84.2021 )
 rotation = 0.349066
-_fireRate = 2.0
-_despawnDistance = 600.0
-_scoreValue = 100
 
 [node name="Curve1" parent="TinyEmberRed4" instance=ExtResource( 4 )]
 

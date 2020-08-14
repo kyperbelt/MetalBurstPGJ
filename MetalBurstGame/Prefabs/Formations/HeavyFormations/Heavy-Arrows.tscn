@@ -3,9 +3,9 @@
 [ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=3]
-[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-WhipArmsAI.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-ArrowsAI.tscn" type="PackedScene" id=4]
 
-[node name="H-WhipArms" type="Node2D"]
+[node name="H-Arrows" type="Node2D"]
 script = ExtResource( 2 )
 __meta__ = {
 "_editor_description_": "[Duplicate this thing to start a formation]
@@ -34,10 +34,5 @@ texture = ExtResource( 3 )
 
 [node name="EmberRed" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -40 )
-_defaultProjectile = null
-_fireRate = 2.0
-_despawnDistance = 600.0
-_deathValue = 100
-_hitValue = 10
 
 [node name="WhipArms" parent="EmberRed" instance=ExtResource( 4 )]

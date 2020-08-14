@@ -1,0 +1,171 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Enemies/SpinnerPurple.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2AI-RedSpin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2AI-EmberBlue.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Enemies/EmberPurple.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2AI-BlueSpin.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2AI-EmberRed.tscn" type="PackedScene" id=10]
+
+[node name="Midboss2" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+
+[node name="DPS Notes" type="Node" parent="."]
+__meta__ = {
+"_editor_description_": "Player DPS:
+Cooldown = 0.125 ; 8 shots per second
+Damage = 75
+DPS = 600
+Form 1 = 1000
+Form 2 = 1250
+Form 3 = 1500
+Total Encounter Length = 25 Seconds
+
+Total HP Value of all foes in formation = 30800
+2200 = HP of all Units
+6 Side Embers
+3 Center Embers
+4 Side Spinners
+1 Center Spinner
+
+Score Value = 80000 Per Enemy
+Score Value Total = 320000 Total"
+}
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="EmberPurpleL3" parent="." instance=ExtResource( 8 )]
+position = Vector2( -264, -50 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-EmberRed" parent="EmberPurpleL3" instance=ExtResource( 10 )]
+
+[node name="EmberPurpleL2" parent="." instance=ExtResource( 8 )]
+position = Vector2( -164, -50 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-EmberRed" parent="EmberPurpleL2" instance=ExtResource( 10 )]
+
+[node name="EmberPurpleL1" parent="." instance=ExtResource( 8 )]
+position = Vector2( -64, -50 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-EmberRed" parent="EmberPurpleL1" instance=ExtResource( 10 )]
+
+[node name="EmberPurpleR1" parent="." instance=ExtResource( 8 )]
+position = Vector2( 64, -50 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-EmberRed" parent="EmberPurpleR1" instance=ExtResource( 10 )]
+
+[node name="EmberPurpleR2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 164, -50 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-EmberRed" parent="EmberPurpleR2" instance=ExtResource( 10 )]
+
+[node name="EmberPurpleR3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 264, -50 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-EmberRed" parent="EmberPurpleR3" instance=ExtResource( 10 )]
+
+[node name="SpinnerPurpleL2" parent="." instance=ExtResource( 3 )]
+position = Vector2( -164, -120 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-RedSpinner" parent="SpinnerPurpleL2" instance=ExtResource( 4 )]
+
+[node name="SpinnerPurpleL1" parent="." instance=ExtResource( 3 )]
+position = Vector2( -64, -120 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-RedSpinner" parent="SpinnerPurpleL1" instance=ExtResource( 4 )]
+
+[node name="SpinnerPurpleR1" parent="." instance=ExtResource( 3 )]
+position = Vector2( 64, -120 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-RedSpinner" parent="SpinnerPurpleR1" instance=ExtResource( 4 )]
+
+[node name="SpinnerPurpleR2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 164, -120 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-RedSpinner" parent="SpinnerPurpleR2" instance=ExtResource( 4 )]
+
+[node name="SpinnerPurpleSpine" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, -170 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-BlueSpinner" parent="SpinnerPurpleSpine" instance=ExtResource( 9 )]
+
+[node name="EmberPurpleSpine1" parent="." instance=ExtResource( 8 )]
+position = Vector2( 0, -95 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-EmberBlue" parent="EmberPurpleSpine1" instance=ExtResource( 5 )]
+
+[node name="EmberPurpleSpine2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 0, -65 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-EmberBlue" parent="EmberPurpleSpine2" instance=ExtResource( 5 )]
+
+[node name="EmberPurpleSpine3" parent="." instance=ExtResource( 8 )]
+position = Vector2( 0, -35 )
+_maxHealth = 2200.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="Midboss2AI-EmberBlue" parent="EmberPurpleSpine3" instance=ExtResource( 5 )]
