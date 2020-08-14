@@ -1,10 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/VFX/Explosion.tres" type="SpriteFrames" id=1]
 [ext_resource path="res://Prefabs/Player/Bomb3 (MindBlast)/MindBlastAI.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Projectiles/ProjectileComponent.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/VFX/AnimatedFrameSet.gd" type="Script" id=4]
 
-[sub_resource type="CircleShape2D" id=4]
+[sub_resource type="CircleShape2D" id=1]
 radius = 75.0
 
 [node name="MindBlastVisual" type="Area2D"]
@@ -22,15 +23,8 @@ _behaviorScene = ExtResource( 2 )
 modulate = Color( 1, 0.5, 0, 1 )
 frames = ExtResource( 1 )
 animation = "Version2"
-frame = 3
 playing = true
-
-[node name="Explode2" type="AnimatedSprite" parent="."]
-visible = false
-frames = ExtResource( 1 )
-animation = "Version2"
-frame = 3
-playing = true
+script = ExtResource( 4 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 4 )
+shape = SubResource( 1 )
