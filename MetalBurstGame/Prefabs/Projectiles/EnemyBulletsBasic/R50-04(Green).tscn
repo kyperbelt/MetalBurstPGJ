@@ -16,6 +16,7 @@ radius = 20.0
 collision_layer = 16
 collision_mask = 68
 script = ExtResource( 2 )
+_soundFX = "sfx_foeShoot"
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = SubResource( 1 )

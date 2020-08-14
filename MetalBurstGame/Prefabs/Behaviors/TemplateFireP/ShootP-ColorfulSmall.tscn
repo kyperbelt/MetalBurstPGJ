@@ -1,0 +1,93 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-06(Blue).tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-05(Cyan).tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-01(Red).tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-08(Magenta).tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-07(Violet).tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-04(Green).tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-03(Yellow).tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-02(Orange).tscn" type="PackedScene" id=13]
+
+[node name="ShootP-ColorfulSmall" type="Node"]
+script = ExtResource( 1 )
+amount = 10
+
+[node name="Sequence" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="Parallel" type="Node" parent="Sequence"]
+script = ExtResource( 5 )
+
+[node name="Shoot8" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 200.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 9 )
+_targetName = "player"
+
+[node name="Shoot7" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 210.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 10 )
+_targetName = "player"
+
+[node name="Shoot6" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 220.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 6 )
+_targetName = "player"
+
+[node name="Shoot5" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 230.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 7 )
+_targetName = "player"
+
+[node name="Shoot4" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 240.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 11 )
+_targetName = "player"
+
+[node name="Shoot3" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 250.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 12 )
+_targetName = "player"
+
+[node name="Shoot2" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 260.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 13 )
+_targetName = "player"
+
+[node name="Shoot1" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 270.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 8 )
+_targetName = "player"
+
+[node name="Wait" type="Node" parent="Sequence"]
+script = ExtResource( 2 )
+delay = 1.0

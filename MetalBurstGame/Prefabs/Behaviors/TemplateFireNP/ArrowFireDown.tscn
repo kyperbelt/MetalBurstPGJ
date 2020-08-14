@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-04(Green).tscn" type="PackedScene" id=6]
+
+[node name="ArrowFireDown" type="Node"]
+script = ExtResource( 3 )
+amount = 4
+
+[node name="Sequence" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="Parallel" type="Node" parent="Sequence"]
+script = ExtResource( 4 )
+
+[node name="ShootL2" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 5 )
+_initialSpeed = 300.0
+_initialHeading = 90.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 6 )
+_offset = Vector2( -50, -50 )
+
+[node name="ShootR2" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 5 )
+_initialSpeed = 300.0
+_initialHeading = 90.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 6 )
+_offset = Vector2( 50, -50 )
+
+[node name="ShootL1" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 5 )
+_initialSpeed = 300.0
+_initialHeading = 90.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 6 )
+_offset = Vector2( -25, -25 )
+
+[node name="ShootR1" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 5 )
+_initialSpeed = 300.0
+_initialHeading = 90.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 6 )
+_offset = Vector2( 25, -25 )
+
+[node name="ShootCenter" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 5 )
+_initialSpeed = 300.0
+_initialHeading = 90.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 6 )
+
+[node name="Wait" type="Node" parent="Sequence"]
+script = ExtResource( 1 )
+delay = 1.5
