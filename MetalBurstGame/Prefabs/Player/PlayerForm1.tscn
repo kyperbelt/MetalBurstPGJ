@@ -6,8 +6,10 @@
 [ext_resource path="res://Prefabs/Player/Player.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/Player/Shot1 (Spread)/PlayerShotV2a (SpreadDefault).tscn" type="PackedScene" id=5]
 [ext_resource path="res://Assets/Player/PlayerHitbox.tres" type="SpriteFrames" id=6]
-[ext_resource path="res://Prefabs/Player/AmberBomb.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Player/Bomb1/AmberBombBase.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Player/Shot1 (Spread)/PlayerShotV3a (SpreadFocus).tscn" type="PackedScene" id=8]
+
+
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 4.0

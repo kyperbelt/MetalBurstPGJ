@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Assets/Player/BombUnderlayer.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Player/BombOverlayer.png" type="Texture" id=2]
-[ext_resource path="res://Prefabs/Projectiles/ProjectileComponent.gd" type="Script" id=3]
-[ext_resource path="res://Prefabs/Behaviors/Projectiles/AmberBombTestBehavior2.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Player/Bomb1/AmberBombAI.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Projectiles/ProjectileComponent.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=1]
 resource_name = "Overlayer"
@@ -60,14 +60,14 @@ radius = 43.6623
 
 [node name="AmberBomb" type="Area2D"]
 collision_layer = 64
-collision_mask = 8
-script = ExtResource( 3 )
+collision_mask = 24
+script = ExtResource( 4 )
 _damage = 30.0
 _fireRate = 1.0
 _destroyOnHit = false
 _speed = 50.0
 _soundFX = "sfx_playerBomb"
-_behaviorScene = ExtResource( 4 )
+_behaviorScene = ExtResource( 3 )
 
 [node name="Underlayer" type="Sprite" parent="."]
 pause_mode = 2
