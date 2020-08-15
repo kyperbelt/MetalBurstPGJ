@@ -256,27 +256,27 @@ position = Vector2( -320, -6000 )
 texture = ExtResource( 18 )
 
 [node name="CurveArcL10" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -245.091, -5731.59 )
+position = Vector2( -245.091, -5569.94 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
-event_time = 114.632
+event_time = 111.399
 spawn_x = -245.091
 
 [node name="CurveArcR10" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 223.565, -5722.12 )
-event_time = 114.442
+position = Vector2( 223.565, -5560.47 )
+event_time = 111.209
 spawn_x = 223.565
 
 [node name="CurveArcL9" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -245.091, -5385.5 )
+position = Vector2( -245.091, -5223.85 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-event_time = 107.71
+event_time = 104.477
 spawn_x = -245.091
 
 [node name="CurveArcR9" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 223.565, -5376.03 )
-event_time = 107.521
+position = Vector2( 223.565, -5214.38 )
+event_time = 104.288
 spawn_x = 223.565
 
 [node name="Cross-XPluss3" parent="StageDirector" instance=ExtResource( 11 )]
@@ -288,13 +288,15 @@ position = Vector2( 0, -5395.4 )
 event_time = 107.908
 
 [node name="CurveArcL8" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -245.091, -4794.28 )
+position = Vector2( -245.091, -4669.73 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
+event_time = 93.3946
 spawn_x = -245.091
 
 [node name="CurveArcR8" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 223.565, -5098.44 )
+position = Vector2( 223.565, -4973.89 )
+event_time = 99.4778
 spawn_x = 223.565
 
 [node name="Cross-SideEnterL3" parent="StageDirector" instance=ExtResource( 14 )]
