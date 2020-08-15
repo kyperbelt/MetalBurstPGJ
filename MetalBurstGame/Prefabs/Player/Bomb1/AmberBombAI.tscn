@@ -18,10 +18,10 @@ script = ExtResource( 3 )
 script = ExtResource( 2 )
 delay = 4.0
 
-[node name="Parallel" type="Node" parent="Sequence/Wait"]
+[node name="Parallel" type="Node" parent="Sequence"]
 script = ExtResource( 7 )
 
-[node name="Shoot" type="Node" parent="Sequence/Wait/Parallel"]
+[node name="Shoot" type="Node" parent="Sequence/Parallel"]
 script = ExtResource( 4 )
 _initialSpeed = 800.0
 _damage = 100.0
@@ -29,7 +29,7 @@ _collisionLayer = 64
 _collisionMask = 24
 _projectileScene = ExtResource( 6 )
 
-[node name="Shoot2" type="Node" parent="Sequence/Wait/Parallel"]
+[node name="Shoot2" type="Node" parent="Sequence/Parallel"]
 script = ExtResource( 4 )
 _initialSpeed = 800.0
 _damage = 100.0
@@ -38,7 +38,7 @@ _collisionLayer = 64
 _collisionMask = 24
 _projectileScene = ExtResource( 6 )
 
-[node name="Shoot3" type="Node" parent="Sequence/Wait/Parallel"]
+[node name="Shoot3" type="Node" parent="Sequence/Parallel"]
 script = ExtResource( 4 )
 _initialSpeed = 800.0
 _damage = 100.0
@@ -47,7 +47,7 @@ _collisionLayer = 64
 _collisionMask = 24
 _projectileScene = ExtResource( 6 )
 
-[node name="Shoot4" type="Node" parent="Sequence/Wait/Parallel"]
+[node name="Shoot4" type="Node" parent="Sequence/Parallel"]
 script = ExtResource( 4 )
 _initialSpeed = 800.0
 _damage = 100.0
@@ -56,7 +56,7 @@ _collisionLayer = 64
 _collisionMask = 24
 _projectileScene = ExtResource( 6 )
 
-[node name="Shoot5" type="Node" parent="Sequence/Wait/Parallel"]
+[node name="Shoot5" type="Node" parent="Sequence/Parallel"]
 script = ExtResource( 4 )
 _initialSpeed = 800.0
 _damage = 100.0
@@ -65,7 +65,7 @@ _collisionLayer = 64
 _collisionMask = 24
 _projectileScene = ExtResource( 6 )
 
-[node name="Shoot6" type="Node" parent="Sequence/Wait/Parallel"]
+[node name="Shoot6" type="Node" parent="Sequence/Parallel"]
 script = ExtResource( 4 )
 _initialSpeed = 800.0
 _damage = 100.0
@@ -74,7 +74,7 @@ _collisionLayer = 64
 _collisionMask = 24
 _projectileScene = ExtResource( 6 )
 
-[node name="Shoot7" type="Node" parent="Sequence/Wait/Parallel"]
+[node name="Shoot7" type="Node" parent="Sequence/Parallel"]
 script = ExtResource( 4 )
 _initialSpeed = 800.0
 _damage = 100.0

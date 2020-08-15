@@ -9,8 +9,6 @@
 [ext_resource path="res://Prefabs/Player/Bomb1/AmberBombBase.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/Player/Shot1 (Spread)/PlayerShotV3a (SpreadFocus).tscn" type="PackedScene" id=8]
 
-
-
 [sub_resource type="CircleShape2D" id=1]
 radius = 4.0
 
@@ -52,7 +50,7 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 6 )
 animation = "Glowing"
-frame = 4
+frame = 3
 playing = true
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]

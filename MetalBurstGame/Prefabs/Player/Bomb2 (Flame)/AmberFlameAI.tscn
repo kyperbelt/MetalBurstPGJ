@@ -15,17 +15,23 @@ script = ExtResource( 3 )
 
 [node name="Repeater" type="Node" parent="Sequence"]
 script = ExtResource( 6 )
-amount = 5
+__meta__ = {
+"_editor_description_": "[I want this to be 2 sec long]"
+}
+amount = 10
 
-[node name="Shoot1" type="Node" parent="Sequence/Repeater"]
+[node name="Sequence" type="Node" parent="Sequence/Repeater"]
+script = ExtResource( 3 )
+
+[node name="Shoot1" type="Node" parent="Sequence/Repeater/Sequence"]
 script = ExtResource( 4 )
 _initialSpeed = 500.0
-_damage = 160.0
+_damage = 75.0
 _initialHeading = -90.0
 _collisionLayer = 64
 _collisionMask = 24
 _projectileScene = ExtResource( 5 )
 
-[node name="Wait" type="Node" parent="Sequence/Repeater"]
+[node name="Wait" type="Node" parent="Sequence/Repeater/Sequence"]
 script = ExtResource( 2 )
-delay = 0.2
+delay = 0.1
