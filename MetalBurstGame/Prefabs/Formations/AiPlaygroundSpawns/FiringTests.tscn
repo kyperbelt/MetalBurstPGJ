@@ -42,11 +42,6 @@ texture = ExtResource( 2 )
 
 [node name="EmberPurple" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, -50 )
-_defaultProjectile = null
-_fireRate = 2.0
-_despawnDistance = 600.0
-_deathValue = 100
-_hitValue = 10
 
 [node name="Hang-Fire1" type="Node" parent="EmberPurple"]
 script = ExtResource( 11 )

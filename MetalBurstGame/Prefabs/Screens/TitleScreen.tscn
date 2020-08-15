@@ -7,7 +7,7 @@
 [ext_resource path="res://Prefabs/System/OptionsMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Screens/TitleScreen.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/System/MenuOption.gd" type="Script" id=7]
-[ext_resource path="res://Prefabs/Stages/AiBehaviorPlayground.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Stages/Survival.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Stages/Stage2Mountainousv4.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Screens/InstructionsFont.tres" type="DynamicFont" id=10]
 [ext_resource path="res://Prefabs/Stages/Stage1Forest(Base).tscn" type="PackedScene" id=11]
@@ -105,7 +105,7 @@ margin_top = 98.0
 margin_right = 300.0
 margin_bottom = 143.0
 custom_fonts/font = ExtResource( 10 )
-text = "Debug: AI Playground"
+text = "\"Survival\""
 script = ExtResource( 7 )
 
 [node name="option3" type="Label" parent="GuiLayer/OptionsMenu/options"]
@@ -124,17 +124,17 @@ bus = "OptionsAudioBus"
 margin_left = 800.0
 margin_top = 300.0
 margin_right = 1200.0
-margin_bottom = 600.0
+margin_bottom = 585.0
 custom_fonts/font = ExtResource( 10 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 3
 custom_constants/shadow_offset_y = 3
-text = "Instructions:
-Arrow Keys / WASD = Move
-Z / K (hold) = Fire
-X / L = Bomb
-SHIFT / J (hold) = Focus
-ESC = Pause"
+text = "Controls:
+Move = Arrow Keys or WASD
+Fire = Z or K
+Bomb = X or L
+Focus = SHIFT or J
+Pause = ESC"
 __meta__ = {
 "_edit_use_anchors_": false
 }
