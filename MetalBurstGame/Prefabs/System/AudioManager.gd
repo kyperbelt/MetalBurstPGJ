@@ -30,7 +30,7 @@ func play_music(music:String,volume_db:float = 0)->bool:
 		var player := _musicStreams[music] as AudioStreamPlayer
 		if(volume_db != -999):
 			player.volume_db = volume_db
-		player.play(0)#play from position 0 -
+		player.duplicate(DUPLICATE_USE_INSTANCING).play(0)#play from position 0 -
 		return true
 	printerr("ERROR: No music named [%s] found in AudioManager"%music)
 	return false
