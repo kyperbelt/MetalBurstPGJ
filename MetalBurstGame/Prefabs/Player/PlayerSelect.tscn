@@ -1,0 +1,171 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Prefabs/Player/PlayerSelect.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/Player/PlayerForm2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Screens/GUIfont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Prefabs/Player/PlayerForm1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Audio/SFX/menu_select02.wav" type="AudioStream" id=5]
+[ext_resource path="res://Prefabs/Backgrounds/PlayerSelectBG.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Player/PlayerForm3.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 109.662, 140.541 )
+
+[node name="PlayerSelect" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1280.0
+margin_bottom = -720.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+playerTypes = [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 7 ) ]
+_animationTime = 0.2
+
+[node name="PlayerSelectBG" parent="." instance=ExtResource( 6 )]
+
+[node name="Current" type="Area2D" parent="."]
+position = Vector2( 629.269, 282.526 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Current"]
+position = Vector2( -1.12561, 1.75409 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Prev" type="Area2D" parent="."]
+position = Vector2( 309.749, 363.508 )
+space_override = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Prev"]
+position = Vector2( -1.12561, 1.75409 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Next" type="Area2D" parent="."]
+position = Vector2( 940.623, 363.508 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Next"]
+position = Vector2( -1.12561, 1.75409 )
+shape = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Name" type="Label" parent="."]
+margin_left = 371.85
+margin_top = 31.4579
+margin_right = 918.85
+margin_bottom = 214.458
+custom_fonts/font = ExtResource( 3 )
+text = "Character Name
+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="RichTextLabel" parent="."]
+margin_left = 528.0
+margin_top = 467.0
+margin_right = 743.0
+margin_bottom = 520.0
+text = "This is a small description ? Maybe not neccessary"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stats" type="VBoxContainer" parent="."]
+margin_left = 509.41
+margin_top = 551.415
+margin_right = 765.41
+margin_bottom = 807.415
+size_flags_vertical = 0
+custom_constants/separation = 15
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Damage" type="HBoxContainer" parent="Stats"]
+margin_right = 255.0
+margin_bottom = 14.0
+size_flags_vertical = 0
+
+[node name="DamageLabel" type="Label" parent="Stats/Damage"]
+margin_right = 52.0
+margin_bottom = 14.0
+text = "Damage"
+
+[node name="Prog" type="ProgressBar" parent="Stats/Damage"]
+margin_left = 56.0
+margin_right = 255.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+max_value = 10.0
+step = 1.0
+
+[node name="Mobility" type="HBoxContainer" parent="Stats"]
+margin_top = 29.0
+margin_right = 255.0
+margin_bottom = 43.0
+size_flags_vertical = 0
+
+[node name="SpeedLabel" type="Label" parent="Stats/Mobility"]
+margin_right = 51.0
+margin_bottom = 14.0
+text = "Speed   "
+
+[node name="Prog" type="ProgressBar" parent="Stats/Mobility"]
+margin_left = 55.0
+margin_right = 255.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+max_value = 10.0
+step = 1.0
+
+[node name="Range" type="HBoxContainer" parent="Stats"]
+margin_top = 58.0
+margin_right = 255.0
+margin_bottom = 72.0
+size_flags_vertical = 0
+
+[node name="RangeLabel" type="Label" parent="Stats/Range"]
+margin_right = 50.0
+margin_bottom = 14.0
+text = "Reach   "
+
+[node name="Prog" type="ProgressBar" parent="Stats/Range"]
+margin_left = 54.0
+margin_right = 255.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+max_value = 10.0
+step = 1.0
+
+[node name="Ease" type="HBoxContainer" parent="Stats"]
+margin_top = 87.0
+margin_right = 255.0
+margin_bottom = 101.0
+size_flags_vertical = 0
+
+[node name="EaseLabel" type="Label" parent="Stats/Ease"]
+margin_right = 57.0
+margin_bottom = 14.0
+text = "Difficulty"
+
+[node name="Prog" type="ProgressBar" parent="Stats/Ease"]
+margin_left = 61.0
+margin_right = 255.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+max_value = 10.0
+step = 1.0
+
+[node name="sfx_menuSelect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -3.25

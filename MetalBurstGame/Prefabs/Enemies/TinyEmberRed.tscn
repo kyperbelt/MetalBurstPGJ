@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Assets/Enemies/EmberShadow.png" type="Texture" id=1]
+[ext_resource path="res://Prefabs/VFX/Particle_FoeExplosion.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/System/EnemyControl.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Enemies/TinyEmbers.tres" type="SpriteFrames" id=4]
 
@@ -9,6 +10,7 @@ extents = Vector2( 20, 15 )
 
 [node name="TinyEmberRed" type="Node2D"]
 script = ExtResource( 3 )
+_deathSpawn = ExtResource( 2 )
 _maxSpeed = 720.0
 _maxHealth = 200.0
 
@@ -32,5 +34,5 @@ shape = SubResource( 1 )
 position = Vector2( 0, -7 )
 frames = ExtResource( 4 )
 animation = "TinyEmberRed"
-frame = 1
+frame = 3
 playing = true

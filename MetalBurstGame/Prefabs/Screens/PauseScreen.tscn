@@ -39,20 +39,20 @@ __meta__ = {
 }
 
 [node name="OptionsMenu" parent="." instance=ExtResource( 4 )]
-anchor_left = 0.31
-anchor_top = 0.466
-anchor_right = 0.522
-anchor_bottom = 0.685
-margin_left = 98.47
-margin_top = 67.276
-margin_right = 130.714
-margin_bottom = 60.91
+anchor_left = 0.387
+anchor_top = 0.559
+anchor_right = 0.624
+anchor_bottom = 0.77
+margin_left = -0.0900574
+margin_top = 0.315979
+margin_right = 0.153992
+margin_bottom = -0.290039
 
 [node name="VBoxContainer" type="VBoxContainer" parent="OptionsMenu"]
-anchor_right = 0.439
-anchor_bottom = 0.5
-margin_right = -117.545
-margin_bottom = -78.183
+anchor_right = 0.83
+anchor_bottom = 0.621
+margin_right = -236.254
+margin_bottom = -96.492
 __meta__ = {
 "_edit_use_anchors_": false
 }

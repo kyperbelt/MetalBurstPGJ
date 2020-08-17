@@ -1,0 +1,72 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/Player/Shot2v2 (Forward)/ShotVisual.tscn" type="PackedScene" id=4]
+
+[node name="Brain" type="Node"]
+script = ExtResource( 1 )
+
+[node name="Parallel" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="ShootL3" type="Node" parent="Parallel"]
+script = ExtResource( 2 )
+_initialSpeed = 1000.0
+_damage = 24.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 4 )
+_offset = Vector2( -50, 30 )
+
+[node name="ShootL2" type="Node" parent="Parallel"]
+script = ExtResource( 2 )
+_initialSpeed = 1000.0
+_damage = 25.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 4 )
+_offset = Vector2( -30, 15 )
+
+[node name="ShootL1" type="Node" parent="Parallel"]
+script = ExtResource( 2 )
+_initialSpeed = 1000.0
+_damage = 25.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 4 )
+_offset = Vector2( -10, 0 )
+
+[node name="ShootR1" type="Node" parent="Parallel"]
+script = ExtResource( 2 )
+_initialSpeed = 1000.0
+_damage = 25.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 4 )
+_offset = Vector2( 10, 0 )
+
+[node name="ShootR2" type="Node" parent="Parallel"]
+script = ExtResource( 2 )
+_initialSpeed = 1000.0
+_damage = 25.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 4 )
+_offset = Vector2( 30, 15 )
+
+[node name="ShootR3" type="Node" parent="Parallel"]
+script = ExtResource( 2 )
+_initialSpeed = 1000.0
+_damage = 24.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 4 )
+_offset = Vector2( 50, 30 )

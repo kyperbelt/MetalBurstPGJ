@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Prefabs/Backgrounds/DustParticlesv2.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/Backgrounds/ScrollingBackground.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Backgrounds/blackbackground.png" type="Texture" id=3]
+[ext_resource path="res://Prefabs/Backgrounds/CloudParticles.tscn" type="PackedScene" id=4]
+
+[sub_resource type="Gradient" id=1]
+colors = PoolColorArray( 0.25, 0.25, 0.25, 0.784314, 0.5, 0.333333, 0.25, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[node name="PlayerSelectBG" type="Node2D"]
+script = ExtResource( 2 )
+vertical_velocity = -80.0
+
+[node name="DarkBack" type="Sprite" parent="."]
+position = Vector2( 1327.9, -26.2272 )
+rotation = 1.57079
+scale = Vector2( 5, 9.88 )
+texture = ExtResource( 3 )
+centered = false
+__meta__ = {
+"_editor_description_": "A prototype background.
+Stage 1 (theoretically)
+Darker area at bottom"
+}
+
+[node name="Gradient" type="Sprite" parent="."]
+position = Vector2( 1329.75, -26.2272 )
+rotation = 1.57079
+scale = Vector2( 0.37896, 1430.65 )
+texture = SubResource( 2 )
+centered = false
+__meta__ = {
+"_editor_description_": "A prototype background.
+Stage 1 (theoretically)
+Darker area at top"
+}
+
+[node name="DustParticlesv2(Vertical)" parent="." instance=ExtResource( 1 )]
+position = Vector2( 650.709, 958.94 )
+rotation = 3.14159
+
+[node name="Cloudparticles(Horiz)" parent="." instance=ExtResource( 4 )]
+modulate = Color( 1, 1, 1, 0.2 )
+position = Vector2( 1280, 0 )
+rotation = 1.5708
+scale = Vector2( 1, 1.2 )
+
+[node name="Cloudparticles(Vert)" parent="." instance=ExtResource( 4 )]
+modulate = Color( 1, 1, 1, 0.2 )
+position = Vector2( 0, 720 )
+rotation = 3.14159
+scale = Vector2( 2, 1 )

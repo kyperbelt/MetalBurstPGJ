@@ -1,0 +1,111 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Prefabs/Enemies/EmberGreen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/BurstSalvoTest.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/PyramidFire(Inverted).tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/PyramidFire.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/ArrowFireDown.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=8]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/WhipArms.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/SalvoFireTest.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/BurstFire.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=12]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/SimpleFireDown1.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-ColorfulSmall.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-AlternateRapid.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-ColorfulBig.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-LV02a.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-LV02b.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-LV01a.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-LV02c.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-CompositeCircle.tscn" type="PackedScene" id=21]
+
+[node name="SurvivalMob1" type="Node2D"]
+script = ExtResource( 7 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 12 )
+
+[node name="EmberGreen" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 110 )
+_maxHealth = 1e+09
+
+[node name="Hang-Fire1" type="Node" parent="EmberGreen"]
+script = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="[InsertFireBehavior]" type="Node" parent="EmberGreen/Hang-Fire1"]
+script = ExtResource( 8 )
+__meta__ = {
+"_editor_description_": "Parallel"
+}
+
+[node name="BurstFire" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 11 )]
+amount = -1
+
+[node name="BurstSalvoTest" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 2 )]
+
+[node name="InvertedPyramidFire" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 3 )]
+
+[node name="PyramidFire" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 4 )]
+
+[node name="SalvoFire" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 10 )]
+amount = -1
+
+[node name="SimpleFireDown" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 13 )]
+amount = -1
+
+[node name="WhipArms" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 9 )]
+amount = -1
+
+[node name="ShootP-AlternateRapid" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 15 )]
+amount = -1
+
+[node name="ShootP-CompositeCircle" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 21 )]
+amount = -1
+
+[node name="ShootP-LV01a" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 19 )]
+amount = -1
+
+[node name="ShootP-LV02a" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 17 )]
+amount = -1
+
+[node name="ShootP-LV02b" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 18 )]
+amount = -1
+
+[node name="ShootP-LV02c" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 20 )]
+amount = -1
+
+[node name="ArrowFireDown" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 5 )]
+amount = -1
+
+[node name="ShootP-ColorfulBig" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 16 )]
+amount = -1
+
+[node name="ShootP-ColorfulSmall" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 14 )]
+amount = -1

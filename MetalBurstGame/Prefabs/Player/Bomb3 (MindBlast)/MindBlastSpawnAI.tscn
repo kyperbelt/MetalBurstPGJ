@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/Player/Bomb3 (MindBlast)/MindBlastVisual.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=5]
+
+[node name="Brain" type="Node"]
+script = ExtResource( 2 )
+
+[node name="Parallel" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="ShootClose" type="Node" parent="Parallel"]
+script = ExtResource( 5 )
+_initialSpeed = 0.0
+_damage = 1000.0
+_collisionLayer = 64
+_collisionMask = 24
+_projectileScene = ExtResource( 3 )
+_offset = Vector2( 0, 45.59 )
+
+[node name="ShootDistant" type="Node" parent="Parallel"]
+script = ExtResource( 5 )
+_initialSpeed = 0.0
+_damage = 1000.0
+_collisionLayer = 64
+_collisionMask = 24
+_projectileScene = ExtResource( 3 )
+_offset = Vector2( 0, -250 )

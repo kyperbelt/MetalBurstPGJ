@@ -7,10 +7,14 @@ class_name EnemyControl, "res://Assets/Tools/boss.png"
 #move to all the needed variables out of the instance
 #and on to the script
 
+#the default projectile this enemy shoots
+#this will be pushed to the blackboard
+export(PackedScene) var _defaultProjectile
+export(PackedScene) var _deathSpawn
 
 #behavior vars
 var _engineReady : bool = false#ready to roll baby
-var _myEngine : MBengine = null
+var _myEngine = null
 var _brain : Brain = null
 
 #movement vars
@@ -89,7 +93,8 @@ func engine_ready(engine):
 		BB.SELF : self,
 		BB.PLAYER : Globals.get_player(),
 		BB.PLAY_AREA : _myEngine.get_play_container(),
-		BB.ENGINE : _myEngine
+		BB.ENGINE : _myEngine,
+		BB.DPROJECTILE: _defaultProjectile
 	})
 	_screenCenter = ZoneMap.get_zone_position(ZoneMap.Zones.Center,_myEngine.get_play_container())
 
@@ -108,7 +113,7 @@ func _physics_process(delta:float):
 func get_engine_ready()->bool:
 	return _engineReady
 
-func get_engine()->MBengine:
+func get_engine():
 	return _myEngine
 
 
@@ -127,7 +132,6 @@ func set_fire_rate(fireRate:float):
 ##########################################################
 
 
-#TODO: add take damage
 func hit(object):
 	#print("Enemy collision with " + object.name + " detected!")
 	#player damaged
@@ -138,18 +142,20 @@ func hit(object):
 		#example SOUND
 		var _value = Globals.audioManager.play_sound("sfx_foeHit")
 		Globals.get_player().score += get_hit_value()
-		print("Enemy[%s] took damage from Object[%s] "%[self.name,object.name])
+		# print("Enemy[%s] took damage from Object[%s] "%[self.name,object.name])
 	#HP-Threshold SFX can also be done here ; more advanced
 	if get_current_health() <= 0:
-		#$FoeDeathSFX.play()
 		var _value = Globals.audioManager.play_sound("sfx_foeDeath")
-		print(self.name + "has died!")
+		if _deathSpawn != null:
+			var dp = _deathSpawn.instance()
+			dp.position = position
+			_myEngine.add_child(dp)
 		Globals.get_player().score += get_death_value()
 		queue_free()
-	if object.name == 'PlayerCollisionArea':
-		object.get_parent().hit(self)
+	if object is Player:
+		object.hit(self)
 
-#TODO: add death
+#TODO: add death animation
 
 ##########################################################
 #@@@@@@@@@@@@@@@@@@@@@@@@ EDITOR @@@@@@@@@@@@@@@@@@@@@@@@#

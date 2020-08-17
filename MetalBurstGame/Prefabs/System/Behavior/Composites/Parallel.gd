@@ -12,6 +12,7 @@ var _returnState : int = RunState.Running
 
 func initiate():
 	.initiate()
+	_finished = false
 	for child in get_child_behaviors():
 		child.initiate()
 	pass

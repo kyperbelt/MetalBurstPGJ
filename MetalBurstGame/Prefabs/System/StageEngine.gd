@@ -18,11 +18,18 @@ var informationDisplay : InformationDisplay = null
 var play_area_width = 0
 var play_area_height = 0
 
+# a list for tracking special entities 
+# this will contain the player for redundancy sake but
+# player should alaways be retrieved using Globals.get_player()
+var _specialEntitiesList = {}
+
 
 func _ready():
+	Globals._currentEngine = self
 	player = Globals.get_player()
 	player.connect("player_hit",self,"player_hit")
 	player.connect("score_changed",self,"score_changed")
+	player.connect("score_multiplier_changed",self,"multiplier_changed")
 	$PlayerLayer.add_child(player)
 	set_process(true)
 
@@ -37,8 +44,21 @@ func _process(_delta):
 		get_node(PauseScreen).show()
 		get_tree().paused = true
 	
+	#clean up special entities if they are not in tree
+	for ent in _specialEntitiesList.keys():
+		if !_specialEntitiesList[ent].is_inside_tree():
+			_specialEntitiesList.erase(ent);
 	informationDisplay.set_bombs(int(floor(player.bomb_percentage / player.bomb_cost)))
 
+#get the special entity by name
+func get_special_entity(name:String):
+	return _specialEntitiesList[name]
+
+#add special entity by name :
+#this will override the last special entity 
+#of the same name if there is one
+func add_special_entity(name:String,entity):
+	_specialEntitiesList[name] = entity
 
 func cleanup():
 	#remove player so that it doesnt get freed
@@ -52,7 +72,7 @@ func pre_process_entities():
 	for child in level_children:
 		var added : bool = false
 		if(child.is_in_group("Enemy")):
-			print("please use SceneDirector SPawnEvents to add to Entities to Stage [failed to add "+child.name+" to entitylayer]")
+			#print("please use SceneDirector SPawnEvents to add to Entities to Stage [failed to add "+child.name+" to entitylayer]")
 			child.get_parent().remove_child(child)
 			$EntityLayer.add_child(child)
 			added = true
@@ -66,10 +86,19 @@ func pre_process_entities():
 				child.engine_ready(self)
 
 
-
+##HEERE WE Handle adding entities to different layers
 func add_child(node : Node, legible_unique_name: bool = false):
-	if(node is Projectiles):
+	
+	#projectiles get added to bullet layer
+	#TODO: set this to projectileComponent
+	if(node is ProjectileComponent):
 		$BulletLayer.add_child(node, legible_unique_name)
+		if node.has_method("engine_ready"):
+			node.engine_ready(self)
+	elif(node is Enemy):
+		$EntityLayer.add_child(node, legible_unique_name)
+		if node.has_method("engine_ready"):
+			node.engine_ready(self)
 	else:
 		.add_child(node, legible_unique_name)
 
@@ -86,7 +115,11 @@ func center_player():
 
 func score_changed():
 	informationDisplay.set_score(player.score,true)
+
 	
+func multiplier_changed(mult:int):
+	print("multiplier changed TO : %s------------------ "%mult);
+	informationDisplay.set_multiplier(mult)
 
 func player_hit():
 	if(player.lives <= 0):
@@ -100,3 +133,7 @@ func player_hit():
 
 func get_play_container()->ViewportContainer:
 	return get_node(Level).get_node("Container") as ViewportContainer
+
+func tree_exited():
+	Globals._currentEngine = null
+	cleanup()

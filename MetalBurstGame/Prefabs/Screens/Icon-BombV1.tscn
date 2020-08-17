@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Assets/Screens/BombIcon1.png" type="Texture" id=1]
+
+[node name="BombsIcon" type="TextureRect"]
+margin_right = 0.32
+margin_bottom = -0.32
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,10 +1,11 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=1]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateBy.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/RotateBy.gd" type="Script" id=2]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=5]
+
 
 [node name="Poof-Fire-Rotate" type="Node"]
 script = ExtResource( 5 )

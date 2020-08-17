@@ -1,16 +1,15 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=2]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/RotateBy.gd" type="Script" id=3]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/ChangeSpeed.gd" type="Script" id=4]
-[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=5]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Movement/MoveForward.gd" type="Script" id=6]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/RotateBy.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/ChangeSpeed.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/MoveForward.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-LV02c.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=8]
-[ext_resource path="res://Prefabs/Formations/SwarmFormations/HelixAI-Fire.tscn" type="PackedScene" id=9]
 
-[node name="HelixL" type="Node"]
+
+[node name="Brain" type="Node"]
 script = ExtResource( 8 )
 
 [node name="Parallel" type="Node" parent="."]
@@ -18,7 +17,7 @@ script = ExtResource( 1 )
 
 [node name="ChangeSpeed" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
-_speed = 200.0
+_speed = 160.0
 
 [node name="MoveSequence" type="Node" parent="Parallel"]
 script = ExtResource( 2 )
@@ -32,7 +31,7 @@ script = ExtResource( 6 )
 [node name="RotateBy" type="Node" parent="Parallel/MoveSequence/Loop 1"]
 script = ExtResource( 3 )
 _angle = -90.0
-_time = 0.5
+_time = 1.0
 
 [node name="Loop 2" type="Node" parent="Parallel/MoveSequence"]
 script = ExtResource( 1 )
@@ -43,7 +42,7 @@ script = ExtResource( 6 )
 [node name="RotateBy" type="Node" parent="Parallel/MoveSequence/Loop 2"]
 script = ExtResource( 3 )
 _angle = 180.0
-_time = 1.0
+_time = 2.0
 
 [node name="Loop 3" type="Node" parent="Parallel/MoveSequence"]
 script = ExtResource( 1 )
@@ -56,46 +55,4 @@ script = ExtResource( 3 )
 _angle = -180.0
 _time = 1.0
 
-[node name="Loop 4" type="Node" parent="Parallel/MoveSequence"]
-script = ExtResource( 1 )
-
-[node name="MoveForward" type="Node" parent="Parallel/MoveSequence/Loop 4"]
-script = ExtResource( 6 )
-
-[node name="RotateBy" type="Node" parent="Parallel/MoveSequence/Loop 4"]
-script = ExtResource( 3 )
-_angle = 180.0
-_time = 1.0
-
-[node name="Loop 5" type="Node" parent="Parallel/MoveSequence"]
-script = ExtResource( 1 )
-
-[node name="MoveForward" type="Node" parent="Parallel/MoveSequence/Loop 5"]
-script = ExtResource( 6 )
-
-[node name="RotateBy" type="Node" parent="Parallel/MoveSequence/Loop 5"]
-script = ExtResource( 3 )
-_angle = -180.0
-_time = 1.0
-
-[node name="FireSequence" type="Node" parent="Parallel"]
-script = ExtResource( 2 )
-
-[node name="PauseBeforeFire" type="Node" parent="Parallel/FireSequence"]
-script = ExtResource( 7 )
-delay = 1.0
-
-[node name="HelixFire" type="Node" parent="Parallel/FireSequence" instance=ExtResource( 9 )]
-script = ExtResource( 5 )
-__meta__ = {
-"_editor_description_": "Time:
-[???]
-
-Behavior:
--Aim at Player
--5 Bursts/Salvos total
--1 reload (Medium-Slow)
--3 Bullets per Burst (Medium)
--250/225/200 Velocity (Medium-Slow)"
-}
-amount = 4
+[node name="ShootP-LV02c" parent="Parallel" instance=ExtResource( 7 )]

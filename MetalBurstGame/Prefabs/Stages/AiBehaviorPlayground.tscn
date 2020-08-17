@@ -51,6 +51,7 @@ event_time = 0.0
 
 [node name="Swarm-CornerSpreadR2" parent="StageDirector" instance=ExtResource( 8 )]
 position = Vector2( -320, -500 )
+event_time = 10.0
 spawn_x = -320.0
 
 [node name="Swarm-CornerSpreadR" parent="StageDirector" instance=ExtResource( 7 )]

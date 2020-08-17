@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Prefabs/Backgrounds/DustParticles.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=2]
@@ -9,18 +9,16 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SoundEvent.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Stages/Survival.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Bosses/B2-CrabBossEvent.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-CurveArcR.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-Arrowhead3.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-CurveArcL.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnter.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnterL.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnterR.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-Caterpillar.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Helix.tscn" type="PackedScene" id=19]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-CornerSpreadL.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2Purple.tscn" type="PackedScene" id=21]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-CornerSpreadR.tscn" type="PackedScene" id=22]
 
 [node name="Stage2RootNode" type="Node"]
@@ -185,15 +183,39 @@ spawn_x = 320.0
 
 [node name="BossBGM" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 320, -7600 )
+B_A_S_E = ""
 event_time = 152.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_O_U_N_D = ""
 _soundName = "bgm_Stage2Boss"
+_soundType = 1
+_eventType = 0
+_overrideVolume = false
 _volume = -4.0
 
 [node name="StageBGM" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 320, 0 )
+B_A_S_E = ""
 event_time = 0.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_O_U_N_D = ""
 _soundName = "bgm_Stage2"
+_soundType = 1
+_eventType = 0
+_overrideVolume = false
 _volume = 4.0
+
+[node name="Swarm-CornerSpreadR10" parent="StageDirector" instance=ExtResource( 20 )]
+position = Vector2( -320, -7205.02 )
+event_time = 144.1
+spawn_x = -320.0
+
+[node name="Swarm-CornerSpreadR9" parent="StageDirector" instance=ExtResource( 22 )]
+position = Vector2( 320, -6972.86 )
+event_time = 139.457
+spawn_x = 320.0
 
 [node name="Arrowhead8" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( 0, -7200 )
@@ -202,6 +224,16 @@ event_time = 144.0
 [node name="Arrowhead7" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( 0, -7000 )
 event_time = 140.0
+
+[node name="Swarm-CornerSpreadR8" parent="StageDirector" instance=ExtResource( 20 )]
+position = Vector2( -320, -6786.59 )
+event_time = 135.732
+spawn_x = -320.0
+
+[node name="Swarm-CornerSpreadR7" parent="StageDirector" instance=ExtResource( 22 )]
+position = Vector2( 320, -6554.43 )
+event_time = 131.089
+spawn_x = 320.0
 
 [node name="SideEnter" parent="StageDirector" instance=ExtResource( 15 )]
 position = Vector2( 0, -6800 )
@@ -215,56 +247,37 @@ rotation = 3.14159
 scale = Vector2( 1, -1 )
 event_time = 131.0
 
-[node name="CurveArcL8" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -230, -6325 )
-rotation = -3.14159
-scale = Vector2( 1, -1 )
-event_time = 126.5
-spawn_x = -230.0
+[node name="Helix8" parent="StageDirector" instance=ExtResource( 19 )]
+position = Vector2( -161.571, -6102.1 )
+event_time = 122.042
+spawn_x = -161.571
 
-[node name="CurveArcR8" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 230, -6325 )
-event_time = 126.5
-spawn_x = 230.0
+[node name="Helix7" parent="StageDirector" instance=ExtResource( 19 )]
+position = Vector2( 170.379, -6322.47 )
+event_time = 126.449
+spawn_x = 170.379
 
-[node name="CurveArcL9" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -230, -6175 )
-rotation = -3.14159
-scale = Vector2( 1, -1 )
-event_time = 123.5
-spawn_x = -230.0
+[node name="Swarm-CornerSpreadR5" parent="StageDirector" instance=ExtResource( 20 )]
+position = Vector2( -320, -6326.33 )
+event_time = 126.527
+spawn_x = -320.0
 
-[node name="CurveArcR9" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 230, -6075 )
-event_time = 121.5
-spawn_x = 230.0
+[node name="Swarm-CornerSpreadR6" parent="StageDirector" instance=ExtResource( 22 )]
+position = Vector2( 320, -6094.16 )
+event_time = 121.883
+spawn_x = 320.0
 
-[node name="CurveArcL7" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -230, -5875 )
-rotation = 3.14159
-scale = Vector2( 1, -1 )
-event_time = 117.5
-spawn_x = -230.0
+[node name="Helix5" parent="StageDirector" instance=ExtResource( 19 )]
+position = Vector2( -161.571, -5661.36 )
+spawn_x = -161.571
 
-[node name="CurveArcR7" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 230, -5875 )
-event_time = 117.5
-spawn_x = 230.0
-
-[node name="CurveArcL6" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( -230, -5675 )
-rotation = -3.14159
-scale = Vector2( 1, -1 )
-event_time = 113.5
-spawn_x = -230.0
-
-[node name="CurveArcR6" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 230, -5675 )
-event_time = 113.5
-spawn_x = 230.0
+[node name="Helix6" parent="StageDirector" instance=ExtResource( 19 )]
+position = Vector2( 170.379, -5870.57 )
+spawn_x = 170.379
 
 [node name="Swarm-CornerSpreadR4" parent="StageDirector" instance=ExtResource( 22 )]
 position = Vector2( 320, -5500 )
+event_time = 110.0
 spawn_x = 320.0
 
 [node name="H-Caterpillar3" parent="StageDirector" instance=ExtResource( 18 )]
@@ -274,6 +287,7 @@ spawn_x = -160.0
 
 [node name="Swarm-CornerSpreadR3" parent="StageDirector" instance=ExtResource( 20 )]
 position = Vector2( -320, -5350 )
+event_time = 107.0
 spawn_x = -320.0
 
 [node name="H-Caterpillar2" parent="StageDirector" instance=ExtResource( 18 )]
@@ -285,7 +299,7 @@ spawn_x = 160.0
 position = Vector2( 0, -5150 )
 event_time = 103.0
 
-[node name="Midboss2" parent="StageDirector" instance=ExtResource( 21 )]
+[node name="Midboss3" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( 0, -3800 )
 event_time = 76.0
 
@@ -349,34 +363,40 @@ spawn_x = 120.0
 
 [node name="Swarm-CornerSpreadR" parent="StageDirector" instance=ExtResource( 20 )]
 position = Vector2( -320, -850 )
+event_time = 17.0
 spawn_x = -320.0
 
 [node name="Swarm-CornerSpreadR2" parent="StageDirector" instance=ExtResource( 22 )]
 position = Vector2( 320, -850 )
+event_time = 17.0
 spawn_x = 320.0
 
 [node name="Helix4" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( 160, -600 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+event_time = 12.0
 spawn_x = 160.0
 
 [node name="Helix3" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( -160, -600 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+event_time = 12.0
 spawn_x = -160.0
 
 [node name="Helix2" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( 160, -400 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+event_time = 8.0
 spawn_x = 160.0
 
 [node name="Helix" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( -160, -200 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+event_time = 4.0
 spawn_x = -160.0
 
 [editable path="StageDirector"]

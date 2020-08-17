@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Prefabs/Player/Shot2v2 (Forward)/PlayerShotV4a (CentralDefault).tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Enemies/Shadow.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Player/Version1b.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Player/Version1c.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Player/PlayerHitbox.tres" type="SpriteFrames" id=5]
+[ext_resource path="res://Prefabs/Player/Player.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/Player/Bomb2 (Flame)/AmberFlameBase.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Player/Shot2v2 (Forward)/PlayerShotV4b (CentralFocus).tscn" type="PackedScene" id=8]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 4.0
+
+[node name="Player" type="Area2D"]
+collision_layer = 4
+collision_mask = 152
+script = ExtResource( 6 )
+BULLET = ExtResource( 1 )
+ALT_BULLET = ExtResource( 8 )
+BOMB = ExtResource( 7 )
+_speed = 325.0
+_focusSpeed = 150.0
+_name = "Arrow Form"
+_descritpion = "A slightly faster form with a powerful focused attack with limited reach."
+_difficultyInfo = 4
+_damageInfo = 8
+_speedInfo = 6
+_rangeInfo = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Shadow" type="Sprite" parent="."]
+position = Vector2( 0, 18 )
+scale = Vector2( 1.25, 2 )
+texture = ExtResource( 2 )
+
+[node name="CoreV3a(Blue)" type="Sprite" parent="."]
+modulate = Color( 0.5, 0.75, 1, 1 )
+position = Vector2( 0, 18 )
+scale = Vector2( 0.66, 0.66 )
+texture = ExtResource( 3 )
+
+[node name="CoreV3b" type="Sprite" parent="."]
+position = Vector2( 0, -23.58 )
+scale = Vector2( 0.66, 0.66 )
+texture = ExtResource( 4 )
+
+[node name="HitboxV2" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.75, 0.75 )
+frames = ExtResource( 5 )
+animation = "Glowing"
+frame = 1
+playing = true
+
+[node name="ProjectileSpawnPosition" type="Node2D" parent="."]
+position = Vector2( 0, -45.5898 )
+
+[node name="NOTES" type="Node" parent="."]
+__meta__ = {
+"_editor_description_": "RoF = 0.125 (8 shots per second)
+NormalSpread = 100x (Lateral)
+FocusSpread = 60x (Lateral)
+Velocity = 1000 / 1500
+
+Normal = 25*6
+Focus = 25*6
+Normal = 1200 DPS
+Focus = 1200 DPS"
+}
