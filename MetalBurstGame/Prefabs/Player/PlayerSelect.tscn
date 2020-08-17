@@ -169,3 +169,4 @@ step = 1.0
 [node name="sfx_menuSelect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )
 volume_db = -3.25
+bus = "OptionsFocusBus"

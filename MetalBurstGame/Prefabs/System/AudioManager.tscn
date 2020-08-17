@@ -142,5 +142,5 @@ __meta__ = {
 Plays: When player scrolls through menu items. Currently only plays on main menu."
 }
 
-[node name="sfx_bomExplode" type="AudioStreamPlayer" parent="Sound"]
+[node name="sfx_bombExplode" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 15 )
