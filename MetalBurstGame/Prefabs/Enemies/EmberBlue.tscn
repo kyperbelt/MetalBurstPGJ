@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://Prefabs/VFX/Particle_FoeExplosion.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/VFX/VFXExplodeBigBlue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Enemies/EmberShadow.png" type="Texture" id=2]
 [ext_resource path="res://Prefabs/System/EnemyControl.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Enemies/EmberSheet.png" type="Texture" id=7]
@@ -37,7 +37,7 @@ shape = SubResource( 1 )
 modulate = Color( 0.52549, 0.85098, 0.964706, 1 )
 frames = ExtResource( 8 )
 animation = "Default"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Body1" type="Sprite" parent="."]
