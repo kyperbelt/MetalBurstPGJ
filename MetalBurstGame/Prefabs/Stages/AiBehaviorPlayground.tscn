@@ -5,7 +5,7 @@
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Formations/AiPlaygroundSpawns/FiringTests.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Prefabs/Bosses/B1-ShrimpBossEvent.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss2Purple.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=14]
 
 [node name="Playground" type="Node"]
@@ -45,12 +45,10 @@ event_time = 30.0
 spawn_x = -321.935
 
 [node name="FiringTests" parent="StageDirector" instance=ExtResource( 5 )]
-position = Vector2( 400, 0 )
-event_time = 0.0
-spawn_x = 400.0
+position = Vector2( 0, -1500 )
+event_time = 30.0
 
-[node name="B1ShrimpPT1" parent="StageDirector" instance=ExtResource( 6 )]
-position = Vector2( 0, -200 )
-event_time = 4.0
+[node name="Midboss2" parent="StageDirector" instance=ExtResource( 6 )]
+event_time = 0.0
 
 [editable path="StageDirector"]
