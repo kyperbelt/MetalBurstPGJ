@@ -145,13 +145,8 @@ position = Vector2( 320, -550 )
 spawn_x = 320.0
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 0, -11500 )
-B_A_S_E = ""
+position = Vector2( 140.206, -11500 )
 event_time = 230.0
-P_O_S_I_T_O_N = ""
-override_time = false
-E_N_D = ""
-delay = 0.0
 Target = ExtResource( 8 )
 
 [node name="StageBGM" parent="StageDirector" instance=ExtResource( 10 )]
