@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/VFX/Explode 15x15.png" type="Texture" id=1]
+[ext_resource path="res://Assets/VFX/ExplodeFrags.tres" type="Material" id=2]
+[ext_resource path="res://Prefabs/VFX/ParticleAutoStart.gd" type="Script" id=3]
+
+[node name="FoeExplode2" type="Particles2D"]
+emitting = false
+amount = 50
+one_shot = true
+explosiveness = 1.0
+process_material = ExtResource( 2 )
+texture = ExtResource( 1 )
+script = ExtResource( 3 )

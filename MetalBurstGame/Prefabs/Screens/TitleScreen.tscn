@@ -12,7 +12,7 @@
 [ext_resource path="res://Assets/Screens/InstructionsFont.tres" type="DynamicFont" id=10]
 [ext_resource path="res://Prefabs/Stages/Stage1Forest(Base).tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Backgrounds/TitleBackground.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Assets/Audio/BGM/BGM_menu02.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Assets/Audio/BGM/MainMenuBGMv2.wav" type="AudioStream" id=13]
 [ext_resource path="res://Assets/Screens/LargeSizeFont.res" type="DynamicFont" id=14]
 [ext_resource path="res://Assets/Screens/Header2.res" type="DynamicFont" id=15]
 
@@ -45,7 +45,7 @@ __meta__ = {
 
 [node name="TitleMain" type="Label" parent="GuiLayer/VBoxContainer"]
 margin_right = 620.0
-margin_bottom = 165.0
+margin_bottom = 117.0
 custom_fonts/font = ExtResource( 14 )
 custom_colors/font_color_shadow = Color( 0, 0.0660001, 0.66, 1 )
 custom_constants/shadow_offset_x = -8
@@ -58,9 +58,9 @@ __meta__ = {
 }
 
 [node name="TitleSub" type="Label" parent="GuiLayer/VBoxContainer"]
-margin_top = 169.0
+margin_top = 121.0
 margin_right = 620.0
-margin_bottom = 243.0
+margin_bottom = 195.0
 custom_fonts/font = ExtResource( 15 )
 custom_colors/font_color_shadow = Color( 0, 0.0660001, 0.66, 1 )
 custom_constants/shadow_offset_x = -4
@@ -145,7 +145,6 @@ __meta__ = {
 [node name="sfx_menuSelect" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -3.25
-bus = "OptionsFocusBus"
 
 [node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )

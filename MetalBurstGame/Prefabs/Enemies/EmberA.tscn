@@ -1,10 +1,11 @@
 [gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Prefabs/Enemies/SimpleEnemyAi.gd" type="Script" id=1]
-[ext_resource path="res://Prefabs/Projectiles/BulletTest.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Projectiles/OlderMaterial/BulletTest.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Enemies/EmberSprites.tres" type="SpriteFrames" id=4]
 [ext_resource path="res://Assets/Audio/SFX/enemyHit02.wav" type="AudioStream" id=5]
 [ext_resource path="res://Assets/Audio/SFX/enemyDeath.wav" type="AudioStream" id=6]
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 40.0432, 25.296 )

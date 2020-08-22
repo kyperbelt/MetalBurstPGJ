@@ -1,0 +1,87 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1AI-BlueSpin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1AI-RedEmber.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Enemies/EmberPurple.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Enemies/SpinnerPurple.tscn" type="PackedScene" id=8]
+
+[node name="Midboss1" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+
+[node name="NOTES" type="Node" parent="."]
+__meta__ = {
+"_editor_description_": "Player DPS:
+Cooldown = 0.125 ; 8 shots per second
+Damage = 75
+DPS = 600
+Form 1 = 1000
+Form 2 = 1250
+Form 3 = 1500
+Total Encounter Length = 30 Seconds Max ; 20 Seconds Min
+
+Total HP Value of all foes in formation = 30000
+7500 = HP of all Individual Units
+2 Red Embers
+2 Blue Spinner
+
+Score Value = 80000 Per Enemy
+Score Value Total = 320000 Total"
+}
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="SpinnerPurpleL" parent="." instance=ExtResource( 8 )]
+position = Vector2( -60, -85 )
+_maxHealth = 7500.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="BlueSpinnerAI" parent="SpinnerPurpleL" instance=ExtResource( 5 )]
+
+[node name="SpinnerPurpleR" parent="." instance=ExtResource( 8 )]
+position = Vector2( 60, -85 )
+_maxHealth = 7500.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="BlueSpinnerAI" parent="SpinnerPurpleR" instance=ExtResource( 5 )]
+
+[node name="EmberPurpleTop" parent="." instance=ExtResource( 7 )]
+position = Vector2( 0, -160 )
+_maxHealth = 7500.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="RedEmberAI" parent="EmberPurpleTop" instance=ExtResource( 6 )]
+
+[node name="EmberPurpleBot" parent="." instance=ExtResource( 7 )]
+position = Vector2( 0, -40 )
+_maxHealth = 7500.0
+_deathValue = 2000
+_hitValue = 20
+
+[node name="RedEmberAI" parent="EmberPurpleBot" instance=ExtResource( 6 )]

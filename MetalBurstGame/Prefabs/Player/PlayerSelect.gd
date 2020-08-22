@@ -70,6 +70,8 @@ func move_selection_right():
 	pass #animate
 
 func make_selection():
+	$sfx_menuSelect.play() #ReimJ: copied from Title Screen ; Plays riff ; please link to Audio Manager
+	yield(get_tree().create_timer(2.0), "timeout") #ReimJ: copied from Title Screen ; Causes pause before play
 	Globals.Player = playerTypes[_currentSelection]
 	Globals._inCharacterSelect = false
 	#hook into stage

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=1]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootPlayer.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=2]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-01(Red).tscn" type="PackedScene" id=5]
 
 [node name="ShootP-LV01a" type="Node"]
 script = ExtResource( 4 )
@@ -22,12 +23,13 @@ __meta__ = {
 "_editor_description_": "[Neccessity]"
 }
 
-[node name="ShootPlayer" type="Node" parent="Sequence"]
+[node name="Shoot" type="Node" parent="Sequence"]
 script = ExtResource( 2 )
-__meta__ = {
-"_editor_description_": "[Controls Velocity]"
-}
-_speed = 200.0
+_initialSpeed = 200.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 5 )
+_targetName = "player"
 
 [node name="Wait" type="Node" parent="Sequence"]
 script = ExtResource( 1 )

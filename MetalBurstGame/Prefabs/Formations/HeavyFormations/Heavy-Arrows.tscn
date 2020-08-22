@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/Enemies/EmberRed.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=3]
+[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-ArrowsAI.tscn" type="PackedScene" id=4]
+
+[node name="H-Arrows" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": "[Duplicate this thing to start a formation]
+[1 Formation = 1 Spawn Event]
+[Otherwise, if you see this within a level's stage director, it means it is a temp prototype]
+
+[What should naming scheme of the root node be?]
+[What should naming scheme of the formation scene be?]
+
+INTENDED USE
+[Describe which level and stage this formation should be used in]
+
+COMPOSITION
+[Describe the visual composition of the formation. What stage enemies are in this formation? How Many?]
+
+MOVEMENT BEHAVIORS
+[Insert the name of the movement behavior's scene]
+
+FIRING REFERNCES
+[Insert the name of the firing behavior's scene]"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="EmberRed" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, -40 )
+
+[node name="WhipArms" parent="EmberRed" instance=ExtResource( 4 )]

@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/MoveForward.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/RotateTo.gd" type="Script" id=5]
+
+[node name="Right to Left" type="Node"]
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": "This influence shot direction."
+}
+
+[node name="Sequence" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="RotateTo" type="Node" parent="Sequence"]
+script = ExtResource( 5 )
+_angle = 225.0
+
+[node name="Parallel" type="Node" parent="Sequence"]
+script = ExtResource( 4 )
+
+[node name="RotateTo2" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 5 )
+_angle = 135.0
+_time = 0.33
+
+[node name="MoveForward" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 1 )

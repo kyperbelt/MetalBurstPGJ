@@ -120,26 +120,14 @@ spawn_x = 320.0
 
 [node name="BossBGM" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 320, -7600 )
-B_A_S_E = ""
 event_time = 152.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_O_U_N_D = ""
 _soundName = "bgm_Stage2Boss"
-_soundType = 1
-_eventType = 0
 _volume = -4.0
 
 [node name="StageBGM" parent="StageDirector" instance=ExtResource( 9 )]
 position = Vector2( 320, 0 )
-B_A_S_E = ""
 event_time = 0.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_O_U_N_D = ""
 _soundName = "bgm_Stage2"
-_soundType = 1
-_eventType = 0
 _volume = 4.0
 
 [node name="[]Intro-C4" parent="StageDirector" instance=ExtResource( 8 )]

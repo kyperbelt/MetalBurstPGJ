@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Screens/UItestA.png" type="Texture" id=2]
@@ -9,8 +9,9 @@
 [ext_resource path="res://Assets/Screens/UItestD.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Screens/UItestDguide.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Screens/UItestDshadow.png" type="Texture" id=9]
-[ext_resource path="res://Prefabs/Player/LivesIcon.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Prefabs/Player/BombsIcon.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/Screens/Icon-ArmorV2.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Screens/Icon-BombV1.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/Screens/Header2.res" type="DynamicFont" id=12]
 
 [node name="InformationDisplay" type="Control"]
 anchor_right = 1.0
@@ -113,44 +114,54 @@ margin_left = 1030.0
 margin_top = 50.0
 margin_right = 1210.0
 margin_bottom = 360.0
-rect_scale = Vector2( 0.528266, 0.558156 )
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ScoreLabel" type="Label" parent="VerticalStack"]
-margin_right = 350.0
-margin_bottom = 90.0
+margin_top = 31.0
+margin_right = 180.0
+margin_bottom = 76.0
 custom_fonts/font = ExtResource( 5 )
 text = "Score"
 align = 1
 
 [node name="Score" type="Label" parent="VerticalStack"]
-margin_top = 94.0
-margin_right = 350.0
-margin_bottom = 184.0
+margin_top = 80.0
+margin_right = 180.0
+margin_bottom = 125.0
 custom_fonts/font = ExtResource( 5 )
 text = "0000000000"
 align = 1
 
 [node name="HSeparator" type="HSeparator" parent="VerticalStack"]
-margin_top = 188.0
-margin_right = 350.0
-margin_bottom = 192.0
+margin_top = 129.0
+margin_right = 180.0
+margin_bottom = 133.0
+
+[node name="HSeparator4" type="HSeparator" parent="VerticalStack"]
+margin_top = 137.0
+margin_right = 180.0
+margin_bottom = 141.0
+
+[node name="HSeparator5" type="HSeparator" parent="VerticalStack"]
+margin_top = 145.0
+margin_right = 180.0
+margin_bottom = 149.0
 
 [node name="LivesLabel" type="Label" parent="VerticalStack"]
-margin_top = 196.0
-margin_right = 350.0
-margin_bottom = 286.0
+margin_top = 153.0
+margin_right = 180.0
+margin_bottom = 198.0
 custom_fonts/font = ExtResource( 5 )
 text = "Armor"
 align = 1
 
 [node name="LivesContainer" type="HBoxContainer" parent="VerticalStack"]
-margin_top = 290.0
-margin_right = 350.0
-margin_bottom = 290.0
+margin_top = 202.0
+margin_right = 180.0
+margin_bottom = 202.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
@@ -168,22 +179,32 @@ text = "@@@"
 align = 1
 
 [node name="HSeparator2" type="HSeparator" parent="VerticalStack"]
-margin_top = 294.0
-margin_right = 350.0
-margin_bottom = 298.0
+margin_top = 206.0
+margin_right = 180.0
+margin_bottom = 210.0
+
+[node name="HSeparator6" type="HSeparator" parent="VerticalStack"]
+margin_top = 214.0
+margin_right = 180.0
+margin_bottom = 218.0
+
+[node name="HSeparator3" type="HSeparator" parent="VerticalStack"]
+margin_top = 222.0
+margin_right = 180.0
+margin_bottom = 226.0
 
 [node name="BombLabel" type="Label" parent="VerticalStack"]
-margin_top = 302.0
-margin_right = 350.0
-margin_bottom = 392.0
+margin_top = 230.0
+margin_right = 180.0
+margin_bottom = 275.0
 custom_fonts/font = ExtResource( 5 )
 text = "Energy"
 align = 1
 
 [node name="BombsContainer" type="HBoxContainer" parent="VerticalStack"]
-margin_top = 396.0
-margin_right = 350.0
-margin_bottom = 396.0
+margin_top = 279.0
+margin_right = 180.0
+margin_bottom = 279.0
 grow_horizontal = 2
 size_flags_horizontal = 3
 size_flags_vertical = 0
@@ -214,44 +235,53 @@ __meta__ = {
 }
 
 [node name="MultiplierLabel" type="Label" parent="."]
-margin_left = 70.4379
-margin_top = 264.191
-margin_right = 344.438
-margin_bottom = 354.191
-rect_scale = Vector2( 0.627695, 0.684098 )
+margin_left = 61.4884
+margin_top = 277.928
+margin_right = 199.488
+margin_bottom = 322.928
 custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color_shadow = Color( 0.66, 0.33, 0, 1 )
+custom_constants/shadow_offset_x = -2
+custom_constants/shadow_offset_y = 2
 text = "Multiplier"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MultiplierProgressBar" type="Label" parent="."]
-margin_left = 45.8832
-margin_top = 405.644
-margin_right = 506.883
-margin_bottom = 495.644
-rect_scale = Vector2( 0.508125, 0.448014 )
-custom_fonts/font = ExtResource( 5 )
-text = ">                  |"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="MultiplierContainer" type="HBoxContainer" parent="."]
-margin_left = 111.671
-margin_top = 315.433
-margin_right = 186.671
-margin_bottom = 405.433
-rect_scale = Vector2( 1.31695, 0.994757 )
+margin_left = 63.0255
+margin_top = 325.964
+margin_right = 163.026
+margin_bottom = 399.964
+alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Multiplier" type="Label" parent="MultiplierContainer"]
-margin_right = 75.0
-margin_bottom = 90.0
-custom_fonts/font = ExtResource( 5 )
+margin_left = 12.0
+margin_right = 87.0
+margin_bottom = 74.0
+custom_fonts/font = ExtResource( 12 )
+custom_colors/font_color_shadow = Color( 0.66, 0.33, 0, 1 )
+custom_constants/shadow_offset_x = -3
+custom_constants/shadow_offset_y = 3
 text = "X 1"
 align = 1
+valign = 1
+
+[node name="MultiplierProgressBar" type="Label" parent="."]
+margin_left = 58.0
+margin_top = 395.393
+margin_right = 279.0
+margin_bottom = 440.393
+custom_fonts/font = ExtResource( 5 )
+custom_colors/font_color_shadow = Color( 0.66, 0.33, 0, 1 )
+custom_constants/shadow_offset_x = -3
+custom_constants/shadow_offset_y = 3
+text = ">                  |"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

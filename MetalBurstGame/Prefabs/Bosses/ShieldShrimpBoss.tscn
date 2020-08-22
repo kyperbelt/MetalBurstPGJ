@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Prefabs/System/EnemyControl.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Enemies/EmberTrail.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://Assets/Bosses/Midboss1.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Enemies/Shadow.png" type="Texture" id=5]
+
+[node name="ShieldShrimpBoss" type="Node2D"]
+script = ExtResource( 1 )
+_maxSpeed = 720.0
+_maxHealth = 1e+07
+
+[node name="Shadow2" type="Sprite" parent="."]
+position = Vector2( 0, 28 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 5 )
+
+[node name="AnimatedTrails" type="Node2D" parent="."]
+modulate = Color( 0.75, 0.916667, 1, 1 )
+
+[node name="Trail-Up-L" type="AnimatedSprite" parent="AnimatedTrails"]
+position = Vector2( -6, -66 )
+rotation = -0.349066
+scale = Vector2( 0.5, 1 )
+frames = ExtResource( 2 )
+animation = "Smooth"
+frame = 3
+playing = true
+
+[node name="Trail-Up-R" type="AnimatedSprite" parent="AnimatedTrails"]
+position = Vector2( 6, -66 )
+rotation = 0.349066
+scale = Vector2( 0.5, 1 )
+frames = ExtResource( 2 )
+animation = "Smooth"
+frame = 3
+playing = true
+
+[node name="Trail-Bot-L" type="AnimatedSprite" parent="AnimatedTrails"]
+position = Vector2( -20, -37.5 )
+rotation = -0.349066
+scale = Vector2( 0.5, 1.5 )
+frames = ExtResource( 2 )
+animation = "Smooth"
+frame = 3
+playing = true
+
+[node name="Trail-Bot-R" type="AnimatedSprite" parent="AnimatedTrails"]
+position = Vector2( 20, -37.5 )
+rotation = 0.349066
+scale = Vector2( 0.5, 1.5 )
+frames = ExtResource( 2 )
+animation = "Smooth"
+frame = 2
+playing = true
+
+[node name="Core2" type="Sprite" parent="."]
+texture = ExtResource( 4 )
+
+[node name="EnemyArea" type="Area2D" parent="."]
+visible = false
+collision_layer = 8
+collision_mask = 97
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="EnemyArea"]
+build_mode = 1
+polygon = PoolVector2Array( 0, -96, 18, -50, 70, 35, 18, 95, 0, 60, -18, 95, -70, 35, -18, -50 )

@@ -1,13 +1,13 @@
 [gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-WhipArms.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-Arrows.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/Backgrounds/Stage1BG.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Backgrounds/DustParticles.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/System/StageDirector/StageDirector.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Stages/Stage2Mountainousv4.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SoundEvent.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Formations/CrossFormations/XPluss.tscn" type="PackedScene" id=11]
@@ -16,7 +16,7 @@
 [ext_resource path="res://Prefabs/Formations/CrossFormations/SideEnterL.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/System/AudioManager.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/Formations/CrossFormations/SideEnterR.tscn" type="PackedScene" id=16]
-[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1Purple.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=18]
 [ext_resource path="res://Prefabs/Bosses/B1-ShrimpBossEvent.tscn" type="PackedScene" id=20]
 [ext_resource path="res://Prefabs/Bosses/B1-SupportEvent1.tscn" type="PackedScene" id=21]
@@ -162,14 +162,14 @@ _eventType = 0
 _overrideVolume = false
 _volume = -4.0
 
-[node name="StageBGM2" parent="StageDirector" instance=ExtResource( 10 )]
+[node name="BossBGMv1" parent="StageDirector" instance=ExtResource( 10 )]
 position = Vector2( 320, -6100 )
 B_A_S_E = ""
 event_time = 122.0
 P_O_S_I_T_O_N = ""
 override_time = false
 S_O_U_N_D = ""
-_soundName = "bgm_Stage1Boss"
+_soundName = "bgm_Stage1Boss(test)"
 _soundType = 1
 _eventType = 0
 _overrideVolume = false
@@ -177,129 +177,71 @@ _volume = -3.0
 
 [node name="B1-Support12" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( -160, -10009.1 )
-B_A_S_E = ""
 event_time = 200.182
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -160.0
 
 [node name="B1-Support11" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( 160, -9834.09 )
-B_A_S_E = ""
 event_time = 196.682
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="B1-Support10" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( -160, -9659.09 )
-B_A_S_E = ""
 event_time = 193.182
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -160.0
 
 [node name="B1-Support9" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( 160, -9484.09 )
-B_A_S_E = ""
 event_time = 189.682
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="B1-Support8" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( -160, -9350 )
-B_A_S_E = ""
 event_time = 187.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -160.0
 
 [node name="B1-Support7" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( 160, -9175 )
-B_A_S_E = ""
 event_time = 183.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="B1-Support6" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( -160, -9000 )
-B_A_S_E = ""
 event_time = 180.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -160.0
 
 [node name="B1-Support5" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( 160, -8825 )
-B_A_S_E = ""
 event_time = 176.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="B1Shrimp2" parent="StageDirector" instance=ExtResource( 20 )]
 position = Vector2( 0, -8850 )
-B_A_S_E = ""
 event_time = 177.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="B1-Support4" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( -160, -8675 )
-B_A_S_E = ""
 event_time = 173.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -160.0
 
 [node name="B1-Support3" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( 160, -8500 )
-B_A_S_E = ""
 event_time = 170.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="B1-Support2" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( -160, -8325 )
-B_A_S_E = ""
 event_time = 166.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -160.0
 
 [node name="B1-Support1" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( 160, -8150 )
-B_A_S_E = ""
 event_time = 163.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="B1Shrimp" parent="StageDirector" instance=ExtResource( 20 )]
 position = Vector2( 0, -6100 )
-B_A_S_E = ""
 event_time = 122.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="[BossImportNode]" type="Node2D" parent="StageDirector"]
 position = Vector2( 0, -6000 )
@@ -308,277 +250,186 @@ position = Vector2( 0, -6000 )
 position = Vector2( -320, -6000 )
 texture = ExtResource( 18 )
 
-[node name="Cross-XPluss5" parent="StageDirector" instance=ExtResource( 11 )]
-position = Vector2( 0, -5700 )
-B_A_S_E = ""
-event_time = 114.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
+[node name="CurveArcL10" parent="StageDirector" instance=ExtResource( 13 )]
+position = Vector2( -245.091, -5569.94 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+event_time = 111.399
+spawn_x = -245.091
 
-[node name="Cross-XPluss4" parent="StageDirector" instance=ExtResource( 11 )]
-position = Vector2( 0, -5400 )
-B_A_S_E = ""
-event_time = 108.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
+[node name="CurveArcR10" parent="StageDirector" instance=ExtResource( 12 )]
+position = Vector2( 223.565, -5560.47 )
+event_time = 111.209
+spawn_x = 223.565
+
+[node name="CurveArcL9" parent="StageDirector" instance=ExtResource( 13 )]
+position = Vector2( -245.091, -5223.85 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+event_time = 104.477
+spawn_x = -245.091
+
+[node name="CurveArcR9" parent="StageDirector" instance=ExtResource( 12 )]
+position = Vector2( 223.565, -5214.38 )
+event_time = 104.288
+spawn_x = 223.565
 
 [node name="Cross-XPluss3" parent="StageDirector" instance=ExtResource( 11 )]
-position = Vector2( 0, -5100 )
-B_A_S_E = ""
-event_time = 102.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
+position = Vector2( 0, -5695.4 )
+event_time = 113.908
 
 [node name="Cross-XPluss2" parent="StageDirector" instance=ExtResource( 11 )]
-position = Vector2( 0, -4800 )
-B_A_S_E = ""
-event_time = 96.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
+position = Vector2( 0, -5395.4 )
+event_time = 107.908
 
-[node name="Midboss1" parent="StageDirector" instance=ExtResource( 17 )]
+[node name="CurveArcL8" parent="StageDirector" instance=ExtResource( 13 )]
+position = Vector2( -245.091, -4669.73 )
+rotation = -3.14159
+scale = Vector2( 1, -1 )
+event_time = 93.3946
+spawn_x = -245.091
+
+[node name="CurveArcR8" parent="StageDirector" instance=ExtResource( 12 )]
+position = Vector2( 223.565, -4973.89 )
+event_time = 99.4778
+spawn_x = 223.565
+
+[node name="Cross-SideEnterL3" parent="StageDirector" instance=ExtResource( 14 )]
+position = Vector2( 0, -5100 )
+event_time = 102.0
+
+[node name="Cross-SideEnterR3" parent="StageDirector" instance=ExtResource( 16 )]
+position = Vector2( 0, -4800 )
+event_time = 96.0
+
+[node name="Midboss1Purp" parent="StageDirector" instance=ExtResource( 17 )]
 position = Vector2( 0, -3300 )
-B_A_S_E = ""
 event_time = 66.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="CurveArcL7" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -249.271, -3087.75 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-B_A_S_E = ""
 event_time = 61.755
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -249.271
 
 [node name="CurveArcR7" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 236.951, -2947.94 )
-B_A_S_E = ""
 event_time = 58.9588
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 236.951
 
 [node name="Cross-XPluss" parent="StageDirector" instance=ExtResource( 11 )]
 position = Vector2( 0, -2750 )
-B_A_S_E = ""
 event_time = 55.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="Cross-SideEnterL2" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -2557.26 )
-B_A_S_E = ""
 event_time = 51.1452
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="Cross-SideEnterR2" parent="StageDirector" instance=ExtResource( 16 )]
 position = Vector2( 0, -2516.25 )
-B_A_S_E = ""
 event_time = 50.325
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="Cross-SideEnterL" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -2370.66 )
-B_A_S_E = ""
 event_time = 47.4132
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="Cross-SideEnterR" parent="StageDirector" instance=ExtResource( 16 )]
 position = Vector2( 0, -2224.18 )
-B_A_S_E = ""
 event_time = 44.4836
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="H-WhipArms4" parent="StageDirector" instance=ExtResource( 2 )]
 position = Vector2( -155.976, -1907.41 )
-B_A_S_E = ""
 event_time = 38.1482
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -155.976
 
 [node name="H-WhipArms5" parent="StageDirector" instance=ExtResource( 2 )]
 position = Vector2( 167.794, -1900.93 )
-B_A_S_E = ""
 event_time = 38.0186
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 167.794
 
 [node name="CurveArcL6" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -231.522, -2028.28 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-B_A_S_E = ""
 event_time = 40.5656
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -231.522
 
 [node name="CurveArcR6" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 234.706, -2036.92 )
-B_A_S_E = ""
 event_time = 40.7384
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 234.706
 
 [node name="H-WhipArms3" parent="StageDirector" instance=ExtResource( 2 )]
 position = Vector2( 216.105, -1652.64 )
-B_A_S_E = ""
 event_time = 33.0528
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 216.105
 
 [node name="CurveArcL5" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -166.768, -1643.74 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-B_A_S_E = ""
 event_time = 32.8748
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -166.768
 
 [node name="H-WhipArms2" parent="StageDirector" instance=ExtResource( 2 )]
 position = Vector2( -183.21, -1372.04 )
-B_A_S_E = ""
 event_time = 27.4408
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -183.21
 
 [node name="CurveArcR5" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 221.464, -1361.39 )
-B_A_S_E = ""
 event_time = 27.2278
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 221.464
 
 [node name="H-WhipArms" parent="StageDirector" instance=ExtResource( 2 )]
 position = Vector2( 0, -1100 )
-B_A_S_E = ""
 event_time = 22.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
-spawn_x = 0.0
 
 [node name="CurveArcL4" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -250, -775 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
-B_A_S_E = ""
 event_time = 15.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -250.0
 
 [node name="CurveArcR4" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 250, -775 )
-B_A_S_E = ""
 event_time = 15.5
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 250.0
 
 [node name="CurveArcL3" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -250, -550 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-B_A_S_E = ""
 event_time = 11.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -250.0
 
 [node name="CurveArcR3" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 250, -550 )
-B_A_S_E = ""
 event_time = 11.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 250.0
 
 [node name="CurveArcL2" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -250, -300 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-B_A_S_E = ""
 event_time = 6.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -250.0
 
 [node name="CurveArcR2" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 250, -300 )
-B_A_S_E = ""
 event_time = 6.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 250.0
 
 [node name="CurveArcL" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -250, 0 )
-B_A_S_E = ""
 event_time = 0.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = -250.0
 
 [node name="CurveArcR" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 250, -150 )
-B_A_S_E = ""
 event_time = 3.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_P_A_W_N = ""
 spawn_x = 250.0
 
 [editable path="StageDirector"]
