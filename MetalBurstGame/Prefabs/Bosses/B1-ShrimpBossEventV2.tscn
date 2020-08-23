@@ -1,0 +1,149 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/360 x36 Alternating.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/StopMove.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/ChangeSpeed.gd" type="Script" id=7]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/MoveCardinal.gd" type="Script" id=8]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=9]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=10]
+[ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-ColorfulBig.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=14]
+[ext_resource path="res://Prefabs/Bosses/ShieldShrimpBoss.tscn" type="PackedScene" id=16]
+
+[node name="B1ShrimpV2" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "[Match with Song]
+
+Section 1
+Section 2
+Section 3
+Section 4
+Section 5
+Section 6
+Section 7
+Section 8"
+}
+event_time = null
+
+[node name="placeholder" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="ShieldShrimpBoss" parent="." instance=ExtResource( 16 )]
+position = Vector2( 0, -100 )
+
+[node name="Brain" type="Node" parent="ShieldShrimpBoss"]
+script = ExtResource( 4 )
+
+[node name="Sequence" type="Node" parent="ShieldShrimpBoss/Brain"]
+script = ExtResource( 6 )
+
+[node name="SequenceIntro" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
+script = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": "Sequence
+2 Sec"
+}
+
+[node name="ChangeSpeed" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/SequenceIntro"]
+script = ExtResource( 7 )
+_speed = 250.0
+
+[node name="MoveCardinal" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/SequenceIntro"]
+script = ExtResource( 8 )
+
+[node name="Wait" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/SequenceIntro"]
+script = ExtResource( 9 )
+delay = 1.0
+
+[node name="StopMove" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/SequenceIntro"]
+script = ExtResource( 5 )
+
+[node name="ParallelSec1" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
+script = ExtResource( 14 )
+__meta__ = {
+"_editor_description_": "Parallel
+Section1 - Low Point
+12 Sec"
+}
+
+[node name="ChangeSpeed" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1"]
+script = ExtResource( 7 )
+_speed = 140.0
+
+[node name="360x36Alt" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1" instance=ExtResource( 3 )]
+
+[node name="Movement" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1"]
+script = ExtResource( 6 )
+
+[node name="Wait" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Movement"]
+script = ExtResource( 9 )
+delay = 3.0
+
+[node name="Repeater" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Movement"]
+script = ExtResource( 10 )
+amount = 4
+
+[node name="Sequence" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Movement/Repeater"]
+script = ExtResource( 6 )
+
+[node name="MoveCardinal" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Movement/Repeater/Sequence"]
+script = ExtResource( 8 )
+_direction = 2
+
+[node name="Wait" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Movement/Repeater/Sequence"]
+script = ExtResource( 9 )
+delay = 2.0
+
+[node name="StopMove" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Movement/Repeater/Sequence"]
+script = ExtResource( 5 )
+
+[node name="MoveCardinal2" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Movement/Repeater/Sequence"]
+script = ExtResource( 8 )
+_direction = 6
+
+[node name="Wait2" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Movement/Repeater/Sequence"]
+script = ExtResource( 9 )
+delay = 4.0
+
+[node name="StopMove2" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Movement/Repeater/Sequence"]
+script = ExtResource( 5 )
+
+[node name="MoveCardinal3" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Movement/Repeater/Sequence"]
+script = ExtResource( 8 )
+_direction = 2
+
+[node name="Wait3" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Movement/Repeater/Sequence"]
+script = ExtResource( 9 )
+delay = 2.0
+
+[node name="StopMove3" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Movement/Repeater/Sequence"]
+script = ExtResource( 5 )
+
+[node name="Sequence" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1"]
+script = ExtResource( 6 )
+
+[node name="Wait" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Sequence"]
+script = ExtResource( 9 )
+delay = 4.125
+
+[node name="ShootP-ColorfulBig" parent="ShieldShrimpBoss/Brain/Sequence/ParallelSec1/Sequence" instance=ExtResource( 11 )]
+
+[node name="SequenceOutro" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
+script = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": "Sequence
+2 Sec"
+}
+
+[node name="ChangeSpeed" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/SequenceOutro"]
+script = ExtResource( 7 )
+_speed = 250.0
+
+[node name="MoveCardinal" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/SequenceOutro"]
+script = ExtResource( 8 )
+_direction = 0
