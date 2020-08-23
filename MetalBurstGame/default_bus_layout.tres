@@ -1,23 +1,26 @@
-[gd_resource type="AudioBusLayout" load_steps=6 format=2]
+[gd_resource type="AudioBusLayout" load_steps=7 format=2]
 
-[sub_resource type="AudioEffectDelay" id=1]
+[sub_resource type="AudioEffectLowShelfFilter" id=1]
+resource_name = "LowShelfFilter"
+
+[sub_resource type="AudioEffectDelay" id=2]
 resource_name = "Delay"
 
-[sub_resource type="AudioEffectReverb" id=2]
+[sub_resource type="AudioEffectReverb" id=3]
 resource_name = "Reverb"
 predelay_feedback = 0.15
 room_size = 0.12
 damping = 0.44
 wet = 0.13
 
-[sub_resource type="AudioEffectDelay" id=3]
+[sub_resource type="AudioEffectDelay" id=4]
 resource_name = "Delay"
 tap1/delay_ms = 11.0
 tap2/delay_ms = 240.0
 feedback/delay_ms = 329.0
 feedback/level_db = -14.48
 
-[sub_resource type="AudioEffectPhaser" id=4]
+[sub_resource type="AudioEffectPhaser" id=5]
 resource_name = "Phaser"
 range_min_hz = 3978.57
 range_max_hz = 5762.5
@@ -25,16 +28,18 @@ rate_hz = 0.668
 feedback = 0.5
 depth = 1.3
 
-[sub_resource type="AudioEffectLowPassFilter" id=5]
+[sub_resource type="AudioEffectLowPassFilter" id=6]
 resource_name = "LowPassFilter"
 
 [resource]
-bus/0/volume_db = 0.267241
+bus/0/volume_db = 0.664978
+bus/0/effect/0/effect = SubResource( 1 )
+bus/0/effect/0/enabled = true
 bus/1/name = "Music"
 bus/1/solo = false
 bus/1/mute = false
 bus/1/bypass_fx = false
-bus/1/volume_db = -4.02726
+bus/1/volume_db = -4.02456
 bus/1/send = "Master"
 bus/2/name = "Sound FX"
 bus/2/solo = false
@@ -48,7 +53,7 @@ bus/3/mute = false
 bus/3/bypass_fx = false
 bus/3/volume_db = 0.0
 bus/3/send = "Sound FX"
-bus/3/effect/0/effect = SubResource( 1 )
+bus/3/effect/0/effect = SubResource( 2 )
 bus/3/effect/0/enabled = true
 bus/4/name = "OptionsFocusBus"
 bus/4/solo = false
@@ -62,11 +67,11 @@ bus/5/mute = false
 bus/5/bypass_fx = false
 bus/5/volume_db = -4.50411
 bus/5/send = "Sound FX"
-bus/5/effect/0/effect = SubResource( 2 )
+bus/5/effect/0/effect = SubResource( 3 )
 bus/5/effect/0/enabled = false
-bus/5/effect/1/effect = SubResource( 3 )
+bus/5/effect/1/effect = SubResource( 4 )
 bus/5/effect/1/enabled = false
-bus/5/effect/2/effect = SubResource( 4 )
+bus/5/effect/2/effect = SubResource( 5 )
 bus/5/effect/2/enabled = false
 bus/6/name = "Player Bomb"
 bus/6/solo = false
@@ -74,7 +79,7 @@ bus/6/mute = false
 bus/6/bypass_fx = false
 bus/6/volume_db = 0.0
 bus/6/send = "Sound FX"
-bus/6/effect/0/effect = SubResource( 5 )
+bus/6/effect/0/effect = SubResource( 6 )
 bus/6/effect/0/enabled = false
 bus/7/name = "Enemy Hit"
 bus/7/solo = false

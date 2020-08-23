@@ -6,11 +6,12 @@ extends Control
 # var b = "text"
 
 
+var _soundSettings
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
 	set_process(false)
-
 
 
 func show():
@@ -29,6 +30,10 @@ func selection_made(selection: int):
 			hide()
 			set_process(false)
 		1:
+			if _soundSettings:
+				_soundSettings.show()
+				get_parent().move_child(_soundSettings,get_parent().get_child_count()-1)
+		2:
 			var scene = "res://Prefabs/Screens/TitleScreen.tscn"
 			var result = get_tree().change_scene(scene)
 			if(result != OK):
