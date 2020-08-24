@@ -12,6 +12,11 @@ class_name EnemyControl, "res://Assets/Tools/boss.png"
 export(PackedScene) var _defaultProjectile
 export(PackedScene) var _deathSpawn
 
+
+#default
+export(float) var _hitSoundTimer = .5
+var _hitTimerElapsed : float = _hitSoundTimer
+
 #behavior vars
 var _engineReady : bool = false#ready to roll baby
 var _myEngine = null
@@ -43,11 +48,15 @@ func _ready():
 	else:
 		var _val = $EnemyArea.connect("area_entered", self, "hit")
 		set_physics_process(true)
+		set_process(true)
 		for child in get_children():
 			if(child is Brain):
 				_brain = child
 				break
 		_speed = _maxSpeed
+
+func _process(delta):
+	_hitTimerElapsed+=delta
 
 func set_velocity(x:float,y:float):
 	_velocity.x = x
@@ -140,7 +149,10 @@ func hit(object):
 		set_current_health(get_current_health()-object.get_damage())
 		
 		#example SOUND
-		var _value = Globals.audioManager.play_sound("sfx_foeHit")
+		if _hitTimerElapsed >= _hitSoundTimer:
+			var _value = Globals.audioManager.play_sound("sfx_foeHit")
+			_hitTimerElapsed = 0
+			
 		Globals.get_player().score += get_hit_value()
 		# print("Enemy[%s] took damage from Object[%s] "%[self.name,object.name])
 	#HP-Threshold SFX can also be done here ; more advanced
