@@ -1,3 +1,4 @@
+#warning-disable
 tool
 extends PositionalEvent
 
@@ -57,5 +58,5 @@ func _process(_delta):
 	if(Engine.editor_hint):
 		if(spawn_x!=position.x):
 			spawn_x = position.x
-		update_y()
-
+		.update_y()
+#warnings-disable

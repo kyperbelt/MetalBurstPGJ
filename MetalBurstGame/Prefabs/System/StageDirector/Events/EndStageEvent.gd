@@ -38,13 +38,15 @@ func get_time():
 		return event_time
 	else:
 		var sd : StageDirector = director as StageDirector
-		return sd.duration if sd != null else 0
+		var alpha = sd.get_alpha_from_y(position.y) if sd != null else 1
+		return (director.duration if director != null else 1) * alpha
 
 func _y_changed():
-	if(!_stickyEnd):
+	if _stickyEnd:
 		var sd = director as StageDirector
 		position.y = sd.get_y_from_alpha((sd.duration+delay)/sd.duration) if sd!=null else position.y
 		update()
+	
 
 func _process(_delta):
 	if(Engine.editor_hint):

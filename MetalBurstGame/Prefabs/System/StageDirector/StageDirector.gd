@@ -32,9 +32,12 @@ export(bool) var show_bounds = true setget set_show_bounds
 export(Color) var bounds_color = Color.red setget set_bounds_color
 
 
+
 export(String) var T_U_N_I_N_G = get_sep() setget set_sep,get_sep
 
+#warnings-disable
 export(float) var duration = 10.0 setget set_duration,get_duration
+export(bool) var _preserveTimings = false
 
 export(String) var D_E_P_E_N_D_E_N_C_Y = get_sep() setget set_sep,get_sep
 export(NodePath) var LevelScene

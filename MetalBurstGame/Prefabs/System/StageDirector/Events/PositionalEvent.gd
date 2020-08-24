@@ -32,7 +32,10 @@ func _on_timeline_change(duration_changed:bool):
 		if(!duration_changed):
 			alpha = sd.get_alpha_from_time(event_time)
 		else:
-			alpha = sd.get_alpha_from_y(position.y)
+			if sd._preserveTimings:
+				alpha = sd.get_alpha_from_time(event_time)
+			else:
+				alpha = sd.get_alpha_from_y(position.y)
 		position.y = sd.get_y_from_alpha(alpha)
 		prev_y = position.y
 		set_time_using_alpha(sd.duration,alpha)
