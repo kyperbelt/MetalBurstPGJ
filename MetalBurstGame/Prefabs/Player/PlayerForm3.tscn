@@ -3,7 +3,7 @@
 [ext_resource path="res://Prefabs/Player/Shot3 (Curves)/PlayerShot (CurveDefault).tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Enemies/Shadow.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Player/Version1b.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Player/Version1c.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Player/Version2-Skull3.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Player/PlayerHitbox.tres" type="SpriteFrames" id=5]
 [ext_resource path="res://Prefabs/Player/Player.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/Player/Bomb3 (MindBlast)/MindBlastBase.tscn" type="PackedScene" id=7]
@@ -42,9 +42,8 @@ position = Vector2( 0, 18 )
 scale = Vector2( 0.66, 0.66 )
 texture = ExtResource( 3 )
 
-[node name="CoreV3b" type="Sprite" parent="."]
-modulate = Color( 1, 0.580392, 0.501961, 1 )
-position = Vector2( 0, -23.58 )
+[node name="Head" type="Sprite" parent="."]
+position = Vector2( 0, -25 )
 scale = Vector2( 0.66, 0.66 )
 texture = ExtResource( 4 )
 

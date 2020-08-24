@@ -16,7 +16,7 @@
 
 [node name="ShootP-ColorfulBig" type="Node"]
 script = ExtResource( 1 )
-amount = 10
+amount = 7
 
 [node name="Sequence" type="Node" parent="."]
 script = ExtResource( 3 )
@@ -90,4 +90,4 @@ _targetName = "player"
 
 [node name="Wait" type="Node" parent="Sequence"]
 script = ExtResource( 2 )
-delay = 1.0
+delay = 5.125

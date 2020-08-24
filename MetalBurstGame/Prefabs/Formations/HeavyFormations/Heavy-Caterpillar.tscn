@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Prefabs/Enemies/EmberBlue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=2]
@@ -12,7 +12,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=10]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/MoveForward.gd" type="Script" id=11]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=12]
-
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=13]
 
 [node name="H-Caterpillar" type="Node2D"]
 script = ExtResource( 3 )
@@ -43,9 +43,6 @@ texture = ExtResource( 7 )
 
 [node name="EmberBlue" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -50 )
-_fireRate = 2.0
-_despawnDistance = 600.0
-_scoreValue = 100
 
 [node name="Brain" type="Node" parent="EmberBlue"]
 script = ExtResource( 12 )
@@ -85,32 +82,35 @@ __meta__ = {
 "_editor_description_": "Time = 0.3 Sec"
 }
 
-[node name="ShootAngle" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+[node name="Parallel" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+script = ExtResource( 13 )
+
+[node name="ShootAngle" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence/Parallel"]
 script = ExtResource( 2 )
 _speed = 250.0
 _angle = 5.0
 
-[node name="ShootAngle2" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+[node name="ShootAngle2" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence/Parallel"]
 script = ExtResource( 2 )
 _speed = 250.0
 _angle = -5.0
 
-[node name="ShootAngle4" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+[node name="ShootAngle4" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence/Parallel"]
 script = ExtResource( 2 )
 _speed = 250.0
 _angle = 10.0
 
-[node name="ShootAngle3" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+[node name="ShootAngle3" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence/Parallel"]
 script = ExtResource( 2 )
 _speed = 250.0
 _angle = -10.0
 
-[node name="ShootAngle6" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+[node name="ShootAngle6" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence/Parallel"]
 script = ExtResource( 2 )
 _speed = 250.0
 _angle = 15.0
 
-[node name="ShootAngle5" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+[node name="ShootAngle5" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence/Parallel"]
 script = ExtResource( 2 )
 _speed = 250.0
 _angle = -15.0
@@ -123,22 +123,25 @@ This determines the time it takes"
 }
 delay = 0.1
 
-[node name="ShootAngle10" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+[node name="Parallel2" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+script = ExtResource( 13 )
+
+[node name="ShootAngle10" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence/Parallel2"]
 script = ExtResource( 2 )
 _speed = 300.0
 _angle = 5.0
 
-[node name="ShootAngle9" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+[node name="ShootAngle9" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence/Parallel2"]
 script = ExtResource( 2 )
 _speed = 300.0
 _angle = -5.0
 
-[node name="ShootAngle8" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+[node name="ShootAngle8" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence/Parallel2"]
 script = ExtResource( 2 )
 _speed = 300.0
 _angle = 10.0
 
-[node name="ShootAngle7" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+[node name="ShootAngle7" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence/Parallel2"]
 script = ExtResource( 2 )
 _speed = 300.0
 _angle = -10.0
@@ -151,12 +154,15 @@ This determines the time it takes"
 }
 delay = 0.1
 
-[node name="ShootAngle12" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+[node name="Parallel3" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+script = ExtResource( 13 )
+
+[node name="ShootAngle12" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence/Parallel3"]
 script = ExtResource( 2 )
 _speed = 350.0
 _angle = 5.0
 
-[node name="ShootAngle11" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence"]
+[node name="ShootAngle11" type="Node" parent="EmberBlue/Brain/Sequence/BurstSize/Sequence/Parallel3"]
 script = ExtResource( 2 )
 _speed = 350.0
 _angle = -5.0

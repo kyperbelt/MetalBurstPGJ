@@ -8,7 +8,6 @@
 [ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-LV02c.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=8]
 
-
 [node name="Brain" type="Node"]
 script = ExtResource( 8 )
 

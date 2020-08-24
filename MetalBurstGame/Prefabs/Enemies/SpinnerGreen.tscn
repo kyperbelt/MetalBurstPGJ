@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/Enemies/Shadow.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Enemies/SpinnerSheet.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Enemies/EmberTrail.tres" type="SpriteFrames" id=4]
-[ext_resource path="res://Prefabs/VFX/Particle_FoeExplosion.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/VFX/VFXExplodeBigGreen.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 15, 15 )
@@ -29,7 +29,6 @@ texture = ExtResource( 2 )
 modulate = Color( 0.6, 0.635294, 0.0431373, 1 )
 frames = ExtResource( 4 )
 animation = "Smooth"
-frame = 7
 playing = true
 
 [node name="ContrailSS" type="AnimatedSprite" parent="."]
@@ -37,7 +36,6 @@ modulate = Color( 0.6, 0.635294, 0.0431373, 1 )
 rotation = -3.14159
 frames = ExtResource( 4 )
 animation = "Smooth"
-frame = 7
 playing = true
 
 [node name="ContrailEE" type="AnimatedSprite" parent="."]
@@ -45,7 +43,6 @@ modulate = Color( 0.6, 0.635294, 0.0431373, 1 )
 rotation = 1.5708
 frames = ExtResource( 4 )
 animation = "Smooth"
-frame = 7
 playing = true
 
 [node name="ContrailWW" type="AnimatedSprite" parent="."]
@@ -53,7 +50,6 @@ modulate = Color( 0.6, 0.635294, 0.0431373, 1 )
 rotation = 4.71239
 frames = ExtResource( 4 )
 animation = "Smooth"
-frame = 7
 playing = true
 
 [node name="ContrailNE" type="AnimatedSprite" parent="."]
@@ -61,7 +57,7 @@ modulate = Color( 0.6, 0.635294, 0.0431373, 1 )
 rotation = 0.785398
 frames = ExtResource( 4 )
 animation = "Smooth"
-frame = 3
+frame = 4
 playing = true
 
 [node name="ContrailSE" type="AnimatedSprite" parent="."]
@@ -69,7 +65,7 @@ modulate = Color( 0.6, 0.635294, 0.0431373, 1 )
 rotation = 2.35619
 frames = ExtResource( 4 )
 animation = "Smooth"
-frame = 3
+frame = 4
 playing = true
 
 [node name="ContrailSW" type="AnimatedSprite" parent="."]
@@ -77,7 +73,7 @@ modulate = Color( 0.6, 0.635294, 0.0431373, 1 )
 rotation = 3.92699
 frames = ExtResource( 4 )
 animation = "Smooth"
-frame = 3
+frame = 4
 playing = true
 
 [node name="ContrailNW" type="AnimatedSprite" parent="."]
@@ -85,7 +81,7 @@ modulate = Color( 0.6, 0.635294, 0.0431373, 1 )
 rotation = 5.49779
 frames = ExtResource( 4 )
 animation = "Smooth"
-frame = 3
+frame = 4
 playing = true
 
 [node name="EnemyArea" type="Area2D" parent="."]

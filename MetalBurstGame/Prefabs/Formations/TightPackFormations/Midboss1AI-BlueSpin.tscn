@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1AI(Base).tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=4]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=5]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=6]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-04(Green).tscn" type="PackedScene" id=7]
 
 [node name="BlueSpinnerAI" type="Node"]
 script = ExtResource( 1 )
@@ -29,9 +30,13 @@ amount = 7
 [node name="Sequence" type="Node" parent="Midboss1AI-Base/Parallel/Repeater/Sequence/Repeater"]
 script = ExtResource( 6 )
 
-[node name="ShootAngle" type="Node" parent="Midboss1AI-Base/Parallel/Repeater/Sequence/Repeater/Sequence"]
+[node name="Shoot" type="Node" parent="Midboss1AI-Base/Parallel/Repeater/Sequence/Repeater/Sequence"]
 script = ExtResource( 5 )
-_speed = 120.0
+_initialSpeed = 120.0
+_initialHeading = 90.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 7 )
 
 [node name="Wait2" type="Node" parent="Midboss1AI-Base/Parallel/Repeater/Sequence/Repeater/Sequence"]
 script = ExtResource( 4 )

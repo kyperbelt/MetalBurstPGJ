@@ -8,6 +8,7 @@ class_name AudioManager, "res://Assets/Tools/wave.png"
 
 const MAX_DB : float = 6.0
 const MIN_DB : float = -50.0
+export(bool) var _instanceNewSFX = false
 
 var _musicStreams = {}
 var _sfxStreams = {}
@@ -33,18 +34,26 @@ func play_music(music:String,volume_db:float = 0)->bool:
 		var player := _musicStreams[music] as AudioStreamPlayer
 		if(volume_db != -999):
 			player.volume_db = volume_db
-		player.play(0)#play from position 0 -
+		player.play(0)
 		return true
 	printerr("ERROR: No music named [%s] found in AudioManager"%music)
 	return false
 
 #attempt to play a sound - return false if unable to play sound
-func play_sound(sound:String,volume_db:float = -999)->bool:
+func play_sound(sound:String,volume_db:float = -999,instance = false)->bool:
 	if(sound in _sfxStreams):
 		var player := _sfxStreams[sound] as AudioStreamPlayer
 		if(volume_db != -999):
 			player.volume_db = volume_db
-		player.play(0)#play from position 0
+		#_clone_stream(player).play(0)	
+		if(instance || _instanceNewSFX):
+			var c : AudioStreamPlayer = _clone_stream(player)#player.duplicate(DUPLICATE_USE_INSTANCING | DUPLICATE_SCRIPTS)#play from position 0 -
+			add_child(c)
+			c.volume_db = player.volume_db
+			c.bus = player.bus
+			c.play(0)
+		else:
+			player.play(0)
 		return true
 	printerr("ERROR: No sound named [%s] found in AudioManager"%sound)
 	return false
@@ -95,7 +104,7 @@ func _set_bus_map(__busMap):
 # return a map of audio busses in {"name":index} format
 # cannot be edited- if you would like to add a map
 func get_bus_map()->Dictionary:
-	return _busMap.duplicate()
+	return _busMap.duplicate(true)
 
 func load_streams():
 	var music = $Music
@@ -133,3 +142,20 @@ func print_bus_info():
 			var af : AudioEffect = AudioServer.get_bus_effect(i,j)
 			print("      -%s"%af.get_class())
 		print("________________________________________")
+
+
+func _clone_stream(stream:AudioStreamPlayer) -> AudioStreamPlayer:
+	var clone : AudioStreamPlayer = AudioStreamPlayer.new()
+	clone.stream = stream.stream
+	clone.volume_db = stream.volume_db
+	clone.autoplay = stream.autoplay
+	clone._import_path = stream._import_path
+	clone.bus = stream.bus 
+	clone.stream_paused = stream.stream_paused
+	clone.owner = stream.owner
+	clone.custom_multiplayer = stream.custom_multiplayer
+	clone.filename = stream.filename
+	clone.mix_target = stream.mix_target
+	clone.name = stream.name
+	clone.pitch_scale = stream.pitch_scale
+	return clone

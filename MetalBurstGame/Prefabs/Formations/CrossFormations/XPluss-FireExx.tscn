@@ -1,27 +1,40 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/ShootAngle.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-04(Green).tscn" type="PackedScene" id=4]
 
 [node name="FireEx" type="Node"]
 script = ExtResource( 2 )
 
-[node name="ShootAngle" type="Node" parent="."]
-script = ExtResource( 1 )
-_speed = 240.0
-_angle = 45.0
+[node name="ShootSE" type="Node" parent="."]
+script = ExtResource( 3 )
+_initialSpeed = 240.0
+_initialHeading = 45.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 4 )
 
-[node name="ShootAngle2" type="Node" parent="."]
-script = ExtResource( 1 )
-_speed = 240.0
-_angle = 135.0
+[node name="ShootSW" type="Node" parent="."]
+script = ExtResource( 3 )
+_initialSpeed = 240.0
+_initialHeading = 135.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 4 )
 
-[node name="ShootAngle3" type="Node" parent="."]
-script = ExtResource( 1 )
-_speed = 240.0
-_angle = 225.0
+[node name="ShootNW" type="Node" parent="."]
+script = ExtResource( 3 )
+_initialSpeed = 240.0
+_initialHeading = 225.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 4 )
 
-[node name="ShootAngle4" type="Node" parent="."]
-script = ExtResource( 1 )
-_speed = 240.0
-_angle = 315.0
+[node name="ShootNE" type="Node" parent="."]
+script = ExtResource( 3 )
+_initialSpeed = 240.0
+_initialHeading = 315.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 4 )

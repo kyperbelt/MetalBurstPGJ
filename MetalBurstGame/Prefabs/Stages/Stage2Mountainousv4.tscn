@@ -269,10 +269,12 @@ spawn_x = 320.0
 
 [node name="Helix5" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( -161.571, -5661.36 )
+event_time = 113.227
 spawn_x = -161.571
 
 [node name="Helix6" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( 170.379, -5870.57 )
+event_time = 117.411
 spawn_x = 170.379
 
 [node name="Swarm-CornerSpreadR4" parent="StageDirector" instance=ExtResource( 22 )]
