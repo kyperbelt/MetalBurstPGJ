@@ -9,7 +9,8 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/ChangeSpeed.gd" type="Script" id=7]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=8]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=9]
-[ext_resource path="res://Prefabs/Bosses/B1P-2Ball.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Bosses/Boss1AI/B1P-2Ball.tscn" type="PackedScene" id=10]
+
 
 
 [node name="B1-Support1" type="Node2D"]

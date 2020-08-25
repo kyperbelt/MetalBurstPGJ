@@ -1,17 +1,16 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/StopMove.gd" type="Script" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=2]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/ChangeSpeed.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/StopMove.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/MoveCardinal.gd" type="Script" id=4]
-[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=5]
-
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/ChangeSpeed.gd" type="Script" id=5]
 
 [node name="Movement" type="Node"]
 script = ExtResource( 2 )
 
 [node name="ChangeSpeed" type="Node" parent="."]
-script = ExtResource( 3 )
+script = ExtResource( 5 )
 _speed = 50.0
 
 [node name="MoveCardinal" type="Node" parent="."]
@@ -19,14 +18,14 @@ script = ExtResource( 4 )
 _direction = 2
 
 [node name="Wait" type="Node" parent="."]
-script = ExtResource( 5 )
+script = ExtResource( 1 )
 delay = 5.0
 
 [node name="StopMove" type="Node" parent="."]
-script = ExtResource( 1 )
+script = ExtResource( 3 )
 
 [node name="ChangeSpeed2" type="Node" parent="."]
-script = ExtResource( 3 )
+script = ExtResource( 5 )
 _speed = 250.0
 
 [node name="MoveCardinal2" type="Node" parent="."]
@@ -34,8 +33,8 @@ script = ExtResource( 4 )
 _direction = 6
 
 [node name="Wait2" type="Node" parent="."]
-script = ExtResource( 5 )
+script = ExtResource( 1 )
 delay = 1.0
 
 [node name="StopMove2" type="Node" parent="."]
-script = ExtResource( 1 )
+script = ExtResource( 3 )

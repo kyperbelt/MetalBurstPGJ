@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Prefabs/System/EnemyControl.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Bosses/MidbossCrab.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Bosses/MidbossCrabShadow.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Bosses/MidbossCrabShadow.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Bosses/MidbossCrab.png" type="Texture" id=3]
 
 [node name="CrabBoss" type="Node2D"]
 script = ExtResource( 1 )
@@ -11,11 +11,11 @@ _maxHealth = 1e+07
 [node name="Shadow" type="Sprite" parent="."]
 position = Vector2( 0, -38 )
 scale = Vector2( 1, 1.125 )
-texture = ExtResource( 3 )
+texture = ExtResource( 2 )
 
 [node name="Core" type="Sprite" parent="."]
 position = Vector2( 0, -38 )
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 
 [node name="EnemyArea" type="Area2D" parent="."]
 collision_layer = 8

@@ -2,11 +2,13 @@
 
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
-[ext_resource path="res://Prefabs/Bosses/CrabBoss.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/Bosses/B2(Center).tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Bosses/CrabBossClaws.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Prefabs/Bosses/B2(LeftClaw).tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/Bosses/B2(RightClaw).tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Bosses/RootBoss/CrabBoss.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Bosses/Boss2AI/B2(Center).tscn" type="PackedScene" id=4]
+[ext_resource path="res://Prefabs/Bosses/RootBoss/CrabBossClaws.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Bosses/Boss2AI/B2(LeftClaw).tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Bosses/Boss2AI/B2(RightClaw).tscn" type="PackedScene" id=7]
+
+
 
 [node name="B2CrabPT1" type="Node2D"]
 script = ExtResource( 1 )

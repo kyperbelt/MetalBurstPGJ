@@ -12,7 +12,8 @@
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=10]
 [ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-ColorfulBig.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=14]
-[ext_resource path="res://Prefabs/Bosses/ShieldShrimpBoss.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/Bosses/RootBoss/ShieldShrimpBoss.tscn" type="PackedScene" id=16]
+
 
 [node name="B1ShrimpV2" type="Node2D"]
 script = ExtResource( 1 )

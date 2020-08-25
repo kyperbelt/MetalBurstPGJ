@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
-[ext_resource path="res://Prefabs/Bosses/ClamBoss.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Prefabs/Bosses/RootBoss/ClamBoss.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=5]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/ChangeSpeed.gd" type="Script" id=6]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/StopMove.gd" type="Script" id=12]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=15]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/RotateBy.gd" type="Script" id=16]
+
 
 
 [node name="Boss3" type="Node2D"]
