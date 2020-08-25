@@ -24,7 +24,7 @@ func initiate():
 	
 
 
-func _update_behavior(delta:float)->int:
+func _update_behavior(_delta:float)->int:
 	var sp : Vector2 = _self.position
 	if(sp.distance_to(_point) >= max_distance):
 		return RunState.Success
