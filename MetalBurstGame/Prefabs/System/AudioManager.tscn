@@ -1,20 +1,21 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://Assets/Audio/SFX/bombRecharge_SFX.wav" type="AudioStream" id=1]
-[ext_resource path="res://Assets/Audio/SFX/menu_select.wav" type="AudioStream" id=2]
-[ext_resource path="res://Assets/Audio/SFX/menu_scroll01.wav" type="AudioStream" id=3]
-[ext_resource path="res://Assets/Audio/SFX/enemyHit02.wav" type="AudioStream" id=4]
-[ext_resource path="res://Assets/Audio/SFX/enemyDeath.wav" type="AudioStream" id=5]
-[ext_resource path="res://Assets/Audio/SFX/playerShoot_vers05.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Audio/SFX-TH7/menu_select00.wav" type="AudioStream" id=1]
+[ext_resource path="res://Assets/Audio/SFX-TH7/menu_ok00.wav" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Audio/SFX-TH7/se_damage00.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Audio/SFX-TH7/foe_enep00.wav" type="AudioStream" id=5]
+[ext_resource path="res://Assets/Audio/SFX-TH7/se_plst00.wav" type="AudioStream" id=6]
 [ext_resource path="res://Assets/Audio/BGM/Stage1BossBGMv3(maybe).wav" type="AudioStream" id=7]
 [ext_resource path="res://Prefabs/System/AudioManager.gd" type="Script" id=8]
-[ext_resource path="res://Assets/Audio/SFX/playerBomb03.wav" type="AudioStream" id=9]
+[ext_resource path="res://Assets/Audio/SFX-TH7/se_gun00.wav" type="AudioStream" id=9]
 [ext_resource path="res://Assets/Audio/BGM/Stage1StageBGMv1.wav" type="AudioStream" id=10]
 [ext_resource path="res://Assets/Audio/BGM/Stage2BossBGMv2.wav" type="AudioStream" id=11]
 [ext_resource path="res://Assets/Audio/BGM/Stage2StageBGMv4.wav" type="AudioStream" id=12]
 [ext_resource path="res://Assets/Audio/BGM/Stage1BossBGMv2.1.wav" type="AudioStream" id=13]
 [ext_resource path="res://Assets/Audio/SFX/menu_select02.wav" type="AudioStream" id=14]
 [ext_resource path="res://Assets/Audio/SFX/sfx_bombExplode.wav" type="AudioStream" id=15]
+[ext_resource path="res://Assets/Audio/SFX-TH7/foe_tan00.wav" type="AudioStream" id=16]
+[ext_resource path="res://Assets/Audio/SFX-TH7/se_pldead00.wav" type="AudioStream" id=17]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource( 8 )
@@ -57,9 +58,8 @@ bus = "Music"
 
 [node name="sfx_foeDeath" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 5 )
-volume_db = -6.0
-pitch_scale = 2.0
-bus = "Enemy Death"
+volume_db = -20.0
+bus = "Sound FX"
 __meta__ = {
 "_editor_description_": "Connected to \"[Every Enemy Scene]\"
 
@@ -68,8 +68,7 @@ Plays: when an StageFoe is killed (thier HP reaches 0). Also when a Boss Form is
 
 [node name="sfx_foeHit" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 4 )
-volume_db = -8.0
-bus = "Enemy Hit"
+bus = "Sound FX"
 __meta__ = {
 "_editor_description_": "Connected to \"[Every Enemy Scene]\"
 
@@ -77,16 +76,14 @@ Plays: Whenever an enemy entity (StageFoe or Boss) recieves damage from the play
 }
 
 [node name="sfx_foeShoot" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource( 2 )
-volume_db = 2.0
-pitch_scale = 2.0
+stream = ExtResource( 16 )
+volume_db = -30.0
 bus = "Sound FX"
 
 [node name="sfx_playerHit" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource( 2 )
-volume_db = 16.0
-pitch_scale = 0.66
-bus = "player Hit"
+stream = ExtResource( 17 )
+volume_db = -20.0
+bus = "Sound FX"
 __meta__ = {
 "_editor_description_": "playerHit
 "
@@ -94,8 +91,8 @@ __meta__ = {
 
 [node name="sfx_playerShoot" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 6 )
-volume_db = -3.0
-bus = "Player Shoot"
+volume_db = -20.0
+bus = "Sound FX"
 __meta__ = {
 "_editor_description_": "Connected to \"Player.tscn\"
 
@@ -104,7 +101,8 @@ Plays: When the player fires a shot (\"Z\"). Will be heard very often. Does not 
 
 [node name="sfx_playerBomb" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 9 )
-bus = "Player Bomb"
+volume_db = -16.0
+bus = "Sound FX"
 __meta__ = {
 "_editor_description_": "Connected to \"Player.tscn\"
 
@@ -112,12 +110,11 @@ Plays: When the player fires a \"bomb\". Can be long, loud, and fancy. Bombs cur
 }
 
 [node name="sfx_playerRegen" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource( 1 )
 volume_db = 5.634
 
 [node name="sfx_menuSelect1" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 2 )
-bus = "OptionsAudioBus"
+bus = "Sound FX"
 __meta__ = {
 "_editor_description_": "Connected to \"TitleScreen.tscn\"
 
@@ -134,7 +131,7 @@ Plays: When player starts the game. Currently acts as the \"play\" button."
 }
 
 [node name="sfx_menuScroll" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource( 3 )
+stream = ExtResource( 1 )
 bus = "Sound FX"
 __meta__ = {
 "_editor_description_": "Connected to \"[All Menu Scenes]\"
