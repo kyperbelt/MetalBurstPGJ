@@ -6,6 +6,8 @@ extends Node
 # This lets us reuse scripts without having to add new AudioPlayers
 class_name AudioManager, "res://Assets/Tools/wave.png"
 
+const MAX_DB : float = 6.0
+const MIN_DB : float = -50.0
 export(bool) var _instanceNewSFX = false
 
 var _musicStreams = {}
@@ -97,6 +99,7 @@ func resume_music(music:String,position:float)->bool:
 #cannot set the bus map
 func _set_bus_map(__busMap):
 	pass
+
 
 # return a map of audio busses in {"name":index} format
 # cannot be edited- if you would like to add a map

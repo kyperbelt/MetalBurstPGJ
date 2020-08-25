@@ -12,7 +12,6 @@ onready var director = get_parent()
 var engine #same engine that houses the layers | not to be confused with godot's internal ENGINE
 
 func _ready():
-	
 	director.connect("timeline_changed",self,"_on_timeline_change")
 
 #override - called when the timeline has changed either in duration or scale

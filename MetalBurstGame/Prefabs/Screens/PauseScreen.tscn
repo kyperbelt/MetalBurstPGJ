@@ -64,10 +64,18 @@ custom_fonts/font = ExtResource( 6 )
 text = "Resume Game"
 script = ExtResource( 5 )
 
-[node name="quit" type="Label" parent="OptionsMenu/VBoxContainer"]
+[node name="sound_settings" type="Label" parent="OptionsMenu/VBoxContainer"]
 margin_top = 49.0
 margin_right = 252.0
 margin_bottom = 94.0
+custom_fonts/font = ExtResource( 6 )
+text = "Sound Settings"
+script = ExtResource( 5 )
+
+[node name="quit" type="Label" parent="OptionsMenu/VBoxContainer"]
+margin_top = 98.0
+margin_right = 252.0
+margin_bottom = 143.0
 custom_fonts/font = ExtResource( 6 )
 text = "Exit to Main Menu"
 script = ExtResource( 5 )

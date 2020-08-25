@@ -1,6 +1,9 @@
 [gd_resource type="AudioBusLayout" load_steps=11 format=2]
 
-[sub_resource type="AudioEffectDelay" id=1]
+[sub_resource type="AudioEffectLowShelfFilter" id=1]
+resource_name = "LowShelfFilter"
+
+[sub_resource type="AudioEffectDelay" id=2]
 resource_name = "Delay"
 
 [sub_resource type="AudioEffectPitchShift" id=2]
@@ -48,7 +51,9 @@ resource_name = "Reverb"
 wet = 0.33
 
 [resource]
-bus/0/volume_db = 0.267241
+bus/0/volume_db = 0.664978
+bus/0/effect/0/effect = SubResource( 1 )
+bus/0/effect/0/enabled = true
 bus/1/name = "Music"
 bus/1/solo = false
 bus/1/mute = false
@@ -67,7 +72,7 @@ bus/3/mute = false
 bus/3/bypass_fx = false
 bus/3/volume_db = 2.44924
 bus/3/send = "Sound FX"
-bus/3/effect/0/effect = SubResource( 1 )
+bus/3/effect/0/effect = SubResource( 2 )
 bus/3/effect/0/enabled = true
 bus/3/effect/1/effect = SubResource( 2 )
 bus/3/effect/1/enabled = true

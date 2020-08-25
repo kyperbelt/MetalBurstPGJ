@@ -21,14 +21,20 @@ func selection_made(selection : int):
 	match selection:
 		0:
 			Globals._selectedStage = TestStage1
+			var _result = get_tree().change_scene_to(PlayerSelect)
 		1:
 			Globals._selectedStage = TestStage2
+			var _result = get_tree().change_scene_to(PlayerSelect)
 		2:
 			Globals._selectedStage = TestStage3
+			var _result = get_tree().change_scene_to(PlayerSelect)
 		3:
+			$GuiLayer/SoundSettings.show()
+			print("sup")
+		4:
 			get_tree().quit()
 		_:
 			print("%s is not a valid selection" % selection)
-	var _result = get_tree().change_scene_to(PlayerSelect)
+	
 	pass
 

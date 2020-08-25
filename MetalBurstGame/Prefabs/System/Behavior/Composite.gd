@@ -22,7 +22,7 @@ func _ready():
 func _find_child_behaviors():
 	for child in get_children():
 		if(child is BehaviorNode):
-			add_child_behavior(child)
+			var _i = add_child_behavior(child)
 			
 func _get_configuration_warning():
 	if(Engine.is_editor_hint()):
