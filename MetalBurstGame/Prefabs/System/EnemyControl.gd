@@ -14,7 +14,7 @@ export(PackedScene) var _deathSpawn
 
 
 #default
-export(float) var _hitSoundTimer = .5
+export(float) var _hitSoundTimer = .2
 var _hitTimerElapsed : float = _hitSoundTimer
 
 #behavior vars
