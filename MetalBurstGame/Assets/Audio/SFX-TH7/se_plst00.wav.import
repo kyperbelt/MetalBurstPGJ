@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_plst00.wav-ea297ca91817787d1628603da27d5eb7.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX-TH7/se_plst00.wav"
+dest_files=[ "res://.import/se_plst00.wav-ea297ca91817787d1628603da27d5eb7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

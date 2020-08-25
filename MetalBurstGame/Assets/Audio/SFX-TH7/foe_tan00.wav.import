@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/foe_tan00.wav-d382862cd5395a3c5ed063d3aa1e576f.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX-TH7/foe_tan00.wav"
+dest_files=[ "res://.import/foe_tan00.wav-d382862cd5395a3c5ed063d3aa1e576f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

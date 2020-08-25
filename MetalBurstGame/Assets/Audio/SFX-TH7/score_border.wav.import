@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/score_border.wav-c781db990142d01f57a261570d5f48c6.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX-TH7/score_border.wav"
+dest_files=[ "res://.import/score_border.wav-c781db990142d01f57a261570d5f48c6.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

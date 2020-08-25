@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/foe_power0.wav-322a34d2bcaa73ef5f050f5f95f2d4f9.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX-TH7/foe_power0.wav"
+dest_files=[ "res://.import/foe_power0.wav-322a34d2bcaa73ef5f050f5f95f2d4f9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/se_item00.wav-c61047902cb2659994cca02e8884c392.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX-TH7/se_item00.wav"
+dest_files=[ "res://.import/se_item00.wav-c61047902cb2659994cca02e8884c392.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
