@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Prefabs/Enemies/EmberGreen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/BurstSalvoTest.tscn" type="PackedScene" id=2]
@@ -12,7 +12,6 @@
 [ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/SalvoFireTest.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/BurstFire.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=12]
-[ext_resource path="res://Prefabs/Behaviors/TemplateFireNP/SimpleFireDown1.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-ColorfulSmall.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-AlternateRapid.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/Behaviors/TemplateFireP/ShootP-ColorfulBig.tscn" type="PackedScene" id=16]
@@ -75,9 +74,6 @@ amount = -1
 [node name="PyramidFire" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 4 )]
 
 [node name="SalvoFire" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 10 )]
-amount = -1
-
-[node name="SimpleFireDown" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 13 )]
 amount = -1
 
 [node name="WhipArms" parent="EmberGreen/Hang-Fire1/[InsertFireBehavior]" instance=ExtResource( 9 )]
