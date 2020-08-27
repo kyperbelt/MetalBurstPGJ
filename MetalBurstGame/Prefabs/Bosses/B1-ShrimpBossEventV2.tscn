@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
@@ -14,7 +14,9 @@
 [ext_resource path="res://Prefabs/Bosses/Boss1AI/B1P-BurstFire.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Prefabs/Bosses/Boss1AI/B1P-2Ball.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=14]
+[ext_resource path="res://Prefabs/Bosses/Boss1AI/B1NP-6Fingers.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Prefabs/Bosses/RootBoss/ShieldShrimpBoss.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Prefabs/Bosses/Boss1AI/B1M-Phase2Move.tscn" type="PackedScene" id=17]
 
 [node name="B1ShrimpV2" type="Node2D"]
 script = ExtResource( 1 )
@@ -50,44 +52,59 @@ script = ExtResource( 14 )
 [node name="EntrySequence" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase1" instance=ExtResource( 8 )]
 
 [node name="Minelayer" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase1" instance=ExtResource( 11 )]
+amount = 7
 
 [node name="5-Fingers" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase1" instance=ExtResource( 3 )]
 amount = 15
 
 [node name="BurstFire" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase1" instance=ExtResource( 12 )]
+amount = 7
 
 [node name="Wait" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase1"]
 script = ExtResource( 9 )
-delay = 20.0
+delay = 20.5
 
 [node name="ParallelPhase2" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
 script = ExtResource( 14 )
 
+[node name="ZigZags" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase2" instance=ExtResource( 17 )]
+
 [node name="7-Ray" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase2" instance=ExtResource( 5 )]
-amount = 50
+amount = 20
+
+[node name="6-Fingers" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase2" instance=ExtResource( 15 )]
+amount = 15
 
 [node name="2-Ball" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase2" instance=ExtResource( 13 )]
+amount = 6
 
 [node name="Wait2" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase2"]
 script = ExtResource( 9 )
-delay = 20.0
-
-[node name="Wait2" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
-script = ExtResource( 9 )
-delay = 1.0
+delay = 20.5
 
 [node name="ParallelPhase3" type="Node" parent="ShieldShrimpBoss/Brain/Sequence"]
 script = ExtResource( 14 )
 
 [node name="SplitRay" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 7 )]
-amount = 50
-
-[node name="2-Ball" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 13 )]
+amount = 66
 
 [node name="Minelayer" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 11 )]
+amount = 7
+
+[node name="5-Fingers2" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 3 )]
+amount = 15
+
+[node name="6-Fingers2" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 15 )]
+amount = 15
+
+[node name="2-Ball" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 13 )]
+amount = 6
+
+[node name="BurstFire2" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 12 )]
+amount = 7
 
 [node name="Wait3" type="Node" parent="ShieldShrimpBoss/Brain/Sequence/ParallelPhase3"]
 script = ExtResource( 9 )
-delay = 20.0
+delay = 20.5
 
 [node name="ExitSequence" parent="ShieldShrimpBoss/Brain/Sequence" instance=ExtResource( 10 )]

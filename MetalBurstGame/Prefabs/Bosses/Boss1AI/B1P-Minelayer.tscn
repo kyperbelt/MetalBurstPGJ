@@ -10,13 +10,17 @@
 [node name="Minelayer" type="Node"]
 script = ExtResource( 4 )
 __meta__ = {
-"_editor_description_": "1 Cycle = 2 Sec
-Default Total = 18 Sec"
+"_editor_description_": "1 Cycle = 2.56 Sec
+Default Total = 20.48 Sec"
 }
-amount = 9
+amount = 8
 
 [node name="Sequence" type="Node" parent="."]
 script = ExtResource( 2 )
+
+[node name="Wait" type="Node" parent="Sequence"]
+script = ExtResource( 5 )
+delay = 2.56
 
 [node name="Parallel" type="Node" parent="Sequence"]
 script = ExtResource( 6 )
@@ -56,7 +60,3 @@ _collisionLayer = 16
 _collisionMask = 4
 _projectileScene = ExtResource( 1 )
 _targetName = "player"
-
-[node name="Wait" type="Node" parent="Sequence"]
-script = ExtResource( 5 )
-delay = 2.0

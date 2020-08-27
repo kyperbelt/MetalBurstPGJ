@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-01(Red).tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-03(Yellow).tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=2]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=4]

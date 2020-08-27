@@ -5,18 +5,22 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=5]
-[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-02(Orange).tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-01(Red).tscn" type="PackedScene" id=6]
 
 [node name="BurstFire" type="Node"]
 script = ExtResource( 4 )
 __meta__ = {
-"_editor_description_": "1 Cycle = 2 Sec
-Default Total = 18 Sec"
+"_editor_description_": "1 Cycle = 2.56 Sec
+Default Total = 20.48 Sec"
 }
-amount = 9
+amount = 8
 
 [node name="Sequence" type="Node" parent="."]
 script = ExtResource( 2 )
+
+[node name="Wait" type="Node" parent="Sequence"]
+script = ExtResource( 5 )
+delay = 1.56
 
 [node name="BurstSize" type="Node" parent="Sequence"]
 script = ExtResource( 4 )
@@ -28,6 +32,10 @@ amount = 3
 [node name="Sequence" type="Node" parent="Sequence/BurstSize"]
 script = ExtResource( 2 )
 
+[node name="Wait" type="Node" parent="Sequence/BurstSize/Sequence"]
+script = ExtResource( 5 )
+delay = 0.33
+
 [node name="Parallel" type="Node" parent="Sequence/BurstSize/Sequence"]
 script = ExtResource( 1 )
 
@@ -36,7 +44,7 @@ script = ExtResource( 3 )
 _initialSpeed = 300.0
 _collisionLayer = 16
 _collisionMask = 4
-_projectileScene = ExtResource( 7 )
+_projectileScene = ExtResource( 6 )
 _targetName = "player"
 
 [node name="Shoot3" type="Node" parent="Sequence/BurstSize/Sequence/Parallel"]
@@ -44,7 +52,7 @@ script = ExtResource( 3 )
 _initialSpeed = 266.0
 _collisionLayer = 16
 _collisionMask = 4
-_projectileScene = ExtResource( 7 )
+_projectileScene = ExtResource( 6 )
 _targetName = "player"
 
 [node name="Shoot2" type="Node" parent="Sequence/BurstSize/Sequence/Parallel"]
@@ -52,7 +60,7 @@ script = ExtResource( 3 )
 _initialSpeed = 233.0
 _collisionLayer = 16
 _collisionMask = 4
-_projectileScene = ExtResource( 7 )
+_projectileScene = ExtResource( 6 )
 _targetName = "player"
 
 [node name="Shoot1" type="Node" parent="Sequence/BurstSize/Sequence/Parallel"]
@@ -60,13 +68,5 @@ script = ExtResource( 3 )
 _initialSpeed = 200.0
 _collisionLayer = 16
 _collisionMask = 4
-_projectileScene = ExtResource( 7 )
+_projectileScene = ExtResource( 6 )
 _targetName = "player"
-
-[node name="Wait" type="Node" parent="Sequence/BurstSize/Sequence"]
-script = ExtResource( 5 )
-delay = 0.33
-
-[node name="Wait" type="Node" parent="Sequence"]
-script = ExtResource( 5 )
-delay = 1.0
