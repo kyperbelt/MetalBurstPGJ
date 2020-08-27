@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Prefabs/System/Level.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Prefabs/Formations/HeavyFormations/Heavy-Arrows.tscn" type="PackedScene" id=2]
@@ -18,8 +18,7 @@
 [ext_resource path="res://Prefabs/Formations/CrossFormations/SideEnterR.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Prefabs/Formations/TightPackFormations/Midboss1Purple.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=18]
-[ext_resource path="res://Prefabs/Bosses/B1-ShrimpBossEvent.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Prefabs/Bosses/B1-SupportEvent1.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Prefabs/Bosses/B1-ShrimpBossEventV2.tscn" type="PackedScene" id=19]
 
 [node name="RootNode" type="Node"]
 __meta__ = {
@@ -47,6 +46,7 @@ show_bounds = true
 bounds_color = Color( 1, 0, 0, 1 )
 T_U_N_I_N_G = ""
 duration = 230.0
+_preserveTimings = false
 D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
@@ -145,22 +145,9 @@ position = Vector2( 320, -550 )
 spawn_x = 320.0
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 140.206, -11500 )
-event_time = 230.0
+position = Vector2( 140.206, -9100 )
+event_time = 182.0
 Target = ExtResource( 8 )
-
-[node name="StageBGM" parent="StageDirector" instance=ExtResource( 10 )]
-position = Vector2( 320, 0 )
-B_A_S_E = ""
-event_time = 0.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_O_U_N_D = ""
-_soundName = "bgm_Stage1"
-_soundType = 1
-_eventType = 0
-_overrideVolume = false
-_volume = -4.0
 
 [node name="BossBGMv1" parent="StageDirector" instance=ExtResource( 10 )]
 position = Vector2( 320, -6100 )
@@ -175,71 +162,20 @@ _eventType = 0
 _overrideVolume = false
 _volume = -3.0
 
-[node name="B1-Support12" parent="StageDirector" instance=ExtResource( 21 )]
-position = Vector2( -160, -10009.1 )
-event_time = 200.182
-spawn_x = -160.0
+[node name="StageBGM" parent="StageDirector" instance=ExtResource( 10 )]
+position = Vector2( 320, 0 )
+B_A_S_E = ""
+event_time = 0.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_O_U_N_D = ""
+_soundName = "bgm_Stage1"
+_soundType = 1
+_eventType = 0
+_overrideVolume = false
+_volume = -4.0
 
-[node name="B1-Support11" parent="StageDirector" instance=ExtResource( 21 )]
-position = Vector2( 160, -9834.09 )
-event_time = 196.682
-spawn_x = 160.0
-
-[node name="B1-Support10" parent="StageDirector" instance=ExtResource( 21 )]
-position = Vector2( -160, -9659.09 )
-event_time = 193.182
-spawn_x = -160.0
-
-[node name="B1-Support9" parent="StageDirector" instance=ExtResource( 21 )]
-position = Vector2( 160, -9484.09 )
-event_time = 189.682
-spawn_x = 160.0
-
-[node name="B1-Support8" parent="StageDirector" instance=ExtResource( 21 )]
-position = Vector2( -160, -9350 )
-event_time = 187.0
-spawn_x = -160.0
-
-[node name="B1-Support7" parent="StageDirector" instance=ExtResource( 21 )]
-position = Vector2( 160, -9175 )
-event_time = 183.5
-spawn_x = 160.0
-
-[node name="B1-Support6" parent="StageDirector" instance=ExtResource( 21 )]
-position = Vector2( -160, -9000 )
-event_time = 180.0
-spawn_x = -160.0
-
-[node name="B1-Support5" parent="StageDirector" instance=ExtResource( 21 )]
-position = Vector2( 160, -8825 )
-event_time = 176.5
-spawn_x = 160.0
-
-[node name="B1Shrimp2" parent="StageDirector" instance=ExtResource( 20 )]
-position = Vector2( 0, -8850 )
-event_time = 177.0
-
-[node name="B1-Support4" parent="StageDirector" instance=ExtResource( 21 )]
-position = Vector2( -160, -8675 )
-event_time = 173.5
-spawn_x = -160.0
-
-[node name="B1-Support3" parent="StageDirector" instance=ExtResource( 21 )]
-position = Vector2( 160, -8500 )
-event_time = 170.0
-spawn_x = 160.0
-
-[node name="B1-Support2" parent="StageDirector" instance=ExtResource( 21 )]
-position = Vector2( -160, -8325 )
-event_time = 166.5
-spawn_x = -160.0
-
-[node name="B1-Support1" parent="StageDirector" instance=ExtResource( 21 )]
-position = Vector2( 160, -8150 )
-event_time = 163.0
-spawn_x = 160.0
-
-[node name="B1Shrimp" parent="StageDirector" instance=ExtResource( 20 )]
+[node name="B1ShrimpV2" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( 0, -6100 )
 event_time = 122.0
 
@@ -251,48 +187,48 @@ position = Vector2( -320, -6000 )
 texture = ExtResource( 18 )
 
 [node name="CurveArcL10" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -245.091, -5569.94 )
+position = Vector2( -235, -5570 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
-event_time = 111.399
-spawn_x = -245.091
+event_time = 111.4
+spawn_x = -235.0
 
 [node name="CurveArcR10" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 223.565, -5560.47 )
-event_time = 111.209
-spawn_x = 223.565
+position = Vector2( 235, -5570 )
+event_time = 111.4
+spawn_x = 235.0
 
 [node name="CurveArcL9" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -245.091, -5223.85 )
+position = Vector2( -235, -5225 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-event_time = 104.477
-spawn_x = -245.091
+event_time = 104.5
+spawn_x = -235.0
 
 [node name="CurveArcR9" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 223.565, -5214.38 )
-event_time = 104.288
-spawn_x = 223.565
+position = Vector2( 235, -5225 )
+event_time = 104.5
+spawn_x = 235.0
 
 [node name="Cross-XPluss3" parent="StageDirector" instance=ExtResource( 11 )]
-position = Vector2( 0, -5695.4 )
-event_time = 113.908
+position = Vector2( 0, -5700 )
+event_time = 114.0
 
 [node name="Cross-XPluss2" parent="StageDirector" instance=ExtResource( 11 )]
-position = Vector2( 0, -5395.4 )
-event_time = 107.908
+position = Vector2( 0, -5400 )
+event_time = 108.0
 
 [node name="CurveArcL8" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -245.091, -4669.73 )
+position = Vector2( -235, -4675 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-event_time = 93.3946
-spawn_x = -245.091
+event_time = 93.5
+spawn_x = -235.0
 
 [node name="CurveArcR8" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 223.565, -4973.89 )
-event_time = 99.4778
-spawn_x = 223.565
+position = Vector2( 235, -4975 )
+event_time = 99.5
+spawn_x = 235.0
 
 [node name="Cross-SideEnterL3" parent="StageDirector" instance=ExtResource( 14 )]
 position = Vector2( 0, -5100 )
@@ -307,80 +243,80 @@ position = Vector2( 0, -3300 )
 event_time = 66.0
 
 [node name="CurveArcL7" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -249.271, -3087.75 )
+position = Vector2( -240, -3075 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-event_time = 61.755
-spawn_x = -249.271
+event_time = 61.5
+spawn_x = -240.0
 
 [node name="CurveArcR7" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 236.951, -2947.94 )
-event_time = 58.9588
-spawn_x = 236.951
+position = Vector2( 240, -2950 )
+event_time = 59.0
+spawn_x = 240.0
 
 [node name="Cross-XPluss" parent="StageDirector" instance=ExtResource( 11 )]
 position = Vector2( 0, -2750 )
 event_time = 55.0
 
 [node name="Cross-SideEnterL2" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( 0, -2557.26 )
-event_time = 51.1452
+position = Vector2( 0, -2550 )
+event_time = 51.0
 
 [node name="Cross-SideEnterR2" parent="StageDirector" instance=ExtResource( 16 )]
-position = Vector2( 0, -2516.25 )
-event_time = 50.325
+position = Vector2( 0, -2515 )
+event_time = 50.3
 
 [node name="Cross-SideEnterL" parent="StageDirector" instance=ExtResource( 14 )]
-position = Vector2( 0, -2370.66 )
-event_time = 47.4132
+position = Vector2( 0, -2370 )
+event_time = 47.4
 
 [node name="Cross-SideEnterR" parent="StageDirector" instance=ExtResource( 16 )]
-position = Vector2( 0, -2224.18 )
-event_time = 44.4836
+position = Vector2( 0, -2230 )
+event_time = 44.6
 
 [node name="H-WhipArms4" parent="StageDirector" instance=ExtResource( 2 )]
-position = Vector2( -155.976, -1907.41 )
-event_time = 38.1482
-spawn_x = -155.976
+position = Vector2( -160, -1900 )
+event_time = 38.0
+spawn_x = -160.0
 
 [node name="H-WhipArms5" parent="StageDirector" instance=ExtResource( 2 )]
-position = Vector2( 167.794, -1900.93 )
-event_time = 38.0186
-spawn_x = 167.794
+position = Vector2( 160, -1900 )
+event_time = 38.0
+spawn_x = 160.0
 
 [node name="CurveArcL6" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -231.522, -2028.28 )
+position = Vector2( -230, -2025 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-event_time = 40.5656
-spawn_x = -231.522
+event_time = 40.5
+spawn_x = -230.0
 
 [node name="CurveArcR6" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 234.706, -2036.92 )
-event_time = 40.7384
-spawn_x = 234.706
+position = Vector2( 230, -2025 )
+event_time = 40.5
+spawn_x = 230.0
 
 [node name="H-WhipArms3" parent="StageDirector" instance=ExtResource( 2 )]
-position = Vector2( 216.105, -1652.64 )
-event_time = 33.0528
-spawn_x = 216.105
+position = Vector2( 190, -1650 )
+event_time = 33.0
+spawn_x = 190.0
 
 [node name="CurveArcL5" parent="StageDirector" instance=ExtResource( 13 )]
-position = Vector2( -166.768, -1643.74 )
+position = Vector2( -225, -1650 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-event_time = 32.8748
-spawn_x = -166.768
+event_time = 33.0
+spawn_x = -225.0
 
 [node name="H-WhipArms2" parent="StageDirector" instance=ExtResource( 2 )]
-position = Vector2( -183.21, -1372.04 )
-event_time = 27.4408
-spawn_x = -183.21
+position = Vector2( -190, -1350 )
+event_time = 27.0
+spawn_x = -190.0
 
 [node name="CurveArcR5" parent="StageDirector" instance=ExtResource( 12 )]
-position = Vector2( 221.464, -1361.39 )
-event_time = 27.2278
-spawn_x = 221.464
+position = Vector2( 225, -1350 )
+event_time = 27.0
+spawn_x = 225.0
 
 [node name="H-WhipArms" parent="StageDirector" instance=ExtResource( 2 )]
 position = Vector2( 0, -1100 )
