@@ -45,13 +45,13 @@ hatch_marks = 45
 show_bounds = true
 bounds_color = Color( 1, 0, 0, 1 )
 T_U_N_I_N_G = ""
-duration = 230.0
-_preserveTimings = false
+duration = 188.0
+_preserveTimings = true
 D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
-position = Vector2( 640, -11500 )
+position = Vector2( 640, -9400 )
 
 [node name="NOTES" type="Node" parent="StageDirector"]
 __meta__ = {
@@ -145,8 +145,8 @@ position = Vector2( 320, -550 )
 spawn_x = 320.0
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 140.206, -9100 )
-event_time = 182.0
+position = Vector2( 0, -9400 )
+event_time = 188.0
 Target = ExtResource( 8 )
 
 [node name="BossBGMv1" parent="StageDirector" instance=ExtResource( 10 )]
