@@ -69,6 +69,7 @@ show_bounds = true
 bounds_color = Color( 1, 0, 0, 1 )
 T_U_N_I_N_G = ""
 duration = 360.0
+_preserveTimings = false
 D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
@@ -77,12 +78,7 @@ position = Vector2( 640, -18000 )
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 0, -18000 )
-B_A_S_E = ""
 event_time = 360.0
-P_O_S_I_T_O_N = ""
-override_time = false
-E_N_D = ""
-delay = 0.0
 Target = ExtResource( 10 )
 
 [node name="Boss2" parent="StageDirector" instance=ExtResource( 11 )]
@@ -208,13 +204,13 @@ _overrideVolume = false
 _volume = 4.0
 
 [node name="Swarm-CornerSpreadR10" parent="StageDirector" instance=ExtResource( 20 )]
-position = Vector2( -320, -7205.02 )
-event_time = 144.1
+position = Vector2( -320, -7200 )
+event_time = 144.0
 spawn_x = -320.0
 
 [node name="Swarm-CornerSpreadR9" parent="StageDirector" instance=ExtResource( 22 )]
-position = Vector2( 320, -6972.86 )
-event_time = 139.457
+position = Vector2( 320, -7000 )
+event_time = 140.0
 spawn_x = 320.0
 
 [node name="Arrowhead8" parent="StageDirector" instance=ExtResource( 13 )]
@@ -226,13 +222,13 @@ position = Vector2( 0, -7000 )
 event_time = 140.0
 
 [node name="Swarm-CornerSpreadR8" parent="StageDirector" instance=ExtResource( 20 )]
-position = Vector2( -320, -6786.59 )
-event_time = 135.732
+position = Vector2( -320, -6800 )
+event_time = 136.0
 spawn_x = -320.0
 
 [node name="Swarm-CornerSpreadR7" parent="StageDirector" instance=ExtResource( 22 )]
-position = Vector2( 320, -6554.43 )
-event_time = 131.089
+position = Vector2( 320, -6550 )
+event_time = 131.0
 spawn_x = 320.0
 
 [node name="SideEnter" parent="StageDirector" instance=ExtResource( 15 )]
@@ -248,34 +244,34 @@ scale = Vector2( 1, -1 )
 event_time = 131.0
 
 [node name="Helix8" parent="StageDirector" instance=ExtResource( 19 )]
-position = Vector2( -161.571, -6102.1 )
-event_time = 122.042
-spawn_x = -161.571
+position = Vector2( -160, -6100 )
+event_time = 122.0
+spawn_x = -160.0
 
 [node name="Helix7" parent="StageDirector" instance=ExtResource( 19 )]
-position = Vector2( 170.379, -6322.47 )
-event_time = 126.449
-spawn_x = 170.379
+position = Vector2( 160, -6325 )
+event_time = 126.5
+spawn_x = 160.0
 
 [node name="Swarm-CornerSpreadR5" parent="StageDirector" instance=ExtResource( 20 )]
-position = Vector2( -320, -6326.33 )
-event_time = 126.527
+position = Vector2( -320, -6325 )
+event_time = 126.5
 spawn_x = -320.0
 
 [node name="Swarm-CornerSpreadR6" parent="StageDirector" instance=ExtResource( 22 )]
-position = Vector2( 320, -6094.16 )
-event_time = 121.883
+position = Vector2( 320, -6100 )
+event_time = 122.0
 spawn_x = 320.0
 
 [node name="Helix5" parent="StageDirector" instance=ExtResource( 19 )]
-position = Vector2( -161.571, -5661.36 )
-event_time = 113.227
-spawn_x = -161.571
+position = Vector2( -160, -5675 )
+event_time = 113.5
+spawn_x = -160.0
 
 [node name="Helix6" parent="StageDirector" instance=ExtResource( 19 )]
-position = Vector2( 170.379, -5870.57 )
-event_time = 117.411
-spawn_x = 170.379
+position = Vector2( 160, -5875 )
+event_time = 117.5
+spawn_x = 160.0
 
 [node name="Swarm-CornerSpreadR4" parent="StageDirector" instance=ExtResource( 22 )]
 position = Vector2( 320, -5500 )

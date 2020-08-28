@@ -19,6 +19,7 @@ script = ExtResource( 6 )
 BULLET = ExtResource( 1 )
 ALT_BULLET = ExtResource( 8 )
 BOMB = ExtResource( 7 )
+_multiplierDeadZone = 8.0
 _speed = 325.0
 _focusSpeed = 150.0
 _name = "Claw Form"

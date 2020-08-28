@@ -44,7 +44,7 @@ _offset = Vector2( -5, 0 )
 
 [node name="ShootCL" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
-_initialSpeed = 1600.0
+_initialSpeed = 1500.0
 _damage = 15.0
 _initialHeading = -90.0
 _collisionLayer = 32
@@ -54,7 +54,7 @@ _offset = Vector2( -5, 0 )
 
 [node name="ShootCR" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
-_initialSpeed = 1600.0
+_initialSpeed = 1500.0
 _damage = 15.0
 _initialHeading = -90.0
 _collisionLayer = 32

@@ -19,6 +19,7 @@ script = ExtResource( 4 )
 BULLET = ExtResource( 5 )
 ALT_BULLET = ExtResource( 8 )
 BOMB = ExtResource( 7 )
+_multiplierDeadZone = 8.0
 _focusSpeed = 150.0
 _name = "Spread Form"
 _descritpion = "An easy to use form that has a wide attack reach."

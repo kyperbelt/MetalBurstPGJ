@@ -1,0 +1,123 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R25-06(Blue).tscn" type="PackedScene" id=1]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=2]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=3]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=6]
+
+[node name="10-Fingers" type="Node"]
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": "1 Cycle = 1.28 Sec
+Default Total = 12.8 Sec"
+}
+amount = 10
+
+[node name="Sequence" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="Wait" type="Node" parent="Sequence"]
+script = ExtResource( 2 )
+delay = 0.64
+
+[node name="Parallel" type="Node" parent="Sequence"]
+script = ExtResource( 6 )
+
+[node name="LShootE" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 250.0
+_initialHeading = 60.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 1 )
+_offset = Vector2( -64, 0 )
+
+[node name="LShootSE" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 250.0
+_initialHeading = 75.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 1 )
+_offset = Vector2( -64, 0 )
+
+[node name="LShootS" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 250.0
+_initialHeading = 90.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 1 )
+_offset = Vector2( -64, 0 )
+
+[node name="LShootSW" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 250.0
+_initialHeading = 105.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 1 )
+_offset = Vector2( -64, 0 )
+
+[node name="LShootW" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 250.0
+_initialHeading = 120.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 1 )
+_offset = Vector2( -64, 0 )
+
+[node name="Wait2" type="Node" parent="Sequence"]
+script = ExtResource( 2 )
+delay = 0.64
+
+[node name="Parallel2" type="Node" parent="Sequence"]
+script = ExtResource( 6 )
+
+[node name="RShootE" type="Node" parent="Sequence/Parallel2"]
+script = ExtResource( 4 )
+_initialSpeed = 250.0
+_initialHeading = 60.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 1 )
+_offset = Vector2( 64, 0 )
+
+[node name="RShootSE" type="Node" parent="Sequence/Parallel2"]
+script = ExtResource( 4 )
+_initialSpeed = 250.0
+_initialHeading = 75.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 1 )
+_offset = Vector2( 64, 0 )
+
+[node name="RShootS" type="Node" parent="Sequence/Parallel2"]
+script = ExtResource( 4 )
+_initialSpeed = 250.0
+_initialHeading = 90.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 1 )
+_offset = Vector2( 64, 0 )
+
+[node name="RShootSW" type="Node" parent="Sequence/Parallel2"]
+script = ExtResource( 4 )
+_initialSpeed = 250.0
+_initialHeading = 105.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 1 )
+_offset = Vector2( 64, 0 )
+
+[node name="RShootW" type="Node" parent="Sequence/Parallel2"]
+script = ExtResource( 4 )
+_initialSpeed = 250.0
+_initialHeading = 120.0
+_collisionLayer = 16
+_collisionMask = 4
+_projectileScene = ExtResource( 1 )
+_offset = Vector2( 64, 0 )

@@ -38,6 +38,7 @@ show_bounds = true
 bounds_color = Color( 1, 0, 0, 1 )
 T_U_N_I_N_G = ""
 duration = 110.0
+_preserveTimings = false
 D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
@@ -136,16 +137,12 @@ S_O_U_N_D = ""
 _soundName = "bgm_Stage2Boss"
 _soundType = 1
 _eventType = 0
+_overrideVolume = false
 _volume = -4.0
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 0, -5500 )
-B_A_S_E = ""
 event_time = 110.0
-P_O_S_I_T_O_N = ""
-override_time = false
-E_N_D = ""
-delay = 0.0
 Target = ExtResource( 8 )
 
 [node name="B2CrabPT1" parent="StageDirector" instance=ExtResource( 2 )]

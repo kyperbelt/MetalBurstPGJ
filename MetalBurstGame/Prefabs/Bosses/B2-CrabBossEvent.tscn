@@ -1,14 +1,24 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
 [ext_resource path="res://Prefabs/Bosses/RootBoss/CrabBoss.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Prefabs/Bosses/Boss2AI/B2(Center).tscn" type="PackedScene" id=4]
-[ext_resource path="res://Prefabs/Bosses/RootBoss/CrabBossClaws.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Prefabs/Bosses/Boss2AI/B2(LeftClaw).tscn" type="PackedScene" id=6]
-[ext_resource path="res://Prefabs/Bosses/Boss2AI/B2(RightClaw).tscn" type="PackedScene" id=7]
-
-
+[ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/Bosses/Boss1AI/B1M-Phase2Move.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Bosses/Boss1AI/B1M-ExitSequence.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Bosses/Boss1AI/B1NP-5Fingers.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Prefabs/Bosses/Boss1AI/B1M-EntrySequence.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Prefabs/Bosses/Boss1AI/B1NP-SplitRay.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Bosses/Boss1AI/B1P-2Ball.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Prefabs/Bosses/Boss1AI/B1P-Minelayer.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Bosses/Boss1AI/B1NP-6Fingers.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Prefabs/Bosses/Boss1AI/B1P-BurstFire.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=15]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=16]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=17]
+[ext_resource path="res://Prefabs/Bosses/Boss2AI/B2NP-5Fingers.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Prefabs/Bosses/Boss2AI/B2NP-VGrip.tscn" type="PackedScene" id=19]
+[ext_resource path="res://Prefabs/Bosses/Boss2AI/B2P-3BigSpread.tscn" type="PackedScene" id=20]
 
 [node name="B2CrabPT1" type="Node2D"]
 script = ExtResource( 1 )
@@ -41,14 +51,67 @@ texture = ExtResource( 2 )
 position = Vector2( 0, -65 )
 _maxSpeed = 720.0
 
-[node name="B2(Center)" parent="CrabBoss" instance=ExtResource( 4 )]
+[node name="Brain" type="Node" parent="CrabBoss"]
+script = ExtResource( 4 )
 
-[node name="ClawL" parent="." instance=ExtResource( 5 )]
-position = Vector2( -64, -64 )
+[node name="Sequence" type="Node" parent="CrabBoss/Brain"]
+script = ExtResource( 16 )
 
-[node name="B2(LeftClaw)" parent="ClawL" instance=ExtResource( 6 )]
+[node name="ParallelPhase1" type="Node" parent="CrabBoss/Brain/Sequence"]
+script = ExtResource( 17 )
 
-[node name="ClawR" parent="." instance=ExtResource( 5 )]
-position = Vector2( 64, -64 )
+[node name="EntrySequence" parent="CrabBoss/Brain/Sequence/ParallelPhase1" instance=ExtResource( 9 )]
 
-[node name="B2(RightClaw)" parent="ClawR" instance=ExtResource( 7 )]
+[node name="VGrip" parent="CrabBoss/Brain/Sequence/ParallelPhase1" instance=ExtResource( 19 )]
+
+[node name="3BigSpread" parent="CrabBoss/Brain/Sequence/ParallelPhase1" instance=ExtResource( 20 )]
+
+[node name="Wait" type="Node" parent="CrabBoss/Brain/Sequence/ParallelPhase1"]
+script = ExtResource( 15 )
+delay = 20.5
+
+[node name="ParallelPhase2" type="Node" parent="CrabBoss/Brain/Sequence"]
+script = ExtResource( 17 )
+
+[node name="ZigZags" parent="CrabBoss/Brain/Sequence/ParallelPhase2" instance=ExtResource( 5 )]
+
+[node name="10-Fingers" parent="CrabBoss/Brain/Sequence/ParallelPhase2" instance=ExtResource( 18 )]
+
+[node name="3BigSpread" parent="CrabBoss/Brain/Sequence/ParallelPhase2" instance=ExtResource( 20 )]
+
+[node name="Wait2" type="Node" parent="CrabBoss/Brain/Sequence/ParallelPhase2"]
+script = ExtResource( 15 )
+delay = 20.5
+
+[node name="ParallelPhase3" type="Node" parent="CrabBoss/Brain/Sequence"]
+script = ExtResource( 17 )
+
+[node name="SplitRay" parent="CrabBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 10 )]
+amount = 66
+
+[node name="Minelayer" parent="CrabBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 12 )]
+amount = 7
+
+[node name="5-Fingers2" parent="CrabBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 7 )]
+amount = 15
+
+[node name="6-Fingers2" parent="CrabBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 13 )]
+amount = 15
+
+[node name="2-Ball" parent="CrabBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 11 )]
+amount = 6
+
+[node name="BurstFire2" parent="CrabBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 14 )]
+amount = 7
+
+[node name="Wait3" type="Node" parent="CrabBoss/Brain/Sequence/ParallelPhase3"]
+script = ExtResource( 15 )
+delay = 20.5
+
+[node name="ExitSequence" parent="CrabBoss/Brain/Sequence" instance=ExtResource( 6 )]
+
+[node name="Offsets" type="Node" parent="."]
+__meta__ = {
+"_editor_description_": "ClawL: X = -64
+ClawR: X = 64"
+}
