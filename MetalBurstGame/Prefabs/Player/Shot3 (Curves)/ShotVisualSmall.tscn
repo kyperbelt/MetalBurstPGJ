@@ -8,19 +8,20 @@ radius = 8.0
 height = 40.0
 
 [node name="ProjectileComponent" type="Area2D"]
+scale = Vector2( 0.5, 0.5 )
 collision_layer = 32
 collision_mask = 8
 script = ExtResource( 1 )
 _damage = 0.0
 _fireRate = 0.0
 _speed = 0.0
-_projectileRange = 1000.0
+_projectileRange = 250.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 18 )
 shape = SubResource( 1 )
 
 [node name="PlayerShotV2" type="Sprite" parent="."]
-modulate = Color( 0, 0.717647, 1, 1 )
+modulate = Color( 1, 0.666667, 0, 1 )
 position = Vector2( 0, 20 )
 texture = ExtResource( 2 )

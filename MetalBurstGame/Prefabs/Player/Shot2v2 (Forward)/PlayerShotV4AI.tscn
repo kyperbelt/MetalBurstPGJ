@@ -14,7 +14,7 @@ script = ExtResource( 3 )
 [node name="ShootL3" type="Node" parent="Parallel"]
 script = ExtResource( 2 )
 _initialSpeed = 1000.0
-_damage = 24.0
+_damage = 25.0
 _initialHeading = -90.0
 _collisionLayer = 32
 _collisionMask = 8
@@ -64,7 +64,7 @@ _offset = Vector2( 30, 15 )
 [node name="ShootR3" type="Node" parent="Parallel"]
 script = ExtResource( 2 )
 _initialSpeed = 1000.0
-_damage = 24.0
+_damage = 25.0
 _initialHeading = -90.0
 _collisionLayer = 32
 _collisionMask = 8
