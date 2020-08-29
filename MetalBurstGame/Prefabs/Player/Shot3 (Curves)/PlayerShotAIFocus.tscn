@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Spawn.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/Player/Shot3 (Curves)/ShotVisualL.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/Player/Shot3 (Curves)/ShotVisualR.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Prefabs/Player/Shot3 (Curves)/ShotVisualSmall.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=7]
 
 [node name="Brain" type="Node"]
 script = ExtResource( 3 )
@@ -41,3 +43,53 @@ _offset = Vector2( 30, -100 )
 script = ExtResource( 1 )
 _spawn = ExtResource( 5 )
 _offset = Vector2( 50, -100 )
+
+[node name="ShootL4" type="Node" parent="Parallel"]
+script = ExtResource( 7 )
+_initialSpeed = 700.0
+_damage = 15.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 6 )
+_offset = Vector2( -40, -100 )
+
+[node name="ShootL2" type="Node" parent="Parallel"]
+script = ExtResource( 7 )
+_initialSpeed = 700.0
+_damage = 15.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 6 )
+_offset = Vector2( -20, -90 )
+
+[node name="ShootC" type="Node" parent="Parallel"]
+script = ExtResource( 7 )
+_initialSpeed = 700.0
+_damage = 15.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 6 )
+_offset = Vector2( 0, -80 )
+
+[node name="ShootR2" type="Node" parent="Parallel"]
+script = ExtResource( 7 )
+_initialSpeed = 700.0
+_damage = 15.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 6 )
+_offset = Vector2( 20, -90 )
+
+[node name="ShootR4" type="Node" parent="Parallel"]
+script = ExtResource( 7 )
+_initialSpeed = 700.0
+_damage = 15.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 6 )
+_offset = Vector2( 40, -100 )

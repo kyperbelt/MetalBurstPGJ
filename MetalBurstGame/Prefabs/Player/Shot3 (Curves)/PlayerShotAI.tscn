@@ -44,6 +44,16 @@ script = ExtResource( 7 )
 _spawn = ExtResource( 2 )
 _offset = Vector2( 50, 0 )
 
+[node name="ShootL4" type="Node" parent="Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 700.0
+_damage = 15.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 5 )
+_offset = Vector2( -40, 0 )
+
 [node name="ShootL3" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
 _initialSpeed = 700.0
@@ -52,7 +62,7 @@ _initialHeading = -90.0
 _collisionLayer = 32
 _collisionMask = 8
 _projectileScene = ExtResource( 5 )
-_offset = Vector2( -30, 0 )
+_offset = Vector2( -30, 5 )
 
 [node name="ShootL2" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
@@ -62,7 +72,7 @@ _initialHeading = -90.0
 _collisionLayer = 32
 _collisionMask = 8
 _projectileScene = ExtResource( 5 )
-_offset = Vector2( -20, 5 )
+_offset = Vector2( -20, 10 )
 
 [node name="ShootL1" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
@@ -72,7 +82,7 @@ _initialHeading = -90.0
 _collisionLayer = 32
 _collisionMask = 8
 _projectileScene = ExtResource( 5 )
-_offset = Vector2( -10, 10 )
+_offset = Vector2( -10, 15 )
 
 [node name="ShootC" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
@@ -82,7 +92,7 @@ _initialHeading = -90.0
 _collisionLayer = 32
 _collisionMask = 8
 _projectileScene = ExtResource( 5 )
-_offset = Vector2( 0, 15 )
+_offset = Vector2( 0, 20 )
 
 [node name="ShootR1" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
@@ -92,7 +102,7 @@ _initialHeading = -90.0
 _collisionLayer = 32
 _collisionMask = 8
 _projectileScene = ExtResource( 5 )
-_offset = Vector2( 10, 10 )
+_offset = Vector2( 10, 15 )
 
 [node name="ShootR2" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
@@ -102,7 +112,7 @@ _initialHeading = -90.0
 _collisionLayer = 32
 _collisionMask = 8
 _projectileScene = ExtResource( 5 )
-_offset = Vector2( 20, 5 )
+_offset = Vector2( 20, 10 )
 
 [node name="ShootR3" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
@@ -112,4 +122,14 @@ _initialHeading = -90.0
 _collisionLayer = 32
 _collisionMask = 8
 _projectileScene = ExtResource( 5 )
-_offset = Vector2( 30, 0 )
+_offset = Vector2( 30, 5 )
+
+[node name="ShootR4" type="Node" parent="Parallel"]
+script = ExtResource( 4 )
+_initialSpeed = 700.0
+_damage = 15.0
+_initialHeading = -90.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 5 )
+_offset = Vector2( 40, 0 )

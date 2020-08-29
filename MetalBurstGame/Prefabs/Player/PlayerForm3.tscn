@@ -16,6 +16,18 @@ radius = 4.0
 collision_layer = 4
 collision_mask = 152
 script = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": "Main Power (6)
+2x3b
+Spread Power
+9s
+Focus Power
+5s
+
+Score Stats
+Spread: 6+9 = 15
+Focus: 6+5 = 11"
+}
 BULLET = ExtResource( 1 )
 ALT_BULLET = ExtResource( 8 )
 BOMB = ExtResource( 7 )

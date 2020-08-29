@@ -15,7 +15,7 @@ script = ExtResource( 1 )
 _damage = 0.0
 _fireRate = 0.0
 _speed = 0.0
-_projectileRange = 250.0
+_projectileRange = 300.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 18 )

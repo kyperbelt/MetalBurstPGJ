@@ -12,7 +12,16 @@ script = ExtResource( 1 )
 [node name="Parallel" type="Node" parent="."]
 script = ExtResource( 3 )
 
-[node name="ShootFL4" type="Node" parent="Parallel"]
+[node name="ShootSFL4" type="Node" parent="Parallel"]
+script = ExtResource( 2 )
+_initialSpeed = 800.0
+_damage = 15.0
+_initialHeading = -138.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 4 )
+
+[node name="ShootSFL3" type="Node" parent="Parallel"]
 script = ExtResource( 2 )
 _initialSpeed = 800.0
 _damage = 15.0
@@ -21,11 +30,20 @@ _collisionLayer = 32
 _collisionMask = 8
 _projectileScene = ExtResource( 4 )
 
-[node name="ShootFL3" type="Node" parent="Parallel"]
+[node name="ShootSFL2" type="Node" parent="Parallel"]
 script = ExtResource( 2 )
 _initialSpeed = 800.0
 _damage = 15.0
 _initialHeading = -134.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 4 )
+
+[node name="ShootSFL1" type="Node" parent="Parallel"]
+script = ExtResource( 2 )
+_initialSpeed = 800.0
+_damage = 15.0
+_initialHeading = -132.0
 _collisionLayer = 32
 _collisionMask = 8
 _projectileScene = ExtResource( 4 )
@@ -93,7 +111,16 @@ _collisionLayer = 32
 _collisionMask = 8
 _projectileScene = ExtResource( 4 )
 
-[node name="ShootR3" type="Node" parent="Parallel"]
+[node name="ShootSR1" type="Node" parent="Parallel"]
+script = ExtResource( 2 )
+_initialSpeed = 800.0
+_damage = 15.0
+_initialHeading = -48.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 4 )
+
+[node name="ShootSR2" type="Node" parent="Parallel"]
 script = ExtResource( 2 )
 _initialSpeed = 800.0
 _damage = 15.0
@@ -102,11 +129,20 @@ _collisionLayer = 32
 _collisionMask = 8
 _projectileScene = ExtResource( 4 )
 
-[node name="ShootR4" type="Node" parent="Parallel"]
+[node name="ShootSR3" type="Node" parent="Parallel"]
 script = ExtResource( 2 )
 _initialSpeed = 800.0
 _damage = 15.0
 _initialHeading = -44.0
+_collisionLayer = 32
+_collisionMask = 8
+_projectileScene = ExtResource( 4 )
+
+[node name="ShootSR4" type="Node" parent="Parallel"]
+script = ExtResource( 2 )
+_initialSpeed = 800.0
+_damage = 15.0
+_initialHeading = -42.0
 _collisionLayer = 32
 _collisionMask = 8
 _projectileScene = ExtResource( 4 )

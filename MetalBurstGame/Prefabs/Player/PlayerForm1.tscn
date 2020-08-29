@@ -16,11 +16,21 @@ radius = 4.0
 collision_layer = 4
 collision_mask = 152
 script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": "Spread Power (5 + 2x2)
+3b4s + 2x4s
+Focus Power (7)
+7b
+
+Score Stats
+Spread: 3+4+8 = 15
+Focus: 7 = 7"
+}
 BULLET = ExtResource( 5 )
 ALT_BULLET = ExtResource( 8 )
 BOMB = ExtResource( 7 )
 _multiplierDeadZone = 8.0
-_focusSpeed = 150.0
+_focusSpeed = 160.0
 _name = "Spread Form"
 _descritpion = "An easy to use form that has a wide attack reach."
 _difficultyInfo = 2
@@ -51,7 +61,7 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 6 )
 animation = "Glowing"
-frame = 2
+frame = 5
 playing = true
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]

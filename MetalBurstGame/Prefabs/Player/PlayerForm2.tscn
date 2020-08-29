@@ -16,6 +16,16 @@ radius = 4.0
 collision_layer = 4
 collision_mask = 152
 script = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": "Spread Power (6)
+6b
+Focus Power (8)
+6b + 4s
+
+Score Stats
+Spread: 6 = 6
+Focus: 6+4 = 10"
+}
 BULLET = ExtResource( 1 )
 ALT_BULLET = ExtResource( 8 )
 BOMB = ExtResource( 7 )
@@ -52,7 +62,7 @@ texture = ExtResource( 4 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 5 )
 animation = "Glowing"
-frame = 3
+frame = 5
 playing = true
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]
