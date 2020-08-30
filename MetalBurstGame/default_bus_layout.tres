@@ -6,10 +6,6 @@ resource_name = "LowShelfFilter"
 [sub_resource type="AudioEffectDelay" id=2]
 resource_name = "Delay"
 
-[sub_resource type="AudioEffectPitchShift" id=2]
-resource_name = "PitchShift"
-pitch_scale = 0.5
-
 [sub_resource type="AudioEffectReverb" id=3]
 resource_name = "Reverb"
 wet = 0.27
