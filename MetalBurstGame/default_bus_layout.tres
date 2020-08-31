@@ -1,4 +1,4 @@
-[gd_resource type="AudioBusLayout" load_steps=11 format=2]
+[gd_resource type="AudioBusLayout" load_steps=12 format=2]
 
 [sub_resource type="AudioEffectLowShelfFilter" id=1]
 resource_name = "LowShelfFilter"
@@ -32,8 +32,13 @@ rate_hz = 0.668
 feedback = 0.5
 depth = 1.3
 
-[sub_resource type="AudioEffectLowPassFilter" id=7]
-resource_name = "LowPassFilter"
+[sub_resource type="AudioEffectPitchShift" id=11]
+resource_name = "PitchShift"
+pitch_scale = 0.27
+
+[sub_resource type="AudioEffectPitchShift" id=12]
+resource_name = "PitchShift"
+pitch_scale = 0.56
 
 [sub_resource type="AudioEffectDelay" id=8]
 resource_name = "Delay"
@@ -87,7 +92,7 @@ bus/5/bypass_fx = false
 bus/5/volume_db = -4.50411
 bus/5/send = "Sound FX"
 bus/5/effect/0/effect = SubResource( 4 )
-bus/5/effect/0/enabled = false
+bus/5/effect/0/enabled = true
 bus/5/effect/1/effect = SubResource( 5 )
 bus/5/effect/1/enabled = false
 bus/5/effect/2/effect = SubResource( 6 )
@@ -98,19 +103,21 @@ bus/6/mute = false
 bus/6/bypass_fx = false
 bus/6/volume_db = 0.0
 bus/6/send = "Sound FX"
-bus/6/effect/0/effect = SubResource( 7 )
+bus/6/effect/0/effect = SubResource( 11 )
 bus/6/effect/0/enabled = false
 bus/7/name = "Enemy Hit"
 bus/7/solo = false
 bus/7/mute = false
 bus/7/bypass_fx = false
-bus/7/volume_db = 0.0672607
+bus/7/volume_db = 0.464998
 bus/7/send = "Sound FX"
+bus/7/effect/0/effect = SubResource( 12 )
+bus/7/effect/0/enabled = true
 bus/8/name = "Enemy Death"
 bus/8/solo = false
 bus/8/mute = false
 bus/8/bypass_fx = false
-bus/8/volume_db = -1.31927
+bus/8/volume_db = -0.128275
 bus/8/send = "Sound FX"
 bus/8/effect/0/effect = SubResource( 8 )
 bus/8/effect/0/enabled = true

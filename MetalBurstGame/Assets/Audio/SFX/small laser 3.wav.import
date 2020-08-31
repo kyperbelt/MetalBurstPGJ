@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/small laser 3.wav-14847c81c72f17659981f7c484470a8f.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/small laser 3.wav"
+dest_files=[ "res://.import/small laser 3.wav-14847c81c72f17659981f7c484470a8f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

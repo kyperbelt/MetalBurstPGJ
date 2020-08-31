@@ -3,9 +3,9 @@
 [ext_resource path="res://Assets/Audio/SFX/bombRecharge_SFX.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Audio/SFX/menu_select.wav" type="AudioStream" id=2]
 [ext_resource path="res://Assets/Audio/SFX/menu_scroll01.wav" type="AudioStream" id=3]
-[ext_resource path="res://Assets/Audio/SFX/enemyHit02.wav" type="AudioStream" id=4]
+[ext_resource path="res://Assets/Audio/SFX/small laser 1.wav" type="AudioStream" id=4]
 [ext_resource path="res://Assets/Audio/SFX/enemyDeath.wav" type="AudioStream" id=5]
-[ext_resource path="res://Assets/Audio/SFX/playerShoot_vers05.wav" type="AudioStream" id=6]
+[ext_resource path="res://Assets/Audio/SFX/woody thump.wav" type="AudioStream" id=6]
 [ext_resource path="res://Assets/Audio/BGM/Stage1BossBGMv3(maybe).wav" type="AudioStream" id=7]
 [ext_resource path="res://Prefabs/System/AudioManager.gd" type="Script" id=8]
 [ext_resource path="res://Assets/Audio/SFX/laser04.wav" type="AudioStream" id=9]
@@ -67,8 +67,8 @@ Plays: when an StageFoe is killed (thier HP reaches 0). Also when a Boss Form is
 }
 
 [node name="sfx_foeHit" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource( 4 )
-volume_db = -8.0
+stream = ExtResource( 6 )
+volume_db = 0.587
 bus = "Enemy Hit"
 __meta__ = {
 "_editor_description_": "Connected to \"[Every Enemy Scene]\"
@@ -93,7 +93,7 @@ __meta__ = {
 }
 
 [node name="sfx_playerShoot" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource( 6 )
+stream = ExtResource( 4 )
 volume_db = -3.0
 bus = "Player Shoot"
 __meta__ = {
