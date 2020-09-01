@@ -66,7 +66,7 @@ _damage = 30.0
 _fireRate = 1.0
 _destroyOnHit = false
 _speed = 50.0
-_soundFX = "sfx_playerBomb"
+_soundFX = "sfx_playerBomb1a"
 _behaviorScene = ExtResource( 3 )
 
 [node name="Underlayer" type="Sprite" parent="."]

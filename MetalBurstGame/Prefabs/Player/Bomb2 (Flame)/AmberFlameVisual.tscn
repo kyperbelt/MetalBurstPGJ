@@ -66,7 +66,7 @@ _fireRate = 0.0
 _destroyOnHit = false
 _speed = 0.0
 _projectileRange = 300.0
-_soundFX = "sfx_playerBomb"
+_soundFX = "sfx_playerBomb2"
 
 [node name="Underlayer" type="Sprite" parent="."]
 pause_mode = 2

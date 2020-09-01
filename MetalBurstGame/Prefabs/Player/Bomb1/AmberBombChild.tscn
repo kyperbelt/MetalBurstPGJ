@@ -5,7 +5,6 @@
 [ext_resource path="res://Prefabs/Player/Bomb1/AmberBombChildAI.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Prefabs/Projectiles/ProjectileComponent.gd" type="Script" id=4]
 
-
 [sub_resource type="Animation" id=1]
 resource_name = "Overlayer"
 length = 2.0
@@ -66,7 +65,7 @@ script = ExtResource( 4 )
 _damage = 300.0
 _fireRate = 1.0
 _destroyOnHit = false
-_soundFX = "sfx_playerBomb"
+_soundFX = "sfx_playerBomb1b"
 _behaviorScene = ExtResource( 3 )
 
 [node name="Underlayer" type="Sprite" parent="."]

@@ -16,13 +16,14 @@ _damage = 500.0
 _fireRate = 0.0
 _destroyOnHit = false
 _speed = 0.0
-_soundFX = "sfx_playerBomb"
+_soundFX = ""
 _behaviorScene = ExtResource( 2 )
 
 [node name="Explode" type="AnimatedSprite" parent="."]
 modulate = Color( 1, 0.5, 0, 1 )
 frames = ExtResource( 1 )
 animation = "Version2"
+frame = 2
 playing = true
 script = ExtResource( 4 )
 

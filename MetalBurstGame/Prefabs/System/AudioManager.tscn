@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Assets/Audio/SFX/bombRecharge_SFX.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Audio/SFX/menu_select.wav" type="AudioStream" id=2]
@@ -15,6 +15,9 @@
 [ext_resource path="res://Assets/Audio/BGM/Stage1BossBGMv2.1.wav" type="AudioStream" id=13]
 [ext_resource path="res://Assets/Audio/SFX/menu_select02.wav" type="AudioStream" id=14]
 [ext_resource path="res://Assets/Audio/SFX/sfx_bombExplode.wav" type="AudioStream" id=15]
+[ext_resource path="res://Assets/Audio/SFX/playerBomb03.wav" type="AudioStream" id=16]
+[ext_resource path="res://Assets/Audio/SFX/playerBomb01.wav" type="AudioStream" id=17]
+[ext_resource path="res://Assets/Audio/SFX/playerBomb02.wav" type="AudioStream" id=18]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource( 8 )
@@ -108,7 +111,52 @@ bus = "Player Bomb"
 __meta__ = {
 "_editor_description_": "Connected to \"Player.tscn\"
 
-Plays: When the player fires a \"bomb\". Can be long, loud, and fancy. Bombs currently not coded yet."
+Plays: When the player fires a \"bomb\". Can be long, loud, and fancy.
+Player Form: The original Bomb SFX ; will be replaced with the other ones"
+}
+
+[node name="sfx_playerBomb1a" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 17 )
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Player Form: Form 1 ; initial firing ; has a long length as if it were a fuse to fore-shadow the secondary explosion
+
+Connected to \"Player.tscn\"
+Plays: When the player fires a \"bomb\". Can be long, loud, and fancy.
+"
+}
+
+[node name="sfx_playerBomb1b" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 17 )
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Player Form: Form 1 ; the secondary explosion
+
+Connected to \"Player.tscn\"
+Plays: When the player fires a \"bomb\". Can be long, loud, and fancy.
+"
+}
+
+[node name="sfx_playerBomb2" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 18 )
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Player Form: Form 2 ; A series of rapid attacks ; water-derived-SFX?
+
+Connected to \"Player.tscn\"
+Plays: When the player fires a \"bomb\". Can be long, loud, and fancy.
+"
+}
+
+[node name="sfx_playerBomb3" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 16 )
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Player Form: Form 3 ; A large explosion
+
+Connected to \"Player.tscn\"
+Plays: When the player fires a \"bomb\". Can be long, loud, and fancy.
+"
 }
 
 [node name="sfx_playerRegen" type="AudioStreamPlayer" parent="Sound"]

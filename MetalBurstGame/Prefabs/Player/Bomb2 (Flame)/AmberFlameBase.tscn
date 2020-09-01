@@ -13,7 +13,7 @@ script = ExtResource( 2 )
 _damage = 0.0
 _fireRate = 1.0
 _speed = 0.0
-_soundFX = "sfx_playerBomb"
+_soundFX = "sfx_playerBomb2"
 _behaviorScene = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
