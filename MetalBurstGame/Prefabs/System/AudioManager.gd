@@ -55,7 +55,7 @@ func play_sound(sound:String,volume_db:float = -999,instance = false)->bool:
 		else:
 			player.play(0)
 		return true
-	printerr("ERROR: No sound named [%s] found in AudioManager"%sound)
+	#printerr("ERROR: No sound named [%s] found in AudioManager"%sound)
 	return false
 
 #set the bus db volume using the name of the bus

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Assets/Audio/SFX/bombRecharge_SFX.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Audio/SFX/menu_select.wav" type="AudioStream" id=2]
@@ -18,6 +18,9 @@
 [ext_resource path="res://Assets/Audio/SFX/playerBomb03.wav" type="AudioStream" id=16]
 [ext_resource path="res://Assets/Audio/SFX/playerBomb01.wav" type="AudioStream" id=17]
 [ext_resource path="res://Assets/Audio/SFX/playerBomb02.wav" type="AudioStream" id=18]
+[ext_resource path="res://Assets/Audio/SFX/laser03.wav" type="AudioStream" id=19]
+[ext_resource path="res://Assets/Audio/SFX/playerShoot_vers03a.wav" type="AudioStream" id=20]
+[ext_resource path="res://Assets/Audio/SFX/playerShoot_vers05.wav" type="AudioStream" id=21]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource( 8 )
@@ -103,6 +106,63 @@ __meta__ = {
 "_editor_description_": "Connected to \"Player.tscn\"
 
 Plays: When the player fires a shot (\"Z\"). Will be heard very often. Does not need to draw too much attention."
+}
+
+[node name="sfx_playerShoot1a" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 20 )
+volume_db = -3.0
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Connected to \"Player.tscn\"
+Form 1 Spread"
+}
+
+[node name="sfx_playerShoot1b" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 20 )
+volume_db = -3.0
+pitch_scale = 0.5
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Connected to \"Player.tscn\"
+Form 1 Focus"
+}
+
+[node name="sfx_playerShoot2a" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 19 )
+volume_db = -3.0
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Connected to \"Player.tscn\"
+Form 2 Spread"
+}
+
+[node name="sfx_playerShoot2b" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 19 )
+volume_db = -3.0
+pitch_scale = 0.5
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Connected to \"Player.tscn\"
+Form 2 Focus"
+}
+
+[node name="sfx_playerShoot3a" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 21 )
+volume_db = -3.0
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Connected to \"Player.tscn\"
+Form 3 Spread"
+}
+
+[node name="sfx_playerShoot3b" type="AudioStreamPlayer" parent="Sound"]
+stream = ExtResource( 21 )
+volume_db = -3.0
+pitch_scale = 0.5
+bus = "Sound FX"
+__meta__ = {
+"_editor_description_": "Connected to \"Player.tscn\"
+Form 3 Focus"
 }
 
 [node name="sfx_playerBomb" type="AudioStreamPlayer" parent="Sound"]
