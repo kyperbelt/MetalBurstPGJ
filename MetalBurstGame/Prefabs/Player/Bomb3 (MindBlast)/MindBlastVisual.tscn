@@ -10,6 +10,7 @@
 radius = 75.0
 
 [node name="MindBlastVisual" type="Area2D"]
+scale = Vector2( 0.6, 0.6 )
 collision_layer = 64
 collision_mask = 24
 script = ExtResource( 3 )
