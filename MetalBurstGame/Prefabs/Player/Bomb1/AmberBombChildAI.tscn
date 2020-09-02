@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/ScaleTo.gd" type="Script" id=2]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/RemoveEntity.gd" type="Script" id=4]
+[ext_resource path="res://Prefabs/System/Behavior/Actions/Transform/RotateBy.gd" type="Script" id=5]
+[ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=6]
 
 [node name="BigBrain" type="Node"]
 script = ExtResource( 1 )
@@ -11,10 +13,17 @@ script = ExtResource( 1 )
 [node name="Sequence" type="Node" parent="."]
 script = ExtResource( 3 )
 
-[node name="ScaleTo" type="Node" parent="Sequence"]
+[node name="Parallel" type="Node" parent="Sequence"]
+script = ExtResource( 6 )
+
+[node name="ScaleTo" type="Node" parent="Sequence/Parallel"]
 script = ExtResource( 2 )
-_scale = Vector2( 4, 4 )
-_time = 1.0
+_time = 3.0
+
+[node name="RotateBy" type="Node" parent="Sequence/Parallel"]
+script = ExtResource( 5 )
+_angle = 1080.0
+_time = 3.0
 
 [node name="RemoveEntity" type="Node" parent="Sequence"]
 script = ExtResource( 4 )

@@ -61,7 +61,7 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 6 )
 animation = "Glowing"
-frame = 5
+frame = 2
 playing = true
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]

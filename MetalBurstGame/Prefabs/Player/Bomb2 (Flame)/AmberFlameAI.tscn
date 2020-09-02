@@ -25,7 +25,7 @@ script = ExtResource( 3 )
 
 [node name="Shoot1" type="Node" parent="Sequence/Repeater/Sequence"]
 script = ExtResource( 4 )
-_initialSpeed = 500.0
+_initialSpeed = 540.0
 _damage = 75.0
 _initialHeading = -90.0
 _collisionLayer = 64
