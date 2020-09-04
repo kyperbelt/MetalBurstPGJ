@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Stage2BossBGMv3.ogg-3b3cefe654b940979b4514f8d3226c79
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

@@ -127,6 +127,19 @@ modulate = Color( 0.996078, 0.572549, 0.572549, 1 )
 position = Vector2( 320, -550 )
 spawn_x = 320.0
 
+[node name="StageBGMEnd" parent="StageDirector" instance=ExtResource( 10 )]
+position = Vector2( 320, -4750 )
+B_A_S_E = ""
+event_time = 95.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_O_U_N_D = ""
+_soundName = "bgm_Stage2BossEnd"
+_soundType = 1
+_eventType = 0
+_overrideVolume = false
+_volume = -4.0
+
 [node name="StageBGM" parent="StageDirector" instance=ExtResource( 10 )]
 position = Vector2( 320, -100 )
 B_A_S_E = ""

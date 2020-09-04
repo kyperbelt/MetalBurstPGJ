@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Tools/star.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Prefabs/Bosses/Boss2AI/B2P-5BigSpread.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Bosses/Boss1AI/B1P-2Ball.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Bosses/Boss2AI/B2P-VolcanoSpread.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Prefabs/Bosses/Boss2AI/B2DEBUG-PhaseIndicator.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=15]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Sequence.gd" type="Script" id=16]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=17]
@@ -59,53 +60,86 @@ script = ExtResource( 16 )
 [node name="ParallelPhase1" type="Node" parent="CrabBoss/Brain/Sequence"]
 script = ExtResource( 17 )
 
+[node name="B2DEBUG-PhaseIndicator" parent="CrabBoss/Brain/Sequence/ParallelPhase1" instance=ExtResource( 13 )]
+
 [node name="EntrySequence" parent="CrabBoss/Brain/Sequence/ParallelPhase1" instance=ExtResource( 8 )]
 
 [node name="VGrip" parent="CrabBoss/Brain/Sequence/ParallelPhase1" instance=ExtResource( 19 )]
 
 [node name="3BigSpread" parent="CrabBoss/Brain/Sequence/ParallelPhase1" instance=ExtResource( 20 )]
+amount = 7
 
 [node name="Wait" type="Node" parent="CrabBoss/Brain/Sequence/ParallelPhase1"]
 script = ExtResource( 15 )
-delay = 20.5
+delay = 21.0
 
 [node name="ParallelPhase2" type="Node" parent="CrabBoss/Brain/Sequence"]
 script = ExtResource( 17 )
 
+[node name="B2DEBUG-PhaseIndicator" parent="CrabBoss/Brain/Sequence/ParallelPhase2" instance=ExtResource( 13 )]
+
 [node name="ZigZags" parent="CrabBoss/Brain/Sequence/ParallelPhase2" instance=ExtResource( 5 )]
 
 [node name="6-Barriers" parent="CrabBoss/Brain/Sequence/ParallelPhase2" instance=ExtResource( 9 )]
+amount = 7
 
 [node name="10-Fingers" parent="CrabBoss/Brain/Sequence/ParallelPhase2" instance=ExtResource( 18 )]
+amount = 7
 
 [node name="3BigSpread" parent="CrabBoss/Brain/Sequence/ParallelPhase2" instance=ExtResource( 20 )]
+amount = 3
 
 [node name="Wait2" type="Node" parent="CrabBoss/Brain/Sequence/ParallelPhase2"]
 script = ExtResource( 15 )
-delay = 20.5
+delay = 11.5
 
 [node name="ParallelPhase3" type="Node" parent="CrabBoss/Brain/Sequence"]
 script = ExtResource( 17 )
 
+[node name="B2DEBUG-PhaseIndicator" parent="CrabBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 13 )]
+
 [node name="DualFans" parent="CrabBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 7 )]
 
 [node name="2-Ball" parent="CrabBoss/Brain/Sequence/ParallelPhase3" instance=ExtResource( 11 )]
-amount = 6
 
 [node name="Wait3" type="Node" parent="CrabBoss/Brain/Sequence/ParallelPhase3"]
 script = ExtResource( 15 )
-delay = 20.5
+delay = 15.5
 
 [node name="ParallelPhase4" type="Node" parent="CrabBoss/Brain/Sequence"]
 script = ExtResource( 17 )
 
+[node name="B2DEBUG-PhaseIndicator" parent="CrabBoss/Brain/Sequence/ParallelPhase4" instance=ExtResource( 13 )]
+
 [node name="5BigSpread" parent="CrabBoss/Brain/Sequence/ParallelPhase4" instance=ExtResource( 10 )]
+amount = 7
 
 [node name="VolcanoSpread" parent="CrabBoss/Brain/Sequence/ParallelPhase4" instance=ExtResource( 12 )]
+amount = 7
 
 [node name="Wait3" type="Node" parent="CrabBoss/Brain/Sequence/ParallelPhase4"]
 script = ExtResource( 15 )
-delay = 20.5
+delay = 21.5
+
+[node name="ParallelPhase5" type="Node" parent="CrabBoss/Brain/Sequence"]
+script = ExtResource( 17 )
+
+[node name="B2DEBUG-PhaseIndicator" parent="CrabBoss/Brain/Sequence/ParallelPhase5" instance=ExtResource( 13 )]
+
+[node name="6-Barriers" parent="CrabBoss/Brain/Sequence/ParallelPhase5" instance=ExtResource( 9 )]
+amount = 12
+
+[node name="10-Fingers" parent="CrabBoss/Brain/Sequence/ParallelPhase5" instance=ExtResource( 18 )]
+amount = 12
+
+[node name="VolcanoSpread" parent="CrabBoss/Brain/Sequence/ParallelPhase5" instance=ExtResource( 12 )]
+amount = 7
+
+[node name="Wait3" type="Node" parent="CrabBoss/Brain/Sequence/ParallelPhase5"]
+script = ExtResource( 15 )
+delay = 23.5
+
+[node name="B2DEBUG-PhaseIndicator" parent="CrabBoss/Brain/Sequence" instance=ExtResource( 13 )]
 
 [node name="ExitSequence" parent="CrabBoss/Brain/Sequence" instance=ExtResource( 6 )]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/Audio/SFX/bombRecharge_SFX.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Audio/SFX/menu_select.wav" type="AudioStream" id=2]
@@ -10,7 +10,7 @@
 [ext_resource path="res://Prefabs/System/AudioManager.gd" type="Script" id=8]
 [ext_resource path="res://Assets/Audio/SFX/laser04.wav" type="AudioStream" id=9]
 [ext_resource path="res://Assets/Audio/BGM/Stage1StageBGMv1.wav" type="AudioStream" id=10]
-[ext_resource path="res://Assets/Audio/BGM/Stage2BossBGMv2.wav" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Audio/BGM/Stage2BossBGMv3.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Assets/Audio/BGM/Stage2StageBGMv4.wav" type="AudioStream" id=12]
 [ext_resource path="res://Assets/Audio/BGM/Stage1BossBGMv2.1.wav" type="AudioStream" id=13]
 [ext_resource path="res://Assets/Audio/SFX/menu_select02.wav" type="AudioStream" id=14]
@@ -21,6 +21,7 @@
 [ext_resource path="res://Assets/Audio/SFX/laser03.wav" type="AudioStream" id=19]
 [ext_resource path="res://Assets/Audio/SFX/playerShoot_vers03a.wav" type="AudioStream" id=20]
 [ext_resource path="res://Assets/Audio/SFX/playerShoot_vers05.wav" type="AudioStream" id=21]
+[ext_resource path="res://Assets/Audio/BGM/Stage2BossBGMv3End.ogg" type="AudioStream" id=22]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource( 8 )
@@ -51,7 +52,12 @@ bus = "Music"
 
 [node name="bgm_Stage2Boss" type="AudioStreamPlayer" parent="Music"]
 stream = ExtResource( 11 )
-volume_db = -4.0
+volume_db = 4.0
+bus = "Music"
+
+[node name="bgm_Stage2BossEnd" type="AudioStreamPlayer" parent="Music"]
+stream = ExtResource( 22 )
+volume_db = 4.0
 bus = "Music"
 
 [node name="bgm_Stage1Boss(test)" type="AudioStreamPlayer" parent="Music"]

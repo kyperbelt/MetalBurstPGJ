@@ -18,9 +18,9 @@ _speed = 200.0
 script = ExtResource( 6 )
 __meta__ = {
 "_editor_description_": "1 Loop = 4 Sec
-Default Total = 20 sec"
+Default Total = 8 sec"
 }
-amount = 5
+amount = 2
 
 [node name="Sequence" type="Node" parent="Repeater"]
 script = ExtResource( 1 )
