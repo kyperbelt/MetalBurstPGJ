@@ -8,13 +8,6 @@
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=6]
 
 [node name="ZigZags" type="Node"]
-script = ExtResource( 1 )
-
-[node name="ChangeSpeed" type="Node" parent="."]
-script = ExtResource( 3 )
-_speed = 200.0
-
-[node name="Repeater" type="Node" parent="."]
 script = ExtResource( 6 )
 __meta__ = {
 "_editor_description_": "1 Loop = 4 Sec
@@ -22,65 +15,69 @@ Default Total = 8 sec"
 }
 amount = 2
 
-[node name="Sequence" type="Node" parent="Repeater"]
+[node name="Sequence" type="Node" parent="."]
 script = ExtResource( 1 )
 
-[node name="MoveCardinal" type="Node" parent="Repeater/Sequence"]
+[node name="ChangeSpeed" type="Node" parent="Sequence"]
+script = ExtResource( 3 )
+_speed = 200.0
+
+[node name="MoveCardinal" type="Node" parent="Sequence"]
 script = ExtResource( 5 )
 _direction = 2
 
-[node name="Wait" type="Node" parent="Repeater/Sequence"]
+[node name="Wait" type="Node" parent="Sequence"]
 script = ExtResource( 2 )
 delay = 0.5
 
-[node name="StopMove" type="Node" parent="Repeater/Sequence"]
+[node name="StopMove" type="Node" parent="Sequence"]
 script = ExtResource( 4 )
 
-[node name="Wait4" type="Node" parent="Repeater/Sequence"]
+[node name="Wait4" type="Node" parent="Sequence"]
 script = ExtResource( 2 )
 delay = 0.5
 
-[node name="MoveCardinal2" type="Node" parent="Repeater/Sequence"]
+[node name="MoveCardinal2" type="Node" parent="Sequence"]
 script = ExtResource( 5 )
 _direction = 6
 
-[node name="Wait2" type="Node" parent="Repeater/Sequence"]
+[node name="Wait2" type="Node" parent="Sequence"]
 script = ExtResource( 2 )
 delay = 0.5
 
-[node name="StopMove2" type="Node" parent="Repeater/Sequence"]
+[node name="StopMove2" type="Node" parent="Sequence"]
 script = ExtResource( 4 )
 
-[node name="Wait5" type="Node" parent="Repeater/Sequence"]
+[node name="Wait5" type="Node" parent="Sequence"]
 script = ExtResource( 2 )
 delay = 0.5
 
-[node name="MoveCardinal4" type="Node" parent="Repeater/Sequence"]
+[node name="MoveCardinal4" type="Node" parent="Sequence"]
 script = ExtResource( 5 )
 _direction = 6
 
-[node name="Wait8" type="Node" parent="Repeater/Sequence"]
+[node name="Wait8" type="Node" parent="Sequence"]
 script = ExtResource( 2 )
 delay = 0.5
 
-[node name="StopMove4" type="Node" parent="Repeater/Sequence"]
+[node name="StopMove4" type="Node" parent="Sequence"]
 script = ExtResource( 4 )
 
-[node name="Wait7" type="Node" parent="Repeater/Sequence"]
+[node name="Wait7" type="Node" parent="Sequence"]
 script = ExtResource( 2 )
 delay = 0.5
 
-[node name="MoveCardinal3" type="Node" parent="Repeater/Sequence"]
+[node name="MoveCardinal3" type="Node" parent="Sequence"]
 script = ExtResource( 5 )
 _direction = 2
 
-[node name="Wait3" type="Node" parent="Repeater/Sequence"]
+[node name="Wait3" type="Node" parent="Sequence"]
 script = ExtResource( 2 )
 delay = 0.5
 
-[node name="StopMove3" type="Node" parent="Repeater/Sequence"]
+[node name="StopMove3" type="Node" parent="Sequence"]
 script = ExtResource( 4 )
 
-[node name="Wait6" type="Node" parent="Repeater/Sequence"]
+[node name="Wait6" type="Node" parent="Sequence"]
 script = ExtResource( 2 )
 delay = 0.5

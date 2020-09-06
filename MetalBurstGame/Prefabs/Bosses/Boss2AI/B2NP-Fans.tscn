@@ -10,8 +10,8 @@
 [node name="DualFans" type="Node"]
 script = ExtResource( 3 )
 __meta__ = {
-"_editor_description_": "1 Cycle = ??? Sec
-Total = ??? Sec"
+"_editor_description_": "1 Cycle = 3 Sec
+Default Total = 9 Sec"
 }
 amount = 3
 

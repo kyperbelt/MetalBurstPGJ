@@ -20,10 +20,6 @@ amount = 8
 [node name="Sequence" type="Node" parent="."]
 script = ExtResource( 2 )
 
-[node name="Wait" type="Node" parent="Sequence"]
-script = ExtResource( 5 )
-delay = 1.56
-
 [node name="BurstSize" type="Node" parent="Sequence"]
 script = ExtResource( 4 )
 __meta__ = {
@@ -34,17 +30,13 @@ amount = 3
 [node name="Sequence" type="Node" parent="Sequence/BurstSize"]
 script = ExtResource( 2 )
 
-[node name="Wait" type="Node" parent="Sequence/BurstSize/Sequence"]
-script = ExtResource( 5 )
-delay = 0.33
-
 [node name="Parallel" type="Node" parent="Sequence/BurstSize/Sequence"]
 script = ExtResource( 1 )
 
 [node name="ShootL1" type="Node" parent="Sequence/BurstSize/Sequence/Parallel"]
 script = ExtResource( 3 )
-_initialSpeed = 300.0
-_initialHeading = -10.0
+_initialSpeed = 220.0
+_initialHeading = -12.0
 _collisionLayer = 16
 _collisionMask = 4
 _projectileScene = ExtResource( 6 )
@@ -52,8 +44,8 @@ _targetName = "player"
 
 [node name="ShootR1" type="Node" parent="Sequence/BurstSize/Sequence/Parallel"]
 script = ExtResource( 3 )
-_initialSpeed = 300.0
-_initialHeading = 10.0
+_initialSpeed = 220.0
+_initialHeading = 12.0
 _collisionLayer = 16
 _collisionMask = 4
 _projectileScene = ExtResource( 6 )
@@ -61,7 +53,7 @@ _targetName = "player"
 
 [node name="ShootC" type="Node" parent="Sequence/BurstSize/Sequence/Parallel"]
 script = ExtResource( 3 )
-_initialSpeed = 300.0
+_initialSpeed = 220.0
 _collisionLayer = 16
 _collisionMask = 4
 _projectileScene = ExtResource( 6 )
@@ -72,8 +64,8 @@ script = ExtResource( 1 )
 
 [node name="ShootL2" type="Node" parent="Sequence/BurstSize/Sequence/Parallel2"]
 script = ExtResource( 3 )
-_initialSpeed = 250.0
-_initialHeading = -20.0
+_initialSpeed = 200.0
+_initialHeading = -16.0
 _collisionLayer = 16
 _collisionMask = 4
 _projectileScene = ExtResource( 7 )
@@ -81,8 +73,8 @@ _targetName = "player"
 
 [node name="ShootR2" type="Node" parent="Sequence/BurstSize/Sequence/Parallel2"]
 script = ExtResource( 3 )
-_initialSpeed = 250.0
-_initialHeading = 20.0
+_initialSpeed = 200.0
+_initialHeading = 16.0
 _collisionLayer = 16
 _collisionMask = 4
 _projectileScene = ExtResource( 7 )
@@ -90,8 +82,8 @@ _targetName = "player"
 
 [node name="ShootL1" type="Node" parent="Sequence/BurstSize/Sequence/Parallel2"]
 script = ExtResource( 3 )
-_initialSpeed = 250.0
-_initialHeading = -10.0
+_initialSpeed = 200.0
+_initialHeading = -8.0
 _collisionLayer = 16
 _collisionMask = 4
 _projectileScene = ExtResource( 7 )
@@ -99,8 +91,8 @@ _targetName = "player"
 
 [node name="ShootR1" type="Node" parent="Sequence/BurstSize/Sequence/Parallel2"]
 script = ExtResource( 3 )
-_initialSpeed = 250.0
-_initialHeading = 10.0
+_initialSpeed = 200.0
+_initialHeading = 8.0
 _collisionLayer = 16
 _collisionMask = 4
 _projectileScene = ExtResource( 7 )
@@ -111,7 +103,7 @@ script = ExtResource( 1 )
 
 [node name="ShootL3" type="Node" parent="Sequence/BurstSize/Sequence/Parallel3"]
 script = ExtResource( 3 )
-_initialSpeed = 200.0
+_initialSpeed = 180.0
 _initialHeading = -45.0
 _collisionLayer = 16
 _collisionMask = 4
@@ -120,7 +112,7 @@ _targetName = "player"
 
 [node name="ShootR3" type="Node" parent="Sequence/BurstSize/Sequence/Parallel3"]
 script = ExtResource( 3 )
-_initialSpeed = 200.0
+_initialSpeed = 180.0
 _initialHeading = 45.0
 _collisionLayer = 16
 _collisionMask = 4
@@ -129,7 +121,7 @@ _targetName = "player"
 
 [node name="ShootL2" type="Node" parent="Sequence/BurstSize/Sequence/Parallel3"]
 script = ExtResource( 3 )
-_initialSpeed = 200.0
+_initialSpeed = 180.0
 _initialHeading = -30.0
 _collisionLayer = 16
 _collisionMask = 4
@@ -138,7 +130,7 @@ _targetName = "player"
 
 [node name="ShootR2" type="Node" parent="Sequence/BurstSize/Sequence/Parallel3"]
 script = ExtResource( 3 )
-_initialSpeed = 200.0
+_initialSpeed = 180.0
 _initialHeading = 30.0
 _collisionLayer = 16
 _collisionMask = 4
@@ -147,7 +139,7 @@ _targetName = "player"
 
 [node name="ShootL1" type="Node" parent="Sequence/BurstSize/Sequence/Parallel3"]
 script = ExtResource( 3 )
-_initialSpeed = 200.0
+_initialSpeed = 180.0
 _initialHeading = -15.0
 _collisionLayer = 16
 _collisionMask = 4
@@ -156,7 +148,7 @@ _targetName = "player"
 
 [node name="ShootR1" type="Node" parent="Sequence/BurstSize/Sequence/Parallel3"]
 script = ExtResource( 3 )
-_initialSpeed = 200.0
+_initialSpeed = 180.0
 _initialHeading = 15.0
 _collisionLayer = 16
 _collisionMask = 4
@@ -165,8 +157,16 @@ _targetName = "player"
 
 [node name="ShootC1" type="Node" parent="Sequence/BurstSize/Sequence/Parallel3"]
 script = ExtResource( 3 )
-_initialSpeed = 300.0
+_initialSpeed = 180.0
 _collisionLayer = 16
 _collisionMask = 4
 _projectileScene = ExtResource( 8 )
 _targetName = "player"
+
+[node name="Wait" type="Node" parent="Sequence/BurstSize/Sequence"]
+script = ExtResource( 5 )
+delay = 0.33
+
+[node name="Wait" type="Node" parent="Sequence"]
+script = ExtResource( 5 )
+delay = 1.56

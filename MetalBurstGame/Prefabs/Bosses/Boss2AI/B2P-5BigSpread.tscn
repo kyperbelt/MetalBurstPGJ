@@ -5,7 +5,7 @@
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Decorators/Repeater.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Utility/Wait.gd" type="Script" id=5]
-[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/E15x30-02(Orange).tscn" type="PackedScene" id=6]
+[ext_resource path="res://Prefabs/Projectiles/EnemyBulletsBasic/R50-02(Orange).tscn" type="PackedScene" id=6]
 
 [node name="5BigSpread" type="Node"]
 script = ExtResource( 4 )
@@ -77,7 +77,7 @@ _targetName = "player"
 
 [node name="ShootC" type="Node" parent="Sequence/BurstSize/Sequence/Parallel"]
 script = ExtResource( 3 )
-_initialSpeed = 220.0
+_initialSpeed = 200.0
 _collisionLayer = 16
 _collisionMask = 4
 _projectileScene = ExtResource( 6 )
