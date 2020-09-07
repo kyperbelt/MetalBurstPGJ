@@ -37,17 +37,19 @@ hatch_marks = 7
 show_bounds = true
 bounds_color = Color( 1, 0, 0, 1 )
 T_U_N_I_N_G = ""
-duration = 110.0
+duration = 70.0
+_preserveTimings = true
 D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
-position = Vector2( 640, -5500 )
+position = Vector2( 640, -3500 )
 
 [node name="NOTES" type="Node" parent="StageDirector"]
 __meta__ = {
-"_editor_description_": "
-
+"_editor_description_": "68 Seconds Total
+62 Seconds = Length of Battle/Song
+2 Sec at Start
 
 
 ###Links###
@@ -133,20 +135,15 @@ event_time = 2.0
 P_O_S_I_T_O_N = ""
 override_time = false
 S_O_U_N_D = ""
-_soundName = "bgm_Stage1Boss(test)"
+_soundName = "bgm_Stage1Boss"
 _soundType = 1
 _eventType = 0
 _overrideVolume = false
 _volume = -3.0
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 0, -5500 )
-B_A_S_E = ""
-event_time = 110.0
-P_O_S_I_T_O_N = ""
-override_time = false
-E_N_D = ""
-delay = 0.0
+position = Vector2( 0, -3500 )
+event_time = 70.0
 Target = ExtResource( 8 )
 
 [node name="B1ShrimpV2" parent="StageDirector" instance=ExtResource( 2 )]

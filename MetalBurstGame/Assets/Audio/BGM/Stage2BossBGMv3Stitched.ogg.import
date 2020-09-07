@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Stage2BossBGMv3Stitched.ogg-32588e1f86ee16a878194218e060ea9e.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/BGM/Stage2BossBGMv3Stitched.ogg"
+dest_files=[ "res://.import/Stage2BossBGMv3Stitched.ogg-32588e1f86ee16a878194218e060ea9e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

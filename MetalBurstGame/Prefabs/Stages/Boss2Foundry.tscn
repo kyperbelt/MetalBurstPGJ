@@ -37,13 +37,13 @@ hatch_marks = 7
 show_bounds = true
 bounds_color = Color( 1, 0, 0, 1 )
 T_U_N_I_N_G = ""
-duration = 110.0
-_preserveTimings = false
+duration = 105.0
+_preserveTimings = true
 D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
-position = Vector2( 640, -5500 )
+position = Vector2( 640, -5250 )
 
 [node name="NOTES" type="Node" parent="StageDirector"]
 __meta__ = {
@@ -127,19 +127,6 @@ modulate = Color( 0.996078, 0.572549, 0.572549, 1 )
 position = Vector2( 320, -550 )
 spawn_x = 320.0
 
-[node name="StageBGMEnd" parent="StageDirector" instance=ExtResource( 10 )]
-position = Vector2( 320, -4750 )
-B_A_S_E = ""
-event_time = 95.0
-P_O_S_I_T_O_N = ""
-override_time = false
-S_O_U_N_D = ""
-_soundName = "bgm_Stage2BossEnd"
-_soundType = 1
-_eventType = 0
-_overrideVolume = false
-_volume = -4.0
-
 [node name="StageBGM" parent="StageDirector" instance=ExtResource( 10 )]
 position = Vector2( 320, -100 )
 B_A_S_E = ""
@@ -154,8 +141,8 @@ _overrideVolume = false
 _volume = -4.0
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 0, -5500 )
-event_time = 110.0
+position = Vector2( 0, -5250 )
+event_time = 105.0
 Target = ExtResource( 8 )
 
 [node name="B2CrabPT1" parent="StageDirector" instance=ExtResource( 2 )]
