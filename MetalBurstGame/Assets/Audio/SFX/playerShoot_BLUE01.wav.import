@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/playerShoot_BLUE01.wav-5b06c2c719e0d2a21b10c721c6eee57f.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/SFX/playerShoot_BLUE01.wav"
+dest_files=[ "res://.import/playerShoot_BLUE01.wav-5b06c2c719e0d2a21b10c721c6eee57f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

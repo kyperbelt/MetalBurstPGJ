@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://Assets/Audio/SFX/bombRecharge_SFX.wav" type="AudioStream" id=1]
 [ext_resource path="res://Assets/Audio/SFX/menu_select.wav" type="AudioStream" id=2]
@@ -15,13 +15,15 @@
 [ext_resource path="res://Assets/Audio/BGM/Stage1BossBGMv2.1.wav" type="AudioStream" id=13]
 [ext_resource path="res://Assets/Audio/SFX/menu_select02.wav" type="AudioStream" id=14]
 [ext_resource path="res://Assets/Audio/SFX/sfx_bombExplode.wav" type="AudioStream" id=15]
-[ext_resource path="res://Assets/Audio/SFX/playerBomb03.wav" type="AudioStream" id=16]
-[ext_resource path="res://Assets/Audio/SFX/playerBomb01.wav" type="AudioStream" id=17]
+[ext_resource path="res://Assets/Audio/SFX/playerShoot_BLUE01.wav" type="AudioStream" id=16]
+[ext_resource path="res://Assets/Audio/SFX/bomb_explodeGREEN.wav" type="AudioStream" id=17]
 [ext_resource path="res://Assets/Audio/SFX/playerBomb02.wav" type="AudioStream" id=18]
 [ext_resource path="res://Assets/Audio/SFX/laser03.wav" type="AudioStream" id=19]
 [ext_resource path="res://Assets/Audio/SFX/playerShoot_vers03a.wav" type="AudioStream" id=20]
 [ext_resource path="res://Assets/Audio/SFX/playerShoot_vers05.wav" type="AudioStream" id=21]
 [ext_resource path="res://Assets/Audio/BGM/Stage2BossBGMv3End.ogg" type="AudioStream" id=22]
+[ext_resource path="res://Assets/Audio/SFX/bomb_RED.wav" type="AudioStream" id=23]
+[ext_resource path="res://Assets/Audio/SFX/bomb_launchGREEN.wav" type="AudioStream" id=24]
 
 [node name="AudioManager" type="Node"]
 script = ExtResource( 8 )
@@ -125,8 +127,7 @@ Form 1 Spread"
 
 [node name="sfx_playerShoot1b" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 20 )
-volume_db = -3.0
-pitch_scale = 0.5
+volume_db = 0.824
 bus = "Sound FX"
 __meta__ = {
 "_editor_description_": "Connected to \"Player.tscn\"
@@ -134,7 +135,7 @@ Form 1 Focus"
 }
 
 [node name="sfx_playerShoot2a" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource( 19 )
+stream = ExtResource( 16 )
 volume_db = -3.0
 bus = "Sound FX"
 __meta__ = {
@@ -155,6 +156,7 @@ Form 2 Focus"
 [node name="sfx_playerShoot3a" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 21 )
 volume_db = -3.0
+pitch_scale = 0.75
 bus = "Sound FX"
 __meta__ = {
 "_editor_description_": "Connected to \"Player.tscn\"
@@ -163,8 +165,7 @@ Form 3 Spread"
 
 [node name="sfx_playerShoot3b" type="AudioStreamPlayer" parent="Sound"]
 stream = ExtResource( 21 )
-volume_db = -3.0
-pitch_scale = 0.5
+volume_db = -6.817
 bus = "Sound FX"
 __meta__ = {
 "_editor_description_": "Connected to \"Player.tscn\"
@@ -182,7 +183,7 @@ Player Form: The original Bomb SFX ; will be replaced with the other ones"
 }
 
 [node name="sfx_playerBomb1a" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource( 17 )
+stream = ExtResource( 24 )
 bus = "Sound FX"
 __meta__ = {
 "_editor_description_": "Player Form: Form 1 ; initial firing ; has a long length as if it were a fuse to fore-shadow the secondary explosion
@@ -215,7 +216,7 @@ Plays: When the player fires a \"bomb\". Can be long, loud, and fancy.
 }
 
 [node name="sfx_playerBomb3" type="AudioStreamPlayer" parent="Sound"]
-stream = ExtResource( 16 )
+stream = ExtResource( 23 )
 bus = "Sound FX"
 __meta__ = {
 "_editor_description_": "Player Form: Form 3 ; A large explosion
