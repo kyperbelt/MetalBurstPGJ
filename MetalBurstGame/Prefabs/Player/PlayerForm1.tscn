@@ -61,7 +61,7 @@ texture = ExtResource( 1 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 6 )
 animation = "Glowing"
-frame = 2
+frame = 3
 playing = true
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]
@@ -74,8 +74,17 @@ NormalSpread = 30 Degrees / 92 Degrees
 FocusSpread = 12 Degrees
 Velocity = 800 / 1000
 
-Normal = 25*3 ; 15*4 ; 15*4
-Focus = 25*3 ; 15*4
-Normal = 1080 DPS + 480 DPS
-Focus = 1080 DPS"
+Normal = 25*3 ; 15*4 ; 15*8
+Focus = 25*7
+Normal = 1080 DPS + 960 DPS
+Focus = 1400 DPS
+
+Spread Power (5 + 2x2)
+3b4s + 2x4s
+Focus Power (7)
+7b
+
+Score Stats
+Spread: 3+4+8 = 15
+Focus: 7 = 7"
 }

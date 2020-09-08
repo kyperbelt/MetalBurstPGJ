@@ -31,7 +31,7 @@ ALT_BULLET = ExtResource( 8 )
 BOMB = ExtResource( 7 )
 _multiplierDeadZone = 8.0
 _speed = 325.0
-_focusSpeed = 150.0
+_focusSpeed = 140.0
 _name = "Arrow Form"
 _descritpion = "A slightly faster form with a powerful focused attack with limited reach."
 _difficultyInfo = 4
@@ -62,7 +62,7 @@ texture = ExtResource( 4 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 5 )
 animation = "Glowing"
-frame = 5
+frame = 4
 playing = true
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]
@@ -73,10 +73,19 @@ __meta__ = {
 "_editor_description_": "RoF = 0.125 (8 shots per second)
 NormalSpread = 100x (Lateral)
 FocusSpread = 60x (Lateral)
-Velocity = 1000 / 1500
+Velocity = 1000 / 1400
 
 Normal = 25*6
-Focus = 25*6
+Focus = 25*8
 Normal = 1200 DPS
-Focus = 1200 DPS"
+Focus = 1600 DPS
+
+Spread Power (6)
+6b
+Focus Power (8)
+6b + 4s
+
+Score Stats
+Spread: 6 = 6
+Focus: 7+2 = 9 (reduce to 8)"
 }

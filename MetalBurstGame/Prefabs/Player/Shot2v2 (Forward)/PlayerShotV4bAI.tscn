@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Prefabs/System/Behavior/Brain.gd" type="Script" id=1]
-[ext_resource path="res://Prefabs/Player/Shot2v2 (Forward)/ShotVisualSmall.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Prefabs/System/Behavior/Composites/Parallel.gd" type="Script" id=3]
 [ext_resource path="res://Prefabs/System/Behavior/Actions/Projectile/Shoot.gd" type="Script" id=4]
 [ext_resource path="res://Prefabs/Player/Shot2v2 (Forward)/ShotVisual.tscn" type="PackedScene" id=5]
@@ -42,45 +41,25 @@ _collisionMask = 8
 _projectileScene = ExtResource( 5 )
 _offset = Vector2( -5, 0 )
 
-[node name="ShootCL2" type="Node" parent="Parallel"]
+[node name="ShootCu" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
 _initialSpeed = 1400.0
-_damage = 15.0
+_damage = 25.0
 _initialHeading = -90.0
 _collisionLayer = 32
 _collisionMask = 8
-_projectileScene = ExtResource( 2 )
-_offset = Vector2( -5, -10 )
+_projectileScene = ExtResource( 5 )
+_offset = Vector2( 0, -10 )
 
-[node name="ShootCL" type="Node" parent="Parallel"]
+[node name="ShootC" type="Node" parent="Parallel"]
 script = ExtResource( 4 )
 _initialSpeed = 1400.0
-_damage = 15.0
+_damage = 25.0
 _initialHeading = -90.0
 _collisionLayer = 32
 _collisionMask = 8
-_projectileScene = ExtResource( 2 )
-_offset = Vector2( -2.5, -10 )
-
-[node name="ShootCR" type="Node" parent="Parallel"]
-script = ExtResource( 4 )
-_initialSpeed = 1400.0
-_damage = 15.0
-_initialHeading = -90.0
-_collisionLayer = 32
-_collisionMask = 8
-_projectileScene = ExtResource( 2 )
-_offset = Vector2( 2.5, -10 )
-
-[node name="ShootCR2" type="Node" parent="Parallel"]
-script = ExtResource( 4 )
-_initialSpeed = 1400.0
-_damage = 15.0
-_initialHeading = -90.0
-_collisionLayer = 32
-_collisionMask = 8
-_projectileScene = ExtResource( 2 )
-_offset = Vector2( 5, -10 )
+_projectileScene = ExtResource( 5 )
+_offset = Vector2( 0, -10 )
 
 [node name="ShootR1" type="Node" parent="Parallel"]
 script = ExtResource( 4 )

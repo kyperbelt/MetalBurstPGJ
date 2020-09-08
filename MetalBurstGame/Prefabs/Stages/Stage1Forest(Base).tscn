@@ -45,13 +45,13 @@ hatch_marks = 45
 show_bounds = true
 bounds_color = Color( 1, 0, 0, 1 )
 T_U_N_I_N_G = ""
-duration = 190.0
+duration = 192.0
 _preserveTimings = true
 D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
-position = Vector2( 640, -9500 )
+position = Vector2( 640, -9600 )
 
 [node name="NOTES" type="Node" parent="StageDirector"]
 __meta__ = {
@@ -111,8 +111,8 @@ modulate = Color( 0.996078, 0.572549, 0.572549, 1 )
 position = Vector2( 0, -550 )
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 0, -9500 )
-event_time = 190.0
+position = Vector2( 0, -9600 )
+event_time = 192.0
 Target = ExtResource( 8 )
 
 [node name="BossBGMv1" parent="StageDirector" instance=ExtResource( 10 )]
@@ -131,7 +131,7 @@ _volume = -3.0
 [node name="StageBGM" parent="StageDirector" instance=ExtResource( 10 )]
 position = Vector2( 320, -100 )
 B_A_S_E = ""
-event_time = 2.00001
+event_time = 2.0
 P_O_S_I_T_O_N = ""
 override_time = false
 S_O_U_N_D = ""
@@ -316,24 +316,24 @@ spawn_x = 250.0
 position = Vector2( -250, -400 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
-event_time = 8.00001
+event_time = 8.0
 spawn_x = -250.0
 
 [node name="CurveArcR2" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 250, -400 )
-event_time = 8.00001
+event_time = 8.0
 spawn_x = 250.0
 
 [node name="CurveArcL" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -250, -100 )
 rotation = -3.14159
 scale = Vector2( 1, -1 )
-event_time = 2.00001
+event_time = 2.0
 spawn_x = -250.0
 
 [node name="CurveArcR" parent="StageDirector" instance=ExtResource( 12 )]
 position = Vector2( 250, -250 )
-event_time = 5.00001
+event_time = 5.0
 spawn_x = 250.0
 
 [editable path="StageDirector"]

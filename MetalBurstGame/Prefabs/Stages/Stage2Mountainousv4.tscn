@@ -9,7 +9,7 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SoundEvent.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Prefabs/Stages/Survival.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Bosses/B2-CrabBossEvent.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-Arrowhead3.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnter.tscn" type="PackedScene" id=15]
@@ -68,17 +68,17 @@ hatch_marks = 89
 show_bounds = true
 bounds_color = Color( 1, 0, 0, 1 )
 T_U_N_I_N_G = ""
-duration = 360.0
-_preserveTimings = false
+duration = 255.0
+_preserveTimings = true
 D_E_P_E_N_D_E_N_C_Y = ""
 LevelScene = NodePath("../Level")
 
 [node name="END" parent="StageDirector" index="1"]
-position = Vector2( 640, -18000 )
+position = Vector2( 640, -12750 )
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
-position = Vector2( 0, -18000 )
-event_time = 360.0
+position = Vector2( 0, -12750 )
+event_time = 255.0
 Target = ExtResource( 10 )
 
 [node name="Boss2" parent="StageDirector" instance=ExtResource( 11 )]
