@@ -1,6 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Prefabs/Screens/SoundSettings.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Screens/InstructionsFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/Screens/InstructionsFontSmall.tres" type="DynamicFont" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -28,114 +30,118 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HSeparator" type="HSeparator" parent="Container"]
-margin_right = 743.0
-margin_bottom = 32.0
-rect_min_size = Vector2( 0, 32 )
-custom_styles/separator = SubResource( 1 )
-
 [node name="HBoxContainer" type="HBoxContainer" parent="Container"]
-margin_top = 46.0
 margin_right = 743.0
-margin_bottom = 60.0
+margin_bottom = 45.0
 size_flags_horizontal = 3
 alignment = 1
 
 [node name="NameLabel" type="Label" parent="Container/HBoxContainer"]
-margin_left = 324.0
-margin_right = 418.0
-margin_bottom = 14.0
+margin_left = 268.0
+margin_right = 474.0
+margin_bottom = 45.0
+custom_fonts/font = ExtResource( 2 )
 text = "Sound Settings"
 
 [node name="HSeparator2" type="HSeparator" parent="Container"]
-margin_top = 74.0
+margin_top = 59.0
 margin_right = 743.0
-margin_bottom = 106.0
+margin_bottom = 91.0
 rect_min_size = Vector2( 0, 32 )
 custom_styles/separator = SubResource( 1 )
 
 [node name="SoundVerticals" type="HBoxContainer" parent="Container"]
-margin_top = 120.0
+margin_top = 105.0
 margin_right = 743.0
-margin_bottom = 275.0
+margin_bottom = 244.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 10
 
 [node name="Labels" type="VBoxContainer" parent="Container/SoundVerticals"]
-margin_right = 97.0
-margin_bottom = 155.0
+margin_right = 103.0
+margin_bottom = 99.0
+size_flags_vertical = 0
 custom_constants/separation = 30
 
 [node name="MasterLabel" type="Label" parent="Container/SoundVerticals/Labels"]
-margin_right = 97.0
-margin_bottom = 14.0
+margin_right = 103.0
+margin_bottom = 13.0
+custom_fonts/font = ExtResource( 3 )
 text = "Master Volume"
 align = 2
 
 [node name="MusicLabel" type="Label" parent="Container/SoundVerticals/Labels"]
-margin_top = 44.0
-margin_right = 97.0
-margin_bottom = 58.0
+margin_top = 43.0
+margin_right = 103.0
+margin_bottom = 56.0
+custom_fonts/font = ExtResource( 3 )
 text = "Music Volume"
 align = 2
 
 [node name="SoundEffectLabel" type="Label" parent="Container/SoundVerticals/Labels"]
-margin_top = 88.0
-margin_right = 97.0
-margin_bottom = 102.0
+margin_top = 86.0
+margin_right = 103.0
+margin_bottom = 99.0
+custom_fonts/font = ExtResource( 3 )
 text = "SFX Volume"
 align = 2
 
 [node name="Scrolls" type="VBoxContainer" parent="Container/SoundVerticals"]
-margin_left = 107.0
-margin_right = 697.0
-margin_bottom = 155.0
+margin_left = 113.0
+margin_right = 698.0
+margin_bottom = 96.0
 size_flags_horizontal = 3
+size_flags_vertical = 2
 custom_constants/separation = 30
+alignment = 1
 
 [node name="MasterScroll" type="HScrollBar" parent="Container/SoundVerticals/Scrolls"]
-margin_right = 590.0
+margin_right = 585.0
 margin_bottom = 12.0
 
 [node name="MusicScroll" type="HScrollBar" parent="Container/SoundVerticals/Scrolls"]
 margin_top = 42.0
-margin_right = 590.0
+margin_right = 585.0
 margin_bottom = 54.0
 
 [node name="SFXScroll" type="HScrollBar" parent="Container/SoundVerticals/Scrolls"]
 margin_top = 84.0
-margin_right = 590.0
+margin_right = 585.0
 margin_bottom = 96.0
 
 [node name="Percentages" type="VBoxContainer" parent="Container/SoundVerticals"]
-margin_left = 707.0
+margin_left = 708.0
 margin_right = 743.0
-margin_bottom = 155.0
+margin_bottom = 99.0
+size_flags_vertical = 0
 custom_constants/separation = 30
 
 [node name="MasterPercent" type="Label" parent="Container/SoundVerticals/Percentages"]
-margin_right = 36.0
-margin_bottom = 14.0
+margin_right = 35.0
+margin_bottom = 13.0
+custom_fonts/font = ExtResource( 3 )
 text = "100%"
 align = 2
 
 [node name="MusicPercent" type="Label" parent="Container/SoundVerticals/Percentages"]
-margin_top = 44.0
-margin_right = 36.0
-margin_bottom = 58.0
+margin_top = 43.0
+margin_right = 35.0
+margin_bottom = 56.0
+custom_fonts/font = ExtResource( 3 )
 text = "100%"
 align = 2
 
 [node name="SoundPercent" type="Label" parent="Container/SoundVerticals/Percentages"]
-margin_top = 88.0
-margin_right = 36.0
-margin_bottom = 102.0
+margin_top = 86.0
+margin_right = 35.0
+margin_bottom = 99.0
+custom_fonts/font = ExtResource( 3 )
 text = "100%"
 align = 2
 
 [node name="OptionsContainer" type="HBoxContainer" parent="Container"]
-margin_top = 289.0
+margin_top = 258.0
 margin_right = 743.0
 margin_bottom = 309.0
 size_flags_horizontal = 3
@@ -143,13 +149,15 @@ custom_constants/separation = 30
 alignment = 1
 
 [node name="Cancel" type="Button" parent="Container/OptionsContainer"]
-margin_left = 305.0
-margin_right = 359.0
-margin_bottom = 20.0
+margin_left = 263.0
+margin_right = 365.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 2 )
 text = "Cancel"
 
 [node name="Apply" type="Button" parent="Container/OptionsContainer"]
-margin_left = 389.0
-margin_right = 437.0
-margin_bottom = 20.0
+margin_left = 395.0
+margin_right = 479.0
+margin_bottom = 51.0
+custom_fonts/font = ExtResource( 2 )
 text = "Apply"
