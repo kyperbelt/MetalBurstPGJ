@@ -6,6 +6,7 @@ var GameOverScore = Globals.get_player().score
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Globals.delete_player()
 	#ReimJ: Added to view score at GameOver
 	$Score.set_text("%010d" % GameOverScore)
 	pass # Replace with function body.

@@ -32,9 +32,8 @@ func selection_made(selection : int):
 			$GuiLayer/SoundSettings.show()
 			print("sup")
 		4:
+			$GuiLayer/TitleScreenCredits.show()
+		5:
 			get_tree().quit()
-		_:
-			print("%s is not a valid selection" % selection)
-	
 	pass
 

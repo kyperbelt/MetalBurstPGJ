@@ -9,7 +9,7 @@
 [ext_resource path="res://Prefabs/System/StageDirector/Events/EndStageEvent.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SpawnEvent.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/System/StageDirector/Events/SoundEvent.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Prefabs/Screens/GameOverScreen.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Prefabs/Screens/GameOverScreenVictory.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Bosses/B2-CrabBossEvent.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-Arrowhead3.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Prefabs/Formations/SwarmFormations/Swarm-SideEnter.tscn" type="PackedScene" id=15]
@@ -78,12 +78,23 @@ position = Vector2( 640, -12750 )
 
 [node name="EndStageEvent" parent="StageDirector" instance=ExtResource( 7 )]
 position = Vector2( 0, -12750 )
+B_A_S_E = ""
 event_time = 255.0
+P_O_S_I_T_O_N = ""
+override_time = false
+E_N_D = ""
+_stickyEnd = true
+delay = 0.0
 Target = ExtResource( 10 )
 
 [node name="Boss2" parent="StageDirector" instance=ExtResource( 11 )]
 position = Vector2( 0, -7600 )
+B_A_S_E = ""
 event_time = 152.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Marks" type="Node" parent="StageDirector"]
 
@@ -205,196 +216,365 @@ _volume = 4.0
 
 [node name="Swarm-CornerSpreadR10" parent="StageDirector" instance=ExtResource( 20 )]
 position = Vector2( -320, -7200 )
+B_A_S_E = ""
 event_time = 144.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="Swarm-CornerSpreadR9" parent="StageDirector" instance=ExtResource( 22 )]
 position = Vector2( 320, -7000 )
+B_A_S_E = ""
 event_time = 140.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 320.0
 
 [node name="Arrowhead8" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( 0, -7200 )
+B_A_S_E = ""
 event_time = 144.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Arrowhead7" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( 0, -7000 )
+B_A_S_E = ""
 event_time = 140.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Swarm-CornerSpreadR8" parent="StageDirector" instance=ExtResource( 20 )]
 position = Vector2( -320, -6800 )
+B_A_S_E = ""
 event_time = 136.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="Swarm-CornerSpreadR7" parent="StageDirector" instance=ExtResource( 22 )]
 position = Vector2( 320, -6550 )
+B_A_S_E = ""
 event_time = 131.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 320.0
 
 [node name="SideEnter" parent="StageDirector" instance=ExtResource( 15 )]
 position = Vector2( 0, -6800 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+B_A_S_E = ""
 event_time = 136.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="SideEnter5" parent="StageDirector" instance=ExtResource( 15 )]
 position = Vector2( 0, -6550 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+B_A_S_E = ""
 event_time = 131.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Helix8" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( -160, -6100 )
+B_A_S_E = ""
 event_time = 122.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -160.0
 
 [node name="Helix7" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( 160, -6325 )
+B_A_S_E = ""
 event_time = 126.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="Swarm-CornerSpreadR5" parent="StageDirector" instance=ExtResource( 20 )]
 position = Vector2( -320, -6325 )
+B_A_S_E = ""
 event_time = 126.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="Swarm-CornerSpreadR6" parent="StageDirector" instance=ExtResource( 22 )]
 position = Vector2( 320, -6100 )
+B_A_S_E = ""
 event_time = 122.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 320.0
 
 [node name="Helix5" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( -160, -5675 )
+B_A_S_E = ""
 event_time = 113.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -160.0
 
 [node name="Helix6" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( 160, -5875 )
+B_A_S_E = ""
 event_time = 117.5
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="Swarm-CornerSpreadR4" parent="StageDirector" instance=ExtResource( 22 )]
 position = Vector2( 320, -5500 )
+B_A_S_E = ""
 event_time = 110.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 320.0
 
 [node name="H-Caterpillar3" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( -160, -5500 )
+B_A_S_E = ""
 event_time = 110.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -160.0
 
 [node name="Swarm-CornerSpreadR3" parent="StageDirector" instance=ExtResource( 20 )]
 position = Vector2( -320, -5350 )
+B_A_S_E = ""
 event_time = 107.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="H-Caterpillar2" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( 160, -5350 )
+B_A_S_E = ""
 event_time = 107.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="H-Caterpillar" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( 0, -5150 )
+B_A_S_E = ""
 event_time = 103.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Midboss3" parent="StageDirector" instance=ExtResource( 21 )]
 position = Vector2( 0, -3800 )
+B_A_S_E = ""
 event_time = 76.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="SideEnter4" parent="StageDirector" instance=ExtResource( 15 )]
 position = Vector2( 0, -3600 )
+B_A_S_E = ""
 event_time = 72.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="SideEnter3" parent="StageDirector" instance=ExtResource( 15 )]
 position = Vector2( 0, -3400 )
+B_A_S_E = ""
 event_time = 68.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="SideEnter2" parent="StageDirector" instance=ExtResource( 15 )]
 position = Vector2( 0, -3200 )
+B_A_S_E = ""
 event_time = 64.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="SideEnterR2" parent="StageDirector" instance=ExtResource( 17 )]
 position = Vector2( 0, -2950 )
+B_A_S_E = ""
 event_time = 59.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="SideEnterL2" parent="StageDirector" instance=ExtResource( 16 )]
 position = Vector2( 0, -2700 )
+B_A_S_E = ""
 event_time = 54.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="H-Caterpillar8" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( 180, -2450 )
+B_A_S_E = ""
 event_time = 49.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 180.0
 
 [node name="H-Caterpillar7" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( -180, -2450 )
+B_A_S_E = ""
 event_time = 49.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -180.0
 
 [node name="H-Caterpillar6" parent="StageDirector" instance=ExtResource( 18 )]
 position = Vector2( 0, -2200 )
+B_A_S_E = ""
 event_time = 44.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Arrowhead14" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( 0, -1900 )
+B_A_S_E = ""
 event_time = 38.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
+spawn_x = 0.0
 
 [node name="Arrowhead6" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -120, -1700 )
+B_A_S_E = ""
 event_time = 34.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -120.0
 
 [node name="Arrowhead5" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( 120, -1500 )
+B_A_S_E = ""
 event_time = 30.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 120.0
 
 [node name="Arrowhead4" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( -120, -1300 )
+B_A_S_E = ""
 event_time = 26.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -120.0
 
 [node name="Arrowhead3" parent="StageDirector" instance=ExtResource( 13 )]
 position = Vector2( 120, -1100 )
+B_A_S_E = ""
 event_time = 22.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 120.0
 
 [node name="Swarm-CornerSpreadR" parent="StageDirector" instance=ExtResource( 20 )]
 position = Vector2( -320, -850 )
+B_A_S_E = ""
 event_time = 17.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -320.0
 
 [node name="Swarm-CornerSpreadR2" parent="StageDirector" instance=ExtResource( 22 )]
 position = Vector2( 320, -850 )
+B_A_S_E = ""
 event_time = 17.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 320.0
 
 [node name="Helix4" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( 160, -600 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+B_A_S_E = ""
 event_time = 12.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="Helix3" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( -160, -600 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+B_A_S_E = ""
 event_time = 12.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -160.0
 
 [node name="Helix2" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( 160, -400 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+B_A_S_E = ""
 event_time = 8.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = 160.0
 
 [node name="Helix" parent="StageDirector" instance=ExtResource( 19 )]
 position = Vector2( -160, -200 )
 rotation = 3.14159
 scale = Vector2( 1, -1 )
+B_A_S_E = ""
 event_time = 4.0
+P_O_S_I_T_O_N = ""
+override_time = false
+S_P_A_W_N = ""
 spawn_x = -160.0
 
 [editable path="StageDirector"]
