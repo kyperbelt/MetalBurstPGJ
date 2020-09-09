@@ -1,9 +1,6 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Screens/UItestA.png" type="Texture" id=2]
-[ext_resource path="res://Assets/Screens/UItestB.png" type="Texture" id=3]
-[ext_resource path="res://Assets/Screens/UItestC.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Screens/GUIfont.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Prefabs/Screens/ImageRepeater.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Screens/UItestD.png" type="Texture" id=7]
@@ -20,21 +17,6 @@ script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="UItestA" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 2 )
-centered = false
-
-[node name="UItestB" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 3 )
-centered = false
-
-[node name="UItestC" type="Sprite" parent="."]
-visible = false
-texture = ExtResource( 4 )
-centered = false
 
 [node name="UItestDshadowL" type="Sprite" parent="."]
 position = Vector2( 280, 0 )
