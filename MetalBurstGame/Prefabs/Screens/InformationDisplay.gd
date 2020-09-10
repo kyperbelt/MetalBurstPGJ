@@ -75,5 +75,5 @@ func update_progressBar():
 	var _nextMultiplierScoreValue = player.get_score_from_mult(player._scoreMultiplier+1)
 	var _amountRequired = _nextMultiplierScoreValue - _currentMultiplierScoreValue
 	var _amountAchieved = _currentAccumValue - _currentMultiplierScoreValue
-	var delta = _amountAchieved/_amountRequired * 15
-	$MultiplierProgressBar.set_text(Globals.reverseString("|%15s|"%(">"+Globals.repeat_string("=",delta-1))));
+	var delta = _amountAchieved/_amountRequired
+	$MultiplierProgressBar.value = delta*100;

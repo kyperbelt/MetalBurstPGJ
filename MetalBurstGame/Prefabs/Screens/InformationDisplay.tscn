@@ -235,10 +235,10 @@ __meta__ = {
 }
 
 [node name="MultiplierLabel" type="Label" parent="."]
-margin_left = 61.4884
-margin_top = 277.928
-margin_right = 199.488
-margin_bottom = 322.928
+margin_left = 58.3136
+margin_top = 274.753
+margin_right = 196.314
+margin_bottom = 319.753
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color_shadow = Color( 0.66, 0.33, 0, 1 )
 custom_constants/shadow_offset_x = -2
@@ -249,10 +249,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="MultiplierProgressBar" type="ProgressBar" parent="."]
+margin_left = 36.0729
+margin_top = 414.236
+margin_right = 242.073
+margin_bottom = 428.236
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="MultiplierContainer" type="HBoxContainer" parent="."]
-margin_left = 63.0255
+margin_left = 83.6617
 margin_top = 325.964
-margin_right = 163.026
+margin_right = 183.662
 margin_bottom = 399.964
 alignment = 1
 __meta__ = {
@@ -270,18 +279,3 @@ custom_constants/shadow_offset_y = 3
 text = "X 1"
 align = 1
 valign = 1
-
-[node name="MultiplierProgressBar" type="Label" parent="."]
-margin_left = 58.0
-margin_top = 395.393
-margin_right = 279.0
-margin_bottom = 440.393
-custom_fonts/font = ExtResource( 5 )
-custom_colors/font_color_shadow = Color( 0.66, 0.33, 0, 1 )
-custom_constants/shadow_offset_x = -3
-custom_constants/shadow_offset_y = 3
-text = ">                  |"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
