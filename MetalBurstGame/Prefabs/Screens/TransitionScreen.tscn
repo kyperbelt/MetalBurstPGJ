@@ -19,9 +19,9 @@ position = Vector2( 4.99753, -3.5901 )
 
 [node name="Narrative" type="Label" parent="."]
 margin_left = 115.0
-margin_top = 69.1591
+margin_top = 69.0
 margin_right = 1165.0
-margin_bottom = 220.159
+margin_bottom = 514.0
 custom_fonts/font = ExtResource( 9 )
 custom_colors/font_color_shadow = Color( 0.66, 0.33, 0, 1 )
 custom_constants/shadow_offset_x = -5

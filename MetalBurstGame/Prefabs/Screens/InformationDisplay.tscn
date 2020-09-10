@@ -1,6 +1,7 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Prefabs/Screens/InformationDisplay.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Screens/GUIfontSmall.tres" type="DynamicFont" id=2]
 [ext_resource path="res://Assets/Screens/GUIfont.tres" type="DynamicFont" id=5]
 [ext_resource path="res://Prefabs/Screens/ImageRepeater.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Screens/UItestD.png" type="Texture" id=7]
@@ -9,6 +10,12 @@
 [ext_resource path="res://Prefabs/Screens/Icon-ArmorV2.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Prefabs/Screens/Icon-BombV1.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Assets/Screens/Header2.res" type="DynamicFont" id=12]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.623529, 0.219608, 0.0941176, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.74902, 0.431373, 0.113725, 1 )
 
 [node name="InformationDisplay" type="Control"]
 anchor_right = 1.0
@@ -217,10 +224,9 @@ __meta__ = {
 }
 
 [node name="MultiplierLabel" type="Label" parent="."]
-margin_left = 58.3136
-margin_top = 274.753
-margin_right = 196.314
-margin_bottom = 319.753
+margin_top = 270.0
+margin_right = 320.0
+margin_bottom = 320.0
 custom_fonts/font = ExtResource( 5 )
 custom_colors/font_color_shadow = Color( 0.66, 0.33, 0, 1 )
 custom_constants/shadow_offset_x = -2
@@ -231,29 +237,20 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MultiplierProgressBar" type="ProgressBar" parent="."]
-margin_left = 36.0729
-margin_top = 414.236
-margin_right = 242.073
-margin_bottom = 428.236
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="MultiplierContainer" type="HBoxContainer" parent="."]
-margin_left = 83.6617
-margin_top = 325.964
-margin_right = 183.662
-margin_bottom = 399.964
+margin_top = 320.0
+margin_right = 320.0
+margin_bottom = 400.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Multiplier" type="Label" parent="MultiplierContainer"]
-margin_left = 12.0
-margin_right = 87.0
-margin_bottom = 74.0
+margin_left = 122.0
+margin_top = 3.0
+margin_right = 197.0
+margin_bottom = 77.0
 custom_fonts/font = ExtResource( 12 )
 custom_colors/font_color_shadow = Color( 0.66, 0.33, 0, 1 )
 custom_constants/shadow_offset_x = -3
@@ -261,3 +258,25 @@ custom_constants/shadow_offset_y = 3
 text = "X 1"
 align = 1
 valign = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 55.0
+margin_top = 410.0
+margin_right = 265.0
+margin_bottom = 445.0
+color = Color( 0.898039, 0.666667, 0.156863, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MultiplierProgressBar" type="ProgressBar" parent="."]
+margin_left = 60.0
+margin_top = 415.0
+margin_right = 260.0
+margin_bottom = 440.0
+custom_styles/fg = SubResource( 1 )
+custom_styles/bg = SubResource( 2 )
+custom_fonts/font = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -18,18 +18,17 @@ __meta__ = {
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 133.948
-margin_top = -19.6246
-margin_right = -104.052
-margin_bottom = 29.3754
+margin_left = 100.0
+margin_right = -99.9999
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Container" type="VBoxContainer" parent="CenterContainer"]
-margin_top = 50.0
-margin_right = 762.0
-margin_bottom = 699.0
+margin_left = 19.0
+margin_top = 49.0
+margin_right = 781.0
+margin_bottom = 650.0
 custom_constants/separation = 14
 __meta__ = {
 "_edit_use_anchors_": false
@@ -54,27 +53,26 @@ text = "Credits"
 [node name="Label" type="Label" parent="CenterContainer/Container"]
 margin_top = 59.0
 margin_right = 762.0
-margin_bottom = 584.0
+margin_bottom = 536.0
 custom_fonts/font = ExtResource( 2 )
 text = "Developed By:
-Kevin \"ReimJ\" F. - Project Lead, Design, & Art
-Jonathan \"Kyperbelt\" C. - Programming
-Josh \"Jzamo\" Z. - Music & Audio
+Kevin Feng (\"ReimJ\") - Project Lead, Design, & Art
+Jonathan Camarena (\"Kyperbelt\") - Programming
+Josh Zamora (\"Jzamo\") - Music & Audio
 
 Created for \"Progressive Game Jam 6\" (PGJ)
 Hosted by the Sacramento Developer's Collective (SDC)
 
 Version 0.7.0
-Posted on: [2020-09-12]
-"
+Date: [2020-09-12]"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="OptionsContainer" type="HBoxContainer" parent="CenterContainer/Container"]
-margin_top = 598.0
+margin_top = 550.0
 margin_right = 762.0
-margin_bottom = 649.0
+margin_bottom = 601.0
 size_flags_horizontal = 3
 custom_constants/separation = 30
 alignment = 1

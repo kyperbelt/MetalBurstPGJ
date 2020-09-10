@@ -7,7 +7,7 @@
 [ext_resource path="res://Prefabs/System/OptionsMenu.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Prefabs/Screens/TitleScreen.gd" type="Script" id=6]
 [ext_resource path="res://Prefabs/System/MenuOption.gd" type="Script" id=7]
-[ext_resource path="res://Prefabs/Stages/Survival.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Prefabs/Stages/ScoringPlayground.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Prefabs/Stages/Stage2Mountainousv4.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Screens/InstructionsFont.tres" type="DynamicFont" id=10]
 [ext_resource path="res://Prefabs/Stages/Stage1Forest(Base).tscn" type="PackedScene" id=11]
@@ -110,7 +110,7 @@ margin_top = 98.0
 margin_right = 300.0
 margin_bottom = 143.0
 custom_fonts/font = ExtResource( 10 )
-text = "\"Survival Mode\""
+text = "\"Playground Mode\""
 script = ExtResource( 7 )
 
 [node name="option3" type="Label" parent="GuiLayer/OptionsMenu/options"]
@@ -152,11 +152,13 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 3
 custom_constants/shadow_offset_y = 3
 text = "Controls:
-Move = Arrow Keys or WASD
-Fire = Z or K
-Bomb = X or L
-Focus = SHIFT or J
-Pause = ESC"
+Move = Arrow Keys
+Fire = Z
+Bomb = X
+Focus = SHIFT
+Pause = ESC
+
+Additional Details in \"Read Me\""
 __meta__ = {
 "_edit_use_anchors_": false
 }

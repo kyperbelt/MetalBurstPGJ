@@ -37,10 +37,10 @@ _focusSpeed = 150.0
 _rechargeRate = 0.04
 _name = "Claw Form"
 _descritpion = "A difficult to use form with an oddly pathed, but powerful attack."
-_difficultyInfo = 8
+_difficultyInfo = 2
 _damageInfo = 9
 _speedInfo = 6
-_rangeInfo = 7
+_rangeInfo = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
@@ -65,6 +65,7 @@ texture = ExtResource( 4 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 5 )
 animation = "Glowing"
+frame = 4
 playing = true
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]
