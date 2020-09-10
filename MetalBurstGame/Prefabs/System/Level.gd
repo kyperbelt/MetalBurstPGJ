@@ -17,6 +17,7 @@ func _ready():
 
 	$PauseScreens._soundSettings = get_node(_soundSettingsPath)
 
-	Globals.get_player()._set_score_multiplier(1)
+	Globals.get_player()._scoreAccumValue = 0
+	
 
 
