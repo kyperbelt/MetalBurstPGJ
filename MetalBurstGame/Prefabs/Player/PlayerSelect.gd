@@ -30,6 +30,8 @@ onready var DifficultyProg : ProgressBar = $Stats/Ease/Prog
 
 var animationFunc : FuncRef = null
 
+var _selectionMade : bool = false
+
 func _ready():
 	Globals._inCharacterSelect = true
 	_current = playerTypes[get_selection(_currentSelection)].instance()
@@ -45,6 +47,7 @@ func _ready():
 	add_child(_prev)
 
 	update_current_fields()
+	_selectionMade = false
 
 #function to wrap the selection
 #in case we exceed the expected amount
@@ -76,6 +79,7 @@ func make_selection():
 	Globals._inCharacterSelect = false
 	#hook into stage
 	var _result = get_tree().change_scene_to(Globals._selectedStage)
+	_selectionMade = true
 	pass
 
 func animate_from_right(time:float):
@@ -142,7 +146,9 @@ func _process(delta):
 	if(_animating):
 		var time = min(_animationElapsed / _animationTime,1)
 		animationFunc.call_func(time)
-		
+	
+	if _selectionMade:
+		return
 	if(Input.is_action_just_pressed("move_left")):
 		if(_animating):
 			animationFunc.call_func(1)
