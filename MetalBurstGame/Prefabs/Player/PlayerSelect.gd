@@ -30,6 +30,8 @@ onready var DifficultyProg : ProgressBar = $Stats/Ease/Prog
 
 var animationFunc : FuncRef = null
 
+var _selectionMade : bool = false
+
 func _ready():
 	Globals._inCharacterSelect = true
 	_current = playerTypes[get_selection(_currentSelection)].instance()
@@ -45,6 +47,7 @@ func _ready():
 	add_child(_prev)
 
 	update_current_fields()
+	_selectionMade = false
 
 #function to wrap the selection
 #in case we exceed the expected amount
@@ -71,11 +74,13 @@ func move_selection_right():
 
 func make_selection():
 	$sfx_menuSelect.play() #ReimJ: copied from Title Screen ; Plays riff ; please link to Audio Manager
+	_selectionMade = true
 	yield(get_tree().create_timer(2.0), "timeout") #ReimJ: copied from Title Screen ; Causes pause before play
 	Globals.Player = playerTypes[_currentSelection]
 	Globals._inCharacterSelect = false
 	#hook into stage
 	var _result = get_tree().change_scene_to(Globals._selectedStage)
+	
 	pass
 
 func animate_from_right(time:float):
@@ -142,16 +147,17 @@ func _process(delta):
 	if(_animating):
 		var time = min(_animationElapsed / _animationTime,1)
 		animationFunc.call_func(time)
-		
-	if(Input.is_action_just_pressed("move_left")):
-		if(_animating):
-			animationFunc.call_func(1)
-		move_selection_left()
-	elif( Input.is_action_just_pressed("move_right")):
-		if(_animating):
-			animationFunc.call_func(1)
-		move_selection_right()
-	elif Input.is_action_just_pressed("ui_accept"):
-		if(_animating):
-			animationFunc.call_func(1)
-		make_selection()
+	
+	if !_selectionMade:
+		if(Input.is_action_just_pressed("move_left")):
+			if(_animating):
+				animationFunc.call_func(1)
+			move_selection_left()
+		elif( Input.is_action_just_pressed("move_right")):
+			if(_animating):
+				animationFunc.call_func(1)
+			move_selection_right()
+		elif Input.is_action_just_pressed("ui_accept"):
+			if(_animating):
+				animationFunc.call_func(1)
+			make_selection()

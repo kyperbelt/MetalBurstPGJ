@@ -16,3 +16,7 @@ func _ready():
 	$Container/PlayArea/Engine.set_info_display(get_node("InformationDisplay"))
 
 	$PauseScreens._soundSettings = get_node(_soundSettingsPath)
+
+	Globals.get_player()._set_score_multiplier(1)
+
+
