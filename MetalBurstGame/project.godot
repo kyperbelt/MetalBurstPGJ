@@ -400,7 +400,7 @@ _global_script_class_icons={
 
 config/name="MetalBurstGame"
 run/main_scene="res://Prefabs/Screens/TitleScreen.tscn"
-config/icon="res://icon.png"
+config/icon="res://Icon2.png"
 
 [autoload]
 

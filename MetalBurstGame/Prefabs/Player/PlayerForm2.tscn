@@ -33,7 +33,7 @@ _multiplierDeadZone = 8.0
 _speed = 325.0
 _focusSpeed = 140.0
 _name = "Arrow Form"
-_descritpion = "A slightly faster form with a powerful focused attack with limited reach."
+_descritpion = "A slightly faster form with a powerful focused attack"
 _difficultyInfo = 6
 _damageInfo = 8
 _speedInfo = 6
@@ -62,7 +62,7 @@ texture = ExtResource( 4 )
 scale = Vector2( 0.75, 0.75 )
 frames = ExtResource( 5 )
 animation = "Glowing"
-frame = 5
+frame = 2
 playing = true
 
 [node name="ProjectileSpawnPosition" type="Node2D" parent="."]

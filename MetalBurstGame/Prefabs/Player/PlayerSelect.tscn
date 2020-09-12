@@ -33,7 +33,7 @@ _animationTime = 0.2
 [node name="PlayerSelectBG" parent="." instance=ExtResource( 6 )]
 
 [node name="Current" type="Area2D" parent="."]
-position = Vector2( 629.269, 282.526 )
+position = Vector2( 640, 280 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Current"]
 position = Vector2( -1.12561, 1.75409 )
@@ -43,7 +43,7 @@ __meta__ = {
 }
 
 [node name="Prev" type="Area2D" parent="."]
-position = Vector2( 309.749, 363.508 )
+position = Vector2( 325, 360 )
 space_override = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Prev"]
@@ -54,7 +54,7 @@ __meta__ = {
 }
 
 [node name="Next" type="Area2D" parent="."]
-position = Vector2( 940.623, 363.508 )
+position = Vector2( 955, 360 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Next"]
 position = Vector2( -1.12561, 1.75409 )
@@ -64,10 +64,10 @@ __meta__ = {
 }
 
 [node name="Name" type="Label" parent="."]
-margin_left = 371.85
-margin_top = 31.4579
-margin_right = 918.85
-margin_bottom = 214.458
+margin_left = 365.0
+margin_top = 50.0
+margin_right = 915.0
+margin_bottom = 170.0
 custom_fonts/font = ExtResource( 3 )
 text = "Character Name
 "
