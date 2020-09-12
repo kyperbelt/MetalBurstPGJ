@@ -114,4 +114,20 @@ align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Secret Message" type="Label" parent="."]
+margin_left = 115.0
+margin_top = 598.507
+margin_right = 1165.0
+margin_bottom = 688.507
+rect_rotation = 1.77715
+custom_fonts/font = ExtResource( 9 )
+custom_colors/font_color_shadow = Color( 0, 0.658824, 0.141176, 1 )
+custom_constants/shadow_offset_x = -5
+custom_constants/shadow_offset_y = 5
+text = "I Ate A Broccoli Forest!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="selection_entered" from="OptionsMenu" to="." method="selection_made"]
